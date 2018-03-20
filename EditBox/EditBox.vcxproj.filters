@@ -27,6 +27,15 @@
     <ClInclude Include="EditBox.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="text.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CLine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CText.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -36,6 +45,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="IO.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CLine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CText.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
