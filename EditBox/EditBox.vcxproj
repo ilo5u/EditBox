@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="API.h" />
     <ClInclude Include="CLine.h" />
     <ClInclude Include="CText.h" />
     <ClInclude Include="EditBox.h" />
