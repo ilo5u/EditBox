@@ -10,6 +10,13 @@ struct Position
 {
 	int LineNumber;		//所在行号
 	int Sequence;		//所在序号
+	//operators
+	bool operator<(Position& position);
+	bool operator<=(Position& position);
+	bool operator>(Position& position);
+	bool operator>=(Position& position);
+	bool operator==(Position& position);
+	bool operator!=(Position& position);
 };
 //每次分配的数据块
 class Line_iterator;			//行迭代器
@@ -23,6 +30,9 @@ class CLine
 {
 	friend class Line_iterator;
 	friend class CText;
+	friend class Cursor;
+	friend class Text_iterator;
+	friend struct Record;
 public:
 	CLine(int LNum, CLine* pNext = NULL);
 	CLine(CLine& L);
@@ -34,13 +44,14 @@ public:
 	Line_iterator DeleteLine(int first, int last);					//删除当前行[first,end]内的字符串		字符从1开始返回删除后的第一位
 	bool BackSpace(Position position);								//退格键  删除Position 位置上的字符  
 	Line_iterator InsertStrings(int start,std::wstring String);		//在start "后面" 加入字符串
-//	void WriteLine();												//将本行写入文本文件
 	Line_iterator begin();											//返回指向行首字符的迭代器
 	Line_iterator end();											//返回指向行尾字符的迭代器
 	std::wstring  TransformToWString(int first, int last);			//以wstringf的形式返回[first,last]中的字符串
 	size_t size()const;												//返回本行字符串数量
-	CLine& operator=(CLine Line);
+	CLine& operator=(CLine Line);									//赋值
 	void SetLineNumber(int Number);									//设置/更改行号
+	bool isBlankLine()const;										//返回当前行是否为空
+	int Line_Width(int Width);										//返回当前行行宽
 private:
 	CLine*		pNextLine;											//下一行
 	DataBlock*	pLineHead;											//行首
@@ -55,13 +66,16 @@ private:
 class Line_iterator
 {
 	friend class CLine;
+	friend class Text_iterator;
 public:
+	Line_iterator() = default;
 	Line_iterator(CLine& theLine, int index = 1);
 	Line_iterator(const Line_iterator& m);
-	Line_iterator& operator=(const Line_iterator& m);
 	~Line_iterator();
-	bool operator==(const Line_iterator& m);
-	bool operator!=(const Line_iterator& m);
+	void Set(CLine& theLine, int index = 1);					//设定绑定行
+	int CurrentPosition()const;									//返回当前迭代器指向位置
+	CLine* GetLinePointer();									//返回当前行首指针
+	bool isValid()const;										//是否为有效(非空)的行
 //operators
 	Line_iterator& operator++();
 	Line_iterator operator++(int);
@@ -70,6 +84,9 @@ public:
 	Line_iterator& operator+(int n);
 	Line_iterator& operator-(int n);
 	TCHAR&	operator*();
+	Line_iterator& operator=(const Line_iterator& m);
+	bool operator==(const Line_iterator& m);
+	bool operator!=(const Line_iterator& m);
 private:
 	CLine *		pLine;			//当前行指针			
 	TCHAR *		pWChar;			//指向CLine中的一个字符
