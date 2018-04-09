@@ -24,9 +24,6 @@
     <ClInclude Include="resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="EditBox.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="text.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -37,6 +34,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="API.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="editbox.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -54,6 +54,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="CText.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="API.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cursor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Record.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

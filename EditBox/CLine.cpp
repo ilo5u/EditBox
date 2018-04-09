@@ -1,5 +1,4 @@
-#include "CLine.h"
-#include<assert.h>
+#include "stdafx.h"
 
 CLine::CLine(int LNum, CLine * pNext)
 {
@@ -105,13 +104,13 @@ void CLine::ShowLineData()
 	}
 	else
 	{
-		std::cout << "此行为空" << std::endl;
+		std::cout << std::endl;
 	}
 }
 
 Line_iterator CLine::DeleteLine(int first, int last)
 {
-	if (bBlankLine || first > last || first > nDataSize)	//空行或无效的操作
+	if (bBlankLine || first > last || first > nDataSize||last==0)	//空行或无效的操作
 		return Line_iterator(*this);
 	if (first == 1 && last == nDataSize)		//删除整行
 	{
@@ -168,9 +167,13 @@ bool CLine::BackSpace(Position position)
 }
 /*
 在start后面插入字符串 ：
+eg		abcdef    insert "123"  start=3
+------->abc123def
 			start==0			在行首添加字符串
 			start==nDataSize	在行末添加字符
 			start==x			在x位置后面插入字符串
+			返回插入的第一位字符位置
+		return Line_iterator(4)
 */
 Line_iterator CLine::InsertStrings(int start, std::wstring String)
 {
@@ -179,7 +182,7 @@ Line_iterator CLine::InsertStrings(int start, std::wstring String)
 	{
 		CreateLine(String);
 		bBlankLine = false;
-		return end();
+		return begin();
 	}
 	Line_iterator it_start(*this,start);
 	Line_iterator it_end = this->end();
@@ -190,8 +193,7 @@ Line_iterator CLine::InsertStrings(int start, std::wstring String)
 		if (bBlankLine)
 		{
 			CreateLine(String);
-			bBlankLine = false;
-			return end();
+			return begin();
 		}
 		//先将当前块补满后再添加新的strings
 		int n = nBlocks * BLOCK_SIZE - it_start.nIndex;
@@ -212,6 +214,13 @@ Line_iterator CLine::InsertStrings(int start, std::wstring String)
 			nBlocks += pnewLine->nBlocks;
 			pnewLine->pLineHead = NULL;
 			delete pnewLine;
+		}
+		else
+		{
+			if (n != 0)
+			{
+				*(it_start + 1) = L'\0';
+			}
 		}
 	}
 	else if (start == 0)	//在行首插入
@@ -251,7 +260,7 @@ Line_iterator CLine::InsertStrings(int start, std::wstring String)
 		return InsertStrings(start, String);
 	}
 	nDataSize += Size_to_add;
-	return it_start;
+	return Line_iterator(*this, start + 1);
 }
 
 Line_iterator CLine::begin()
@@ -264,7 +273,11 @@ Line_iterator CLine::end()
 	Line_iterator It = begin() + (nDataSize - 1);
 	return It;
 }
-
+/*
+[first,last]内的字符转化为wstring形式
+eg.		abcdef  [2,4]
+return  "bcd"
+*/
 std::wstring CLine::TransformToWString(int first, int last) 
 {
 	std::wstring WStr;
@@ -301,6 +314,31 @@ void CLine::SetLineNumber(int Number)
 	nLineNumber = Number;
 }
 
+bool CLine::isBlankLine() const
+{
+	return bBlankLine;
+}
+//返回当前行行宽（像素）
+int CLine::Line_Width(int Width)
+{
+	if (bBlankLine)
+		return 0;
+	int Width_EN = Width;
+	int Width_ZH = Width * 2;
+	int	Total_Width = 0;
+	Line_iterator iterator(*this);
+	for (int i = 1; i <= nDataSize; i++)
+	{
+		short int m = *iterator;		//得到字符的编码值
+		if (WORD(m >> 8) > 0)		//中文
+			Total_Width += Width_ZH;
+		else                       //英文
+			Total_Width += Width_EN;
+		++iterator;
+	}
+	return Total_Width;
+}
+
 //删除多余的数据块
 void CLine::DeleteSpareBlocks(DataBlock * p)
 {
@@ -331,16 +369,19 @@ void CLine::swap(CLine & Line, bool SWAP_Next_Line_DATA)
 
 Line_iterator::Line_iterator(CLine & theLine, int index):pLine(&theLine)
 {
-	if (theLine.pLineHead != NULL)
+	if (theLine.pLineHead != NULL)					//不为空行的情况
 	{
 		pWChar = theLine.pLineHead->Strings;		//指向行首字符
 		pBlock = theLine.pLineHead;
 		nIndex = 1;
-		if(index)
+		if (index)
 			*this = *this + (index - 1);
+		else
+			nIndex = 0;		//等于0说明此行为空
 	}
 	else
 	{
+		pLine = NULL;
 		pWChar = NULL;
 		pBlock = NULL;
 		nIndex = 0;
@@ -416,9 +457,39 @@ Line_iterator & Line_iterator::operator=(const Line_iterator & m)
 
 Line_iterator::~Line_iterator()
 {
+	pLine = NULL;
 	pWChar = NULL;
 	pLine = NULL;
 	pBlock = NULL;
+}
+/*更改行迭代器当前绑定的行*/
+void Line_iterator::Set(CLine & theLine, int index)
+{
+	pLine = &theLine;
+	if (theLine.pLineHead != NULL)
+	{
+		pWChar = theLine.pLineHead->Strings;		//指向行首字符
+		pBlock = theLine.pLineHead;
+		nIndex = 1;
+		if (index)
+			*this = *this + (index - 1);
+	}
+	else
+	{
+		pWChar = NULL;
+		pBlock = NULL;
+		nIndex = 0;
+	}
+}
+//返回当前迭代器指向的字符所在位置
+int Line_iterator::CurrentPosition() const
+{
+	return nIndex;
+}
+//返回当前行指针
+CLine * Line_iterator::GetLinePointer()
+{
+	return pLine;
 }
 
 Line_iterator & Line_iterator::operator+(int n)
@@ -450,16 +521,31 @@ Line_iterator & Line_iterator::operator-(int n)
 	}
 	return *this;
 }
-
+/*
+返回迭代器所指位置的字符引用
+注意：鉴于存在空行的情况下，使用时应当保证pWChar有效
+*/
 TCHAR& Line_iterator::operator*()
 {
-	assert(pWChar != NULL);
 	return *pWChar;
+}
+/*
+主要用于*访问前判断
+返回值：
+		true		当前迭代器指向有效字符
+		false		当前迭代器未绑定或当前行为空行
+*/
+bool Line_iterator::isValid() const
+{
+	if (pWChar == NULL)
+		return false;
+	else
+		return true;
 }
 
 bool Line_iterator::operator==(const Line_iterator & m)
 {
-	return pWChar == m.pWChar&&pBlock == m.pBlock&&nIndex == m.nIndex;
+	return	pBlock == m.pBlock&&nIndex == m.nIndex;		//若指向的字符位于同一区域块的同一位置 则相等
 }
 
 bool Line_iterator::operator!=(const Line_iterator & m)
@@ -488,4 +574,37 @@ Line_iterator copy(Line_iterator start, Line_iterator first, Line_iterator last)
 	}
 	*start = *last;
 	return start;
+}
+
+bool Position::operator<(Position & position)
+{
+	if (LineNumber < position.LineNumber)
+		return true;
+	else
+		return Sequence < position.Sequence;
+}
+
+bool Position::operator<=(Position & position)
+{
+	return !(*this > position);
+}
+
+bool Position::operator>(Position & position)
+{
+	return (!(*this < position)) && (*this != position);
+}
+
+bool Position::operator>=(Position & position)
+{
+	return !(*this < position);
+}
+
+bool Position::operator==(Position & position)
+{
+	return LineNumber == position.LineNumber&&Sequence == position.Sequence;
+}
+
+bool Position::operator!=(Position & position)
+{
+	return !(*this == position);
 }
