@@ -22,7 +22,41 @@ void Record::ReDo(CText* p)
 	{
 		case RD_DELETE:
 		{
-
+			int StartLineNumber = start.LineNumber;
+			int EndLineNumber = end.LineNumber;
+			int n = StartLineNumber;								//对应当前处理行号
+			std::wstring Str;
+			CLine* pLine = pData->pFirstLineHead;
+			start = { start.LineNumber,start.Sequence - 1 };		//恢复的起始点
+			Str = pLine->TransformToWString(1, pLine->nDataSize);
+			if (StartLineNumber == EndLineNumber)					//删除的段落在同一行
+			{
+				pText->Insert(start, Str);
+				delete pData;
+				pData = NULL;
+				break;
+			}      
+			pText->EnterNewLine(start);								//删除的段落大于一行	
+			pText->Insert(start, Str);								//首段恢复
+			while (pLine->pNextLine != NULL)
+			{
+				pLine = pLine->pNextLine;
+				if (pLine->nLineNumber == EndLineNumber)
+					break;
+				n++;
+				Str = pLine->TransformToWString(1, pLine->nDataSize);
+				pText->InsertLine(n - 1);
+				CLine* p = pText->GetLinePointer(n);
+				p->CreateLine(Str);
+			}
+			if (pLine != NULL)									//处理尾行
+			{
+				Str = pLine->TransformToWString(1, pLine->nDataSize);
+				pText->Insert({ EndLineNumber ,0 }, Str);
+			}
+			delete pData;
+			pData = NULL;
+			break;
 		}
 		case RD_INSERT:
 		{

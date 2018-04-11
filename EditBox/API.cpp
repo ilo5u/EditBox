@@ -1,6 +1,5 @@
 #include "stdafx.h"
-#include <stack>
-
+#include<stack>
 Cursor* pCursor = NULL;
 wchar_t* pTChar = NULL;
 std::stack<Record*>* pRecord = NULL;
@@ -104,9 +103,8 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 			int New_Width = hText->Max_Line_Width(Width_EN);			//处理后文本最大宽度
 			//记录撤销信息
 			Record* rd = new Record(RD_RETURN);
-			rd->start = position;
+			rd->Set_Choose_Data(position, position);
 			pRecord->push(rd);
-			/*对光标的处理*/;
 			//高字节文本范围横向宽度（单位像素）低字节纵向宽度
 			return  RVALUE(Height*hText->Line_Number()) << 32 | RVALUE(New_Width);
 		}
@@ -254,11 +252,16 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 			TCHAR wch = (TCHAR)LODWORD(sParam);		//带插入字符
 			ws.push_back(wch);
 			Position position = pCursor->CursorToPosition(x, y);
-			hText->Insert(position, ws);
+			hText->Insert(position, ws);			//在Position后面插入一个字符
+			position = { position.LineNumber,position.Sequence + 1 };
 			rd->Set_Choose_Data(position, position);
 			pRecord->push(rd);
 			int New_Max_Width = hText->Max_Line_Width(Install::Width);
-			return RVALUE(New_Max_Width);
+			if (WORD(wch >> 8) > 0)
+				x += Width_ZH;
+			else
+				x += Width_EN;
+			return RVALUE(x) << 32 | RVALUE(New_Max_Width);				
 		}
 		case UM_TEXT:
 		{
@@ -320,7 +323,17 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 		}
 		case UM_CANCEL:
 		{
+			if (pRecord->empty())			//当前没有待撤销的步骤
+				return UR_ERROR;	
 			Record* p = pRecord->top();
+			//取出第一个非选中信息
+			while (p->ACT != RD_CHOOSE)
+			{
+				pRecord->pop();
+				if(pRecord->empty())		//当前撤销栈仅存了选中信息，没有待撤销的步骤
+					return UR_ERROR;
+				p = pRecord->top();
+			}
 			pRecord->pop();
 			p->ReDo(hText);
 			if (p->ACT == RD_RETURN)		//撤销换行

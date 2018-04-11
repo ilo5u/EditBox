@@ -89,10 +89,11 @@ void CLine::ClearLine()
 
 void CLine::ShowLineData()
 {
+	printf("%d ", nLineNumber);
 	if (pLineHead != NULL)
 	{
 		std::wcout.imbue(std::locale(std::locale(), "", LC_CTYPE));		//切换本地语言输出中文
-		printf("行号:%d,数据块数量:%d,字符个数:%d,内容:", nLineNumber, nBlocks, nDataSize);
+	//	printf("行号:%d,数据块数量:%d,字符个数:%d,内容:", nLineNumber, nBlocks, nDataSize);
 		DataBlock* p = pLineHead;
 		while (p != NULL)
 		{
@@ -108,9 +109,12 @@ void CLine::ShowLineData()
 	}
 }
 
+/*
+删除该行[first,last]之间的字符
+*/
 Line_iterator CLine::DeleteLine(int first, int last)
 {
-	if (bBlankLine || first > last || first > nDataSize||last==0)	//空行或无效的操作
+	if (bBlankLine || first > last || first > nDataSize || last == 0)	//空行或无效的操作
 		return Line_iterator(*this);
 	if (first == 1 && last == nDataSize)		//删除整行
 	{
@@ -177,6 +181,8 @@ eg		abcdef    insert "123"  start=3
 */
 Line_iterator CLine::InsertStrings(int start, std::wstring String)
 {
+	if (String.empty())
+		return end();
 	//在空行插入
 	if (bBlankLine)
 	{
@@ -270,7 +276,7 @@ Line_iterator CLine::begin()
 
 Line_iterator CLine::end()
 {
-	Line_iterator It = begin() + (nDataSize - 1);
+	Line_iterator It = begin() + max((nDataSize - 1),0);
 	return It;
 }
 /*
@@ -281,7 +287,7 @@ return  "bcd"
 std::wstring CLine::TransformToWString(int first, int last) 
 {
 	std::wstring WStr;
-	if (bBlankLine || first > last)
+	if (bBlankLine || first > nDataSize)
 		return WStr;
 	TCHAR wch;
 	Line_iterator it_first(*this, first);

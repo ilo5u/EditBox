@@ -65,7 +65,19 @@ BOOL WINAPI MyTextOutW(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCWS
 	}
 	TextOut(hdc, iLeft, y, lpString + e, iCount - e);
 
-	assert(!(iCount != c));
+	// assert(!(iCount != c));
 
 	return (TRUE);
+}
+
+void chDEBUGMESSAGEBOX(LPCWSTR msg)
+{
+	MessageBox(NULL, msg, TEXT("DEBUG"), MB_OKCANCEL);
+}
+
+void chDEBUGTEXTOUT(HWND hWnd, LPCWSTR lpString, int x, int y)
+{
+	HDC hdc = GetDC(hWnd);
+	TextOut(hdc, x, y, lpString, lstrlen(lpString));
+	ReleaseDC(hWnd, hdc);
 }

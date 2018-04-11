@@ -254,11 +254,11 @@ Position CText::Insert(Position start, Position first, Position last)
 }
 /*
 在start 后面 插入字符串
-返回插入的第一个字符位置
+返回插入的最后一个字符位置
 eg.
 22		abcdef    insert "123"  start={22,3}
 ------->abc123def	
-return  {22,4}
+return  {22,6}
 */
 Position CText::Insert(Position start, std::wstring String)
 {
@@ -269,16 +269,16 @@ Position CText::Insert(Position start, std::wstring String)
 	if (p->bBlankLine) 
 	{
 		p->CreateLine(String);
-		return { start.LineNumber,1 };
+		return { start.LineNumber,(int)String.size() };
 	}
 	else
 	{
 		p->InsertStrings(start.Sequence, String);
-		return { start.LineNumber,start.Sequence + 1 };
+		return { start.LineNumber,int(start.Sequence + String.size()) };
 	}
 }
 /*
-在position处的字符后按下回车键
+在position处的字符 后 按下回车键
 特殊情况 position.Sequence==0表示在本行上加一行
 eg.	1	abc|def  {1,3}
 --> 1   abc
@@ -304,7 +304,7 @@ Position CText::EnterNewLine(Position position)
 	}
 	else
 	{
-		std::wstring Str = p->TransformToWString(position.Sequence, p->nDataSize);
+		std::wstring Str = p->TransformToWString(position.Sequence + 1, p->nDataSize);
 		p->DeleteLine(position.Sequence + 1, p->nDataSize);
 		p = p->pNextLine;
 		p->CreateLine(Str);
@@ -454,7 +454,7 @@ CLine * CText::GetLinePointer(int LineNumber)
 	CLine* p = pFirstLineHead;
 	if (p == NULL)
 		return NULL;
-	while (p->nLineNumber != LineNumber)
+	while (p!= NULL && p->nLineNumber != LineNumber)
 		p = p->pNextLine;
 	return p;
 }
