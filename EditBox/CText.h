@@ -2,10 +2,11 @@
 #ifndef UNICODE
 #define UNICODE
 #endif // !UNICODE
-#include <sstream>
-#include <fstream>
-#include <queue>
-#include "CLine.h"
+#include<sstream>
+#include<fstream>
+#include"CLine.h"
+#include<queue>
+#include<Windows.h>
 //文本存储结构
 class CText
 {

@@ -451,10 +451,12 @@ void CText::InsertLine(int AfterLineNumber)
 //获取行首指针
 CLine * CText::GetLinePointer(int LineNumber)
 {
+	if (LineNumber > Line_Number())
+		throw std::invalid_argument("传输行参数过大");
 	CLine* p = pFirstLineHead;
 	if (p == NULL)
 		return NULL;
-	while (p!= NULL && p->nLineNumber != LineNumber)
+	while (p->nLineNumber != LineNumber)
 		p = p->pNextLine;
 	return p;
 }

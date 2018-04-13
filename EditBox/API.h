@@ -46,6 +46,7 @@ typedef ULONGLONG RVALUE;	// _INT64
 #define UR_ERROR	0xf0000001f0000000
 #define UR_SUCCESS	0xf0000010f0000000
 #define UR_SAVED	0xf0000100f0000000
+#define	UR_NOTCANCEL	0xf0000000f1100000
 
 #define INRANGE(x, l, r) ((x) >= (l) && (x) <= (r))
 #define TEXT_SIZE	500				//显示文本长度

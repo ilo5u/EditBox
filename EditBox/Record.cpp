@@ -73,6 +73,11 @@ void Record::ReDo(CText* p)
 			pText->DeleteLines(nextLineNumber, nextLineNumber);
 			pLine->InsertStrings(start.Sequence, Str);
 		}
+		case RD_MERGE_LINE:
+		{
+			pText->EnterNewLine(start);
+			break;
+		}
 		default:
 			break;
 	}
@@ -114,6 +119,15 @@ void Record::Save_Delete_Data(CText * pc, Position first, Position last)
 		Str = pLine->TransformToWString(1, last.Sequence);
 		p->CreateLine(Str);
 	}
+}
+
+void Record::Save_Merge_Line_Data(CText * p, int LineNumber)
+{
+	LineNumber--;
+	if (LineNumber < 1)
+		throw std::invalid_argument("行号小于1，传参错误");
+	CLine* pLine = p->GetLinePointer(LineNumber);
+	start = end = { LineNumber,pLine->nDataSize };		//保存EnterNewLine位置
 }
 
 void Record::Save_Insert_Data(Position first, Position last)

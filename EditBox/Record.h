@@ -3,16 +3,18 @@
 #include"Cursor.h"
 #include<Windows.h>
 //记录操作信息
-#define RD_DELETE 0x00000001
-#define RD_INSERT 0x00000010
-#define RD_RETURN 0x00000100
-#define RD_CHOOSE 0x00001000
+#define RD_DELETE		0x00000001
+#define RD_INSERT		0x00000010
+#define RD_RETURN		0x00000100
+#define RD_CHOOSE		0x00001000
+#define RD_MERGE_LINE	0x00010000
 struct Record
 {
 	Record(UINT flag);
 	~Record();
 	void ReDo(CText* p);				//撤销
 	void Save_Delete_Data(CText* pc,Position first,Position last);	//删除前保留删除信息
+	void Save_Merge_Line_Data(CText* p, int LineNumber);			//记录合并行信息
 	void Save_Insert_Data(Position first,Position last);			//保存插入信息
 	void Set_Choose_Data(Position first, Position last);			//设置选中信息
 	void Clear_Choose_Data();
@@ -62,4 +64,18 @@ RD_DELETE
 start 记录了删除的起点
 end   记录了删除的终点
 pData 记录了删除的内容
+*/
+
+/*
+RD_MERGE_LINE		
+对合并行的撤销
+合并行：  
+1    ABCDE
+2	 |123456
+按下backspace
+1	 ABCDE123456
+
+start 记录按下回车的位置（此例中为{1,5}）
+Save_Merge_Line_Data(CText* p,int LineNumber);
+合并前第二行行号
 */

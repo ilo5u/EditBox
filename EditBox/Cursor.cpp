@@ -1,5 +1,4 @@
 #include "stdafx.h"
-
 int Install::Width = 10;
 int Install::Height = 10;
 Cursor::Cursor(CText * p, int width, int height)
@@ -147,7 +146,7 @@ int Cursor::CharactersProperty_before_Cursor(int LineNumber, int x)
 int Cursor::CursorLocation(int LineNumber, int x)
 {
 	CLine* pLine = pText->GetLinePointer(LineNumber);
-	int Length = pText->Line_Width(LineNumber, nWidth);
+	int Length =pText-> Line_Width(LineNumber, nWidth);
 	if (x > Length)
 		return Length;
 	else
@@ -160,7 +159,7 @@ int Cursor::CursorLocation(int LineNumber, int x)
 				x--;
 		}
 	}
-
+	
 }
 /*
 返回光标前字符的位置
@@ -174,6 +173,16 @@ Position Cursor::CursorToPosition(int x, int y)
 	if (!isLegalCursor(LineNumber, x))
 		throw std::invalid_argument("invalid (x,y)");
 	int n = Characters_before_Cursor(LineNumber, x);
+	/*
+	if (n == 0)		//光标位于行首
+	{		
+		if (LineNumber == 1)
+			throw std::invalid_argument("光标位于文本头，之前无字符");
+		//对位于行首的情况，认为光标前字符位置为上一行行末尾字符位置
+		LineNumber--;
+		CLine* pLine = pText->GetLinePointer(LineNumber);
+		n = pLine->nDataSize;
+	}*/
 	return { LineNumber,n };
 }
 /*
@@ -197,7 +206,8 @@ Position Cursor::CursorToPosition_After(int x, int y)
 			//光标位于文本末尾
 			throw std::invalid_argument("光标位于文本末尾 后面没有字符");
 		}
-		return { LineNumber + 1,0 };
+		//return {LineNumber+1,0}
+		return { LineNumber + 1,1 };
 	}
 	else
 		return { LineNumber,p1.Sequence + 1 };

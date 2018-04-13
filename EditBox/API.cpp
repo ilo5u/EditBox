@@ -119,7 +119,7 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 			//删除start光标后的字符到end光标前的所有字符
 			try 
 			{
-				start_position = pCursor->CursorToPosition_After(x, y);
+				start_position = pCursor->CursorToPosition_After(x, y);		//获得删除的起点
 				
 			}
 			catch (std::invalid_argument &e)
@@ -132,6 +132,7 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 				return RVALUE(New_Height_Y) << 32 | RVALUE(New_Width_X);
 			}
 			end_position = pCursor->CursorToPosition(end_x, end_y);
+
 			//位置相同表示退格键
 			if (end_position == start_position)
 			{
@@ -140,13 +141,22 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 				hText->BackSpace(start_position);
 			}
 			//坐标相等表示向后删除
-			if (end_x == x && end_y == y)
+			else if (end_x == x && end_y == y)
 			{
 				try
 				{
 					end_position = pCursor->CursorToPosition_After(end_x, end_y);
+					if (end_position.LineNumber != LineNumber)			//有换行的情况  即  光标位于行尾
+					{
+						end_position.Sequence--;
+						rd->ACT = RD_MERGE_LINE;
+						rd->Save_Merge_Line_Data(hText, end_position.LineNumber);
+					}
+					else
+					{
+						rd->Save_Delete_Data(hText, end_position, end_position);
+					}
 					hText->BackSpace(end_position);
-					rd->Save_Delete_Data(hText, end_position, end_position);
 					pRecord->push(rd);
 				}
 				catch (std::invalid_argument& e)
@@ -157,9 +167,9 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 			}
 			else
 			{
-				hText->Delete(start_position, end_position);
 				rd->Save_Delete_Data(hText, start_position, end_position);
 				pRecord->push(rd);
+				hText->Delete(start_position, end_position);
 			}
 			//新文本长宽
 			int New_Width_X = hText->Max_Line_Width(Width_EN);
@@ -279,8 +289,6 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 			CLine* pLine = hText->GetLinePointer(LineNumber);
 			Position position_start;		//字符显示起点
 			Position position_end;			//字符显示终点
-			end_x = pCursor->CursorLocation(LineNumber, end_x);
-			position_end = pCursor->CursorToPosition(end_x, y);
 			try
 			{
 				position_start = pCursor->CursorToPosition_After(x, y);		//获得光标后字符
@@ -296,6 +304,8 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 				iCount = (end_x - pLine->Line_Width(Install::Width)) / Install::Width;
 				return RVALUE(TEXT_SIZE) << 32;
 			}
+			end_x = pCursor->CursorLocation(LineNumber, end_x);
+			position_end = pCursor->CursorToPosition(end_x, y);
 			std::wstring WStr = pLine->TransformToWString(position_start.Sequence, position_end.Sequence);
 			WStringToWch(WStr,pTChar);
 			iCount = WStr.size() + (end_x - hText->Line_Width(LineNumber, Install::Width)) / Install::Width;
@@ -324,14 +334,14 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 		case UM_CANCEL:
 		{
 			if (pRecord->empty())			//当前没有待撤销的步骤
-				return UR_ERROR;	
+				return UR_NOTCANCEL;	
 			Record* p = pRecord->top();
 			//取出第一个非选中信息
 			while (p->ACT != RD_CHOOSE)
 			{
 				pRecord->pop();
 				if(pRecord->empty())		//当前撤销栈仅存了选中信息，没有待撤销的步骤
-					return UR_ERROR;
+					return UR_NOTCANCEL;
 				p = pRecord->top();
 			}
 			pRecord->pop();
