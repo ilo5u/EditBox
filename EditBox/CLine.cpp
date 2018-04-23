@@ -1,5 +1,4 @@
-#include "stdafx.h"
-
+#include"stdafx.h"
 CLine::CLine(int LNum, CLine * pNext)
 {
 	nLineNumber = LNum;
@@ -9,21 +8,12 @@ CLine::CLine(int LNum, CLine * pNext)
 	nBlocks = nDataSize = 0;
 }
 
-CLine::CLine(CLine & L)
+CLine::CLine(CLine & L) :pLineHead(NULL), pNextLine(L.pNextLine), nLineNumber(L.nLineNumber)
 {
-	CLine* pLine = new CLine(L.nLineNumber);
 	std::wstring String = L.TransformToWString(1, L.size());
-	pLine->CreateLine(String);
-	swap(*pLine,true);
-	pLine->pLineHead = NULL;
-	delete pLine;
+	CreateLine(String);
 }
 
-CLine::CLine(CLine && L)
-{
-	swap(L, true);
-	L.pLineHead = NULL;
-}
 
 CLine::~CLine()
 {
@@ -34,9 +24,12 @@ CLine::~CLine()
 //创建当前行(一般用于初始化之后)
 void CLine::CreateLine(std::wstring & String)
 {
-	if (String.empty() || String[0] == L'\n')		//回车 直接换行 此行为空
+	if (String.empty())			//回车 直接换行 此行为空
 	{
 		bBlankLine = true;
+		nDataSize = 0;
+		pLineHead = NULL;
+		nBlocks = 0;
 		return;
 	}
 	//非空行
@@ -50,7 +43,7 @@ void CLine::CreateLine(std::wstring & String)
 		nBlocks = nBlocks + 1;
 	pLineHead = new DataBlock;
 	DataBlock* p = pLineHead;
-		//依次创建nBlocks个块
+	//依次创建nBlocks个块
 	std::wstring::iterator Iterator = String.begin();
 	for (int i = 1; i <= nBlocks; i++)
 	{
@@ -93,7 +86,7 @@ void CLine::ShowLineData()
 	if (pLineHead != NULL)
 	{
 		std::wcout.imbue(std::locale(std::locale(), "", LC_CTYPE));		//切换本地语言输出中文
-	//	printf("行号:%d,数据块数量:%d,字符个数:%d,内容:", nLineNumber, nBlocks, nDataSize);
+																		//	printf("行号:%d,数据块数量:%d,字符个数:%d,内容:", nLineNumber, nBlocks, nDataSize);
 		DataBlock* p = pLineHead;
 		while (p != NULL)
 		{
@@ -142,7 +135,7 @@ Line_iterator CLine::DeleteLine(int first, int last)
 		nDataSize -= (last - first + 1);
 		return it_first;
 	}
-	else 
+	else
 	{
 		it_first = copy(it_first, it_last + 1, it_end);
 		DeleteLine((it_first + 1).nIndex, nDataSize);
@@ -173,16 +166,33 @@ bool CLine::BackSpace(Position position)
 在start后面插入字符串 ：
 eg		abcdef    insert "123"  start=3
 ------->abc123def
-			start==0			在行首添加字符串
-			start==nDataSize	在行末添加字符
-			start==x			在x位置后面插入字符串
-			返回插入的第一位字符位置
-		return Line_iterator(4)
+start==0			在行首添加字符串
+start==nDataSize	在行末添加字符
+start==x			在x位置后面插入字符串
+返回插入的第一位字符位置
+return Line_iterator(4)
 */
 Line_iterator CLine::InsertStrings(int start, std::wstring String)
 {
-	if (String.empty())
+	if (String.empty())			//若传入字符串为空，认为是插入换行符
+	{
+		if (start == 0)			//换行
+		{
+			CLine* p = new CLine(*this);		//创建副本
+			ClearLine();
+			pNextLine = p;
+		}
+		else
+		{
+			String = TransformToWString(start + 1, nDataSize);
+			DeleteLine(start + 1, nDataSize);
+			CLine* p = new CLine(nLineNumber + 1, pNextLine);
+			p->CreateLine(String);
+			pNextLine = p;
+		}
+		UpDataLineNumber();
 		return end();
+	}
 	//在空行插入
 	if (bBlankLine)
 	{
@@ -190,7 +200,7 @@ Line_iterator CLine::InsertStrings(int start, std::wstring String)
 		bBlankLine = false;
 		return begin();
 	}
-	Line_iterator it_start(*this,start);
+	Line_iterator it_start(*this, start);
 	Line_iterator it_end = this->end();
 	int Size_to_add = String.size();
 	if (start == nDataSize)		//直接在行尾增加字符
@@ -231,7 +241,7 @@ Line_iterator CLine::InsertStrings(int start, std::wstring String)
 	}
 	else if (start == 0)	//在行首插入
 	{
-		Line_iterator it_start=begin();
+		Line_iterator it_start = begin();
 		CLine* pnewLine = new CLine(nLineNumber);
 		pnewLine->CreateLine(String);
 		//衔接
@@ -256,7 +266,7 @@ Line_iterator CLine::InsertStrings(int start, std::wstring String)
 	else     //在之间插入
 	{
 		std::wstring backstr = TransformToWString(it_start.nIndex + 1, nDataSize);		//保存start后面的字符串
-		//删除这部分
+																						//删除这部分
 		nDataSize -= backstr.size();
 		DeleteSpareBlocks(it_start.pBlock->pNextBlock);
 		it_start.pBlock->pNextBlock = NULL;
@@ -276,7 +286,7 @@ Line_iterator CLine::begin()
 
 Line_iterator CLine::end()
 {
-	Line_iterator It = begin() + max((nDataSize - 1),0);
+	Line_iterator It = begin() + max((nDataSize - 1), 0);
 	return It;
 }
 /*
@@ -284,7 +294,7 @@ Line_iterator CLine::end()
 eg.		abcdef  [2,4]
 return  "bcd"
 */
-std::wstring CLine::TransformToWString(int first, int last) 
+std::wstring CLine::TransformToWString(int first, int last)
 {
 	std::wstring WStr;
 	if (bBlankLine || first > nDataSize)
@@ -307,13 +317,18 @@ size_t CLine::size() const
 	return nDataSize;
 }
 
-CLine & CLine::operator=(CLine Line)
+CLine & CLine::operator=(CLine& Line)
 {
 	if (pLineHead != NULL)
 		ClearLine();
-	swap(Line,true);
+	std::wstring String = Line.TransformToWString(1, Line.size());
+	CreateLine(String);
+	pNextLine = Line.pNextLine;
+	nLineNumber = Line.nLineNumber;
 	return *this;
 }
+
+
 
 void CLine::SetLineNumber(int Number)
 {
@@ -357,23 +372,24 @@ void CLine::DeleteSpareBlocks(DataBlock * p)
 	}
 }
 
-void CLine::swap(CLine & Line, bool SWAP_Next_Line_DATA)
+//更新行号
+void CLine::UpDataLineNumber()
 {
-	using std::swap;
-	swap(pLineHead, Line.pLineHead);
-	swap(nBlocks, Line.nBlocks);
-	swap(nDataSize, Line.nDataSize);
-	swap(bBlankLine, Line.bBlankLine);
-	//有必要的话交换下一行的对象
-	if (SWAP_Next_Line_DATA)
+	CLine* pLine = pNextLine;
+	int n = nLineNumber + 1;
+	while (pLine != NULL)
 	{
-		swap(pNextLine, Line.pNextLine);
-		swap(nLineNumber, Line.nLineNumber);
+		pLine->nLineNumber = n;
+		n++;
+		pLine
+			= pLine->pNextLine;
 	}
-		
 }
 
-Line_iterator::Line_iterator(CLine & theLine, int index):pLine(&theLine)
+
+
+
+Line_iterator::Line_iterator(CLine & theLine, int index) :pLine(&theLine)
 {
 	if (theLine.pLineHead != NULL)					//不为空行的情况
 	{
@@ -410,7 +426,7 @@ Line_iterator & Line_iterator::operator++()
 		pBlock = pBlock->pNextBlock;
 		pWChar = pBlock->Strings;
 	}
-	else 
+	else
 	{
 		pWChar++;
 	}
@@ -501,7 +517,7 @@ CLine * Line_iterator::GetLinePointer()
 Line_iterator & Line_iterator::operator+(int n)
 {
 	int BeginIndex = nIndex % BLOCK_SIZE - 1;		//当前所在块中下标
-	int Blocks_to_add = n / BLOCK_SIZE;				
+	int Blocks_to_add = n / BLOCK_SIZE;
 	int Remainder = n % BLOCK_SIZE;					//相对偏移量
 	nIndex += Blocks_to_add * BLOCK_SIZE;
 	while (Blocks_to_add)
@@ -538,8 +554,8 @@ TCHAR& Line_iterator::operator*()
 /*
 主要用于*访问前判断
 返回值：
-		true		当前迭代器指向有效字符
-		false		当前迭代器未绑定或当前行为空行
+true		当前迭代器指向有效字符
+false		当前迭代器未绑定或当前行为空行
 */
 bool Line_iterator::isValid() const
 {

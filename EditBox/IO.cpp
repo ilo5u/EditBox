@@ -1,4 +1,56 @@
 #include "stdafx.h"
+#include "editbox.h"
+#include <process.h>
+#include <mutex>
+
+static unsigned __stdcall RunTimer(LPVOID lpVoid)
+{
+	HTIMER hTimer = (HTIMER)lpVoid;
+
+	WaitForSingleObject(hTimer->time_mutex, INFINITE);
+	Sleep(hTimer->time_rest);
+	ReleaseMutex(hTimer->time_mutex);
+
+	_endthreadex(0);
+	return (0);
+}
+
+BOOL IsTimerStopped(HTIMER hTimer)
+{
+	if (WaitForSingleObject(hTimer->time_mutex, 50) == WAIT_TIMEOUT)
+		return (FALSE);
+
+	ReleaseMutex(hTimer->time_mutex);
+	return (TRUE);
+}
+
+_TIMER::_TIMER(const DWORD& tr) :
+	time_rest(tr)
+{
+	time_mutex = CreateMutex(NULL, FALSE, TEXT("TIME MUTEX"));
+	time_thread_id = (HANDLE)_beginthreadex(NULL, 0, RunTimer, (LPVOID)this, 0, NULL);
+}
+
+_TIMER::~_TIMER()
+{
+	WaitForSingleObject(time_thread_id, INFINITE);
+	CloseHandle(time_thread_id);
+
+	WaitForSingleObject(time_mutex, INFINITE);
+	CloseHandle(time_mutex);
+}
+
+HTIMER _stdcall CreateTimer(DWORD time_length)
+{
+	HTIMER new_timer = new TIMER{time_length};
+	return new_timer;
+}
+
+BOOL _stdcall KillTimer(HTIMER timer)
+{
+	delete timer;
+	return (TRUE);
+}
 
 BOOL WINAPI MyTextOutW(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCWSTR lpString, _In_ int c, _In_ short s, _In_ short e, _In_ int width)
 {
@@ -80,4 +132,19 @@ void chDEBUGTEXTOUT(HWND hWnd, LPCWSTR lpString, int x, int y)
 	HDC hdc = GetDC(hWnd);
 	TextOut(hdc, x, y, lpString, lstrlen(lpString));
 	ReleaseDC(hWnd, hdc);
+}
+
+void chDEBUGMESSAGEBOX(LPCWSTR lpszFmt, ...)
+{
+	TCHAR out[1000] = { 0 };
+	va_list arg_ptr;
+	va_start(arg_ptr, lpszFmt);
+	_vsnwprintf_s(out, _countof(out), lpszFmt, arg_ptr);
+	MessageBox(NULL, out, TEXT("DEBUG"), MB_OKCANCEL);
+}
+
+BOOL WINAPI MyDrawTextW(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCWSTR lpchText, _In_ LPRECT lpRect, _In_ int c, _In_ short s, _In_ short e, _In_ int width)
+{
+	
+	return (TRUE);
 }

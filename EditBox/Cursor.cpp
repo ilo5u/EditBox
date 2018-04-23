@@ -6,6 +6,7 @@ Cursor::Cursor(CText * p, int width, int height)
 	pText = p;
 	nWidth = width;
 	nHeight = height;
+	bChoose = 0;
 }
 
 void Cursor::SethText(CText * p)
@@ -97,7 +98,7 @@ bool Cursor::isTextTail(int x, int y)
 int Cursor::Characters_before_Cursor(int LineNumber, int x)
 {
 	if (!isLegalCursor(LineNumber, x))						//检查光标合法性
-		throw std::invalid_argument("invalid Cursor 'x'");
+		x = CursorLocation(LineNumber, x);
 	CLine* p = pText->GetLinePointer(LineNumber);
 	int Width = 0;
 	int n = 0;
@@ -142,11 +143,12 @@ int Cursor::CharactersProperty_before_Cursor(int LineNumber, int x)
 /*
 鼠标点击时对光标重定位
 使之返回一个合法的光标位置
+向后定位
 */
 int Cursor::CursorLocation(int LineNumber, int x)
 {
 	CLine* pLine = pText->GetLinePointer(LineNumber);
-	int Length =pText-> Line_Width(LineNumber, nWidth);
+	int Length = pText->Line_Width(LineNumber, nWidth);
 	if (x > Length)
 		return Length;
 	else
@@ -156,10 +158,10 @@ int Cursor::CursorLocation(int LineNumber, int x)
 			if (isLegalCursor(LineNumber, x))
 				return x;
 			else
-				x--;
+				x++;
 		}
 	}
-	
+
 }
 /*
 返回光标前字符的位置
@@ -171,26 +173,17 @@ Position Cursor::CursorToPosition(int x, int y)
 	int LineNumber = y / nHeight + 1;
 	//光标合法性检测
 	if (!isLegalCursor(LineNumber, x))
-		throw std::invalid_argument("invalid (x,y)");
+		x = CursorLocation(LineNumber, x);
 	int n = Characters_before_Cursor(LineNumber, x);
-	/*
-	if (n == 0)		//光标位于行首
-	{		
-		if (LineNumber == 1)
-			throw std::invalid_argument("光标位于文本头，之前无字符");
-		//对位于行首的情况，认为光标前字符位置为上一行行末尾字符位置
-		LineNumber--;
-		CLine* pLine = pText->GetLinePointer(LineNumber);
-		n = pLine->nDataSize;
-	}*/
+
 	return { LineNumber,n };
 }
 /*
 返回光标后的字符位置
 eg. 3 abcde|fd
 return (3,6)
-	3 abcdefd|
-	4 1234
+3 abcdefd|
+4 1234
 return (4,0)  若光标位于行尾 则返回下一行起始位置
 */
 Position Cursor::CursorToPosition_After(int x, int y)
@@ -206,8 +199,7 @@ Position Cursor::CursorToPosition_After(int x, int y)
 			//光标位于文本末尾
 			throw std::invalid_argument("光标位于文本末尾 后面没有字符");
 		}
-		//return {LineNumber+1,0}
-		return { LineNumber + 1,1 };
+		return { LineNumber + 1,0 };		//下一行行首
 	}
 	else
 		return { LineNumber,p1.Sequence + 1 };
@@ -235,28 +227,27 @@ POINT Cursor::PositionToCursor(Position position)
 	point.y = y;
 	return point;
 }
-/*复制选段内容并在合适位置添加换行符*/
-std::wstring Cursor::Copy(Position start, Position end)
+
+void Cursor::Choose(Position s, Position e)
 {
-	std::wstring wstr;
-	Text_iterator first(*pText, start.LineNumber, start.Sequence);
-	Text_iterator last(*pText, end.LineNumber, end.Sequence);
-	Text_iterator last_next = last + 1;
-	int currentLineNumber = start.LineNumber;
-	while (first != last_next)
-	{
-		if (currentLineNumber != first.CurrentLineNumber())		//需要换行
-		{
-			wstr.push_back(L'\n');
-			currentLineNumber++;
-		}
-		TCHAR wch = *first;
-		if (wch == L'\n')
-			currentLineNumber++;
-		wstr.push_back(wch);
-		++first;
-	}
-	return wstr;
+	start = s;
+	end = e;
+	bChoose = 1;
+}
+
+void Cursor::SetChoose()
+{
+	bChoose = 0;
+}
+
+void Cursor::ResetChoose()
+{
+	bChoose = 0;
+}
+
+bool Cursor::isChoose()
+{
+	return bChoose;
 }
 
 void Install::SetWidth(int width)

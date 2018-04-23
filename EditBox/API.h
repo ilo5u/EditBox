@@ -3,6 +3,9 @@
 #include"Cursor.h"
 #include<Windows.h>
 #include"Record.h"
+#pragma once
+
+
 typedef CText* HTEXT;
 HTEXT	_stdcall	CreateText(int iCharWidth, int iCharHeight);
 BOOL	_stdcall	DestroyText(HTEXT &hText);
@@ -41,21 +44,19 @@ typedef ULONGLONG RVALUE;	// _INT64
 #define UM_CANCEL	0x00000018
 #define UM_FIND		0x00000021
 
-#define UR_NOPATH	0xf0000000f0100000
-#define UR_NOTSAVED	0xf0000000f1000000
-#define UR_ERROR	0xf0000001f0000000
-#define UR_SUCCESS	0xf0000010f0000000
-#define UR_SAVED	0xf0000100f0000000
-#define	UR_NOTCANCEL	0xf0000000f1100000
+#define UR_NOPATH		0xf0000000f0100000
+#define UR_NOTSAVED		0xf0000000f1000000
+#define UR_NOTCANCEL	0xf0000000f1100000
+#define UR_ERROR		0xf0000001f0000000
+#define UR_SUCCESS		0xf0000010f0000000
+#define UR_SAVED		0xf0000100f0000000
 
 #define INRANGE(x, l, r) ((x) >= (l) && (x) <= (r))
-#define TEXT_SIZE	500				//显示文本长度
+#define TEXT_SIZE	300				//显示文本长度
 
 RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM fParam, SPARAM sParam);
 
-Cursor*  Initialize_Cursor(CText* p,int Width,int Height);
-void Free_Cursor(Cursor*& p);
-
-void chDEBUGMESSAGEBOX(LPCWSTR);
-
-void chDEBUGTEXTOUT(HWND, LPCWSTR, int, int);
+Cursor*  Initialize_Cursor(CText* p, int Width, int Height);
+void Alloc_Buffer(wchar_t* &p, size_t &Old_Size, size_t New_Size);
+void Free_Buffer(wchar_t* &p);
+void Set_Height_Light(int LineNumber, Position ps, Position pe, short int& start, short int& end);
