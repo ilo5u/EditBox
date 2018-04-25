@@ -3,15 +3,13 @@
 #include <process.h>
 #include <mutex>
 
-static unsigned __stdcall RunTimer(LPVOID lpVoid)
+static DWORD __stdcall RunTimer(LPVOID lpVoid)
 {
 	HTIMER hTimer = (HTIMER)lpVoid;
 
 	WaitForSingleObject(hTimer->time_mutex, INFINITE);
 	Sleep(hTimer->time_rest);
 	ReleaseMutex(hTimer->time_mutex);
-
-	_endthreadex(0);
 	return (0);
 }
 
@@ -28,7 +26,7 @@ _TIMER::_TIMER(const DWORD& tr) :
 	time_rest(tr)
 {
 	time_mutex = CreateMutex(NULL, FALSE, TEXT("TIME MUTEX"));
-	time_thread_id = (HANDLE)_beginthreadex(NULL, 0, RunTimer, (LPVOID)this, 0, NULL);
+	time_thread_id = CreateThread(NULL, 0, RunTimer, (LPVOID)this, 0, NULL);
 }
 
 _TIMER::~_TIMER()
@@ -79,7 +77,7 @@ BOOL WINAPI MyTextOutW(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCWS
 
 	// À¶µ×°××Ö
 	SetTextColor(hdc, RGB(0xFF, 0xFF, 0xFF));
-	SetBkColor(hdc, RGB(0x18, 0x74, 0xCD));
+	SetBkColor(hdc, RGB(0x1C, 0x86, 0xEE));
 	// ...
 
 	iLeft = iRight;
@@ -122,7 +120,7 @@ BOOL WINAPI MyTextOutW(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCWS
 	return (TRUE);
 }
 
-void chDEBUGMESSAGEBOX(LPCWSTR msg)
+void chDEBUGPRINTBOX(LPCWSTR msg)
 {
 	MessageBox(NULL, msg, TEXT("DEBUG"), MB_OKCANCEL);
 }

@@ -94,6 +94,14 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <HeapReserveSize>
+      </HeapReserveSize>
+      <HeapCommitSize>
+      </HeapCommitSize>
+      <StackReserveSize>
+      </StackReserveSize>
+      <StackCommitSize>
+      </StackCommitSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -149,6 +157,7 @@
   <ItemGroup>
     <ClInclude Include="API.h" />
     <ClInclude Include="CLine.h" />
+    <ClInclude Include="CreateDump.h" />
     <ClInclude Include="CText.h" />
     <ClInclude Include="editbox.h" />
     <ClInclude Include="resource.h" />
@@ -159,6 +168,7 @@
   <ItemGroup>
     <ClCompile Include="API.cpp" />
     <ClCompile Include="CLine.cpp" />
+    <ClCompile Include="CreateDump.cpp" />
     <ClCompile Include="CText.cpp" />
     <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="EditBox.cpp" />

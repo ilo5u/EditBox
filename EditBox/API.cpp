@@ -1,11 +1,11 @@
 #include "stdafx.h"
 #include<stack>
+#include "editbox.h"
 
 
 Cursor* pCursor = NULL;
 wchar_t* pTChar = NULL;
 wchar_t* pDataBuffer = NULL;
-size_t BufferSize = 0;
 size_t MaxBufferSize = 0;
 std::stack<Record*>* pRecord = NULL;
 RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM fParam, SPARAM sParam)
@@ -61,17 +61,17 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 		int opt = pCursor->CharactersProperty_before_Cursor(LineNumber, x);
 		switch (opt)
 		{
-		case 1:x -= Width_ZH; break;
-		case -1:x -= Width_EN; break;
-		default:
-		{
-			if (LineNumber != 1)
+			case 1:x -= Width_ZH; break;
+			case -1:x -= Width_EN; break;
+			default:
 			{
-				x = hText->Line_Width(LineNumber - 1, Width_EN);
-				y -= Height;
+				if (LineNumber != 1)
+				{
+					x = hText->Line_Width(LineNumber - 1, Width_EN);
+					y -= Height;
+				}
+				break;
 			}
-			break;
-		}
 		}
 		pCursor->ResetChoose();
 		return RVALUE(y) << 32 | RVALUE(x);
@@ -270,26 +270,15 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 	}
 	case UM_COPY:
 	{
-		int end_x = LODWORD(fParam);
-		int end_y = HIDWORD(fParam);
-		Position copy_start = pCursor->CursorToPosition_After(x, y);
-		Position copy_end = pCursor->CursorToPosition(end_x, end_y);
-		int Size = 0;
-		if (copy_start == copy_end)
-		{
-			return RVALUE(0);
-		}
-		else
-		{
-			pCursor->Choose(copy_start, copy_end);
-
-			std::wstring wstr_copy = hText->Copy(copy_start, copy_end);
-
-			Alloc_Buffer(pDataBuffer, MaxBufferSize, wstr_copy.size());
-			WStringToWch(wstr_copy, pDataBuffer);
-			*((LPWSTR*)sParam) = pDataBuffer;
-			return RVALUE(wstr_copy.size());
-		}
+		if (!pCursor->isChoose())
+			throw std::invalid_argument("没有选中信息 拷贝失败");
+		Position copy_start = pCursor->start;
+		Position copy_end = pCursor->end;
+		std::wstring wstr_copy = hText->Copy(copy_start, copy_end);
+		Alloc_Buffer(pTChar, MaxBufferSize, wstr_copy.size());
+		WStringToWch(wstr_copy, pTChar);
+		*((LPWSTR*)sParam) = pTChar;
+		return RVALUE(wstr_copy.size());
 	}
 	case UM_CHAR:
 	{
@@ -297,18 +286,33 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 		Record* rd = new Record(RD_INSERT);
 		std::wstring ws;
 		TCHAR wch = (TCHAR)LODWORD(sParam);			//待插入字符
-		ws.push_back(wch);
 		Position position = pCursor->CursorToPosition(x, y);
+		if (wch == L'\t')							//处理Tab
+		{
+			int PreWidth = hText->Line_Width(position.LineNumber, Width_EN, position.Sequence);		
+			int n = TAB_SIZE - (PreWidth / Width_EN) % TAB_SIZE;			//n表示需要插入空格的数量
+			x += Width_EN * n;
+			for (int i = 0; i < n; i++)
+				ws.push_back(L' ');
+			Position temp = { position.LineNumber,position.Sequence + 1 };
+			position = hText->Insert(position, ws);
+			rd->Set_Choose_Data(temp, position);
+		}
+		else
+		{
+			ws.push_back(wch);
 
-		position = hText->Insert(position, ws);				//在Position后面插入一个字符  position记录插入后的字符位置
+			position = hText->Insert(position, ws);				//在Position后面插入一个字符  position记录插入后的字符位置
 
-		rd->Set_Choose_Data(position, position);
+			rd->Set_Choose_Data(position, position);
+			if (WORD(wch >> 8) > 0)
+				x += Width_ZH;
+			else
+				x += Width_EN;
+		}
+
 		pRecord->push(rd);
 		int New_Max_Width = hText->Max_Line_Width(Install::Width);
-		if (WORD(wch >> 8) > 0)
-			x += Width_ZH;
-		else
-			x += Width_EN;
 		return RVALUE(x) << 32 | RVALUE(New_Max_Width);
 	}
 	case UM_TEXT:
@@ -361,10 +365,12 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 	case UM_CHOOSE:
 	{
 		Position start, end;
-		x = pCursor->CursorLocation(LineNumber, x);
 		int end_x = LODWORD(fParam);
 		int end_y = HIDWORD(fParam);
 		end_y -= end_y % Height;
+		end_x = pCursor->CursorLocation(end_y / Height + 1, end_x);
+		x = pCursor->CursorLocation(LineNumber, x);
+		POINT p = { x,y };
 		if (y > end_y)
 		{
 			std::swap(x, end_x);
@@ -372,12 +378,20 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 		}
 		else if (y == end_y && x > end_x)
 			std::swap(x, end_x);
-		end.LineNumber = end_y / Height + 1;
-		end_x = pCursor->CursorLocation(end.LineNumber, end_x);
+		
+	
 		end = pCursor->CursorToPosition(end_x, end_y);
-		start = pCursor->CursorToPosition_After(x, y);
-		pCursor->Choose(start, end);
-		return RVALUE(end_y) << 32 | RVALUE(end_x);
+		try
+		{
+			start = pCursor->CursorToPosition_After(x, y);
+			pCursor->Choose(start, end);					//记录选中信息 （start 在前 end 在后）
+		}
+		catch (std::invalid_argument& e)
+		{
+			pCursor->ResetChoose();
+		}				
+		
+		return RVALUE(p.y) << 32 | RVALUE(p.x);
 	}
 	case UM_CANCEL:
 	{
@@ -477,13 +491,27 @@ Cursor * Initialize_Cursor(CText * p, int Width, int Height)
 //为数据存储申请缓冲区 存在周期为整个程序
 void Alloc_Buffer(wchar_t *& p, size_t & Old_Size, size_t New_Size)
 {
-	if (New_Size > Old_Size)
+	if (p == NULL)
 	{
-		if (p != NULL)
-			delete[]p;
 		p = new wchar_t[New_Size];
 		Old_Size = New_Size;
-		BufferSize = New_Size;
+		return;
+	}
+	if (New_Size > Old_Size)				//缓冲区需要扩容
+	{
+		delete[]p;
+		p = new wchar_t[New_Size];
+		Old_Size = New_Size;
+	}
+	else
+	{
+		if (Old_Size > 1000)				//缓冲区太大 减小缓冲区长度
+		{
+			delete[]p;
+			int n = max(New_Size, Old_Size / 3);
+			p = new wchar_t[n];
+			Old_Size = n;
+		}
 	}
 }
 

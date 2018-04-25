@@ -53,7 +53,7 @@ typedef ULONGLONG RVALUE;	// _INT64
 
 #define INRANGE(x, l, r) ((x) >= (l) && (x) <= (r))
 #define TEXT_SIZE	300				//显示文本长度
-
+#define TAB_SIZE	4				//Tab字符为4空格
 RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM fParam, SPARAM sParam);
 
 Cursor*  Initialize_Cursor(CText* p, int Width, int Height);

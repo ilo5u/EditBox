@@ -36,7 +36,7 @@ BOOL WINAPI MyDrawTextW(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCW
 #define MyDrawText MyDrawTextA
 #endif // UNICODE
 
-void chDEBUGMESSAGEBOX(LPCWSTR msg);
+void chDEBUGPRINTBOX(LPCWSTR msg);
 
 void chDEBUGMESSAGEBOX(LPCWSTR lpszFmt, ...);
 

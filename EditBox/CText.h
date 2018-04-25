@@ -35,7 +35,7 @@ public:
 																				//交互函数
 public:
 	int Line_Size(int LineNumber);												//返回某行字符数量
-	int Line_Width(int LineNumber, int Width);									//返回当前行所占位宽
+	int Line_Width(int LineNumber, int Width, int end = 0);						//返回当前行所占位宽
 	int Max_Line_Width(int Width);												//文本最大行宽
 	int Line_Number()const;														//返回行数
 	CLine* GetLinePointer(int LineNumber);										//获取行指针

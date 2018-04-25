@@ -50,7 +50,7 @@ public:
 	CLine& operator=(CLine& Line);									//赋值
 	void SetLineNumber(int Number);									//设置/更改行号
 	bool isBlankLine()const;										//返回当前行是否为空
-	int  Line_Width(int Width);										//返回当前行行宽
+	int  Line_Width(int Width, int end = 0);						//返回当前行行宽
 private:
 	CLine * pNextLine;											//下一行
 	DataBlock*	pLineHead;											//行首

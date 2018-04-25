@@ -339,16 +339,18 @@ bool CLine::isBlankLine() const
 {
 	return bBlankLine;
 }
-//返回当前行行宽（像素）
-int CLine::Line_Width(int Width)
+//返回当前行行宽[1-nDatasize/end]（像素） 第三个参数可选 
+//end == 0 返回行宽 end != 0 返回[1-end]的宽度
+int CLine::Line_Width(int Width,int end)
 {
 	if (bBlankLine)
 		return 0;
+	int n = end == 0 ? nDataSize : min(end, nDataSize);
 	int Width_EN = Width;
 	int Width_ZH = Width * 2;
 	int	Total_Width = 0;
 	Line_iterator iterator(*this);
-	for (int i = 1; i <= nDataSize; i++)
+	for (int i = 1; i <= n; i++)
 	{
 		short int m = *iterator;		//得到字符的编码值
 		if (WORD(m >> 8) > 0)		//中文

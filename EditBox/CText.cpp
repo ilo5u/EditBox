@@ -259,8 +259,11 @@ std::wstring CText::Copy(Position start, Position end)
 	}
 	if (p == NULL)
 		throw std::invalid_argument("拷贝：错误的结束位置");
-	LineStr = p->TransformToWString(1, end.Sequence);
-	LineStr.push_back(Flag);
+	if (p->nLineNumber != start.LineNumber)
+		LineStr = p->TransformToWString(1, end.Sequence);
+	else
+		LineStr = p->TransformToWString(start.Sequence, end.Sequence);
+	
 	Str += LineStr;
 	return Str;
 }
@@ -378,10 +381,11 @@ int CText::Line_Size(int LineNumber)
 	return p->nDataSize;
 }
 //返回输出屏幕上本行所有字符所占宽度 其中Width为标准单位宽度
-int CText::Line_Width(int LineNumber, int Width)
+//第三个参数可选 end==0 返回行宽 end != 0  返回当前行[1-end]宽度
+int CText::Line_Width(int LineNumber, int Width, int end)
 {
 	CLine* p = GetLinePointer(LineNumber);
-	return p->Line_Width(Width);
+	return p->Line_Width(Width, end);
 }
 int CText::Max_Line_Width(int Width)
 {
