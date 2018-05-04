@@ -20,6 +20,16 @@ BOOL IsTimerStopped(HTIMER hTimer);
 
 BOOL _stdcall KillTimer(HTIMER timer);
 
+// RESOURCE
+class CText;
+typedef CText *HTEXT, *LPTEXT;
+typedef struct _TEXT_INFO
+{
+	LPTEXT m_lpText;
+	HFONT m_lpFont;
+} TEXTINFO, *LPTEXTINFO, *HTEXTINFO;
+
+// IO
 BOOL WINAPI MyTextOutW(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCWSTR lpString, _In_ int c, _In_ short s, _In_ short e, _In_ int width);
 
 #ifdef UNICODE
@@ -28,16 +38,10 @@ BOOL WINAPI MyTextOutW(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCWS
 #define MyTextOut MyTextOutA
 #endif // UNICODE
 
-BOOL WINAPI MyDrawTextW(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCWSTR lpString, _In_ LPRECT lpRect, _In_ int c, _In_ short s, _In_ short e, _In_ int width);
-
-#ifdef UNICODE
-#define MyDrawText MyDrawTextW
-#else
-#define MyDrawText MyDrawTextA
-#endif // UNICODE
-
+// DEBUG
 void chDEBUGPRINTBOX(LPCWSTR msg);
 
 void chDEBUGMESSAGEBOX(LPCWSTR lpszFmt, ...);
 
 void chDEBUGTEXTOUT(HWND hWnd, LPCWSTR lpString, int x, int y);
+// DEBUG
