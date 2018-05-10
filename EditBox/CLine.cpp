@@ -300,6 +300,7 @@ std::wstring CLine::TransformToWString(int first, int last)
 	if (bBlankLine || first > nDataSize)
 		return WStr;
 	TCHAR wch;
+	last = min(nDataSize, last);
 	Line_iterator it_first(*this, first);
 	Line_iterator it_last(*this, last);
 	while (first <= last)
@@ -345,7 +346,7 @@ int CLine::Line_Width(int Width,int end)
 {
 	if (bBlankLine)
 		return 0;
-	int n = end == 0 ? nDataSize : min(end, nDataSize);
+	int n =( end == 0 ? nDataSize : min(end, nDataSize));
 	int Width_EN = Width;
 	int Width_ZH = Width * 2;
 	int	Total_Width = 0;

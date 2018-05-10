@@ -24,6 +24,10 @@ HTEXTINFO __stdcall CreateTextInfo(HWND hWnd)
 
 BOOL __stdcall ReleaseTextInfo(HWND hWnd, HTEXTINFO hTextInfo)
 {
+	ReleaseGDI(hWnd, hTextInfo->m_hGDI);
+	ReleaseKernel(hWnd, hTextInfo->m_hKernel);
+	ReleaseUser(hWnd, hTextInfo->m_hUser);
+
 	delete hTextInfo;
 	return (TRUE);
 }
@@ -52,15 +56,15 @@ HTEXTUSER __stdcall CreateUser(HWND hWnd)
 		TEXT("New Curier")				// Ãû³Æ
 	);
 	lpUser->m_pCaretSize = POINT{ 1, 16 };
-	lpUser->m_pCaretPos = POINT{ 0, 0 };
+	lpUser->m_pCaretPos  = POINT{ 0, 0 };
 
 	RECT rcClient;
 	GetClientRect(hWnd, &rcClient);
 	lpUser->m_pWindowSize = POINT{ rcClient.right - rcClient.left, rcClient.bottom - rcClient.top };
-	lpUser->m_pWindowPos = POINT{ 0, 0 };
-	lpUser->m_pPageSize = POINT{
-		lpUser->m_pWindowSize.x / ZHWIDTH(lpUser->m_pCharSize.x),
-		lpUser->m_pWindowSize.y / ZHHEIGHT(lpUser->m_pCharSize.y)
+	lpUser->m_pWindowPos  = POINT{ 0, 0 };
+	lpUser->m_pPageSize   = POINT{
+		lpUser->m_pWindowSize.x / USWIDTH(lpUser->m_pCharSize.x),
+		lpUser->m_pWindowSize.y / USHEIGHT(lpUser->m_pCharSize.y)
 	};
 
 	return HTEXTUSER(lpUser);
@@ -83,7 +87,7 @@ HTEXTKERNEL __stdcall CreateKernel(HWND hWnd, HTEXTUSER hUser)
 
 	lpKernel->m_pTextSize = POINT{ 0, 0 };
 	lpKernel->m_pStartPos = POINT{ 0, 0 };
-	lpKernel->m_pEndPos = POINT{ 0, 0 };
+	lpKernel->m_pEndPos   = POINT{ 0, 0 };
 
 	return HTEXTKERNEL(lpKernel);
 }
@@ -101,9 +105,9 @@ HTEXTGDI __stdcall CreateGDI(HWND hWnd, HTEXTUSER hUser)
 		return HTEXTGDI(nullptr);
 
 	HDC hdc = GetDC(hWnd);
-	lpGDI->m_hMemDC = CreateCompatibleDC(hdc);
+	lpGDI->m_hMemDC  = CreateCompatibleDC(hdc);
 	lpGDI->m_hBitmap = CreateCompatibleBitmap(hdc, hUser->m_pWindowSize.x, hUser->m_pWindowSize.y);
-	lpGDI->m_hBrush = CreateSolidBrush(RGB(0xFF, 0xFF, 0xFF));
+	lpGDI->m_hBrush  = CreateSolidBrush(RGB(0xFF, 0xFF, 0xFF));
 
 	SelectObject(lpGDI->m_hMemDC, lpGDI->m_hBitmap);
 	SelectObject(lpGDI->m_hMemDC, lpGDI->m_hBrush);
@@ -112,28 +116,17 @@ HTEXTGDI __stdcall CreateGDI(HWND hWnd, HTEXTUSER hUser)
 
 	// ´ýÀ©Õ¹
 	lpGDI->m_hMouseTimer = nullptr;
-	lpGDI->m_hSaveTimer = nullptr;
+	lpGDI->m_hSaveTimer  = nullptr;
 
 	return HTEXTGDI(lpGDI);
 }
 
 BOOL __stdcall ReleaseGDI(HWND hWnd, HTEXTGDI hGDI)
 {
+	DeleteObject(hGDI->m_hBitmap);
+	DeleteObject(hGDI->m_hBrush);
+	DeleteObject(hGDI->m_hMemDC);
+
 	delete hGDI;
-	return (TRUE);
-}
-
-BOOL __stdcall SelectWindowSize(HTEXTINFO hTextInfo, LPRECT lpRect)
-{
-	hTextInfo->m_hUser->m_pWindowSize = POINT{ 
-		lpRect->right - lpRect->left, 
-		lpRect->bottom - lpRect->top 
-	};
-
-	hTextInfo->m_hUser->m_pPageSize = POINT{
-		hTextInfo->m_hUser->m_pWindowSize.x / ZHWIDTH(hTextInfo->m_hUser->m_pCharSize.x),
-		hTextInfo->m_hUser->m_pWindowSize.y / ZHHEIGHT(hTextInfo->m_hUser->m_pCharSize.y)
-	};
-
 	return (TRUE);
 }

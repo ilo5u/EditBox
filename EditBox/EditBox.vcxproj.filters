@@ -24,9 +24,6 @@
     <ClInclude Include="resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="text.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="CLine.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -39,7 +36,7 @@
     <ClInclude Include="editbox.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CreateDump.h">
+    <ClInclude Include="debug.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -68,10 +65,16 @@
     <ClCompile Include="Record.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CreateDump.cpp">
+    <ClCompile Include="timer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="timer.cpp">
+    <ClCompile Include="textinfo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="textoperation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

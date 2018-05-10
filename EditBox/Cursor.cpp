@@ -40,7 +40,7 @@ bool Cursor::isEnBefore(int LineNumber, int x)
 bool Cursor::isEnAfter(int LineNumber, int x)
 {
 	if (!isLegalCursor(LineNumber, x))	//检查光标合法性
-		throw std::invalid_argument("invalid Cursor 'x'");
+		x = CursorLocation(LineNumber, x);
 	int Size = Characters_before_Cursor(LineNumber, x);
 	if (Size == pText->Line_Size(LineNumber))
 		throw std::invalid_argument("光标x后无字符");
@@ -57,6 +57,13 @@ bool Cursor::isLegalCursor(int LineNumber, int x)
 {
 	int Sum = 0;
 	CLine* p = pText->GetLinePointer(LineNumber);
+	if (p == NULL)
+	{
+		if (x > 0)
+			return false;
+		else
+			return true;
+	}
 	if (x > p->Line_Width(nWidth))
 		return false;
 	Line_iterator iterator(*p);
@@ -100,6 +107,8 @@ int Cursor::Characters_before_Cursor(int LineNumber, int x)
 	if (!isLegalCursor(LineNumber, x))						//检查光标合法性
 		x = CursorLocation(LineNumber, x);
 	CLine* p = pText->GetLinePointer(LineNumber);
+	if (p == NULL)											//当前为空行首 字符数量为0
+		return 0;
 	int Width = 0;
 	int n = 0;
 	Line_iterator iterator(*p);
@@ -113,8 +122,6 @@ int Cursor::Characters_before_Cursor(int LineNumber, int x)
 		++iterator;
 		++n;
 	}
-	if (Width != x)
-		throw std::invalid_argument("error coordinate 'x'");
 	return n;
 }
 
@@ -128,10 +135,12 @@ int Cursor::CharactersProperty_before_Cursor(int LineNumber, int x)
 {
 	if (x == 0)
 		return 0;
-	if (!isLegalCursor(LineNumber, x))		//检查光标合法性
+	if (!isLegalCursor(LineNumber, x))						//检查光标合法性
 		throw std::invalid_argument("invalid Cursor 'x'");
 	int Size = Characters_before_Cursor(LineNumber, x);		//光标前字符数量
 	CLine* p = pText->GetLinePointer(LineNumber);
+	if (p == NULL)											//空行首 无字符
+		return 0;
 	Line_iterator iterator(*p, Size);
 	int m = *iterator;
 	if (WORD(m >> 8) > 0)
@@ -147,9 +156,8 @@ int Cursor::CharactersProperty_before_Cursor(int LineNumber, int x)
 */
 int Cursor::CursorLocation(int LineNumber, int x)
 {
-	CLine* pLine = pText->GetLinePointer(LineNumber);
 	int Length = pText->Line_Width(LineNumber, nWidth);
-	if (x > Length)
+	if (x >= Length)
 		return Length;
 	else
 	{
@@ -167,6 +175,8 @@ int Cursor::CursorLocation(int LineNumber, int x)
 返回光标前字符的位置
 eg. 3 abcde|fd
 return (3,5)
+eg. 3 |abcdef
+return {3,0}
 */
 Position Cursor::CursorToPosition(int x, int y)
 {
@@ -192,14 +202,14 @@ Position Cursor::CursorToPosition_After(int x, int y)
 	Position p1 = CursorToPosition(x, y);		//光标前字符位置
 	CLine* p = pText->GetLinePointer(LineNumber);
 	//光标位于行尾
-	if (p->nDataSize == p1.Sequence)
+	if (p != NULL && p->nDataSize == p1.Sequence)
 	{
 		if (p->nLineNumber == pText->Line_Number())
 		{
 			//光标位于文本末尾
 			throw std::invalid_argument("光标位于文本末尾 后面没有字符");
 		}
-		return { LineNumber + 1,0 };		//下一行行首
+		return { LineNumber + 1,min(1,p->pNextLine->nDataSize) };		//下一行行首
 	}
 	else
 		return { LineNumber,p1.Sequence + 1 };
@@ -212,17 +222,7 @@ POINT Cursor::PositionToCursor(Position position)
 	POINT point;
 	int x, y;
 	y = (position.LineNumber - 1)*nHeight;
-	CLine* pLine = pText->GetLinePointer(position.LineNumber);
-	Line_iterator iterator(*pLine);
-	x = 0;
-	for (int i = 1; i <= position.Sequence; i++)
-	{
-		short int m = *iterator;
-		x += nWidth;
-		if (WORD(m >> 8) > 0)
-			x += nWidth;
-		++iterator;
-	}
+	x = pText->Line_Width(position.LineNumber, nWidth, position.Sequence);
 	point.x = x;
 	point.y = y;
 	return point;
@@ -259,3 +259,4 @@ void Install::SetHeight(int height)
 {
 	Install::Height = height;
 }
+

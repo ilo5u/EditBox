@@ -1,9 +1,10 @@
 #include"stdafx.h"
+#include "debug.h"
 
 CText::CText()
 {
 	pFirstLineHead = NULL;
-	nLineNumbers = 0;
+	nLineNumbers = 1;
 	FileName = "";
 }
 
@@ -71,8 +72,8 @@ void CText::ClearAll()
 	}
 	FileName = "";
 	pFirstLineHead = NULL;
-	nLineNumbers = 0;
-	bSave = 1;
+	nLineNumbers = 1;
+	bSave = 0;
 }
 
 void CText::ShowText() const
@@ -85,10 +86,6 @@ void CText::ShowText() const
 			p->ShowLineData();
 			p = p->pNextLine;
 		}
-	}
-	else
-	{
-		std::cout << "空文件" << std::endl;
 	}
 }
 /*
@@ -204,9 +201,9 @@ Position CText::Insert(Position start, std::wstring String)
 	bSave = 0;
 	std::queue<std::wstring> dq = WStrToLineWStr(String);
 	CLine* p = GetLinePointer(start.LineNumber);
-	if (p == NULL)
-		throw std::invalid_argument("位置传入错误");
+
 	int n = start.LineNumber;
+	int prenumbers = 0;
 	if (!dq.empty())					//对首行的特殊处理
 	{
 		String = dq.front();
@@ -215,8 +212,10 @@ Position CText::Insert(Position start, std::wstring String)
 
 		if (String.size() != 0 && !dq.empty())
 			EnterNewLine({ n, start.Sequence + (int)String.size() });
-		if(!dq.empty())
-		n++;
+		if (!dq.empty())
+			n++;
+		else
+			prenumbers = start.Sequence;
 		p = p->pNextLine;
 	}
 	while (dq.size() > 1)
@@ -238,7 +237,7 @@ Position CText::Insert(Position start, std::wstring String)
 		dq.pop();
 		p->InsertStrings(0, String);
 	}
-	return { n,(int)String.size() };
+	return { n,(int)(String.size() + prenumbers) };
 }
 /*拷贝Position在[start ,end]之间的字符串 保存在wstring中 并加上换行符*/
 std::wstring CText::Copy(Position start, Position end)
@@ -302,7 +301,8 @@ Position CText::EnterNewLine(Position position)
 	}
 }
 
-std::queue<Position> CText::SeekStrings(std::wstring Str, Position start)
+//查找字符串 返回值表示是否查找到 将该字符串的起点和终点赋值给参数
+bool CText::SeekStrings(std::wstring Str, Position& start, Position& end)
 {
 	//模式匹配预处理
 	int* pNext = GetNextValArray(Str);
@@ -311,14 +311,16 @@ std::queue<Position> CText::SeekStrings(std::wstring Str, Position start)
 	Text_iterator TextEnd(*this);
 	iterator.GoPosition(start);
 	TextEnd.GoEnd();
-	std::queue<Position>	Container;		//存储容器
 											//匹配
 	for (int j = -1; iterator != TextEnd; )
 	{
 		if (j == nSize)				//成功的一次匹配
 		{
-			Container.push((iterator - nSize).GetCurPositin());
+			
+			start = (iterator - nSize).GetCurPositin();
+			end = iterator.GetCurPositin();
 			j = -1;
+			return true;
 		}
 		if (j == -1 || *iterator == Str[j])
 		{
@@ -329,7 +331,7 @@ std::queue<Position> CText::SeekStrings(std::wstring Str, Position start)
 			j = pNext[j];
 	}
 	delete pNext;
-	return Container;
+	return false;
 }
 
 /*
@@ -385,6 +387,8 @@ int CText::Line_Size(int LineNumber)
 int CText::Line_Width(int LineNumber, int Width, int end)
 {
 	CLine* p = GetLinePointer(LineNumber);
+	if (p == NULL)
+		return 0;
 	return p->Line_Width(Width, end);
 }
 int CText::Max_Line_Width(int Width)
@@ -418,7 +422,7 @@ void CText::UpDataLineNumber(CLine * p, int Start)
 		p = p->pNextLine;
 		Start++;
 	}
-	nLineNumbers = Start - 1;
+	nLineNumbers = max(1, Start - 1);
 }
 /*
 插入空行

@@ -28,7 +28,7 @@ public:
 	Position	Insert(Position start, std::wstring String);						//插入字符串
 	std::wstring Copy(Position start, Position end);							//拷贝段落
 	Position	EnterNewLine(Position position);								//光标在position后按回车
-	std::queue<Position>	SeekStrings(std::wstring Str, Position start);		//查找字符串
+	bool	SeekStrings(std::wstring Str, Position& start, Position& end);		//查找字符串
 	Position	Replace(Position start, Position end, std::wstring Str);		//替换字符串
 	bool        isSaved();														//是否保存
 	std::string FilePath();														//返回文件路径
@@ -81,5 +81,5 @@ size_t NumberOfZH(const std::wstring &wstr);				//宽字符串中中文字符数量
 std::wstring StringToWString(const std::string& s);			//实现字符转换
 std::string WStringToString(const std::wstring& ws);		//实现字符转换
 std::string wchTostring(TCHAR* pwch);						//宽字符指针转换为string
-void WStringToWch(const std::wstring &ws, TCHAR* &pwch);		//宽字符串转化为指针
+void WStringToWch(const std::wstring &ws, TCHAR* &pwch);	//宽字符串转化为指针
 std::queue<std::wstring> WStrToLineWStr(std::wstring WSTR);	//将包含换行符的字符串转化为不同行的字符串(不含换行符)		

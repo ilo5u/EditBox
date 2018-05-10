@@ -144,29 +144,8 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 			return RVALUE(New_Height_Y) << 32 | RVALUE(New_Width_X);
 		}
 		end_position = pCursor->CursorToPosition(end_x, end_y);
-		//位置相同表示退格键
-		if (end_position == start_position)
-		{
-			if (start_position.Sequence == 0)
-			{
-				rd->ACT = RD_MERGE_LINE;
-				if (start_position.LineNumber > 1)			//不记录无效的删除
-				{
-					rd->Save_Merge_Line_Data(hText, start_position.LineNumber);
-					pRecord->push(rd);
-				}
-				else
-					delete rd;
-			}
-			else
-			{
-				rd->Save_Delete_Data(hText, start_position, start_position);
-				pRecord->push(rd);
-			}
-			hText->BackSpace(start_position);
-		}
 		//坐标相等表示向后删除
-		else if (end_x == x && end_y == y)
+		if (end_x == x && end_y == y)
 		{
 			try
 			{
@@ -175,6 +154,7 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 				{
 					rd->ACT = RD_MERGE_LINE;
 					rd->Save_Merge_Line_Data(hText, end_position.LineNumber);
+					end_position.Sequence = 0;
 				}
 				else
 				{
@@ -190,6 +170,27 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 				pCursor->ResetChoose();
 				return RVALUE(0);
 			}
+		}
+		//位置相同表示退格键
+		else if (end_position <= start_position)
+		{
+			if (end_position.Sequence == 0)
+			{
+				rd->ACT = RD_MERGE_LINE;
+				if (end_position.LineNumber > 1)			//不记录无效的删除
+				{
+					rd->Save_Merge_Line_Data(hText, end_position.LineNumber);
+					pRecord->push(rd);
+				}
+				else
+					delete rd;
+			}
+			else
+			{
+				rd->Save_Delete_Data(hText, start_position, start_position);
+				pRecord->push(rd);
+			}
+			hText->BackSpace(end_position);
 		}
 		else
 		{
@@ -222,6 +223,7 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 		{
 			hText->ClearAll();
 			pCursor->ResetChoose();
+			hText->NewFile();
 			return UR_SAVED;
 		}
 		return  UR_NOTSAVED;
@@ -327,12 +329,17 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 			pTChar[0] = L'\0';
 			return RVALUE(0);
 		}
-		pCursor->CursorLocation(LineNumber, x);
+		x = pCursor->CursorLocation(LineNumber, x);
 		int iCount = 0;					//显示的字符数量
 		short int iStart = 0;			//高亮部分的开始点
 		short int iEnd = 0;				//高亮部分结束点
 		int end_x = LODWORD(fParam);
 		CLine* pLine = hText->GetLinePointer(LineNumber);
+		if (pLine==NULL)
+		{
+			pTChar[0] = L'\0';
+			return RVALUE(0);
+		}
 		Position position_start;		//字符显示起点
 		Position position_end;			//字符显示终点
 		try
@@ -442,7 +449,7 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 		pCursor->ResetChoose();
 		Record* rd = new Record(RD_INSERT);
 		std::string SText = wchTostring((TCHAR*)sParam);
-		std::wstring WSText = StringToWString(SText);		//待插入的内容
+		std::wstring WSText = StringToWString(SText);			//待插入的内容
 		Position start;
 		start = pCursor->CursorToPosition(x, y);
 		Position s = { start.LineNumber,start.Sequence + 1 };	//插入后的首字符位置
@@ -456,6 +463,19 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 		int Text_Height = hText->Line_Number()*Height;
 
 		return RVALUE(Text_Height) << 32 | RVALUE(Text_Width);
+	}
+	case UM_FIND:
+	{
+		std::wstring Str;
+		Position start, end;
+		if (hText->SeekStrings(Str, start, end))			//查找成功
+		{
+
+		}
+		else                                               //未查到
+		{
+
+		}
 	}
 	default: break;
 	}
