@@ -223,7 +223,6 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 		{
 			hText->ClearAll();
 			pCursor->ResetChoose();
-			hText->NewFile();
 			return UR_SAVED;
 		}
 		return  UR_NOTSAVED;
@@ -329,17 +328,12 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 			pTChar[0] = L'\0';
 			return RVALUE(0);
 		}
-		x = pCursor->CursorLocation(LineNumber, x);
+		pCursor->CursorLocation(LineNumber, x);
 		int iCount = 0;					//显示的字符数量
 		short int iStart = 0;			//高亮部分的开始点
 		short int iEnd = 0;				//高亮部分结束点
 		int end_x = LODWORD(fParam);
 		CLine* pLine = hText->GetLinePointer(LineNumber);
-		if (pLine==NULL)
-		{
-			pTChar[0] = L'\0';
-			return RVALUE(0);
-		}
 		Position position_start;		//字符显示起点
 		Position position_end;			//字符显示终点
 		try
@@ -466,16 +460,76 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 	}
 	case UM_FIND:
 	{
-		std::wstring Str;
-		Position start, end;
-		if (hText->SeekStrings(Str, start, end))			//查找成功
-		{
+		/*
+		----------------------------------------------------------------------------------
+		|当前光标向后查找 1 当前光标向前查找 0 （8位）|区分大小写 1 不区分大小写 0（8位）|
+		----------------------------------------------------------------------------------
+		*/
 
-		}
-		else                                               //未查到
+		/*设置查找模式*/
+		bool upper_lower = true;
+		if (unsigned char(*(ULONGLONG*)fParam) == 0)
+			upper_lower = false;
+		Position start = hText->First_Position();
+		Position end = hText->End_Position();
+		if ((WORD(*(ULONGLONG*)fParam) >> 8) > 0)
 		{
-
+			try 
+			{
+				start = pCursor->CursorToPosition_After(x, y);
+			}
+			catch (std::invalid_argument& e)
+			{
+				return UR_ERROR;					//从文本末尾开始查找 无符合匹配
+			}
 		}
+			
+		else
+		{
+			end = pCursor->CursorToPosition(x, y);
+			if (end.Sequence == 0)
+			{
+				if (LineNumber == 1)				//从文本头之前查找 无符合匹配
+					return UR_ERROR;
+				else
+				{
+					end.LineNumber--;
+					CLine* pLine = hText->GetLinePointer(end.LineNumber);
+					end.Sequence = pLine->size();
+				}
+			}
+		}
+
+		/*取出待查找字符串*/
+		std::string SText = wchTostring((TCHAR*)sParam);
+		std::wstring Str = StringToWString(SText);						
+
+
+		if (hText->SeekStrings(Str, start, end, upper_lower))			//查找成功
+		{
+			POINT s = pCursor->PositionToCursor_Before(start);
+			(*(POINT*)fParam) = pCursor->PositionToCursor(end);
+			pCursor->Choose(start, end);				
+			return RVALUE(s.y) << 32 | RVALUE(s.x);
+		}
+
+		return UR_ERROR;												//未查到
+	}
+	case UM_REPLACE:
+	{
+		/*取出替代的字符串*/
+		std::string SText = wchTostring((TCHAR*)sParam);
+		std::wstring Str = StringToWString(SText);
+
+		/*选中被替换的字符串起始终点位置*/
+		Position start = pCursor->CursorToPosition_After(x, y);
+		Position end = pCursor->CursorToPosition(((POINT*)fParam)->x, ((POINT*)fParam)->y);
+
+		end = hText->Replace(start, end, Str);
+		pCursor->Choose(start, end);
+
+		POINT p = pCursor->PositionToCursor(end);
+		return RVALUE(p.x) << 32 | hText->Max_Line_Width(Width_EN);
 	}
 	default: break;
 	}

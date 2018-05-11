@@ -1,0 +1,465 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="resource_8h" kind="file">
+    <compoundname>resource.h</compoundname>
+    <includedby refid="editbox_8h" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h</includedby>
+    <invincdepgraph>
+      <node id="366">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/io.cpp</label>
+        <link refid="io_8cpp"/>
+      </node>
+      <node id="362">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h</label>
+        <link refid="resource.h"/>
+        <childnode refid="363" relation="include">
+        </childnode>
+      </node>
+      <node id="369">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp</label>
+        <link refid="timer_8cpp"/>
+      </node>
+      <node id="364">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp</label>
+        <link refid="debug_8cpp"/>
+      </node>
+      <node id="363">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h</label>
+        <link refid="editbox_8h"/>
+        <childnode refid="364" relation="include">
+        </childnode>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+        <childnode refid="367" relation="include">
+        </childnode>
+        <childnode refid="368" relation="include">
+        </childnode>
+        <childnode refid="369" relation="include">
+        </childnode>
+      </node>
+      <node id="367">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp</label>
+        <link refid="textinfo_8cpp"/>
+      </node>
+      <node id="368">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp</label>
+        <link refid="textoperation_8cpp"/>
+      </node>
+      <node id="365">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/EditBox.cpp</label>
+        <link refid="_edit_box_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="resource_8h_1abb326bd165140b31acf04b893ef655ca" prot="public" static="no">
+        <name>IDC_MYICON</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="5" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1ac23bde364c074de4349130b22c615c03" prot="public" static="no">
+        <name>IDD_EDITBOX_DIALOG</name>
+        <initializer>102</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="6" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a636c9aea2a8d16b73e43df39b3e0e7bd" prot="public" static="no">
+        <name>IDS_APP_TITLE</name>
+        <initializer>103</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="7" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="7" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1a1e683c5a19c00d05cd803e46b805e339" compoundref="_edit_box_8cpp" startline="31" endline="65">wWinMain</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a77a06326b569136edbb6c766bc98c33c" prot="public" static="no">
+        <name>IDD_ABOUTBOX</name>
+        <initializer>103</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="8" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="8" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a589e0105bc3e8681893dbf51210ceeec" prot="public" static="no">
+        <name>IDM_ABOUT</name>
+        <initializer>104</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="9" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="9" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a79aeed168a959b22b32169e25f8c1f4d" prot="public" static="no">
+        <name>IDM_EXIT</name>
+        <initializer>105</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="10" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="10" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a904a080b88449d69b049030def294403" prot="public" static="no">
+        <name>IDI_EDITBOX</name>
+        <initializer>107</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="11" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="11" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1aa0d0c9beb94350f8eac8fc4026a65375" compoundref="_edit_box_8cpp" startline="74" endline="93">MyRegisterClass</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a861a8cb71616b4615a5823bcf4bff6e3" prot="public" static="no">
+        <name>IDI_SMALL</name>
+        <initializer>108</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="12" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="12" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1aa0d0c9beb94350f8eac8fc4026a65375" compoundref="_edit_box_8cpp" startline="74" endline="93">MyRegisterClass</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a888776beca0efea25fd1367843a1ab6e" prot="public" static="no">
+        <name>IDC_EDITBOX</name>
+        <initializer>109</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="13" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="13" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1aa0d0c9beb94350f8eac8fc4026a65375" compoundref="_edit_box_8cpp" startline="74" endline="93">MyRegisterClass</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a1e683c5a19c00d05cd803e46b805e339" compoundref="_edit_box_8cpp" startline="31" endline="65">wWinMain</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a9772c84d39896ad00b9aeb34b15d324d" prot="public" static="no">
+        <name>IDR_MAINFRAME</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="14" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a815cd97fba665de33980afa2af025255" prot="public" static="no">
+        <name>IDD_FINDDIALOG</name>
+        <initializer>129</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="15" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1ae15e4563b703ac0b4ac35e1311915ba1" prot="public" static="no">
+        <name>IDC_FINDWHAT</name>
+        <initializer>1001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="16" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1ad0e80dea4221865e1ca410726ea1c02b" prot="public" static="no">
+        <name>IDC_REPLACEWHAT</name>
+        <initializer>1002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="17" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a824a951009329c017247fb5d8f1484ed" prot="public" static="no">
+        <name>IDC_COMPLETEMATCH</name>
+        <initializer>1003</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="18" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a155ca2bad0d8b5bebc3e238d2e7e33a9" prot="public" static="no">
+        <name>IDC_LHCASE</name>
+        <initializer>1004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="19" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1ab327987e95290579c3a3980f3251e5c6" prot="public" static="no">
+        <name>IDC_FINDHINT</name>
+        <initializer>1007</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="20" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a105ee151a66a8ce4e1cda0aeabcbe117" prot="public" static="no">
+        <name>IDC_REPLACEHINT</name>
+        <initializer>1008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="21" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1af33267b7f1f2d37e7f6f7abf1e718727" prot="public" static="no">
+        <name>IDC_TYPEHINT</name>
+        <initializer>1016</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="22" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1add53acd5ce67983d8f432b0eb8ba2117" prot="public" static="no">
+        <name>IDM_NEW</name>
+        <initializer>32773</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="23" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1af20742613e64b1ef84ed8bc2672d73a8" prot="public" static="no">
+        <name>IDM_SAVE</name>
+        <initializer>32774</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="24" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1aee82e4e10d24819420576c360c462901" prot="public" static="no">
+        <name>IDM_OPEN</name>
+        <initializer>32777</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="25" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a439a1d35939dfaa5df4c8c041ac603aa" prot="public" static="no">
+        <name>IDM_SAVEAS</name>
+        <initializer>32778</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="26" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a113019b8b64d2a5898cd0b74e7161818" prot="public" static="no">
+        <name>IDM_FIND</name>
+        <initializer>32783</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="27" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a6c4f43108f44ec17cd7ac71e10907ac0" prot="public" static="no">
+        <name>IDM_COPY</name>
+        <initializer>32787</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="28" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a8c2e2d3d8285751e3e1e9db03bdad1dc" prot="public" static="no">
+        <name>IDM_CUT</name>
+        <initializer>32789</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="29" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a2f8986bc25d59cf0d98558b510623e3f" prot="public" static="no">
+        <name>IDM_PASTE</name>
+        <initializer>32790</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="30" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1aabaa2beebb5caa31152b0699794739c2" prot="public" static="no">
+        <name>IDM_CANCEL</name>
+        <initializer>32792</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="31" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a1aab8591ea67205af25b67cf6ff71103" prot="public" static="no">
+        <name>IDM_ALL</name>
+        <initializer>32794</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="32" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a44290b9fbb7f07f87ac3bdb8818e7d6e" prot="public" static="no">
+        <name>IDM_REPLACE</name>
+        <initializer>32797</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="33" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1ac93033490bc8943cfc82ec3b40e5cd74" prot="public" static="no">
+        <name>IDC_STATIC</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" line="34" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//{{NO_DEPENDENCIES}}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Microsoft<sp/>Visual<sp/>C++<sp/>生成的包含文件。</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>供<sp/>EditBox.rc<sp/>使用</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="resource_8h_1abb326bd165140b31acf04b893ef655ca" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IDC_MYICON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight></codeline>
+<codeline lineno="6" refid="resource_8h_1ac23bde364c074de4349130b22c615c03" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDD_EDITBOX_DIALOG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>102</highlight></codeline>
+<codeline lineno="7" refid="resource_8h_1a636c9aea2a8d16b73e43df39b3e0e7bd" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDS_APP_TITLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>103</highlight></codeline>
+<codeline lineno="8" refid="resource_8h_1a77a06326b569136edbb6c766bc98c33c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDD_ABOUTBOX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>103</highlight></codeline>
+<codeline lineno="9" refid="resource_8h_1a589e0105bc3e8681893dbf51210ceeec" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDM_ABOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>104</highlight></codeline>
+<codeline lineno="10" refid="resource_8h_1a79aeed168a959b22b32169e25f8c1f4d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDM_EXIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>105</highlight></codeline>
+<codeline lineno="11" refid="resource_8h_1a904a080b88449d69b049030def294403" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDI_EDITBOX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>107</highlight></codeline>
+<codeline lineno="12" refid="resource_8h_1a861a8cb71616b4615a5823bcf4bff6e3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDI_SMALL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>108</highlight></codeline>
+<codeline lineno="13" refid="resource_8h_1a888776beca0efea25fd1367843a1ab6e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDC_EDITBOX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>109</highlight></codeline>
+<codeline lineno="14" refid="resource_8h_1a9772c84d39896ad00b9aeb34b15d324d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDR_MAINFRAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>128</highlight></codeline>
+<codeline lineno="15" refid="resource_8h_1a815cd97fba665de33980afa2af025255" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDD_FINDDIALOG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>129</highlight></codeline>
+<codeline lineno="16" refid="resource_8h_1ae15e4563b703ac0b4ac35e1311915ba1" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDC_FINDWHAT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1001</highlight></codeline>
+<codeline lineno="17" refid="resource_8h_1ad0e80dea4221865e1ca410726ea1c02b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDC_REPLACEWHAT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1002</highlight></codeline>
+<codeline lineno="18" refid="resource_8h_1a824a951009329c017247fb5d8f1484ed" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDC_COMPLETEMATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1003</highlight></codeline>
+<codeline lineno="19" refid="resource_8h_1a155ca2bad0d8b5bebc3e238d2e7e33a9" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDC_LHCASE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1004</highlight></codeline>
+<codeline lineno="20" refid="resource_8h_1ab327987e95290579c3a3980f3251e5c6" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDC_FINDHINT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1007</highlight></codeline>
+<codeline lineno="21" refid="resource_8h_1a105ee151a66a8ce4e1cda0aeabcbe117" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDC_REPLACEHINT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1008</highlight></codeline>
+<codeline lineno="22" refid="resource_8h_1af33267b7f1f2d37e7f6f7abf1e718727" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDC_TYPEHINT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1016</highlight></codeline>
+<codeline lineno="23" refid="resource_8h_1add53acd5ce67983d8f432b0eb8ba2117" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDM_NEW<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32773</highlight></codeline>
+<codeline lineno="24" refid="resource_8h_1af20742613e64b1ef84ed8bc2672d73a8" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDM_SAVE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32774</highlight></codeline>
+<codeline lineno="25" refid="resource_8h_1aee82e4e10d24819420576c360c462901" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDM_OPEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32777</highlight></codeline>
+<codeline lineno="26" refid="resource_8h_1a439a1d35939dfaa5df4c8c041ac603aa" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDM_SAVEAS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32778</highlight></codeline>
+<codeline lineno="27" refid="resource_8h_1a113019b8b64d2a5898cd0b74e7161818" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDM_FIND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32783</highlight></codeline>
+<codeline lineno="28" refid="resource_8h_1a6c4f43108f44ec17cd7ac71e10907ac0" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDM_COPY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32787</highlight></codeline>
+<codeline lineno="29" refid="resource_8h_1a8c2e2d3d8285751e3e1e9db03bdad1dc" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDM_CUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32789</highlight></codeline>
+<codeline lineno="30" refid="resource_8h_1a2f8986bc25d59cf0d98558b510623e3f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDM_PASTE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32790</highlight></codeline>
+<codeline lineno="31" refid="resource_8h_1aabaa2beebb5caa31152b0699794739c2" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDM_CANCEL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32792</highlight></codeline>
+<codeline lineno="32" refid="resource_8h_1a1aab8591ea67205af25b67cf6ff71103" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDM_ALL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32794</highlight></codeline>
+<codeline lineno="33" refid="resource_8h_1a44290b9fbb7f07f87ac3bdb8818e7d6e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDM_REPLACE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32797</highlight></codeline>
+<codeline lineno="34" refid="resource_8h_1ac93033490bc8943cfc82ec3b40e5cd74" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>IDC_STATIC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-1</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Next<sp/>default<sp/>values<sp/>for<sp/>new<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>APSTUDIO_INVOKED</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifndef<sp/>APSTUDIO_READONLY_SYMBOLS</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_APS_NO_MFC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_APS_NEXT_RESOURCE_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>130</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_APS_NEXT_COMMAND_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32799</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_APS_NEXT_CONTROL_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1017</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_APS_NEXT_SYMED_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>110</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/resource.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,456 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_text__iterator" kind="class" prot="public">
+    <compoundname>Text_iterator</compoundname>
+    <includes refid="_c_text_8h" local="no">CText.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_text__iterator_1af33ad5bc623ccba42b1dc216ecd2061a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_c_text" kindref="compound">CText</ref> *</type>
+        <definition>CText* Text_iterator::pText</definition>
+        <argsstring></argsstring>
+        <name>pText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="76" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" bodystart="76" bodyend="-1"/>
+        <referencedby refid="class_text__iterator_1a2e7a32115ef11481d791333840138e72" compoundref="_c_text_8cpp" startline="601" endline="606">GoEnd</referencedby>
+        <referencedby refid="class_text__iterator_1a6fafa43cf62867ecadb47524a5771dec" compoundref="_c_text_8cpp" startline="595" endline="599">GoPosition</referencedby>
+        <referencedby refid="class_text__iterator_1a7ec78e7e057bf205d62bf7487faee1fc" compoundref="_c_text_8cpp" startline="586" endline="593">isEnd</referencedby>
+        <referencedby refid="class_text__iterator_1ac9403569982df04eb9141282b738acd8" compoundref="_c_text_8cpp" startline="510" endline="526">operator++</referencedby>
+        <referencedby refid="class_text__iterator_1ae6c88cae4a7b534df1ad354c30d97dce" compoundref="_c_text_8cpp" startline="535" endline="551">operator--</referencedby>
+        <referencedby refid="class_text__iterator_1a1a9abe224d85f442243bc07305357be6" compoundref="_c_text_8cpp" startline="487" endline="495">Text_iterator</referencedby>
+        <referencedby refid="class_text__iterator_1ae69a919a10648ed1d571162e1f06dd42" compoundref="_c_text_8cpp" startline="497" endline="500">~Text_iterator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_text__iterator_1a83895cc8647c04ad4c67e8eb8d01119a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref></type>
+        <definition>Line_iterator Text_iterator::currLine</definition>
+        <argsstring></argsstring>
+        <name>currLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="77" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" bodystart="77" bodyend="-1"/>
+        <referencedby refid="class_text__iterator_1a50cbffa9d9c843877f5152a16e55c262" compoundref="_c_text_8cpp" startline="615" endline="618">CurrentLineNumber</referencedby>
+        <referencedby refid="class_text__iterator_1a5828a1d8a40e197491579a7840b090e5" compoundref="_c_text_8cpp" startline="608" endline="613">GetCurPositin</referencedby>
+        <referencedby refid="class_text__iterator_1a2e7a32115ef11481d791333840138e72" compoundref="_c_text_8cpp" startline="601" endline="606">GoEnd</referencedby>
+        <referencedby refid="class_text__iterator_1a6fafa43cf62867ecadb47524a5771dec" compoundref="_c_text_8cpp" startline="595" endline="599">GoPosition</referencedby>
+        <referencedby refid="class_text__iterator_1a7ec78e7e057bf205d62bf7487faee1fc" compoundref="_c_text_8cpp" startline="586" endline="593">isEnd</referencedby>
+        <referencedby refid="class_text__iterator_1abe4df17cc9e72310ba27756fa00de411" compoundref="_c_text_8cpp" startline="581" endline="584">operator!=</referencedby>
+        <referencedby refid="class_text__iterator_1a1db3aac9b492864382c47c3b37498235" compoundref="_c_text_8cpp" startline="502" endline="508">operator*</referencedby>
+        <referencedby refid="class_text__iterator_1ac9403569982df04eb9141282b738acd8" compoundref="_c_text_8cpp" startline="510" endline="526">operator++</referencedby>
+        <referencedby refid="class_text__iterator_1ae6c88cae4a7b534df1ad354c30d97dce" compoundref="_c_text_8cpp" startline="535" endline="551">operator--</referencedby>
+        <referencedby refid="class_text__iterator_1ab851a4cf74ff0ce0fc38b94c74099a49" compoundref="_c_text_8cpp" startline="577" endline="580">operator==</referencedby>
+        <referencedby refid="class_text__iterator_1a1a9abe224d85f442243bc07305357be6" compoundref="_c_text_8cpp" startline="487" endline="495">Text_iterator</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_text__iterator_1a58eff6fbd7be8422ed8af1f2fbd3affb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Text_iterator::Text_iterator</definition>
+        <argsstring>()=default</argsstring>
+        <name>Text_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_text__iterator_1a1a9abe224d85f442243bc07305357be6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Text_iterator::Text_iterator</definition>
+        <argsstring>(CText &amp;Text, int LineNumber=1, int position=1)</argsstring>
+        <name>Text_iterator</name>
+        <param>
+          <type><ref refid="class_c_text" kindref="compound">CText</ref> &amp;</type>
+          <declname>Text</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>LineNumber</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>position</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="58" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="487" bodyend="495"/>
+        <references refid="class_text__iterator_1a83895cc8647c04ad4c67e8eb8d01119a" compoundref="_c_text_8h" startline="77">currLine</references>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">CText::GetLinePointer</references>
+        <references refid="class_c_text_1a823b5a708158bcf403f099768ccfa280" compoundref="_c_text_8cpp" startline="407" endline="410">CText::Line_Number</references>
+        <references refid="class_text__iterator_1af33ad5bc623ccba42b1dc216ecd2061a" compoundref="_c_text_8h" startline="76">pText</references>
+        <references refid="class_line__iterator_1aa3c7ec6479e1b1b04f923b2eff2280de" compoundref="_c_line_8cpp" startline="491" endline="508">Line_iterator::Set</references>
+      </memberdef>
+      <memberdef kind="function" id="class_text__iterator_1ae69a919a10648ed1d571162e1f06dd42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Text_iterator::~Text_iterator</definition>
+        <argsstring>()</argsstring>
+        <name>~Text_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="59" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="497" bodyend="500"/>
+        <references refid="class_text__iterator_1af33ad5bc623ccba42b1dc216ecd2061a" compoundref="_c_text_8h" startline="76">pText</references>
+      </memberdef>
+      <memberdef kind="function" id="class_text__iterator_1a7ec78e7e057bf205d62bf7487faee1fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Text_iterator::isEnd</definition>
+        <argsstring>()</argsstring>
+        <name>isEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="60" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="586" bodyend="593"/>
+        <references refid="class_line__iterator_1ac9b7eab9762d2ff694b10eb8f530d091" compoundref="_c_line_8cpp" startline="510" endline="513">Line_iterator::CurrentPosition</references>
+        <references refid="class_text__iterator_1a83895cc8647c04ad4c67e8eb8d01119a" compoundref="_c_text_8h" startline="77">currLine</references>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">CText::GetLinePointer</references>
+        <references refid="class_line__iterator_1a2d33b3ebe0d62dd8245e5e560e9c6a7e" compoundref="_c_line_8cpp" startline="515" endline="518">Line_iterator::GetLinePointer</references>
+        <references refid="class_c_text_1a823b5a708158bcf403f099768ccfa280" compoundref="_c_text_8cpp" startline="407" endline="410">CText::Line_Number</references>
+        <references refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" compoundref="_c_line_8h" startline="58">CLine::nDataSize</references>
+        <references refid="class_c_line_1aa1aed03c5292b8299dd7bcd037a06bf3" compoundref="_c_line_8h" startline="57">CLine::nLineNumber</references>
+        <references refid="class_text__iterator_1af33ad5bc623ccba42b1dc216ecd2061a" compoundref="_c_text_8h" startline="76">pText</references>
+      </memberdef>
+      <memberdef kind="function" id="class_text__iterator_1a6fafa43cf62867ecadb47524a5771dec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Text_iterator::GoPosition</definition>
+        <argsstring>(Position position)</argsstring>
+        <name>GoPosition</name>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="61" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="595" bodyend="599"/>
+        <references refid="class_text__iterator_1a83895cc8647c04ad4c67e8eb8d01119a" compoundref="_c_text_8h" startline="77">currLine</references>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">CText::GetLinePointer</references>
+        <references refid="struct_position_1a7b72348893583b77254a650b7095c9fc" compoundref="_c_line_8h" startline="11">Position::LineNumber</references>
+        <references refid="class_text__iterator_1af33ad5bc623ccba42b1dc216ecd2061a" compoundref="_c_text_8h" startline="76">pText</references>
+        <references refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" compoundref="_c_line_8h" startline="12">Position::Sequence</references>
+        <references refid="class_line__iterator_1aa3c7ec6479e1b1b04f923b2eff2280de" compoundref="_c_line_8cpp" startline="491" endline="508">Line_iterator::Set</references>
+        <referencedby refid="class_c_text_1aa3fefff896b218007b90cdd671f732f8" compoundref="_c_text_8cpp" startline="305" endline="335">CText::SeekStrings</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_text__iterator_1a2e7a32115ef11481d791333840138e72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Text_iterator::GoEnd</definition>
+        <argsstring>()</argsstring>
+        <name>GoEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="62" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="601" bodyend="606"/>
+        <references refid="class_text__iterator_1a83895cc8647c04ad4c67e8eb8d01119a" compoundref="_c_text_8h" startline="77">currLine</references>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">CText::GetLinePointer</references>
+        <references refid="class_c_text_1a823b5a708158bcf403f099768ccfa280" compoundref="_c_text_8cpp" startline="407" endline="410">CText::Line_Number</references>
+        <references refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" compoundref="_c_line_8h" startline="58">CLine::nDataSize</references>
+        <references refid="class_text__iterator_1af33ad5bc623ccba42b1dc216ecd2061a" compoundref="_c_text_8h" startline="76">pText</references>
+        <references refid="class_line__iterator_1aa3c7ec6479e1b1b04f923b2eff2280de" compoundref="_c_line_8cpp" startline="491" endline="508">Line_iterator::Set</references>
+        <referencedby refid="class_c_text_1aa3fefff896b218007b90cdd671f732f8" compoundref="_c_text_8cpp" startline="305" endline="335">CText::SeekStrings</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_text__iterator_1a5828a1d8a40e197491579a7840b090e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+        <definition>Position Text_iterator::GetCurPositin</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurPositin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="63" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="608" bodyend="613"/>
+        <references refid="class_text__iterator_1a83895cc8647c04ad4c67e8eb8d01119a" compoundref="_c_text_8h" startline="77">currLine</references>
+        <references refid="class_line__iterator_1a318d558e773e8e03b868942a37663b36" compoundref="_c_line_8h" startline="93">Line_iterator::nIndex</references>
+        <references refid="class_c_line_1aa1aed03c5292b8299dd7bcd037a06bf3" compoundref="_c_line_8h" startline="57">CLine::nLineNumber</references>
+        <references refid="class_line__iterator_1ae749f39727d5fe5536d3a996ecb5bd94" compoundref="_c_line_8h" startline="90">Line_iterator::pLine</references>
+        <referencedby refid="class_c_text_1aa3fefff896b218007b90cdd671f732f8" compoundref="_c_text_8cpp" startline="305" endline="335">CText::SeekStrings</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_text__iterator_1a50cbffa9d9c843877f5152a16e55c262" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Text_iterator::CurrentLineNumber</definition>
+        <argsstring>()</argsstring>
+        <name>CurrentLineNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="64" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="615" bodyend="618"/>
+        <references refid="class_text__iterator_1a83895cc8647c04ad4c67e8eb8d01119a" compoundref="_c_text_8h" startline="77">currLine</references>
+        <references refid="class_c_line_1aa1aed03c5292b8299dd7bcd037a06bf3" compoundref="_c_line_8h" startline="57">CLine::nLineNumber</references>
+        <references refid="class_line__iterator_1ae749f39727d5fe5536d3a996ecb5bd94" compoundref="_c_line_8h" startline="90">Line_iterator::pLine</references>
+      </memberdef>
+      <memberdef kind="function" id="class_text__iterator_1a1db3aac9b492864382c47c3b37498235" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TCHAR</type>
+        <definition>TCHAR Text_iterator::operator*</definition>
+        <argsstring>()</argsstring>
+        <name>operator*</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="66" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="502" bodyend="508"/>
+        <references refid="class_text__iterator_1a83895cc8647c04ad4c67e8eb8d01119a" compoundref="_c_text_8h" startline="77">currLine</references>
+        <references refid="class_line__iterator_1ae145ec61d5166fafe8f2d63ed42920b8" compoundref="_c_line_8cpp" startline="563" endline="569">Line_iterator::isValid</references>
+      </memberdef>
+      <memberdef kind="function" id="class_text__iterator_1ac9403569982df04eb9141282b738acd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref> &amp;</type>
+        <definition>Text_iterator &amp; Text_iterator::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="67" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="510" bodyend="526"/>
+        <references refid="class_line__iterator_1ac9b7eab9762d2ff694b10eb8f530d091" compoundref="_c_line_8cpp" startline="510" endline="513">Line_iterator::CurrentPosition</references>
+        <references refid="class_text__iterator_1a83895cc8647c04ad4c67e8eb8d01119a" compoundref="_c_text_8h" startline="77">currLine</references>
+        <references refid="class_line__iterator_1a2d33b3ebe0d62dd8245e5e560e9c6a7e" compoundref="_c_line_8cpp" startline="515" endline="518">Line_iterator::GetLinePointer</references>
+        <references refid="class_c_text_1a823b5a708158bcf403f099768ccfa280" compoundref="_c_text_8cpp" startline="407" endline="410">CText::Line_Number</references>
+        <references refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" compoundref="_c_line_8h" startline="58">CLine::nDataSize</references>
+        <references refid="class_c_line_1aa1aed03c5292b8299dd7bcd037a06bf3" compoundref="_c_line_8h" startline="57">CLine::nLineNumber</references>
+        <references refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" compoundref="_c_line_8h" startline="55">CLine::pNextLine</references>
+        <references refid="class_text__iterator_1af33ad5bc623ccba42b1dc216ecd2061a" compoundref="_c_text_8h" startline="76">pText</references>
+        <references refid="class_line__iterator_1aa3c7ec6479e1b1b04f923b2eff2280de" compoundref="_c_line_8cpp" startline="491" endline="508">Line_iterator::Set</references>
+      </memberdef>
+      <memberdef kind="function" id="class_text__iterator_1a52c9e5d18572a4bae2c9a724a183ddd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref></type>
+        <definition>Text_iterator Text_iterator::operator++</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator++</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="68" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="528" bodyend="533"/>
+      </memberdef>
+      <memberdef kind="function" id="class_text__iterator_1ae6c88cae4a7b534df1ad354c30d97dce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref> &amp;</type>
+        <definition>Text_iterator &amp; Text_iterator::operator--</definition>
+        <argsstring>()</argsstring>
+        <name>operator--</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="69" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="535" bodyend="551"/>
+        <references refid="class_line__iterator_1ac9b7eab9762d2ff694b10eb8f530d091" compoundref="_c_line_8cpp" startline="510" endline="513">Line_iterator::CurrentPosition</references>
+        <references refid="class_text__iterator_1a83895cc8647c04ad4c67e8eb8d01119a" compoundref="_c_text_8h" startline="77">currLine</references>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">CText::GetLinePointer</references>
+        <references refid="class_line__iterator_1a2d33b3ebe0d62dd8245e5e560e9c6a7e" compoundref="_c_line_8cpp" startline="515" endline="518">Line_iterator::GetLinePointer</references>
+        <references refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" compoundref="_c_line_8h" startline="58">CLine::nDataSize</references>
+        <references refid="class_c_line_1aa1aed03c5292b8299dd7bcd037a06bf3" compoundref="_c_line_8h" startline="57">CLine::nLineNumber</references>
+        <references refid="class_text__iterator_1af33ad5bc623ccba42b1dc216ecd2061a" compoundref="_c_text_8h" startline="76">pText</references>
+        <references refid="class_line__iterator_1aa3c7ec6479e1b1b04f923b2eff2280de" compoundref="_c_line_8cpp" startline="491" endline="508">Line_iterator::Set</references>
+      </memberdef>
+      <memberdef kind="function" id="class_text__iterator_1a2e2bbdac327ec2a1d61512165cd09531" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref></type>
+        <definition>Text_iterator Text_iterator::operator--</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator--</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="70" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="553" bodyend="558"/>
+      </memberdef>
+      <memberdef kind="function" id="class_text__iterator_1afba92592856bd7a121818e6beff86163" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref> &amp;</type>
+        <definition>Text_iterator &amp; Text_iterator::operator+</definition>
+        <argsstring>(int n)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="71" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="559" bodyend="567"/>
+      </memberdef>
+      <memberdef kind="function" id="class_text__iterator_1abbba8281b4bafab9a4d628db73a7ac7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref> &amp;</type>
+        <definition>Text_iterator &amp; Text_iterator::operator-</definition>
+        <argsstring>(int n)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="72" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="568" bodyend="576"/>
+      </memberdef>
+      <memberdef kind="function" id="class_text__iterator_1ab851a4cf74ff0ce0fc38b94c74099a49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Text_iterator::operator==</definition>
+        <argsstring>(const Text_iterator &amp;Text)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="class_text__iterator" kindref="compound">Text_iterator</ref> &amp;</type>
+          <declname>Text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="73" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="577" bodyend="580"/>
+        <references refid="class_text__iterator_1a83895cc8647c04ad4c67e8eb8d01119a" compoundref="_c_text_8h" startline="77">currLine</references>
+      </memberdef>
+      <memberdef kind="function" id="class_text__iterator_1abe4df17cc9e72310ba27756fa00de411" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Text_iterator::operator!=</definition>
+        <argsstring>(const Text_iterator &amp;Text)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="class_text__iterator" kindref="compound">Text_iterator</ref> &amp;</type>
+          <declname>Text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="74" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="581" bodyend="584"/>
+        <references refid="class_text__iterator_1a83895cc8647c04ad4c67e8eb8d01119a" compoundref="_c_text_8h" startline="77">currLine</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="63">
+        <label>Text_iterator</label>
+        <link refid="class_text__iterator"/>
+        <childnode refid="64" relation="usage">
+          <edgelabel>currLine</edgelabel>
+        </childnode>
+        <childnode refid="67" relation="usage">
+          <edgelabel>pText</edgelabel>
+        </childnode>
+      </node>
+      <node id="67">
+        <label>CText</label>
+        <link refid="class_c_text"/>
+        <childnode refid="65" relation="usage">
+          <edgelabel>pFirstLineHead</edgelabel>
+        </childnode>
+        <childnode refid="68" relation="usage">
+          <edgelabel>FileName</edgelabel>
+        </childnode>
+      </node>
+      <node id="69">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="66">
+        <label>DataBlock</label>
+        <link refid="struct_data_block"/>
+        <childnode refid="66" relation="usage">
+          <edgelabel>pNextBlock</edgelabel>
+        </childnode>
+      </node>
+      <node id="64">
+        <label>Line_iterator</label>
+        <link refid="class_line__iterator"/>
+        <childnode refid="65" relation="usage">
+          <edgelabel>pLine</edgelabel>
+        </childnode>
+        <childnode refid="66" relation="usage">
+          <edgelabel>pBlock</edgelabel>
+        </childnode>
+      </node>
+      <node id="65">
+        <label>CLine</label>
+        <link refid="class_c_line"/>
+        <childnode refid="65" relation="usage">
+          <edgelabel>pNextLine</edgelabel>
+        </childnode>
+        <childnode refid="66" relation="usage">
+          <edgelabel>pLineHead</edgelabel>
+        </childnode>
+      </node>
+      <node id="68">
+        <label>std::string</label>
+        <childnode refid="69" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="55" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" bodystart="54" bodyend="78"/>
+    <listofallmembers>
+      <member refid="class_text__iterator_1a50cbffa9d9c843877f5152a16e55c262" prot="public" virt="non-virtual"><scope>Text_iterator</scope><name>CurrentLineNumber</name></member>
+      <member refid="class_text__iterator_1a83895cc8647c04ad4c67e8eb8d01119a" prot="private" virt="non-virtual"><scope>Text_iterator</scope><name>currLine</name></member>
+      <member refid="class_text__iterator_1a5828a1d8a40e197491579a7840b090e5" prot="public" virt="non-virtual"><scope>Text_iterator</scope><name>GetCurPositin</name></member>
+      <member refid="class_text__iterator_1a2e7a32115ef11481d791333840138e72" prot="public" virt="non-virtual"><scope>Text_iterator</scope><name>GoEnd</name></member>
+      <member refid="class_text__iterator_1a6fafa43cf62867ecadb47524a5771dec" prot="public" virt="non-virtual"><scope>Text_iterator</scope><name>GoPosition</name></member>
+      <member refid="class_text__iterator_1a7ec78e7e057bf205d62bf7487faee1fc" prot="public" virt="non-virtual"><scope>Text_iterator</scope><name>isEnd</name></member>
+      <member refid="class_text__iterator_1abe4df17cc9e72310ba27756fa00de411" prot="public" virt="non-virtual"><scope>Text_iterator</scope><name>operator!=</name></member>
+      <member refid="class_text__iterator_1a1db3aac9b492864382c47c3b37498235" prot="public" virt="non-virtual"><scope>Text_iterator</scope><name>operator*</name></member>
+      <member refid="class_text__iterator_1afba92592856bd7a121818e6beff86163" prot="public" virt="non-virtual"><scope>Text_iterator</scope><name>operator+</name></member>
+      <member refid="class_text__iterator_1ac9403569982df04eb9141282b738acd8" prot="public" virt="non-virtual"><scope>Text_iterator</scope><name>operator++</name></member>
+      <member refid="class_text__iterator_1a52c9e5d18572a4bae2c9a724a183ddd9" prot="public" virt="non-virtual"><scope>Text_iterator</scope><name>operator++</name></member>
+      <member refid="class_text__iterator_1abbba8281b4bafab9a4d628db73a7ac7c" prot="public" virt="non-virtual"><scope>Text_iterator</scope><name>operator-</name></member>
+      <member refid="class_text__iterator_1ae6c88cae4a7b534df1ad354c30d97dce" prot="public" virt="non-virtual"><scope>Text_iterator</scope><name>operator--</name></member>
+      <member refid="class_text__iterator_1a2e2bbdac327ec2a1d61512165cd09531" prot="public" virt="non-virtual"><scope>Text_iterator</scope><name>operator--</name></member>
+      <member refid="class_text__iterator_1ab851a4cf74ff0ce0fc38b94c74099a49" prot="public" virt="non-virtual"><scope>Text_iterator</scope><name>operator==</name></member>
+      <member refid="class_text__iterator_1af33ad5bc623ccba42b1dc216ecd2061a" prot="private" virt="non-virtual"><scope>Text_iterator</scope><name>pText</name></member>
+      <member refid="class_text__iterator_1a58eff6fbd7be8422ed8af1f2fbd3affb" prot="public" virt="non-virtual"><scope>Text_iterator</scope><name>Text_iterator</name></member>
+      <member refid="class_text__iterator_1a1a9abe224d85f442243bc07305357be6" prot="public" virt="non-virtual"><scope>Text_iterator</scope><name>Text_iterator</name></member>
+      <member refid="class_text__iterator_1ae69a919a10648ed1d571162e1f06dd42" prot="public" virt="non-virtual"><scope>Text_iterator</scope><name>~Text_iterator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

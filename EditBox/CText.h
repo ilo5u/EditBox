@@ -25,10 +25,10 @@ public:
 	void DeleteLines(int first, int last);										//删除整行
 	Position Delete(Position first, Position last);								//删除选中部分
 	Position	BackSpace(Position position);									//退格键
-	Position	Insert(Position start, std::wstring String);						//插入字符串
+	Position	Insert(Position start, std::wstring String);					//插入字符串
 	std::wstring Copy(Position start, Position end);							//拷贝段落
 	Position	EnterNewLine(Position position);								//光标在position后按回车
-	bool	SeekStrings(std::wstring Str, Position& start, Position& end);		//查找字符串
+	bool	SeekStrings(std::wstring Str, Position& start, Position& end, bool upper_lower = true);		//查找字符串
 	Position	Replace(Position start, Position end, std::wstring Str);		//替换字符串
 	bool        isSaved();														//是否保存
 	std::string FilePath();														//返回文件路径
@@ -42,12 +42,13 @@ public:
 	Position First_Position();													//返回文本第一个字符位置
 	Position End_Position();													//返回文本最后一个字符位置
 private:
-	CLine * pFirstLineHead;							//行首地址
-	int			nLineNumbers;							//行数
-	std::string	FileName;								//文件名		
-	bool		bSave;									//是否保存
-	void UpDataLineNumber(CLine* p, int Start);			//更新行号
-	void InsertLine(int AfterLineNumber);				//在行号后面插入空行
+	CLine * pFirstLineHead;														//行首地址
+	int			nLineNumbers;													//行数
+	std::string	FileName;														//文件名		
+	bool		bSave;															//是否保存
+	void UpDataLineNumber(CLine* p, int Start);									//更新行号
+	void InsertLine(int AfterLineNumber);										//在行号后面插入空行
+	bool upper_lower_match(TCHAR ch1, TCHAR ch2, bool upper_lower);				//判断是否符合匹配
 };
 
 /*全文本迭代器*/
@@ -68,10 +69,12 @@ public:
 	Text_iterator  operator++(int);
 	Text_iterator& operator--();
 	Text_iterator  operator--(int);
-	Text_iterator& operator+(int n);
-	Text_iterator& operator-(int n);
+	Text_iterator operator+(int n);
+	Text_iterator operator-(int n);
 	bool operator==(const Text_iterator& Text);
 	bool operator!=(const Text_iterator& Text);
+	bool operator<(const Text_iterator& Text);
+	bool operator<=(const Text_iterator& Text);
 private:
 	CText * pText;											//指向文本文件对象的指针
 	Line_iterator currLine;									//绑定的当前行迭代器

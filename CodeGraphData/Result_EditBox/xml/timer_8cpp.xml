@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="timer_8cpp" kind="file">
+    <compoundname>timer.cpp</compoundname>
+    <includes refid="stdafx_8h" local="yes">stdafx.h</includes>
+    <includes refid="editbox_8h" local="yes">editbox.h</includes>
+    <includes local="no">mutex</includes>
+    <incdepgraph>
+      <node id="528">
+        <label>queue</label>
+      </node>
+      <node id="510">
+        <label>windows.h</label>
+      </node>
+      <node id="515">
+        <label>Windowsx.h</label>
+      </node>
+      <node id="516">
+        <label>assert.h</label>
+      </node>
+      <node id="521">
+        <label>Cursor.h</label>
+        <link refid="_cursor_8h"/>
+        <childnode refid="522" relation="include">
+        </childnode>
+        <childnode refid="529" relation="include">
+        </childnode>
+      </node>
+      <node id="507">
+        <label>stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="510" relation="include">
+        </childnode>
+        <childnode refid="511" relation="include">
+        </childnode>
+        <childnode refid="512" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+        <childnode refid="514" relation="include">
+        </childnode>
+        <childnode refid="515" relation="include">
+        </childnode>
+        <childnode refid="516" relation="include">
+        </childnode>
+        <childnode refid="517" relation="include">
+        </childnode>
+        <childnode refid="518" relation="include">
+        </childnode>
+        <childnode refid="519" relation="include">
+        </childnode>
+        <childnode refid="520" relation="include">
+        </childnode>
+      </node>
+      <node id="511">
+        <label>stdlib.h</label>
+      </node>
+      <node id="509">
+        <label>SDKDDKVer.h</label>
+      </node>
+      <node id="529">
+        <label>Windows.h</label>
+      </node>
+      <node id="530">
+        <label>Record.h</label>
+        <link refid="_record_8h"/>
+        <childnode refid="522" relation="include">
+        </childnode>
+        <childnode refid="521" relation="include">
+        </childnode>
+        <childnode refid="529" relation="include">
+        </childnode>
+      </node>
+      <node id="512">
+        <label>malloc.h</label>
+      </node>
+      <node id="520">
+        <label>API.h</label>
+        <link refid="_a_p_i_8h"/>
+        <childnode refid="521" relation="include">
+        </childnode>
+        <childnode refid="529" relation="include">
+        </childnode>
+        <childnode refid="530" relation="include">
+        </childnode>
+      </node>
+      <node id="532">
+        <label>resource.h</label>
+        <link refid="resource_8h"/>
+      </node>
+      <node id="526">
+        <label>string</label>
+      </node>
+      <node id="506">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp</label>
+        <link refid="timer.cpp"/>
+        <childnode refid="507" relation="include">
+        </childnode>
+        <childnode refid="531" relation="include">
+        </childnode>
+        <childnode refid="533" relation="include">
+        </childnode>
+      </node>
+      <node id="513">
+        <label>memory.h</label>
+      </node>
+      <node id="524">
+        <label>fstream</label>
+      </node>
+      <node id="531">
+        <label>editbox.h</label>
+        <link refid="editbox_8h"/>
+        <childnode refid="529" relation="include">
+        </childnode>
+        <childnode refid="532" relation="include">
+        </childnode>
+      </node>
+      <node id="508">
+        <label>targetver.h</label>
+        <link refid="targetver_8h"/>
+        <childnode refid="509" relation="include">
+        </childnode>
+      </node>
+      <node id="523">
+        <label>sstream</label>
+      </node>
+      <node id="525">
+        <label>CLine.h</label>
+        <link refid="_c_line_8h"/>
+        <childnode refid="514" relation="include">
+        </childnode>
+        <childnode refid="526" relation="include">
+        </childnode>
+        <childnode refid="527" relation="include">
+        </childnode>
+      </node>
+      <node id="518">
+        <label>commdlg.h</label>
+      </node>
+      <node id="519">
+        <label>ShlObj.h</label>
+      </node>
+      <node id="527">
+        <label>iostream</label>
+      </node>
+      <node id="514">
+        <label>tchar.h</label>
+      </node>
+      <node id="533">
+        <label>mutex</label>
+      </node>
+      <node id="522">
+        <label>CText.h</label>
+        <link refid="_c_text_8h"/>
+        <childnode refid="523" relation="include">
+        </childnode>
+        <childnode refid="524" relation="include">
+        </childnode>
+        <childnode refid="525" relation="include">
+        </childnode>
+        <childnode refid="528" relation="include">
+        </childnode>
+        <childnode refid="529" relation="include">
+        </childnode>
+      </node>
+      <node id="517">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="timer_8cpp_1ae4ef7e95fabe58ab3f15273a396ff190" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DWORD __stdcall</type>
+        <definition>static DWORD __stdcall RunTimer</definition>
+        <argsstring>(LPVOID lpVoid)</argsstring>
+        <name>RunTimer</name>
+        <param>
+          <type>LPVOID</type>
+          <declname>lpVoid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp" line="5" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp" bodystart="5" bodyend="13"/>
+        <references refid="struct___t_i_m_e_r_1a58bb9d8ba3aa17d241d70b4de084c4e9" compoundref="editbox_8h" startline="15">_TIMER::time_mutex</references>
+        <references refid="struct___t_i_m_e_r_1a7262c637a4ca0a84f6958055b0c75887" compoundref="editbox_8h" startline="14">_TIMER::time_rest</references>
+        <referencedby refid="struct___t_i_m_e_r_1a87e7f6317a93602a297e8df61502f828" compoundref="timer_8cpp" startline="24" endline="29">_TIMER::_TIMER</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="timer_8cpp_1a98ac40abd297710a7c905920dbe88c56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL IsTimerStopped</definition>
+        <argsstring>(HTIMER hTimer)</argsstring>
+        <name>IsTimerStopped</name>
+        <param>
+          <type><ref refid="editbox_8h_1a5f97b8cc533aca3989078513bcfd276c" kindref="member">HTIMER</ref></type>
+          <declname>hTimer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp" line="15" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp" bodystart="15" bodyend="22"/>
+        <references refid="struct___t_i_m_e_r_1a58bb9d8ba3aa17d241d70b4de084c4e9" compoundref="editbox_8h" startline="15">_TIMER::time_mutex</references>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="timer_8cpp_1aa86faaca2fb82cb257d6dad837d717cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="editbox_8h_1a5f97b8cc533aca3989078513bcfd276c" kindref="member">HTIMER</ref> _stdcall</type>
+        <definition>HTIMER _stdcall CreateTimer</definition>
+        <argsstring>(DWORD time_length)</argsstring>
+        <name>CreateTimer</name>
+        <param>
+          <type>DWORD</type>
+          <declname>time_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp" line="40" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp" bodystart="40" bodyend="44"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="timer_8cpp_1a6fd74aab9cf779f90331139c6d4ffe0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL _stdcall</type>
+        <definition>BOOL _stdcall KillTimer</definition>
+        <argsstring>(HTIMER timer)</argsstring>
+        <name>KillTimer</name>
+        <param>
+          <type><ref refid="editbox_8h_1a5f97b8cc533aca3989078513bcfd276c" kindref="member">HTIMER</ref></type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp" line="46" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp" bodystart="46" bodyend="50"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stdafx_8h" kindref="compound">stdafx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="editbox_8h" kindref="compound">editbox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="timer_8cpp_1ae4ef7e95fabe58ab3f15273a396ff190" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>DWORD<sp/>__stdcall<sp/><ref refid="timer_8cpp_1ae4ef7e95fabe58ab3f15273a396ff190" kindref="member">RunTimer</ref>(LPVOID<sp/>lpVoid)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___t_i_m_e_r" kindref="compound">HTIMER</ref><sp/>hTimer<sp/>=<sp/>(<ref refid="editbox_8h_1a5f97b8cc533aca3989078513bcfd276c" kindref="member">HTIMER</ref>)lpVoid;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>WaitForSingleObject(hTimer-&gt;<ref refid="struct___t_i_m_e_r_1a58bb9d8ba3aa17d241d70b4de084c4e9" kindref="member">time_mutex</ref>,<sp/>INFINITE);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>Sleep(hTimer-&gt;<ref refid="struct___t_i_m_e_r_1a7262c637a4ca0a84f6958055b0c75887" kindref="member">time_rest</ref>);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>ReleaseMutex(hTimer-&gt;<ref refid="struct___t_i_m_e_r_1a58bb9d8ba3aa17d241d70b4de084c4e9" kindref="member">time_mutex</ref>);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(0);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="timer_8cpp_1a98ac40abd297710a7c905920dbe88c56" refkind="member"><highlight class="normal">BOOL<sp/><ref refid="timer_8cpp_1a98ac40abd297710a7c905920dbe88c56" kindref="member">IsTimerStopped</ref>(<ref refid="struct___t_i_m_e_r" kindref="compound">HTIMER</ref><sp/>hTimer)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(WaitForSingleObject(hTimer-&gt;<ref refid="struct___t_i_m_e_r_1a58bb9d8ba3aa17d241d70b4de084c4e9" kindref="member">time_mutex</ref>,<sp/>50)<sp/>==<sp/>WAIT_TIMEOUT)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(FALSE);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>ReleaseMutex(hTimer-&gt;<ref refid="struct___t_i_m_e_r_1a58bb9d8ba3aa17d241d70b4de084c4e9" kindref="member">time_mutex</ref>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="struct___t_i_m_e_r_1a87e7f6317a93602a297e8df61502f828" refkind="member"><highlight class="normal"><ref refid="struct___t_i_m_e_r_1a87e7f6317a93602a297e8df61502f828" kindref="member">_TIMER::_TIMER</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>DWORD&amp;<sp/>tr)<sp/>:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>time_rest(tr)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___t_i_m_e_r_1a58bb9d8ba3aa17d241d70b4de084c4e9" kindref="member">time_mutex</ref><sp/>=<sp/>CreateMutex(NULL,<sp/>FALSE,<sp/>TEXT(</highlight><highlight class="stringliteral">&quot;TIME<sp/>MUTEX&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___t_i_m_e_r_1ab4816b5a1b667fd50f17f5f725b11625" kindref="member">time_thread_id</ref><sp/>=<sp/>CreateThread(NULL,<sp/>0,<sp/><ref refid="timer_8cpp_1ae4ef7e95fabe58ab3f15273a396ff190" kindref="member">RunTimer</ref>,<sp/>(LPVOID)</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>0,<sp/>NULL);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="struct___t_i_m_e_r_1a5ae095f7617927db3aa70724c708c455" refkind="member"><highlight class="normal"><ref refid="struct___t_i_m_e_r_1a5ae095f7617927db3aa70724c708c455" kindref="member">_TIMER::~_TIMER</ref>()</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>WaitForSingleObject(<ref refid="struct___t_i_m_e_r_1ab4816b5a1b667fd50f17f5f725b11625" kindref="member">time_thread_id</ref>,<sp/>INFINITE);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>CloseHandle(<ref refid="struct___t_i_m_e_r_1ab4816b5a1b667fd50f17f5f725b11625" kindref="member">time_thread_id</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>WaitForSingleObject(<ref refid="struct___t_i_m_e_r_1a58bb9d8ba3aa17d241d70b4de084c4e9" kindref="member">time_mutex</ref>,<sp/>INFINITE);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>CloseHandle(<ref refid="struct___t_i_m_e_r_1a58bb9d8ba3aa17d241d70b4de084c4e9" kindref="member">time_mutex</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="timer_8cpp_1aa86faaca2fb82cb257d6dad837d717cd" refkind="member"><highlight class="normal"><ref refid="struct___t_i_m_e_r" kindref="compound">HTIMER</ref><sp/>_stdcall<sp/><ref refid="timer_8cpp_1aa86faaca2fb82cb257d6dad837d717cd" kindref="member">CreateTimer</ref>(DWORD<sp/>time_length)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___t_i_m_e_r" kindref="compound">HTIMER</ref><sp/>new_timer<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="struct___t_i_m_e_r" kindref="compound">TIMER</ref>{<sp/>time_length<sp/>};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>new_timer;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="timer_8cpp_1a6fd74aab9cf779f90331139c6d4ffe0b" refkind="member"><highlight class="normal">BOOL<sp/>_stdcall<sp/><ref refid="timer_8cpp_1a6fd74aab9cf779f90331139c6d4ffe0b" kindref="member">KillTimer</ref>(<ref refid="struct___t_i_m_e_r" kindref="compound">HTIMER</ref><sp/>timer)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>timer;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp"/>
+  </compounddef>
+</doxygen>

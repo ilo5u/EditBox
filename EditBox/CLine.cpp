@@ -517,34 +517,36 @@ CLine * Line_iterator::GetLinePointer()
 	return pLine;
 }
 
-Line_iterator & Line_iterator::operator+(int n)
+Line_iterator  Line_iterator::operator+(int n)
 {
-	int BeginIndex = nIndex % BLOCK_SIZE - 1;		//当前所在块中下标
+	Line_iterator temp(*this);
+	int BeginIndex = temp.nIndex % BLOCK_SIZE - 1;		//当前所在块中下标
 	int Blocks_to_add = n / BLOCK_SIZE;
 	int Remainder = n % BLOCK_SIZE;					//相对偏移量
-	nIndex += Blocks_to_add * BLOCK_SIZE;
+	temp.nIndex += Blocks_to_add * BLOCK_SIZE;
 	while (Blocks_to_add)
 	{
-		pBlock = pBlock->pNextBlock;
+		temp.pBlock = temp.pBlock->pNextBlock;
 		Blocks_to_add--;
 	}
 	pWChar = &(pBlock->Strings[BeginIndex]);
 	while (Remainder)
 	{
-		++(*this);
+		++(temp);
 		--Remainder;
 	}
-	return *this;
+	return temp;
 }
 
-Line_iterator & Line_iterator::operator-(int n)
+Line_iterator  Line_iterator::operator-(int n)
 {
+	Line_iterator temp(*this);
 	while (n)
 	{
-		--(*this);
+		--(temp);
 		--n;
 	}
-	return *this;
+	return temp;
 }
 /*
 返回迭代器所指位置的字符引用
@@ -601,6 +603,7 @@ Line_iterator copy(Line_iterator start, Line_iterator first, Line_iterator last)
 	return start;
 }
 
+//P1<P2 表示p1 在 P2之前 
 bool Position::operator<(Position & position)
 {
 	if (LineNumber < position.LineNumber)

@@ -1,5 +1,4 @@
 #include"stdafx.h"
-#include "debug.h"
 
 CText::CText()
 {
@@ -11,6 +10,7 @@ CText::CText()
 CText::~CText()
 {
 	ClearAll();
+	delete pFirstLineHead;
 }
 /*新建文本 保存默认文件名*/
 void CText::NewFile()
@@ -34,7 +34,6 @@ void CText::ReadText(std::string filename)
 	CLine* p = NULL;
 	while (std::getline(File_r, LineStr))
 	{
-		nLineNumbers++;
 		if (nLineNumbers == 1)
 		{
 			if (LineStr.empty())		//空文件
@@ -54,7 +53,7 @@ void CText::ReadText(std::string filename)
 			p = p->pNextLine;
 			p->CreateLine(LineWStr);
 		}
-
+		nLineNumbers++;
 	}
 	File_r.close();
 	bSave = 1;
@@ -71,7 +70,7 @@ void CText::ClearAll()
 		delete temp;
 	}
 	FileName = "";
-	pFirstLineHead = NULL;
+	pFirstLineHead = new CLine(1);
 	nLineNumbers = 1;
 	bSave = 0;
 }
@@ -201,7 +200,8 @@ Position CText::Insert(Position start, std::wstring String)
 	bSave = 0;
 	std::queue<std::wstring> dq = WStrToLineWStr(String);
 	CLine* p = GetLinePointer(start.LineNumber);
-
+	if (p == NULL)
+		throw std::invalid_argument("位置传入错误");
 	int n = start.LineNumber;
 	int prenumbers = 0;
 	if (!dq.empty())					//对首行的特殊处理
@@ -301,8 +301,22 @@ Position CText::EnterNewLine(Position position)
 	}
 }
 
-//查找字符串 返回值表示是否查找到 将该字符串的起点和终点赋值给参数
-bool CText::SeekStrings(std::wstring Str, Position& start, Position& end)
+/*
+查找字符串 返回值表示是否查找到 将该字符串的起点和终点赋值给参数
+
+提供的功能：
+1 全字符匹配
+2 区分大小写下的全字符匹配
+3 不区分大小写下的全字符匹配
+4 向前查找
+5 向后查找
+传入参数start用于指明开始位置 最终被赋值为查找到的字符串第一个字符位置
+传入参数end用于指明结束位置 最终被赋值为查找到的字符串最后一个字符位置
+参数 upper_lower 取值：
+true	区分大小写（默认情况）
+false	不区分大小写
+*/
+bool CText::SeekStrings(std::wstring Str, Position& start, Position& end, bool upper_lower)
 {
 	//模式匹配预处理
 	int* pNext = GetNextValArray(Str);
@@ -310,26 +324,29 @@ bool CText::SeekStrings(std::wstring Str, Position& start, Position& end)
 	Text_iterator iterator(*this);
 	Text_iterator TextEnd(*this);
 	iterator.GoPosition(start);
-	TextEnd.GoEnd();
-											//匹配
-	for (int j = -1; iterator != TextEnd; )
+	TextEnd.GoPosition(end);
+	//匹配
+	int j = 0;
+	while (iterator <= TextEnd)
 	{
-		if (j == nSize)				//成功的一次匹配
-		{
-			
-			start = (iterator - nSize).GetCurPositin();
-			end = iterator.GetCurPositin();
-			j = -1;
-			return true;
-		}
-		if (j == -1 || *iterator == Str[j])
+		if (j == -1 || upper_lower_match(*iterator, Str[j], upper_lower))
 		{
 			++j;
 			++iterator;
 		}
 		else
 			j = pNext[j];
+		if (j == nSize)				//成功的一次匹配
+		{
+
+			start = (iterator - nSize).GetCurPositin();
+			end = (iterator - 1).GetCurPositin();
+			j = -1;
+			delete pNext;
+			return true;
+		}
 	}
+
 	delete pNext;
 	return false;
 }
@@ -387,8 +404,6 @@ int CText::Line_Size(int LineNumber)
 int CText::Line_Width(int LineNumber, int Width, int end)
 {
 	CLine* p = GetLinePointer(LineNumber);
-	if (p == NULL)
-		return 0;
 	return p->Line_Width(Width, end);
 }
 int CText::Max_Line_Width(int Width)
@@ -454,6 +469,22 @@ void CText::InsertLine(int AfterLineNumber)
 		}
 	}
 }
+
+/*
+判断两字符是否相当
+参数3 upper_lower 取值：
+true	区分大小写
+false	不区分大小写
+*/
+bool CText::upper_lower_match(TCHAR ch1, TCHAR ch2, bool upper_lower)
+{
+	if ((iswalpha(ch1) && iswalpha(ch2)) && (upper_lower == false))			//两字符均为字母 且不区分大小写
+	{
+		return towlower(ch1) == towlower(ch2);
+	}
+	else
+		return ch1 == ch2;
+}
 //获取行首指针
 CLine * CText::GetLinePointer(int LineNumber)
 {
@@ -461,7 +492,7 @@ CLine * CText::GetLinePointer(int LineNumber)
 		throw std::invalid_argument("传输行参数过大");
 	CLine* p = pFirstLineHead;
 	if (p == NULL)
-		return NULL;
+		throw std::invalid_argument("未创建的文本");
 	while (p->nLineNumber != LineNumber)
 		p = p->pNextLine;
 	return p;
@@ -556,23 +587,25 @@ Text_iterator Text_iterator::operator--(int)
 	--(*this);
 	return temp;
 }
-Text_iterator & Text_iterator::operator+(int n)
+Text_iterator  Text_iterator::operator+(int n)
 {
+	Text_iterator temp(*this);
 	while (n)
 	{
-		++(*this);
+		++temp;
 		--n;
 	}
-	return *this;
+	return temp;
 }
-Text_iterator & Text_iterator::operator-(int n)
+Text_iterator  Text_iterator::operator-(int n)
 {
+	Text_iterator temp(*this);
 	while (n)
 	{
-		--(*this);
+		--temp;
 		--n;
 	}
-	return *this;
+	return temp;
 }
 bool Text_iterator::operator==(const Text_iterator & Text)
 {
@@ -582,6 +615,20 @@ bool Text_iterator::operator!=(const Text_iterator & Text)
 {
 	return currLine != Text.currLine;
 }
+
+bool Text_iterator::operator<(const Text_iterator & Text)
+{
+	if (currLine.pLine->nLineNumber < Text.currLine.pLine->nLineNumber)
+		return true;
+	if (currLine.nIndex < Text.currLine.nIndex)
+		return true;
+	return false;
+}
+bool Text_iterator::operator<=(const Text_iterator & Text)
+{
+	return (*this < Text) || (currLine.pLine->nLineNumber == Text.currLine.pLine->nLineNumber&&currLine.nIndex == Text.currLine.nIndex);
+}
+
 //判断当前文本迭代器是否到了文末
 bool Text_iterator::isEnd()
 {

@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct___t_e_x_t___u_s_e_r" kind="struct" prot="public">
+    <compoundname>_TEXT_USER</compoundname>
+    <includes refid="editbox_8h" local="no">editbox.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___t_e_x_t___u_s_e_r_1a5ad7522d369bd4e6a3ce4b717689f424" prot="public" static="no" mutable="no">
+        <type>HFONT</type>
+        <definition>HFONT _TEXT_USER::m_hFont</definition>
+        <argsstring></argsstring>
+        <name>m_hFont</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="29" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a00d094f318003965d49b28a2bb9fbdf8" compoundref="textinfo_8cpp" startline="101" endline="122">CreateGDI</referencedby>
+        <referencedby refid="textinfo_8cpp_1a0dca3c70fc95ea6a3554cffc08937a75" compoundref="textinfo_8cpp" startline="35" endline="71">CreateUser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_e_x_t___u_s_e_r_1a4469adea819d837c6f58e666a0f209b0" prot="public" static="no" mutable="no">
+        <type>POINT</type>
+        <definition>POINT _TEXT_USER::m_pCharSize</definition>
+        <argsstring></argsstring>
+        <name>m_pCharSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="30" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a073fdf0b934ea2bea409ab94b544d2be" compoundref="textinfo_8cpp" startline="79" endline="93">CreateKernel</referencedby>
+        <referencedby refid="textinfo_8cpp_1a0dca3c70fc95ea6a3554cffc08937a75" compoundref="textinfo_8cpp" startline="35" endline="71">CreateUser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_e_x_t___u_s_e_r_1a931ecfde6be2b53eac3b0a6fd75e2271" prot="public" static="no" mutable="no">
+        <type>POINT</type>
+        <definition>POINT _TEXT_USER::m_pCaretSize</definition>
+        <argsstring></argsstring>
+        <name>m_pCaretSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="31" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a0dca3c70fc95ea6a3554cffc08937a75" compoundref="textinfo_8cpp" startline="35" endline="71">CreateUser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_e_x_t___u_s_e_r_1a0a246aeaace7eec8e9e85d01e44e0b70" prot="public" static="no" mutable="no">
+        <type>POINT</type>
+        <definition>POINT _TEXT_USER::m_pCaretPos</definition>
+        <argsstring></argsstring>
+        <name>m_pCaretPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="32" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a0dca3c70fc95ea6a3554cffc08937a75" compoundref="textinfo_8cpp" startline="35" endline="71">CreateUser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_e_x_t___u_s_e_r_1a69a57e825e55fb1937784c05b10bb88e" prot="public" static="no" mutable="no">
+        <type>POINT</type>
+        <definition>POINT _TEXT_USER::m_pWindowPos</definition>
+        <argsstring></argsstring>
+        <name>m_pWindowPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="33" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a0dca3c70fc95ea6a3554cffc08937a75" compoundref="textinfo_8cpp" startline="35" endline="71">CreateUser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_e_x_t___u_s_e_r_1a936ff142d6f055dcbacc29927a3b67c7" prot="public" static="no" mutable="no">
+        <type>POINT</type>
+        <definition>POINT _TEXT_USER::m_pWindowSize</definition>
+        <argsstring></argsstring>
+        <name>m_pWindowSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="34" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a00d094f318003965d49b28a2bb9fbdf8" compoundref="textinfo_8cpp" startline="101" endline="122">CreateGDI</referencedby>
+        <referencedby refid="textinfo_8cpp_1a0dca3c70fc95ea6a3554cffc08937a75" compoundref="textinfo_8cpp" startline="35" endline="71">CreateUser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_e_x_t___u_s_e_r_1a646fd63408bf87b038d452c86e3e2190" prot="public" static="no" mutable="no">
+        <type>POINT</type>
+        <definition>POINT _TEXT_USER::m_pPageSize</definition>
+        <argsstring></argsstring>
+        <name>m_pPageSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="35" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a0dca3c70fc95ea6a3554cffc08937a75" compoundref="textinfo_8cpp" startline="35" endline="71">CreateUser</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="28" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="27" bodyend="36"/>
+    <listofallmembers>
+      <member refid="struct___t_e_x_t___u_s_e_r_1a5ad7522d369bd4e6a3ce4b717689f424" prot="public" virt="non-virtual"><scope>_TEXT_USER</scope><name>m_hFont</name></member>
+      <member refid="struct___t_e_x_t___u_s_e_r_1a0a246aeaace7eec8e9e85d01e44e0b70" prot="public" virt="non-virtual"><scope>_TEXT_USER</scope><name>m_pCaretPos</name></member>
+      <member refid="struct___t_e_x_t___u_s_e_r_1a931ecfde6be2b53eac3b0a6fd75e2271" prot="public" virt="non-virtual"><scope>_TEXT_USER</scope><name>m_pCaretSize</name></member>
+      <member refid="struct___t_e_x_t___u_s_e_r_1a4469adea819d837c6f58e666a0f209b0" prot="public" virt="non-virtual"><scope>_TEXT_USER</scope><name>m_pCharSize</name></member>
+      <member refid="struct___t_e_x_t___u_s_e_r_1a646fd63408bf87b038d452c86e3e2190" prot="public" virt="non-virtual"><scope>_TEXT_USER</scope><name>m_pPageSize</name></member>
+      <member refid="struct___t_e_x_t___u_s_e_r_1a69a57e825e55fb1937784c05b10bb88e" prot="public" virt="non-virtual"><scope>_TEXT_USER</scope><name>m_pWindowPos</name></member>
+      <member refid="struct___t_e_x_t___u_s_e_r_1a936ff142d6f055dcbacc29927a3b67c7" prot="public" virt="non-virtual"><scope>_TEXT_USER</scope><name>m_pWindowSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

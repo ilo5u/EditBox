@@ -1,0 +1,639 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_cursor" kind="class" prot="public">
+    <compoundname>Cursor</compoundname>
+    <includes refid="_cursor_8h" local="no">Cursor.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_cursor_1aae513efd389f35578db2b6fc47c5d7af" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+        <definition>Position Cursor::start</definition>
+        <argsstring></argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="28" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_cursor_1a2f963111ccfc6af351e75375995c951f" compoundref="_cursor_8cpp" startline="231" endline="236">Choose</referencedby>
+        <referencedby refid="_a_p_i_8h_1aa38f364cf105c6943a1920fc8e71b901" compoundref="_a_p_i_8cpp" startline="550" endline="587">Set_Height_Light</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_cursor_1a41c6b342524ba830e1a9aed3975cea94" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+        <definition>Position Cursor::end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="29" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_cursor_1a2f963111ccfc6af351e75375995c951f" compoundref="_cursor_8cpp" startline="231" endline="236">Choose</referencedby>
+        <referencedby refid="_a_p_i_8h_1aa38f364cf105c6943a1920fc8e71b901" compoundref="_a_p_i_8cpp" startline="550" endline="587">Set_Height_Light</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cursor_1a6d64b4f366fb7cb95e0ebe1fc9676f6f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_c_text" kindref="compound">CText</ref> *</type>
+        <definition>CText* Cursor::pText</definition>
+        <argsstring></argsstring>
+        <name>pText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="31" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_cursor_1a6a42225dc8a5cbb8c7c1cd14691e55a4" compoundref="_cursor_8cpp" startline="105" endline="126">Characters_before_Cursor</referencedby>
+        <referencedby refid="class_cursor_1a232dccb43dd8bfaa9a3662d7f6f69d5a" compoundref="_cursor_8cpp" startline="134" endline="150">CharactersProperty_before_Cursor</referencedby>
+        <referencedby refid="class_cursor_1ae4b07867794c70042c2d3c8d2410491d" compoundref="_cursor_8cpp" startline="4" endline="10">Cursor</referencedby>
+        <referencedby refid="class_cursor_1a600f57bb2ab36d2632cffcf73016f7b5" compoundref="_cursor_8cpp" startline="157" endline="173">CursorLocation</referencedby>
+        <referencedby refid="class_cursor_1ab52b823114daf6409a3e292a2e1cd815" compoundref="_cursor_8cpp" startline="199" endline="216">CursorToPosition_After</referencedby>
+        <referencedby refid="class_cursor_1a1c0097f56a21a934c39c60baa1d05008" compoundref="_cursor_8cpp" startline="40" endline="54">isEnAfter</referencedby>
+        <referencedby refid="class_cursor_1a6b66a6210267c25f37ac6594ec4175de" compoundref="_cursor_8cpp" startline="56" endline="82">isLegalCursor</referencedby>
+        <referencedby refid="class_cursor_1a3decae7bfe7197dc8975c3ff6349be55" compoundref="_cursor_8cpp" startline="85" endline="102">isTextTail</referencedby>
+        <referencedby refid="class_cursor_1aa651fe435ded2561b306da89ea6bcc04" compoundref="_cursor_8cpp" startline="220" endline="229">PositionToCursor</referencedby>
+        <referencedby refid="class_cursor_1a4b43575358a0be93f93c49e858b2d34a" compoundref="_cursor_8cpp" startline="12" endline="15">SethText</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_cursor_1a3fed68fdb966fad71ddaaca1c96785bb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Cursor::nWidth</definition>
+        <argsstring></argsstring>
+        <name>nWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="32" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_cursor_1a6a42225dc8a5cbb8c7c1cd14691e55a4" compoundref="_cursor_8cpp" startline="105" endline="126">Characters_before_Cursor</referencedby>
+        <referencedby refid="class_cursor_1ae4b07867794c70042c2d3c8d2410491d" compoundref="_cursor_8cpp" startline="4" endline="10">Cursor</referencedby>
+        <referencedby refid="class_cursor_1a600f57bb2ab36d2632cffcf73016f7b5" compoundref="_cursor_8cpp" startline="157" endline="173">CursorLocation</referencedby>
+        <referencedby refid="class_cursor_1a6b66a6210267c25f37ac6594ec4175de" compoundref="_cursor_8cpp" startline="56" endline="82">isLegalCursor</referencedby>
+        <referencedby refid="class_cursor_1aa651fe435ded2561b306da89ea6bcc04" compoundref="_cursor_8cpp" startline="220" endline="229">PositionToCursor</referencedby>
+        <referencedby refid="class_cursor_1ad8c15f03732508bc6fdeaa385b32488b" compoundref="_cursor_8cpp" startline="17" endline="20">SetWidth</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_cursor_1aaaa0921e5bd15acfd48ef9c61728f555" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Cursor::nHeight</definition>
+        <argsstring></argsstring>
+        <name>nHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="33" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_cursor_1ae4b07867794c70042c2d3c8d2410491d" compoundref="_cursor_8cpp" startline="4" endline="10">Cursor</referencedby>
+        <referencedby refid="class_cursor_1a7f174f8b8474529dbe9d3b756e24287a" compoundref="_cursor_8cpp" startline="181" endline="190">CursorToPosition</referencedby>
+        <referencedby refid="class_cursor_1ab52b823114daf6409a3e292a2e1cd815" compoundref="_cursor_8cpp" startline="199" endline="216">CursorToPosition_After</referencedby>
+        <referencedby refid="class_cursor_1a3decae7bfe7197dc8975c3ff6349be55" compoundref="_cursor_8cpp" startline="85" endline="102">isTextTail</referencedby>
+        <referencedby refid="class_cursor_1aa651fe435ded2561b306da89ea6bcc04" compoundref="_cursor_8cpp" startline="220" endline="229">PositionToCursor</referencedby>
+        <referencedby refid="class_cursor_1a9f3ce98852d8c9eac5a5505a54fe9dc4" compoundref="_cursor_8cpp" startline="22" endline="25">SetHeight</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_cursor_1a9eac33dc55ccb70baaa31995181877e4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Cursor::bChoose</definition>
+        <argsstring></argsstring>
+        <name>bChoose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="34" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="class_cursor_1a2f963111ccfc6af351e75375995c951f" compoundref="_cursor_8cpp" startline="231" endline="236">Choose</referencedby>
+        <referencedby refid="class_cursor_1ae4b07867794c70042c2d3c8d2410491d" compoundref="_cursor_8cpp" startline="4" endline="10">Cursor</referencedby>
+        <referencedby refid="class_cursor_1ad56cf505ec563381f0c6cf3e66fae3e0" compoundref="_cursor_8cpp" startline="248" endline="251">isChoose</referencedby>
+        <referencedby refid="class_cursor_1a5088b019e8948e12c981c61a104e0048" compoundref="_cursor_8cpp" startline="243" endline="246">ResetChoose</referencedby>
+        <referencedby refid="class_cursor_1a75427c903945e00e975c01f9c3de3e7c" compoundref="_cursor_8cpp" startline="238" endline="241">SetChoose</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cursor_1ae4b07867794c70042c2d3c8d2410491d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Cursor::Cursor</definition>
+        <argsstring>(CText *p, int width, int height)</argsstring>
+        <name>Cursor</name>
+        <param>
+          <type><ref refid="class_c_text" kindref="compound">CText</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="9" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="4" bodyend="10"/>
+        <references refid="class_cursor_1a9eac33dc55ccb70baaa31995181877e4" compoundref="_cursor_8h" startline="34">bChoose</references>
+        <references refid="class_cursor_1aaaa0921e5bd15acfd48ef9c61728f555" compoundref="_cursor_8h" startline="33">nHeight</references>
+        <references refid="class_cursor_1a3fed68fdb966fad71ddaaca1c96785bb" compoundref="_cursor_8h" startline="32">nWidth</references>
+        <references refid="class_cursor_1a6d64b4f366fb7cb95e0ebe1fc9676f6f" compoundref="_cursor_8h" startline="31">pText</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cursor_1a4b43575358a0be93f93c49e858b2d34a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cursor::SethText</definition>
+        <argsstring>(CText *p)</argsstring>
+        <name>SethText</name>
+        <param>
+          <type><ref refid="class_c_text" kindref="compound">CText</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="10" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="12" bodyend="15"/>
+        <references refid="class_cursor_1a6d64b4f366fb7cb95e0ebe1fc9676f6f" compoundref="_cursor_8h" startline="31">pText</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cursor_1ad8c15f03732508bc6fdeaa385b32488b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cursor::SetWidth</definition>
+        <argsstring>(int width)</argsstring>
+        <name>SetWidth</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="11" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="17" bodyend="20"/>
+        <references refid="class_cursor_1a3fed68fdb966fad71ddaaca1c96785bb" compoundref="_cursor_8h" startline="32">nWidth</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cursor_1a9f3ce98852d8c9eac5a5505a54fe9dc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cursor::SetHeight</definition>
+        <argsstring>(int height)</argsstring>
+        <name>SetHeight</name>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="12" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="22" bodyend="25"/>
+        <references refid="class_cursor_1aaaa0921e5bd15acfd48ef9c61728f555" compoundref="_cursor_8h" startline="33">nHeight</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cursor_1a7566d0e6cfeafbc2e7996df82b9e1202" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Cursor::isEnBefore</definition>
+        <argsstring>(int LineNumber, int x)</argsstring>
+        <name>isEnBefore</name>
+        <param>
+          <type>int</type>
+          <declname>LineNumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="13" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="29" bodyend="35"/>
+        <references refid="class_cursor_1a232dccb43dd8bfaa9a3662d7f6f69d5a" compoundref="_cursor_8cpp" startline="134" endline="150">CharactersProperty_before_Cursor</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cursor_1a1c0097f56a21a934c39c60baa1d05008" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Cursor::isEnAfter</definition>
+        <argsstring>(int LineNumber, int x)</argsstring>
+        <name>isEnAfter</name>
+        <param>
+          <type>int</type>
+          <declname>LineNumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="14" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="40" bodyend="54"/>
+        <references refid="class_cursor_1a6a42225dc8a5cbb8c7c1cd14691e55a4" compoundref="_cursor_8cpp" startline="105" endline="126">Characters_before_Cursor</references>
+        <references refid="class_cursor_1a600f57bb2ab36d2632cffcf73016f7b5" compoundref="_cursor_8cpp" startline="157" endline="173">CursorLocation</references>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">CText::GetLinePointer</references>
+        <references refid="class_cursor_1a6b66a6210267c25f37ac6594ec4175de" compoundref="_cursor_8cpp" startline="56" endline="82">isLegalCursor</references>
+        <references refid="class_c_text_1af5f4ba7568e0d2dceaa80fa49f4d36b7" compoundref="_c_text_8cpp" startline="380" endline="384">CText::Line_Size</references>
+        <references refid="class_cursor_1a6d64b4f366fb7cb95e0ebe1fc9676f6f" compoundref="_cursor_8h" startline="31">pText</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cursor_1a6b66a6210267c25f37ac6594ec4175de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Cursor::isLegalCursor</definition>
+        <argsstring>(int LineNumber, int x)</argsstring>
+        <name>isLegalCursor</name>
+        <param>
+          <type>int</type>
+          <declname>LineNumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="15" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="56" bodyend="82"/>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">CText::GetLinePointer</references>
+        <references refid="class_c_line_1a6a02a6e68649d707504f1c9ab8470d33" compoundref="_c_line_8cpp" startline="345" endline="364">CLine::Line_Width</references>
+        <references refid="class_cursor_1a3fed68fdb966fad71ddaaca1c96785bb" compoundref="_cursor_8h" startline="32">nWidth</references>
+        <references refid="class_cursor_1a6d64b4f366fb7cb95e0ebe1fc9676f6f" compoundref="_cursor_8h" startline="31">pText</references>
+        <referencedby refid="class_cursor_1a6a42225dc8a5cbb8c7c1cd14691e55a4" compoundref="_cursor_8cpp" startline="105" endline="126">Characters_before_Cursor</referencedby>
+        <referencedby refid="class_cursor_1a232dccb43dd8bfaa9a3662d7f6f69d5a" compoundref="_cursor_8cpp" startline="134" endline="150">CharactersProperty_before_Cursor</referencedby>
+        <referencedby refid="class_cursor_1a600f57bb2ab36d2632cffcf73016f7b5" compoundref="_cursor_8cpp" startline="157" endline="173">CursorLocation</referencedby>
+        <referencedby refid="class_cursor_1a7f174f8b8474529dbe9d3b756e24287a" compoundref="_cursor_8cpp" startline="181" endline="190">CursorToPosition</referencedby>
+        <referencedby refid="class_cursor_1a1c0097f56a21a934c39c60baa1d05008" compoundref="_cursor_8cpp" startline="40" endline="54">isEnAfter</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cursor_1a3decae7bfe7197dc8975c3ff6349be55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Cursor::isTextTail</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>isTextTail</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="16" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="85" bodyend="102"/>
+        <references refid="class_cursor_1a7f174f8b8474529dbe9d3b756e24287a" compoundref="_cursor_8cpp" startline="181" endline="190">CursorToPosition</references>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">CText::GetLinePointer</references>
+        <references refid="class_c_text_1a823b5a708158bcf403f099768ccfa280" compoundref="_c_text_8cpp" startline="407" endline="410">CText::Line_Number</references>
+        <references refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" compoundref="_c_line_8h" startline="58">CLine::nDataSize</references>
+        <references refid="class_cursor_1aaaa0921e5bd15acfd48ef9c61728f555" compoundref="_cursor_8h" startline="33">nHeight</references>
+        <references refid="class_c_line_1aa1aed03c5292b8299dd7bcd037a06bf3" compoundref="_c_line_8h" startline="57">CLine::nLineNumber</references>
+        <references refid="class_cursor_1a6d64b4f366fb7cb95e0ebe1fc9676f6f" compoundref="_cursor_8h" startline="31">pText</references>
+        <references refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" compoundref="_c_line_8h" startline="12">Position::Sequence</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cursor_1a6a42225dc8a5cbb8c7c1cd14691e55a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Cursor::Characters_before_Cursor</definition>
+        <argsstring>(int LineNumber, int x)</argsstring>
+        <name>Characters_before_Cursor</name>
+        <param>
+          <type>int</type>
+          <declname>LineNumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="17" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="105" bodyend="126"/>
+        <references refid="class_cursor_1a600f57bb2ab36d2632cffcf73016f7b5" compoundref="_cursor_8cpp" startline="157" endline="173">CursorLocation</references>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">CText::GetLinePointer</references>
+        <references refid="class_cursor_1a6b66a6210267c25f37ac6594ec4175de" compoundref="_cursor_8cpp" startline="56" endline="82">isLegalCursor</references>
+        <references refid="class_cursor_1a3fed68fdb966fad71ddaaca1c96785bb" compoundref="_cursor_8h" startline="32">nWidth</references>
+        <references refid="class_cursor_1a6d64b4f366fb7cb95e0ebe1fc9676f6f" compoundref="_cursor_8h" startline="31">pText</references>
+        <referencedby refid="class_cursor_1a232dccb43dd8bfaa9a3662d7f6f69d5a" compoundref="_cursor_8cpp" startline="134" endline="150">CharactersProperty_before_Cursor</referencedby>
+        <referencedby refid="class_cursor_1a7f174f8b8474529dbe9d3b756e24287a" compoundref="_cursor_8cpp" startline="181" endline="190">CursorToPosition</referencedby>
+        <referencedby refid="class_cursor_1a1c0097f56a21a934c39c60baa1d05008" compoundref="_cursor_8cpp" startline="40" endline="54">isEnAfter</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cursor_1a232dccb43dd8bfaa9a3662d7f6f69d5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Cursor::CharactersProperty_before_Cursor</definition>
+        <argsstring>(int LineNumber, int x)</argsstring>
+        <name>CharactersProperty_before_Cursor</name>
+        <param>
+          <type>int</type>
+          <declname>LineNumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="18" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="134" bodyend="150"/>
+        <references refid="class_cursor_1a6a42225dc8a5cbb8c7c1cd14691e55a4" compoundref="_cursor_8cpp" startline="105" endline="126">Characters_before_Cursor</references>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">CText::GetLinePointer</references>
+        <references refid="class_cursor_1a6b66a6210267c25f37ac6594ec4175de" compoundref="_cursor_8cpp" startline="56" endline="82">isLegalCursor</references>
+        <references refid="class_cursor_1a6d64b4f366fb7cb95e0ebe1fc9676f6f" compoundref="_cursor_8h" startline="31">pText</references>
+        <referencedby refid="class_cursor_1a7566d0e6cfeafbc2e7996df82b9e1202" compoundref="_cursor_8cpp" startline="29" endline="35">isEnBefore</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cursor_1a600f57bb2ab36d2632cffcf73016f7b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Cursor::CursorLocation</definition>
+        <argsstring>(int LineNumber, int x)</argsstring>
+        <name>CursorLocation</name>
+        <param>
+          <type>int</type>
+          <declname>LineNumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="19" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="157" bodyend="173"/>
+        <references refid="class_cursor_1a6b66a6210267c25f37ac6594ec4175de" compoundref="_cursor_8cpp" startline="56" endline="82">isLegalCursor</references>
+        <references refid="class_c_text_1aa7f303a9de41a6d9215fb05c2d1400b3" compoundref="_c_text_8cpp" startline="387" endline="393">CText::Line_Width</references>
+        <references refid="class_cursor_1a3fed68fdb966fad71ddaaca1c96785bb" compoundref="_cursor_8h" startline="32">nWidth</references>
+        <references refid="class_cursor_1a6d64b4f366fb7cb95e0ebe1fc9676f6f" compoundref="_cursor_8h" startline="31">pText</references>
+        <referencedby refid="class_cursor_1a6a42225dc8a5cbb8c7c1cd14691e55a4" compoundref="_cursor_8cpp" startline="105" endline="126">Characters_before_Cursor</referencedby>
+        <referencedby refid="class_cursor_1a7f174f8b8474529dbe9d3b756e24287a" compoundref="_cursor_8cpp" startline="181" endline="190">CursorToPosition</referencedby>
+        <referencedby refid="class_cursor_1a1c0097f56a21a934c39c60baa1d05008" compoundref="_cursor_8cpp" startline="40" endline="54">isEnAfter</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cursor_1a7f174f8b8474529dbe9d3b756e24287a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+        <definition>Position Cursor::CursorToPosition</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>CursorToPosition</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="20" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="181" bodyend="190"/>
+        <references refid="class_cursor_1a6a42225dc8a5cbb8c7c1cd14691e55a4" compoundref="_cursor_8cpp" startline="105" endline="126">Characters_before_Cursor</references>
+        <references refid="class_cursor_1a600f57bb2ab36d2632cffcf73016f7b5" compoundref="_cursor_8cpp" startline="157" endline="173">CursorLocation</references>
+        <references refid="class_cursor_1a6b66a6210267c25f37ac6594ec4175de" compoundref="_cursor_8cpp" startline="56" endline="82">isLegalCursor</references>
+        <references refid="class_cursor_1aaaa0921e5bd15acfd48ef9c61728f555" compoundref="_cursor_8h" startline="33">nHeight</references>
+        <referencedby refid="class_cursor_1ab52b823114daf6409a3e292a2e1cd815" compoundref="_cursor_8cpp" startline="199" endline="216">CursorToPosition_After</referencedby>
+        <referencedby refid="class_cursor_1a3decae7bfe7197dc8975c3ff6349be55" compoundref="_cursor_8cpp" startline="85" endline="102">isTextTail</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cursor_1ab52b823114daf6409a3e292a2e1cd815" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+        <definition>Position Cursor::CursorToPosition_After</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>CursorToPosition_After</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="21" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="199" bodyend="216"/>
+        <references refid="class_cursor_1a7f174f8b8474529dbe9d3b756e24287a" compoundref="_cursor_8cpp" startline="181" endline="190">CursorToPosition</references>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">CText::GetLinePointer</references>
+        <references refid="class_c_text_1a823b5a708158bcf403f099768ccfa280" compoundref="_c_text_8cpp" startline="407" endline="410">CText::Line_Number</references>
+        <references refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" compoundref="_c_line_8h" startline="58">CLine::nDataSize</references>
+        <references refid="class_cursor_1aaaa0921e5bd15acfd48ef9c61728f555" compoundref="_cursor_8h" startline="33">nHeight</references>
+        <references refid="class_c_line_1aa1aed03c5292b8299dd7bcd037a06bf3" compoundref="_c_line_8h" startline="57">CLine::nLineNumber</references>
+        <references refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" compoundref="_c_line_8h" startline="55">CLine::pNextLine</references>
+        <references refid="class_cursor_1a6d64b4f366fb7cb95e0ebe1fc9676f6f" compoundref="_cursor_8h" startline="31">pText</references>
+        <references refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" compoundref="_c_line_8h" startline="12">Position::Sequence</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cursor_1aa651fe435ded2561b306da89ea6bcc04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>POINT</type>
+        <definition>POINT Cursor::PositionToCursor</definition>
+        <argsstring>(Position position)</argsstring>
+        <name>PositionToCursor</name>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="22" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="220" bodyend="229"/>
+        <references refid="class_c_text_1aa7f303a9de41a6d9215fb05c2d1400b3" compoundref="_c_text_8cpp" startline="387" endline="393">CText::Line_Width</references>
+        <references refid="struct_position_1a7b72348893583b77254a650b7095c9fc" compoundref="_c_line_8h" startline="11">Position::LineNumber</references>
+        <references refid="class_cursor_1aaaa0921e5bd15acfd48ef9c61728f555" compoundref="_cursor_8h" startline="33">nHeight</references>
+        <references refid="class_cursor_1a3fed68fdb966fad71ddaaca1c96785bb" compoundref="_cursor_8h" startline="32">nWidth</references>
+        <references refid="class_cursor_1a6d64b4f366fb7cb95e0ebe1fc9676f6f" compoundref="_cursor_8h" startline="31">pText</references>
+        <references refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" compoundref="_c_line_8h" startline="12">Position::Sequence</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cursor_1a2f963111ccfc6af351e75375995c951f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cursor::Choose</definition>
+        <argsstring>(Position s, Position e)</argsstring>
+        <name>Choose</name>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="23" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="231" bodyend="236"/>
+        <references refid="class_cursor_1a9eac33dc55ccb70baaa31995181877e4" compoundref="_cursor_8h" startline="34">bChoose</references>
+        <references refid="class_cursor_1a41c6b342524ba830e1a9aed3975cea94" compoundref="_cursor_8h" startline="29">end</references>
+        <references refid="class_cursor_1aae513efd389f35578db2b6fc47c5d7af" compoundref="_cursor_8h" startline="28">start</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cursor_1a75427c903945e00e975c01f9c3de3e7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cursor::SetChoose</definition>
+        <argsstring>()</argsstring>
+        <name>SetChoose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="24" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="238" bodyend="241"/>
+        <references refid="class_cursor_1a9eac33dc55ccb70baaa31995181877e4" compoundref="_cursor_8h" startline="34">bChoose</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cursor_1a5088b019e8948e12c981c61a104e0048" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cursor::ResetChoose</definition>
+        <argsstring>()</argsstring>
+        <name>ResetChoose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="25" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="243" bodyend="246"/>
+        <references refid="class_cursor_1a9eac33dc55ccb70baaa31995181877e4" compoundref="_cursor_8h" startline="34">bChoose</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cursor_1ad56cf505ec563381f0c6cf3e66fae3e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Cursor::isChoose</definition>
+        <argsstring>()</argsstring>
+        <name>isChoose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="26" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="248" bodyend="251"/>
+        <references refid="class_cursor_1a9eac33dc55ccb70baaa31995181877e4" compoundref="_cursor_8h" startline="34">bChoose</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="36">
+        <label>Position</label>
+        <link refid="struct_position"/>
+      </node>
+      <node id="35">
+        <label>Cursor</label>
+        <link refid="class_cursor"/>
+        <childnode refid="36" relation="usage">
+          <edgelabel>end</edgelabel>
+          <edgelabel>start</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>pText</edgelabel>
+        </childnode>
+      </node>
+      <node id="37">
+        <label>CText</label>
+        <link refid="class_c_text"/>
+        <childnode refid="38" relation="usage">
+          <edgelabel>pFirstLineHead</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>FileName</edgelabel>
+        </childnode>
+      </node>
+      <node id="41">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="39">
+        <label>DataBlock</label>
+        <link refid="struct_data_block"/>
+        <childnode refid="39" relation="usage">
+          <edgelabel>pNextBlock</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>CLine</label>
+        <link refid="class_c_line"/>
+        <childnode refid="38" relation="usage">
+          <edgelabel>pNextLine</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>pLineHead</edgelabel>
+        </childnode>
+      </node>
+      <node id="40">
+        <label>std::string</label>
+        <childnode refid="41" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="7" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" bodystart="6" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_cursor_1a9eac33dc55ccb70baaa31995181877e4" prot="private" virt="non-virtual"><scope>Cursor</scope><name>bChoose</name></member>
+      <member refid="class_cursor_1a6a42225dc8a5cbb8c7c1cd14691e55a4" prot="public" virt="non-virtual"><scope>Cursor</scope><name>Characters_before_Cursor</name></member>
+      <member refid="class_cursor_1a232dccb43dd8bfaa9a3662d7f6f69d5a" prot="public" virt="non-virtual"><scope>Cursor</scope><name>CharactersProperty_before_Cursor</name></member>
+      <member refid="class_cursor_1a2f963111ccfc6af351e75375995c951f" prot="public" virt="non-virtual"><scope>Cursor</scope><name>Choose</name></member>
+      <member refid="class_cursor_1ae4b07867794c70042c2d3c8d2410491d" prot="public" virt="non-virtual"><scope>Cursor</scope><name>Cursor</name></member>
+      <member refid="class_cursor_1a600f57bb2ab36d2632cffcf73016f7b5" prot="public" virt="non-virtual"><scope>Cursor</scope><name>CursorLocation</name></member>
+      <member refid="class_cursor_1a7f174f8b8474529dbe9d3b756e24287a" prot="public" virt="non-virtual"><scope>Cursor</scope><name>CursorToPosition</name></member>
+      <member refid="class_cursor_1ab52b823114daf6409a3e292a2e1cd815" prot="public" virt="non-virtual"><scope>Cursor</scope><name>CursorToPosition_After</name></member>
+      <member refid="class_cursor_1a41c6b342524ba830e1a9aed3975cea94" prot="public" virt="non-virtual"><scope>Cursor</scope><name>end</name></member>
+      <member refid="class_cursor_1ad56cf505ec563381f0c6cf3e66fae3e0" prot="public" virt="non-virtual"><scope>Cursor</scope><name>isChoose</name></member>
+      <member refid="class_cursor_1a1c0097f56a21a934c39c60baa1d05008" prot="public" virt="non-virtual"><scope>Cursor</scope><name>isEnAfter</name></member>
+      <member refid="class_cursor_1a7566d0e6cfeafbc2e7996df82b9e1202" prot="public" virt="non-virtual"><scope>Cursor</scope><name>isEnBefore</name></member>
+      <member refid="class_cursor_1a6b66a6210267c25f37ac6594ec4175de" prot="public" virt="non-virtual"><scope>Cursor</scope><name>isLegalCursor</name></member>
+      <member refid="class_cursor_1a3decae7bfe7197dc8975c3ff6349be55" prot="public" virt="non-virtual"><scope>Cursor</scope><name>isTextTail</name></member>
+      <member refid="class_cursor_1aaaa0921e5bd15acfd48ef9c61728f555" prot="private" virt="non-virtual"><scope>Cursor</scope><name>nHeight</name></member>
+      <member refid="class_cursor_1a3fed68fdb966fad71ddaaca1c96785bb" prot="private" virt="non-virtual"><scope>Cursor</scope><name>nWidth</name></member>
+      <member refid="class_cursor_1aa651fe435ded2561b306da89ea6bcc04" prot="public" virt="non-virtual"><scope>Cursor</scope><name>PositionToCursor</name></member>
+      <member refid="class_cursor_1a6d64b4f366fb7cb95e0ebe1fc9676f6f" prot="private" virt="non-virtual"><scope>Cursor</scope><name>pText</name></member>
+      <member refid="class_cursor_1a5088b019e8948e12c981c61a104e0048" prot="public" virt="non-virtual"><scope>Cursor</scope><name>ResetChoose</name></member>
+      <member refid="class_cursor_1a75427c903945e00e975c01f9c3de3e7c" prot="public" virt="non-virtual"><scope>Cursor</scope><name>SetChoose</name></member>
+      <member refid="class_cursor_1a9f3ce98852d8c9eac5a5505a54fe9dc4" prot="public" virt="non-virtual"><scope>Cursor</scope><name>SetHeight</name></member>
+      <member refid="class_cursor_1a4b43575358a0be93f93c49e858b2d34a" prot="public" virt="non-virtual"><scope>Cursor</scope><name>SethText</name></member>
+      <member refid="class_cursor_1ad8c15f03732508bc6fdeaa385b32488b" prot="public" virt="non-virtual"><scope>Cursor</scope><name>SetWidth</name></member>
+      <member refid="class_cursor_1aae513efd389f35578db2b6fc47c5d7af" prot="public" virt="non-virtual"><scope>Cursor</scope><name>start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

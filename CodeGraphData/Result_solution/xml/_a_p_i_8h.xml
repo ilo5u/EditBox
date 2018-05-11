@@ -1,0 +1,1025 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_a_p_i_8h" kind="file">
+    <compoundname>API.h</compoundname>
+    <includes refid="_cursor_8h" local="yes">Cursor.h</includes>
+    <includes local="no">Windows.h</includes>
+    <includes refid="_record_8h" local="yes">Record.h</includes>
+    <includedby refid="stdafx_8h" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/stdafx.h</includedby>
+    <includedby refid="textinfo_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp</includedby>
+    <incdepgraph>
+      <node id="36">
+        <label>queue</label>
+      </node>
+      <node id="28">
+        <label>Cursor.h</label>
+        <link refid="_cursor_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>Windows.h</label>
+      </node>
+      <node id="38">
+        <label>Record.h</label>
+        <link refid="_record_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h</label>
+        <link refid="API.h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>string</label>
+      </node>
+      <node id="31">
+        <label>fstream</label>
+      </node>
+      <node id="30">
+        <label>sstream</label>
+      </node>
+      <node id="32">
+        <label>CLine.h</label>
+        <link refid="_c_line_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>iostream</label>
+      </node>
+      <node id="33">
+        <label>tchar.h</label>
+      </node>
+      <node id="29">
+        <label>CText.h</label>
+        <link refid="_c_text_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="40">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/stdafx.cpp</label>
+        <link refid="stdafx_8cpp"/>
+      </node>
+      <node id="47">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/io.cpp</label>
+        <link refid="io_8cpp"/>
+      </node>
+      <node id="39">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h</label>
+        <link refid="API.h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.cpp</label>
+        <link refid="_c_line_8cpp"/>
+      </node>
+      <node id="52">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp</label>
+        <link refid="timer_8cpp"/>
+      </node>
+      <node id="43">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp</label>
+        <link refid="_c_text_8cpp"/>
+      </node>
+      <node id="41">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.cpp</label>
+        <link refid="_a_p_i_8cpp"/>
+      </node>
+      <node id="45">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp</label>
+        <link refid="debug_8cpp"/>
+      </node>
+      <node id="48">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.cpp</label>
+        <link refid="_record_8cpp"/>
+      </node>
+      <node id="50">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp</label>
+        <link refid="textinfo_8cpp"/>
+      </node>
+      <node id="44">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp</label>
+        <link refid="_cursor_8cpp"/>
+      </node>
+      <node id="51">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp</label>
+        <link refid="textoperation_8cpp"/>
+      </node>
+      <node id="46">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/EditBox.cpp</label>
+        <link refid="_edit_box_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_a_p_i_8h_1a94b6637c5f035545e7b2ac3192d91f19" prot="public" static="no">
+        <name>LODWORD</name>
+        <param><defname>l</defname></param>
+        <initializer>((UINT)(((ULONGLONG)(l)) &amp; 0xffffffff))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="15" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="textoperation_8cpp_1a515f72edefb28c2e51adc570e5ab378c" compoundref="textoperation_8cpp" startline="106" endline="124">MoveCaret</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8db8eabc16f945fab6970a1144e797e" compoundref="textoperation_8cpp" startline="309" endline="335">PaintWindow</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1abddf10fc1bc344eec830edaf4875888f" prot="public" static="no">
+        <name>HIDWORD</name>
+        <param><defname>l</defname></param>
+        <initializer>((UINT)(((ULONGLONG)(l) &gt;&gt; 32) &amp; 0xffffffff))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="16" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="textoperation_8cpp_1a515f72edefb28c2e51adc570e5ab378c" compoundref="textoperation_8cpp" startline="106" endline="124">MoveCaret</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8db8eabc16f945fab6970a1144e797e" compoundref="textoperation_8cpp" startline="309" endline="335">PaintWindow</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1addfa6cb27f683cf21026f0bc4923f7b4" prot="public" static="no">
+        <name>UM_UP</name>
+        <initializer>0x00000026</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="18" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1a152a63770b11e226ce93ab522ab11e19" prot="public" static="no">
+        <name>UM_DOWN</name>
+        <initializer>0x00000028</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="19" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1a57ee48d1cf35ac37e77897b4fb2c0882" prot="public" static="no">
+        <name>UM_LEFT</name>
+        <initializer>0x00000025</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="20" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1ab4f15f33e32a7e4e120c2247b46d7e2d" prot="public" static="no">
+        <name>UM_RIGHT</name>
+        <initializer>0x00000027</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="21" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1a84dc148c13a02981985d656bc1da01bd" prot="public" static="no">
+        <name>UM_RETURN</name>
+        <initializer>0x00000010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="22" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1a91590f327d18d4d4339978f7f3309cd4" prot="public" static="no">
+        <name>UM_END</name>
+        <initializer>0x00000023</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="23" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1aa8053a8bb5b81ace6eb576668ea1a212" prot="public" static="no">
+        <name>UM_CHAR</name>
+        <initializer>0x00000040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="24" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1aa85a1cfcb4fbb9b6ba83c25723effa41" prot="public" static="no">
+        <name>UM_TEXT</name>
+        <initializer>0x00000080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="25" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1ab8db8eabc16f945fab6970a1144e797e" compoundref="textoperation_8cpp" startline="309" endline="335">PaintWindow</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1a3d6cebcd3c19df7da17b6d1cac7c59cd" prot="public" static="no">
+        <name>UM_DELETE</name>
+        <initializer>0x00000100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="26" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1a92732e1417beef4b67611ce395c8622a" prot="public" static="no">
+        <name>UM_CURSOR</name>
+        <initializer>0x00000200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="27" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1a606b7559bb3c83a51d8797022f2817d6" prot="public" static="no">
+        <name>UM_CHOOSE</name>
+        <initializer>0x00000400</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="28" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1ab1c701ac8c279b2a87525ec8c7de9b6e" prot="public" static="no">
+        <name>UM_HOME</name>
+        <initializer>0x00000024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="29" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1a91a0d62528dd0cdd5613a5a009b6aad6" prot="public" static="no">
+        <name>UM_NEW</name>
+        <initializer>0x00001000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="30" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1ae17815df825b3c8a913c3e4f0d6835a4" prot="public" static="no">
+        <name>UM_OPEN</name>
+        <initializer>0x00002000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="31" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1aaee81789b62e1d095ad7e3fccc99ec9a" prot="public" static="no">
+        <name>UM_SAVE</name>
+        <initializer>0x00004000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="32" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1a28267c22aa396ac8f0c9ae1e892d4b01" prot="public" static="no">
+        <name>UM_CLOSE</name>
+        <initializer>0x00008000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="33" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1a2da2ff67002e0a65799f58a1c006e80c" prot="public" static="no">
+        <name>UM_ALL</name>
+        <initializer>0x00000011</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="34" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1af7a5b9fc226a2fe19633300777220d6f" prot="public" static="no">
+        <name>UM_COPY</name>
+        <initializer>0x00000012</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="35" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1a9529cc749a9febdee53a459731402b2d" prot="public" static="no">
+        <name>UM_PASTE</name>
+        <initializer>0x00000014</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="36" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1ac0de31153ef809d07d6c3090fda577d2" prot="public" static="no">
+        <name>UM_CANCEL</name>
+        <initializer>0x00000018</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="37" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1a36eae185b952c1a8dfd9beb2b71d5380" prot="public" static="no">
+        <name>UM_FIND</name>
+        <initializer>0x00000021</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="38" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1ab4ab8ce6663697365782af68d3d6900f" prot="public" static="no">
+        <name>UM_REPLACE</name>
+        <initializer>0x00000022</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="39" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1acc47abb109b510e4798ff2160d7e07c0" prot="public" static="no">
+        <name>UR_NOPATH</name>
+        <initializer>0xf0000000f0100000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="41" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1aaad5eb89e8c04a31f6a8b73865d35e8c" prot="public" static="no">
+        <name>UR_NOTSAVED</name>
+        <initializer>0xf0000000f1000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="42" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1a84827b419363aee4bde6a5fd485be563" prot="public" static="no">
+        <name>UR_NOTCANCEL</name>
+        <initializer>0xf0000000f1100000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="43" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1a679aa379b7f856831d6ffb69dbac7b6d" prot="public" static="no">
+        <name>UR_ERROR</name>
+        <initializer>0xffffffffffffffff</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="44" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="textoperation_8cpp_1a515f72edefb28c2e51adc570e5ab378c" compoundref="textoperation_8cpp" startline="106" endline="124">MoveCaret</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8db8eabc16f945fab6970a1144e797e" compoundref="textoperation_8cpp" startline="309" endline="335">PaintWindow</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1aa1c3590f0c725bc125e0e30c448751d5" prot="public" static="no">
+        <name>UR_SUCCESS</name>
+        <initializer>0xf0000010f0000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="45" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1a4ddffa4a38c520289deecf396be48734" prot="public" static="no">
+        <name>UR_SAVED</name>
+        <initializer>0xf0000100f0000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="46" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1aff0a48040c2889b8763f6eb7771a128e" prot="public" static="no">
+        <name>FIND_COMPELTE</name>
+        <initializer>0x0000000000000001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="48" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1aaa2e93c927c9a6e44a31cc9653c5342c" prot="public" static="no">
+        <name>FIND_LHCASE</name>
+        <initializer>0x0000000000000002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="49" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1afb6f36d91ffbf947cfa3f1114ca79764" prot="public" static="no">
+        <name>TEXT_SIZE</name>
+        <initializer>300</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="51" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1ac576655145c5b4612f504e04a6511a32" compoundref="_a_p_i_8cpp" startline="485" endline="496">CreateText</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_a_p_i_8h_1a9ad1b4a1e4f7381611cfd2ae6620a727" prot="public" static="no">
+        <name>TAB_SIZE</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="52" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_a_p_i_8h_1aa9413ed7069327593b65b1fbe743f019" prot="public" static="no">
+        <type><ref refid="class_c_text" kindref="compound">CText</ref> *</type>
+        <definition>typedef CText* HTEXT</definition>
+        <argsstring></argsstring>
+        <name>HTEXT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="7" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_a_p_i_8h_1a3196d91578d194ac3ce7b307f67509ba" prot="public" static="no">
+        <type>ULONGLONG</type>
+        <definition>typedef ULONGLONG FPARAM</definition>
+        <argsstring></argsstring>
+        <name>FPARAM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="11" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_a_p_i_8h_1a2c1a410fcfeb3e0fd3c16f8c0ffea8dc" prot="public" static="no">
+        <type>ULONGLONG</type>
+        <definition>typedef ULONGLONG SPARAM</definition>
+        <argsstring></argsstring>
+        <name>SPARAM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="12" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_a_p_i_8h_1a24c037a4ce3050a50519add6a361fc55" prot="public" static="no">
+        <type>ULONGLONG</type>
+        <definition>typedef ULONGLONG RVALUE</definition>
+        <argsstring></argsstring>
+        <name>RVALUE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="13" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_a_p_i_8h_1ac576655145c5b4612f504e04a6511a32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_a_p_i_8h_1aa9413ed7069327593b65b1fbe743f019" kindref="member">HTEXT</ref> _stdcall</type>
+        <definition>HTEXT _stdcall CreateText</definition>
+        <argsstring>(int iCharWidth, int iCharHeight)</argsstring>
+        <name>CreateText</name>
+        <param>
+          <type>int</type>
+          <declname>iCharWidth</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iCharHeight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="8" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.cpp" bodystart="485" bodyend="496"/>
+        <references refid="struct_install_1a0cdbcbe4a70a2c24000a98d0465da90b" compoundref="_cursor_8h" startline="43">Install::Height</references>
+        <references refid="_a_p_i_8cpp_1aabb5c4e38ce108dd5f371227d3785d9f" compoundref="_a_p_i_8cpp" startline="514" endline="518">Initialize_Cursor</references>
+        <references refid="class_c_text_1a3ccc06d79ea85f40426f21ed7219d4a8" compoundref="_c_text_8cpp" startline="16" endline="24">CText::NewFile</references>
+        <references refid="_a_p_i_8cpp_1a5890242bc26789e840845303d3792ebe" compoundref="_a_p_i_8cpp" startline="6">pTChar</references>
+        <references refid="_a_p_i_8h_1afb6f36d91ffbf947cfa3f1114ca79764" compoundref="_a_p_i_8h" startline="51">TEXT_SIZE</references>
+        <references refid="struct_install_1a9a4a643ecdd588aaba72f0ac73498a75" compoundref="_cursor_8h" startline="42">Install::Width</references>
+        <referencedby refid="textinfo_8cpp_1a073fdf0b934ea2bea409ab94b544d2be" compoundref="textinfo_8cpp" startline="79" endline="93">CreateKernel</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_a_p_i_8h_1ac18c3370dc59bcfc9d981c8f975c07b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL _stdcall</type>
+        <definition>BOOL _stdcall DestroyText</definition>
+        <argsstring>(HTEXT &amp;hText)</argsstring>
+        <name>DestroyText</name>
+        <param>
+          <type><ref refid="_a_p_i_8h_1aa9413ed7069327593b65b1fbe743f019" kindref="member">HTEXT</ref> &amp;</type>
+          <declname>hText</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="9" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.cpp" bodystart="498" bodyend="512"/>
+        <references refid="_a_p_i_8cpp_1a3ab95940001a3285c8996c7b76ce236c" compoundref="_a_p_i_8cpp" startline="543" endline="548">Free_Buffer</references>
+        <references refid="_a_p_i_8cpp_1ac1e29caa0b12a1c0bad90a6cf23e2427" compoundref="_a_p_i_8cpp" startline="7">pBuffer</references>
+        <references refid="_a_p_i_8cpp_1a35e81f996d5c20a19130237071825a9a" compoundref="_a_p_i_8cpp" startline="5">pCursor</references>
+        <references refid="_a_p_i_8cpp_1ac7bd277cafbf185a131f81f8375d1f1a" compoundref="_a_p_i_8cpp" startline="9">pRecord</references>
+        <references refid="_a_p_i_8cpp_1a5890242bc26789e840845303d3792ebe" compoundref="_a_p_i_8cpp" startline="6">pTChar</references>
+      </memberdef>
+      <memberdef kind="function" id="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_a_p_i_8h_1a24c037a4ce3050a50519add6a361fc55" kindref="member">RVALUE</ref> _stdcall</type>
+        <definition>RVALUE _stdcall UserMessageProc</definition>
+        <argsstring>(HTEXT hText, int x, int y, UINT message, FPARAM fParam, SPARAM sParam)</argsstring>
+        <name>UserMessageProc</name>
+        <param>
+          <type><ref refid="_a_p_i_8h_1aa9413ed7069327593b65b1fbe743f019" kindref="member">HTEXT</ref></type>
+          <declname>hText</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type><ref refid="_a_p_i_8h_1a3196d91578d194ac3ce7b307f67509ba" kindref="member">FPARAM</ref></type>
+          <declname>fParam</declname>
+        </param>
+        <param>
+          <type><ref refid="_a_p_i_8h_1a2c1a410fcfeb3e0fd3c16f8c0ffea8dc" kindref="member">SPARAM</ref></type>
+          <declname>sParam</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="53" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.cpp" bodystart="10" bodyend="483"/>
+        <references refid="struct_record_1ae7c5b5f1395433f551d3c27e7ed00fa5" compoundref="_record_8h" startline="23">Record::ACT</references>
+        <references refid="_a_p_i_8cpp_1af61c75e2f8bdf66aab2b87ba62cdedca" compoundref="_a_p_i_8cpp" startline="522" endline="537">Alloc_Buffer</references>
+        <references refid="class_c_text_1a8b4cd3375f2f673e7daeb8caae3299dd" compoundref="_c_text_8cpp" startline="166" endline="189">CText::BackSpace</references>
+        <references refid="class_cursor_1a6a42225dc8a5cbb8c7c1cd14691e55a4" compoundref="_cursor_8cpp" startline="105" endline="126">Cursor::Characters_before_Cursor</references>
+        <references refid="class_cursor_1a232dccb43dd8bfaa9a3662d7f6f69d5a" compoundref="_cursor_8cpp" startline="134" endline="150">Cursor::CharactersProperty_before_Cursor</references>
+        <references refid="class_cursor_1a2f963111ccfc6af351e75375995c951f" compoundref="_cursor_8cpp" startline="231" endline="236">Cursor::Choose</references>
+        <references refid="class_c_text_1a3e246ed1385aafa70441a021be3e7ee1" compoundref="_c_text_8cpp" startline="65" endline="77">CText::ClearAll</references>
+        <references refid="class_c_text_1a46f994aaca813d66221125f4295f4fcd" compoundref="_c_text_8cpp" startline="243" endline="268">CText::Copy</references>
+        <references refid="class_cursor_1a600f57bb2ab36d2632cffcf73016f7b5" compoundref="_cursor_8cpp" startline="157" endline="173">Cursor::CursorLocation</references>
+        <references refid="class_cursor_1a7f174f8b8474529dbe9d3b756e24287a" compoundref="_cursor_8cpp" startline="181" endline="190">Cursor::CursorToPosition</references>
+        <references refid="class_cursor_1ab52b823114daf6409a3e292a2e1cd815" compoundref="_cursor_8cpp" startline="199" endline="216">Cursor::CursorToPosition_After</references>
+        <references refid="class_c_text_1a5baa587ee060cec570e68110bf6e6f2d" compoundref="_c_text_8cpp" startline="136" endline="160">CText::Delete</references>
+        <references refid="struct_record_1a202754ee6c4db7c19277d74a7fd26f77" compoundref="_record_8h" startline="21">Record::end</references>
+        <references refid="class_cursor_1a41c6b342524ba830e1a9aed3975cea94" compoundref="_cursor_8h" startline="29">Cursor::end</references>
+        <references refid="class_c_text_1a6914c55bbd4bb8352517f672b1986545" compoundref="_c_text_8cpp" startline="478" endline="485">CText::End_Position</references>
+        <references refid="class_c_text_1ae7356293c6869d990f8cbe9f18d23b05" compoundref="_c_text_8cpp" startline="278" endline="302">CText::EnterNewLine</references>
+        <references refid="class_c_text_1a2caf6d91ed3647c812aa7ef7cb7d95b7" compoundref="_c_text_8cpp" startline="372" endline="378">CText::FilePath</references>
+        <references refid="class_c_text_1adabfa437bcb579070acca49c058bfadc" compoundref="_c_text_8cpp" startline="470" endline="476">CText::First_Position</references>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">CText::GetLinePointer</references>
+        <references refid="struct_install_1a0cdbcbe4a70a2c24000a98d0465da90b" compoundref="_cursor_8h" startline="43">Install::Height</references>
+        <references refid="_a_p_i_8h_1abddf10fc1bc344eec830edaf4875888f" compoundref="_a_p_i_8h" startline="16">HIDWORD</references>
+        <references refid="class_c_text_1aeb95b8bf7a9517ead86bff6e39841cb1" compoundref="_c_text_8cpp" startline="199" endline="241">CText::Insert</references>
+        <references refid="class_cursor_1ad56cf505ec563381f0c6cf3e66fae3e0" compoundref="_cursor_8cpp" startline="248" endline="251">Cursor::isChoose</references>
+        <references refid="class_cursor_1a1c0097f56a21a934c39c60baa1d05008" compoundref="_cursor_8cpp" startline="40" endline="54">Cursor::isEnAfter</references>
+        <references refid="class_cursor_1a6b66a6210267c25f37ac6594ec4175de" compoundref="_cursor_8cpp" startline="56" endline="82">Cursor::isLegalCursor</references>
+        <references refid="class_c_text_1adfbfca8b8512249320e44923ffb30165" compoundref="_c_text_8cpp" startline="367" endline="370">CText::isSaved</references>
+        <references refid="class_c_text_1a823b5a708158bcf403f099768ccfa280" compoundref="_c_text_8cpp" startline="407" endline="410">CText::Line_Number</references>
+        <references refid="class_c_text_1af5f4ba7568e0d2dceaa80fa49f4d36b7" compoundref="_c_text_8cpp" startline="380" endline="384">CText::Line_Size</references>
+        <references refid="class_c_text_1aa7f303a9de41a6d9215fb05c2d1400b3" compoundref="_c_text_8cpp" startline="387" endline="393">CText::Line_Width</references>
+        <references refid="struct_position_1a7b72348893583b77254a650b7095c9fc" compoundref="_c_line_8h" startline="11">Position::LineNumber</references>
+        <references refid="_a_p_i_8h_1a94b6637c5f035545e7b2ac3192d91f19" compoundref="_a_p_i_8h" startline="15">LODWORD</references>
+        <references refid="class_c_text_1afc86a44065dfc1e03c51126a57bd1b66" compoundref="_c_text_8cpp" startline="394" endline="405">CText::Max_Line_Width</references>
+        <references refid="_a_p_i_8cpp_1ab7047e3512f429079a5e4af244201bbf" compoundref="_a_p_i_8cpp" startline="8">MaxBufferSize</references>
+        <references refid="class_c_text_1a3ccc06d79ea85f40426f21ed7219d4a8" compoundref="_c_text_8cpp" startline="16" endline="24">CText::NewFile</references>
+        <references refid="_a_p_i_8cpp_1ac1e29caa0b12a1c0bad90a6cf23e2427" compoundref="_a_p_i_8cpp" startline="7">pBuffer</references>
+        <references refid="class_cursor_1aa651fe435ded2561b306da89ea6bcc04" compoundref="_cursor_8cpp" startline="220" endline="229">Cursor::PositionToCursor</references>
+        <references refid="_a_p_i_8cpp_1a5890242bc26789e840845303d3792ebe" compoundref="_a_p_i_8cpp" startline="6">pTChar</references>
+        <references refid="_record_8h_1a6c28ff7d8deac22bb863f05834089d1b" compoundref="_record_8h" startline="7">RD_DELETE</references>
+        <references refid="_record_8h_1a91d73529f704f268f01407d91a579dcc" compoundref="_record_8h" startline="8">RD_INSERT</references>
+        <references refid="_record_8h_1ab34695bf23e76d01f11011676c0f22b6" compoundref="_record_8h" startline="10">RD_MERGE_LINE</references>
+        <references refid="_record_8h_1adc50bf432bdc3e1778b82d8d19bd2468" compoundref="_record_8h" startline="9">RD_RETURN</references>
+        <references refid="class_c_text_1af08d08cbfeb491ec0e3fa58da5747b07" compoundref="_c_text_8cpp" startline="26" endline="61">CText::ReadText</references>
+        <references refid="struct_record_1a8bc01d9746033bc55acf407f9b0e8411" compoundref="_record_8cpp" startline="15" endline="50">Record::ReDo</references>
+        <references refid="class_cursor_1a5088b019e8948e12c981c61a104e0048" compoundref="_cursor_8cpp" startline="243" endline="246">Cursor::ResetChoose</references>
+        <references refid="class_c_text_1afa2569e6f696901abcd3fe1394513921" compoundref="_c_text_8cpp" startline="348" endline="365">CText::Save</references>
+        <references refid="struct_record_1afdb85f0fa26f8fc5def05eaa2280dd0d" compoundref="_record_8cpp" startline="52" endline="58">Record::Save_Delete_Data</references>
+        <references refid="struct_record_1aca658c6e7d69a2f7fdd0c6acac941972" compoundref="_record_8cpp" startline="60" endline="67">Record::Save_Merge_Line_Data</references>
+        <references refid="class_c_text_1aa3fefff896b218007b90cdd671f732f8" compoundref="_c_text_8cpp" startline="305" endline="335">CText::SeekStrings</references>
+        <references refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" compoundref="_c_line_8h" startline="12">Position::Sequence</references>
+        <references refid="struct_record_1a8f3ccd7a97b80ea958ee1881a2e23733" compoundref="_record_8cpp" startline="71" endline="75">Record::Set_Choose_Data</references>
+        <references refid="_a_p_i_8cpp_1aa38f364cf105c6943a1920fc8e71b901" compoundref="_a_p_i_8cpp" startline="550" endline="587">Set_Height_Light</references>
+        <references refid="class_cursor_1a4b43575358a0be93f93c49e858b2d34a" compoundref="_cursor_8cpp" startline="12" endline="15">Cursor::SethText</references>
+        <references refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" compoundref="_record_8h" startline="20">Record::start</references>
+        <references refid="class_cursor_1aae513efd389f35578db2b6fc47c5d7af" compoundref="_cursor_8h" startline="28">Cursor::start</references>
+        <references refid="_c_text_8cpp_1a4a7fc45da60a491092a6d2e67a580d77" compoundref="_c_text_8cpp" startline="658" endline="670">StringToWString</references>
+        <references refid="_a_p_i_8h_1a9ad1b4a1e4f7381611cfd2ae6620a727" compoundref="_a_p_i_8h" startline="52">TAB_SIZE</references>
+        <references refid="_a_p_i_8h_1afb6f36d91ffbf947cfa3f1114ca79764" compoundref="_a_p_i_8h" startline="51">TEXT_SIZE</references>
+        <references refid="class_c_line_1a858096cef404306ad1a2d7bf8314f46b" compoundref="_c_line_8cpp" startline="297" endline="314">CLine::TransformToWString</references>
+        <references refid="_a_p_i_8h_1a2da2ff67002e0a65799f58a1c006e80c" compoundref="_a_p_i_8h" startline="34">UM_ALL</references>
+        <references refid="_a_p_i_8h_1ac0de31153ef809d07d6c3090fda577d2" compoundref="_a_p_i_8h" startline="37">UM_CANCEL</references>
+        <references refid="_a_p_i_8h_1aa8053a8bb5b81ace6eb576668ea1a212" compoundref="_a_p_i_8h" startline="24">UM_CHAR</references>
+        <references refid="_a_p_i_8h_1a606b7559bb3c83a51d8797022f2817d6" compoundref="_a_p_i_8h" startline="28">UM_CHOOSE</references>
+        <references refid="_a_p_i_8h_1a28267c22aa396ac8f0c9ae1e892d4b01" compoundref="_a_p_i_8h" startline="33">UM_CLOSE</references>
+        <references refid="_a_p_i_8h_1af7a5b9fc226a2fe19633300777220d6f" compoundref="_a_p_i_8h" startline="35">UM_COPY</references>
+        <references refid="_a_p_i_8h_1a92732e1417beef4b67611ce395c8622a" compoundref="_a_p_i_8h" startline="27">UM_CURSOR</references>
+        <references refid="_a_p_i_8h_1a3d6cebcd3c19df7da17b6d1cac7c59cd" compoundref="_a_p_i_8h" startline="26">UM_DELETE</references>
+        <references refid="_a_p_i_8h_1a152a63770b11e226ce93ab522ab11e19" compoundref="_a_p_i_8h" startline="19">UM_DOWN</references>
+        <references refid="_a_p_i_8h_1a91590f327d18d4d4339978f7f3309cd4" compoundref="_a_p_i_8h" startline="23">UM_END</references>
+        <references refid="_a_p_i_8h_1a36eae185b952c1a8dfd9beb2b71d5380" compoundref="_a_p_i_8h" startline="38">UM_FIND</references>
+        <references refid="_a_p_i_8h_1ab1c701ac8c279b2a87525ec8c7de9b6e" compoundref="_a_p_i_8h" startline="29">UM_HOME</references>
+        <references refid="_a_p_i_8h_1a57ee48d1cf35ac37e77897b4fb2c0882" compoundref="_a_p_i_8h" startline="20">UM_LEFT</references>
+        <references refid="_a_p_i_8h_1a91a0d62528dd0cdd5613a5a009b6aad6" compoundref="_a_p_i_8h" startline="30">UM_NEW</references>
+        <references refid="_a_p_i_8h_1ae17815df825b3c8a913c3e4f0d6835a4" compoundref="_a_p_i_8h" startline="31">UM_OPEN</references>
+        <references refid="_a_p_i_8h_1a9529cc749a9febdee53a459731402b2d" compoundref="_a_p_i_8h" startline="36">UM_PASTE</references>
+        <references refid="_a_p_i_8h_1a84dc148c13a02981985d656bc1da01bd" compoundref="_a_p_i_8h" startline="22">UM_RETURN</references>
+        <references refid="_a_p_i_8h_1ab4f15f33e32a7e4e120c2247b46d7e2d" compoundref="_a_p_i_8h" startline="21">UM_RIGHT</references>
+        <references refid="_a_p_i_8h_1aaee81789b62e1d095ad7e3fccc99ec9a" compoundref="_a_p_i_8h" startline="32">UM_SAVE</references>
+        <references refid="_a_p_i_8h_1aa85a1cfcb4fbb9b6ba83c25723effa41" compoundref="_a_p_i_8h" startline="25">UM_TEXT</references>
+        <references refid="_a_p_i_8h_1addfa6cb27f683cf21026f0bc4923f7b4" compoundref="_a_p_i_8h" startline="18">UM_UP</references>
+        <references refid="_a_p_i_8h_1a679aa379b7f856831d6ffb69dbac7b6d" compoundref="_a_p_i_8h" startline="44">UR_ERROR</references>
+        <references refid="_a_p_i_8h_1acc47abb109b510e4798ff2160d7e07c0" compoundref="_a_p_i_8h" startline="41">UR_NOPATH</references>
+        <references refid="_a_p_i_8h_1a84827b419363aee4bde6a5fd485be563" compoundref="_a_p_i_8h" startline="43">UR_NOTCANCEL</references>
+        <references refid="_a_p_i_8h_1aaad5eb89e8c04a31f6a8b73865d35e8c" compoundref="_a_p_i_8h" startline="42">UR_NOTSAVED</references>
+        <references refid="_a_p_i_8h_1a4ddffa4a38c520289deecf396be48734" compoundref="_a_p_i_8h" startline="46">UR_SAVED</references>
+        <references refid="_a_p_i_8h_1aa1c3590f0c725bc125e0e30c448751d5" compoundref="_a_p_i_8h" startline="45">UR_SUCCESS</references>
+        <references refid="_c_text_8cpp_1a9c57831810845e2dc5cb6471c7454ca8" compoundref="_c_text_8cpp" startline="688" endline="697">wchTostring</references>
+        <references refid="struct_install_1a9a4a643ecdd588aaba72f0ac73498a75" compoundref="_cursor_8h" startline="42">Install::Width</references>
+        <references refid="_c_text_8cpp_1a67fa7de2cdde9085fd860d7f8a65aab9" compoundref="_c_text_8cpp" startline="699" endline="706">WStringToWch</references>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="textoperation_8cpp_1a515f72edefb28c2e51adc570e5ab378c" compoundref="textoperation_8cpp" startline="106" endline="124">MoveCaret</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8db8eabc16f945fab6970a1144e797e" compoundref="textoperation_8cpp" startline="309" endline="335">PaintWindow</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_a_p_i_8h_1aabb5c4e38ce108dd5f371227d3785d9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_cursor" kindref="compound">Cursor</ref> *</type>
+        <definition>Cursor* Initialize_Cursor</definition>
+        <argsstring>(CText *p, int Width, int Height)</argsstring>
+        <name>Initialize_Cursor</name>
+        <param>
+          <type><ref refid="class_c_text" kindref="compound">CText</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="55" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.cpp" bodystart="514" bodyend="518"/>
+        <references refid="_a_p_i_8cpp_1a35e81f996d5c20a19130237071825a9a" compoundref="_a_p_i_8cpp" startline="5">pCursor</references>
+        <referencedby refid="_a_p_i_8h_1ac576655145c5b4612f504e04a6511a32" compoundref="_a_p_i_8cpp" startline="485" endline="496">CreateText</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_a_p_i_8h_1af61c75e2f8bdf66aab2b87ba62cdedca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alloc_Buffer</definition>
+        <argsstring>(wchar_t *&amp;p, size_t &amp;Old_Size, size_t New_Size)</argsstring>
+        <name>Alloc_Buffer</name>
+        <param>
+          <type>wchar_t *&amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>Old_Size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>New_Size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="56" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.cpp" bodystart="522" bodyend="537"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_a_p_i_8h_1a3ab95940001a3285c8996c7b76ce236c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Free_Buffer</definition>
+        <argsstring>(wchar_t *&amp;p)</argsstring>
+        <name>Free_Buffer</name>
+        <param>
+          <type>wchar_t *&amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="57" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.cpp" bodystart="543" bodyend="548"/>
+        <referencedby refid="_a_p_i_8h_1ac18c3370dc59bcfc9d981c8f975c07b6" compoundref="_a_p_i_8cpp" startline="498" endline="512">DestroyText</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_a_p_i_8h_1aa38f364cf105c6943a1920fc8e71b901" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Set_Height_Light</definition>
+        <argsstring>(int LineNumber, Position ps, Position pe, short int &amp;start, short int &amp;end)</argsstring>
+        <name>Set_Height_Light</name>
+        <param>
+          <type>int</type>
+          <declname>LineNumber</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>ps</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>pe</declname>
+        </param>
+        <param>
+          <type>short int &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>short int &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h" line="58" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.cpp" bodystart="550" bodyend="587"/>
+        <references refid="class_cursor_1a41c6b342524ba830e1a9aed3975cea94" compoundref="_cursor_8h" startline="29">Cursor::end</references>
+        <references refid="struct_position_1a7b72348893583b77254a650b7095c9fc" compoundref="_c_line_8h" startline="11">Position::LineNumber</references>
+        <references refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" compoundref="_c_line_8h" startline="12">Position::Sequence</references>
+        <references refid="class_cursor_1aae513efd389f35578db2b6fc47c5d7af" compoundref="_cursor_8h" startline="28">Cursor::start</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include&quot;<ref refid="_cursor_8h" kindref="compound">Cursor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;Windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include&quot;<ref refid="_record_8h" kindref="compound">Record.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="_a_p_i_8h_1aa9413ed7069327593b65b1fbe743f019" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="class_c_text" kindref="compound">CText</ref>*<sp/><ref refid="_a_p_i_8h_1aa9413ed7069327593b65b1fbe743f019" kindref="member">HTEXT</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="class_c_text" kindref="compound">HTEXT</ref><sp/><sp/><sp/>_stdcall<sp/><sp/><sp/><sp/><ref refid="_a_p_i_8h_1ac576655145c5b4612f504e04a6511a32" kindref="member">CreateText</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iCharWidth,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iCharHeight);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/>_stdcall<sp/><sp/><sp/><sp/><ref refid="_a_p_i_8h_1ac18c3370dc59bcfc9d981c8f975c07b6" kindref="member">DestroyText</ref>(<ref refid="class_c_text" kindref="compound">HTEXT</ref><sp/>&amp;hText);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="_a_p_i_8h_1a3196d91578d194ac3ce7b307f67509ba" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>ULONGLONG<sp/><ref refid="_a_p_i_8h_1a3196d91578d194ac3ce7b307f67509ba" kindref="member">FPARAM</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>_INT64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="_a_p_i_8h_1a2c1a410fcfeb3e0fd3c16f8c0ffea8dc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>ULONGLONG<sp/><ref refid="_a_p_i_8h_1a2c1a410fcfeb3e0fd3c16f8c0ffea8dc" kindref="member">SPARAM</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>_INT64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="_a_p_i_8h_1a24c037a4ce3050a50519add6a361fc55" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>ULONGLONG<sp/><ref refid="_a_p_i_8h_1a24c037a4ce3050a50519add6a361fc55" kindref="member">RVALUE</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>_INT64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="_a_p_i_8h_1a94b6637c5f035545e7b2ac3192d91f19" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LODWORD(l)<sp/>((UINT)(((ULONGLONG)(l))<sp/>&amp;<sp/>0xffffffff))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>低双字节</highlight></codeline>
+<codeline lineno="16" refid="_a_p_i_8h_1abddf10fc1bc344eec830edaf4875888f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>HIDWORD(l)<sp/>((UINT)(((ULONGLONG)(l)<sp/>&gt;&gt;<sp/>32)<sp/>&amp;<sp/>0xffffffff))<sp/><sp/><sp/><sp/>//<sp/>高双字节</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="_a_p_i_8h_1addfa6cb27f683cf21026f0bc4923f7b4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UM_UP<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000026</highlight></codeline>
+<codeline lineno="19" refid="_a_p_i_8h_1a152a63770b11e226ce93ab522ab11e19" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_DOWN<sp/><sp/><sp/><sp/><sp/>0x00000028</highlight></codeline>
+<codeline lineno="20" refid="_a_p_i_8h_1a57ee48d1cf35ac37e77897b4fb2c0882" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_LEFT<sp/><sp/><sp/><sp/><sp/>0x00000025</highlight></codeline>
+<codeline lineno="21" refid="_a_p_i_8h_1ab4f15f33e32a7e4e120c2247b46d7e2d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_RIGHT<sp/><sp/><sp/><sp/>0x00000027</highlight></codeline>
+<codeline lineno="22" refid="_a_p_i_8h_1a84dc148c13a02981985d656bc1da01bd" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_RETURN<sp/><sp/><sp/>0x00000010</highlight></codeline>
+<codeline lineno="23" refid="_a_p_i_8h_1a91590f327d18d4d4339978f7f3309cd4" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_END<sp/><sp/><sp/><sp/><sp/><sp/>0x00000023</highlight></codeline>
+<codeline lineno="24" refid="_a_p_i_8h_1aa8053a8bb5b81ace6eb576668ea1a212" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_CHAR<sp/><sp/><sp/><sp/><sp/>0x00000040</highlight></codeline>
+<codeline lineno="25" refid="_a_p_i_8h_1aa85a1cfcb4fbb9b6ba83c25723effa41" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_TEXT<sp/><sp/><sp/><sp/><sp/>0x00000080</highlight></codeline>
+<codeline lineno="26" refid="_a_p_i_8h_1a3d6cebcd3c19df7da17b6d1cac7c59cd" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_DELETE<sp/><sp/><sp/>0x00000100</highlight></codeline>
+<codeline lineno="27" refid="_a_p_i_8h_1a92732e1417beef4b67611ce395c8622a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_CURSOR<sp/><sp/><sp/>0x00000200</highlight></codeline>
+<codeline lineno="28" refid="_a_p_i_8h_1a606b7559bb3c83a51d8797022f2817d6" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_CHOOSE<sp/><sp/><sp/>0x00000400</highlight></codeline>
+<codeline lineno="29" refid="_a_p_i_8h_1ab1c701ac8c279b2a87525ec8c7de9b6e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_HOME<sp/><sp/><sp/><sp/><sp/>0x00000024</highlight></codeline>
+<codeline lineno="30" refid="_a_p_i_8h_1a91a0d62528dd0cdd5613a5a009b6aad6" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_NEW<sp/><sp/><sp/><sp/><sp/><sp/>0x00001000</highlight></codeline>
+<codeline lineno="31" refid="_a_p_i_8h_1ae17815df825b3c8a913c3e4f0d6835a4" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_OPEN<sp/><sp/><sp/><sp/><sp/>0x00002000</highlight></codeline>
+<codeline lineno="32" refid="_a_p_i_8h_1aaee81789b62e1d095ad7e3fccc99ec9a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_SAVE<sp/><sp/><sp/><sp/><sp/>0x00004000</highlight></codeline>
+<codeline lineno="33" refid="_a_p_i_8h_1a28267c22aa396ac8f0c9ae1e892d4b01" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_CLOSE<sp/><sp/><sp/><sp/>0x00008000</highlight></codeline>
+<codeline lineno="34" refid="_a_p_i_8h_1a2da2ff67002e0a65799f58a1c006e80c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_ALL<sp/><sp/><sp/><sp/><sp/><sp/>0x00000011</highlight></codeline>
+<codeline lineno="35" refid="_a_p_i_8h_1af7a5b9fc226a2fe19633300777220d6f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_COPY<sp/><sp/><sp/><sp/><sp/>0x00000012</highlight></codeline>
+<codeline lineno="36" refid="_a_p_i_8h_1a9529cc749a9febdee53a459731402b2d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_PASTE<sp/><sp/><sp/><sp/>0x00000014</highlight></codeline>
+<codeline lineno="37" refid="_a_p_i_8h_1ac0de31153ef809d07d6c3090fda577d2" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_CANCEL<sp/><sp/><sp/>0x00000018</highlight></codeline>
+<codeline lineno="38" refid="_a_p_i_8h_1a36eae185b952c1a8dfd9beb2b71d5380" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_FIND<sp/><sp/><sp/><sp/><sp/>0x00000021</highlight></codeline>
+<codeline lineno="39" refid="_a_p_i_8h_1ab4ab8ce6663697365782af68d3d6900f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UM_REPLACE<sp/><sp/>0x00000022</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="_a_p_i_8h_1acc47abb109b510e4798ff2160d7e07c0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UR_NOPATH<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xf0000000f0100000</highlight></codeline>
+<codeline lineno="42" refid="_a_p_i_8h_1aaad5eb89e8c04a31f6a8b73865d35e8c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UR_NOTSAVED<sp/><sp/><sp/><sp/><sp/>0xf0000000f1000000</highlight></codeline>
+<codeline lineno="43" refid="_a_p_i_8h_1a84827b419363aee4bde6a5fd485be563" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UR_NOTCANCEL<sp/><sp/><sp/><sp/>0xf0000000f1100000</highlight></codeline>
+<codeline lineno="44" refid="_a_p_i_8h_1a679aa379b7f856831d6ffb69dbac7b6d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UR_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xffffffffffffffff</highlight></codeline>
+<codeline lineno="45" refid="_a_p_i_8h_1aa1c3590f0c725bc125e0e30c448751d5" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UR_SUCCESS<sp/><sp/><sp/><sp/><sp/><sp/>0xf0000010f0000000</highlight></codeline>
+<codeline lineno="46" refid="_a_p_i_8h_1a4ddffa4a38c520289deecf396be48734" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UR_SAVED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xf0000100f0000000</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="_a_p_i_8h_1aff0a48040c2889b8763f6eb7771a128e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FIND_COMPELTE<sp/>0x0000000000000001</highlight></codeline>
+<codeline lineno="49" refid="_a_p_i_8h_1aaa2e93c927c9a6e44a31cc9653c5342c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FIND_LHCASE<sp/><sp/><sp/>0x0000000000000002</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="_a_p_i_8h_1afb6f36d91ffbf947cfa3f1114ca79764" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TEXT_SIZE<sp/><sp/><sp/>300<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//显示文本长度</highlight></codeline>
+<codeline lineno="52" refid="_a_p_i_8h_1a9ad1b4a1e4f7381611cfd2ae6620a727" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TAB_SIZE<sp/><sp/><sp/><sp/>4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//Tab字符为4空格</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"></highlight><highlight class="normal"><ref refid="_a_p_i_8h_1a24c037a4ce3050a50519add6a361fc55" kindref="member">RVALUE</ref><sp/>_stdcall<sp/><ref refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" kindref="member">UserMessageProc</ref>(<ref refid="class_c_text" kindref="compound">HTEXT</ref><sp/>hText,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/>UINT<sp/>message,<sp/><ref refid="_a_p_i_8h_1a3196d91578d194ac3ce7b307f67509ba" kindref="member">FPARAM</ref><sp/>fParam,<sp/><ref refid="_a_p_i_8h_1a2c1a410fcfeb3e0fd3c16f8c0ffea8dc" kindref="member">SPARAM</ref><sp/>sParam);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><ref refid="class_cursor" kindref="compound">Cursor</ref>*<sp/><sp/><ref refid="_a_p_i_8h_1aabb5c4e38ce108dd5f371227d3785d9f" kindref="member">Initialize_Cursor</ref>(<ref refid="class_c_text" kindref="compound">CText</ref>*<sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Height);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_a_p_i_8h_1af61c75e2f8bdf66aab2b87ba62cdedca" kindref="member">Alloc_Buffer</ref>(</highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal">*<sp/>&amp;p,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;Old_Size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>New_Size);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_a_p_i_8h_1a3ab95940001a3285c8996c7b76ce236c" kindref="member">Free_Buffer</ref>(</highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal">*<sp/>&amp;p);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_a_p_i_8h_1aa38f364cf105c6943a1920fc8e71b901" kindref="member">Set_Height_Light</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LineNumber,<sp/><ref refid="struct_position" kindref="compound">Position</ref><sp/>ps,<sp/><ref refid="struct_position" kindref="compound">Position</ref><sp/>pe,<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>start,<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>end);</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h"/>
+  </compounddef>
+</doxygen>

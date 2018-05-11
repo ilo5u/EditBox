@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="stdafx_8cpp" kind="file">
+    <compoundname>stdafx.cpp</compoundname>
+    <includes refid="stdafx_8h" local="yes">stdafx.h</includes>
+    <incdepgraph>
+      <node id="392">
+        <label>queue</label>
+      </node>
+      <node id="374">
+        <label>windows.h</label>
+      </node>
+      <node id="379">
+        <label>Windowsx.h</label>
+      </node>
+      <node id="380">
+        <label>assert.h</label>
+      </node>
+      <node id="385">
+        <label>Cursor.h</label>
+        <link refid="_cursor_8h"/>
+        <childnode refid="386" relation="include">
+        </childnode>
+        <childnode refid="393" relation="include">
+        </childnode>
+      </node>
+      <node id="371">
+        <label>stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="372" relation="include">
+        </childnode>
+        <childnode refid="374" relation="include">
+        </childnode>
+        <childnode refid="375" relation="include">
+        </childnode>
+        <childnode refid="376" relation="include">
+        </childnode>
+        <childnode refid="377" relation="include">
+        </childnode>
+        <childnode refid="378" relation="include">
+        </childnode>
+        <childnode refid="379" relation="include">
+        </childnode>
+        <childnode refid="380" relation="include">
+        </childnode>
+        <childnode refid="381" relation="include">
+        </childnode>
+        <childnode refid="382" relation="include">
+        </childnode>
+        <childnode refid="383" relation="include">
+        </childnode>
+        <childnode refid="384" relation="include">
+        </childnode>
+      </node>
+      <node id="375">
+        <label>stdlib.h</label>
+      </node>
+      <node id="373">
+        <label>SDKDDKVer.h</label>
+      </node>
+      <node id="393">
+        <label>Windows.h</label>
+      </node>
+      <node id="370">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/stdafx.cpp</label>
+        <link refid="stdafx.cpp"/>
+        <childnode refid="371" relation="include">
+        </childnode>
+      </node>
+      <node id="394">
+        <label>Record.h</label>
+        <link refid="_record_8h"/>
+        <childnode refid="386" relation="include">
+        </childnode>
+        <childnode refid="385" relation="include">
+        </childnode>
+        <childnode refid="393" relation="include">
+        </childnode>
+      </node>
+      <node id="376">
+        <label>malloc.h</label>
+      </node>
+      <node id="384">
+        <label>API.h</label>
+        <link refid="_a_p_i_8h"/>
+        <childnode refid="385" relation="include">
+        </childnode>
+        <childnode refid="393" relation="include">
+        </childnode>
+        <childnode refid="394" relation="include">
+        </childnode>
+      </node>
+      <node id="390">
+        <label>string</label>
+      </node>
+      <node id="377">
+        <label>memory.h</label>
+      </node>
+      <node id="388">
+        <label>fstream</label>
+      </node>
+      <node id="372">
+        <label>targetver.h</label>
+        <link refid="targetver_8h"/>
+        <childnode refid="373" relation="include">
+        </childnode>
+      </node>
+      <node id="387">
+        <label>sstream</label>
+      </node>
+      <node id="389">
+        <label>CLine.h</label>
+        <link refid="_c_line_8h"/>
+        <childnode refid="378" relation="include">
+        </childnode>
+        <childnode refid="390" relation="include">
+        </childnode>
+        <childnode refid="391" relation="include">
+        </childnode>
+      </node>
+      <node id="382">
+        <label>commdlg.h</label>
+      </node>
+      <node id="383">
+        <label>ShlObj.h</label>
+      </node>
+      <node id="391">
+        <label>iostream</label>
+      </node>
+      <node id="378">
+        <label>tchar.h</label>
+      </node>
+      <node id="386">
+        <label>CText.h</label>
+        <link refid="_c_text_8h"/>
+        <childnode refid="387" relation="include">
+        </childnode>
+        <childnode refid="388" relation="include">
+        </childnode>
+        <childnode refid="389" relation="include">
+        </childnode>
+        <childnode refid="392" relation="include">
+        </childnode>
+        <childnode refid="393" relation="include">
+        </childnode>
+      </node>
+      <node id="381">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>stdafx.cpp<sp/>:<sp/>只包括标准包含文件的源文件</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>EditBox.pch<sp/>将作为预编译标头</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>stdafx.obj<sp/>将包含预编译类型信息</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stdafx_8h" kindref="compound">stdafx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>在<sp/>STDAFX.H<sp/>中引用任何所需的附加头文件，</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//而不是在此文件中引用</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/stdafx.cpp"/>
+  </compounddef>
+</doxygen>

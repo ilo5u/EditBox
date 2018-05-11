@@ -1,0 +1,999 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="textoperation_8cpp" kind="file">
+    <compoundname>textoperation.cpp</compoundname>
+    <includes refid="stdafx_8h" local="yes">stdafx.h</includes>
+    <includes refid="editbox_8h" local="yes">editbox.h</includes>
+    <includes refid="debug_8h" local="yes">debug.h</includes>
+    <incdepgraph>
+      <node id="499">
+        <label>queue</label>
+      </node>
+      <node id="481">
+        <label>windows.h</label>
+      </node>
+      <node id="486">
+        <label>Windowsx.h</label>
+      </node>
+      <node id="487">
+        <label>assert.h</label>
+      </node>
+      <node id="492">
+        <label>Cursor.h</label>
+        <link refid="_cursor_8h"/>
+        <childnode refid="493" relation="include">
+        </childnode>
+        <childnode refid="500" relation="include">
+        </childnode>
+      </node>
+      <node id="478">
+        <label>stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="479" relation="include">
+        </childnode>
+        <childnode refid="481" relation="include">
+        </childnode>
+        <childnode refid="482" relation="include">
+        </childnode>
+        <childnode refid="483" relation="include">
+        </childnode>
+        <childnode refid="484" relation="include">
+        </childnode>
+        <childnode refid="485" relation="include">
+        </childnode>
+        <childnode refid="486" relation="include">
+        </childnode>
+        <childnode refid="487" relation="include">
+        </childnode>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="489" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+        <childnode refid="491" relation="include">
+        </childnode>
+      </node>
+      <node id="482">
+        <label>stdlib.h</label>
+      </node>
+      <node id="480">
+        <label>SDKDDKVer.h</label>
+      </node>
+      <node id="500">
+        <label>Windows.h</label>
+      </node>
+      <node id="501">
+        <label>Record.h</label>
+        <link refid="_record_8h"/>
+        <childnode refid="493" relation="include">
+        </childnode>
+        <childnode refid="492" relation="include">
+        </childnode>
+        <childnode refid="500" relation="include">
+        </childnode>
+      </node>
+      <node id="483">
+        <label>malloc.h</label>
+      </node>
+      <node id="491">
+        <label>API.h</label>
+        <link refid="_a_p_i_8h"/>
+        <childnode refid="492" relation="include">
+        </childnode>
+        <childnode refid="500" relation="include">
+        </childnode>
+        <childnode refid="501" relation="include">
+        </childnode>
+      </node>
+      <node id="503">
+        <label>resource.h</label>
+        <link refid="resource_8h"/>
+      </node>
+      <node id="497">
+        <label>string</label>
+      </node>
+      <node id="484">
+        <label>memory.h</label>
+      </node>
+      <node id="495">
+        <label>fstream</label>
+      </node>
+      <node id="502">
+        <label>editbox.h</label>
+        <link refid="editbox_8h"/>
+        <childnode refid="500" relation="include">
+        </childnode>
+        <childnode refid="503" relation="include">
+        </childnode>
+      </node>
+      <node id="479">
+        <label>targetver.h</label>
+        <link refid="targetver_8h"/>
+        <childnode refid="480" relation="include">
+        </childnode>
+      </node>
+      <node id="504">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+        <childnode refid="500" relation="include">
+        </childnode>
+      </node>
+      <node id="494">
+        <label>sstream</label>
+      </node>
+      <node id="496">
+        <label>CLine.h</label>
+        <link refid="_c_line_8h"/>
+        <childnode refid="485" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="498" relation="include">
+        </childnode>
+      </node>
+      <node id="477">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp</label>
+        <link refid="textoperation.cpp"/>
+        <childnode refid="478" relation="include">
+        </childnode>
+        <childnode refid="502" relation="include">
+        </childnode>
+        <childnode refid="504" relation="include">
+        </childnode>
+      </node>
+      <node id="489">
+        <label>commdlg.h</label>
+      </node>
+      <node id="490">
+        <label>ShlObj.h</label>
+      </node>
+      <node id="498">
+        <label>iostream</label>
+      </node>
+      <node id="485">
+        <label>tchar.h</label>
+      </node>
+      <node id="493">
+        <label>CText.h</label>
+        <link refid="_c_text_8h"/>
+        <childnode refid="494" relation="include">
+        </childnode>
+        <childnode refid="495" relation="include">
+        </childnode>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="499" relation="include">
+        </childnode>
+        <childnode refid="500" relation="include">
+        </childnode>
+      </node>
+      <node id="488">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="textoperation_8cpp_1a94381ffecfbc96fbaf48576642fd20b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL MyInvalidateRect</definition>
+        <argsstring>(HWND hWnd, LONG left, LONG right, LONG top, LONG bottom)</argsstring>
+        <name>MyInvalidateRect</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>LONG</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>LONG</type>
+          <declname>right</declname>
+        </param>
+        <param>
+          <type>LONG</type>
+          <declname>top</declname>
+        </param>
+        <param>
+          <type>LONG</type>
+          <declname>bottom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" line="5" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="5" bodyend="11"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" compoundref="textoperation_8cpp" startline="177" endline="195">SelectHighlight</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8ed95b601a777c79a06fc1e95e0aca0" compoundref="textoperation_8cpp" startline="255" endline="275">SelectTitledWindow</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textoperation_8cpp_1a08f0a6744ca16873d568b89b74a192b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL operator==</definition>
+        <argsstring>(POINT left, POINT right)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>POINT</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>POINT</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" line="13" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="textoperation_8cpp_1a612b8844c2d272063e8175a2b5b3d457" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL AdjustCaretPosBeforeBackspace</definition>
+        <argsstring>(HWND hWnd, HTEXTINFO hTextInfo)</argsstring>
+        <name>AdjustCaretPosBeforeBackspace</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+          <declname>hTextInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" line="18" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="18" bodyend="28"/>
+        <references refid="editbox_8h_1a31e764f7259e6bf9a8d4e17700c4d4c2" compoundref="editbox_8h" startline="109">ENDPOS</references>
+        <references refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" compoundref="textoperation_8cpp" startline="177" endline="195">SelectHighlight</references>
+        <references refid="editbox_8h_1a7cc19c4cad589ffffc2cd5f2ee272f1e" compoundref="editbox_8h" startline="108">STARTPOS</references>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textoperation_8cpp_1acb321028e09e55935248211d0c741997" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL AdjustWindowPos</definition>
+        <argsstring>(HWND hWnd, HTEXTINFO hTextInfo)</argsstring>
+        <name>AdjustWindowPos</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+          <declname>hTextInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" line="30" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="30" bodyend="104"/>
+        <references refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" compoundref="editbox_8h" startline="122">CARETPOS</references>
+        <references refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" compoundref="editbox_8h" startline="123">CHARSIZE</references>
+        <references refid="textoperation_8cpp_1a4c224a6c2076afbc5bdf27c698cf5e50" compoundref="textoperation_8cpp" startline="288" endline="307">DefaultFill</references>
+        <references refid="editbox_8h_1a31e764f7259e6bf9a8d4e17700c4d4c2" compoundref="editbox_8h" startline="109">ENDPOS</references>
+        <references refid="editbox_8h_1a4b9ca192ede25b85028a300f9d300e42" compoundref="editbox_8h" startline="133">INRANGEX</references>
+        <references refid="editbox_8h_1afe7c3a921bdff1784bb7bb776d5e4a54" compoundref="editbox_8h" startline="134">INRANGEY</references>
+        <references refid="textoperation_8cpp_1a94381ffecfbc96fbaf48576642fd20b4" compoundref="textoperation_8cpp" startline="5" endline="11">MyInvalidateRect</references>
+        <references refid="textoperation_8cpp_1a03acee71495158181c790699f67c5401" compoundref="textoperation_8cpp" startline="277" endline="286">MyScrollWindow</references>
+        <references refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" compoundref="editbox_8h" startline="127">PAGESIZE</references>
+        <references refid="debug_8h_1a07fa3915de3fd9da3bc5ef6f38dbd143" compoundref="debug_8h" startline="17">PRINTCARETPOS</references>
+        <references refid="debug_8h_1a7fce88c2583e5a8cbb4286cb1654f764" compoundref="debug_8h" startline="29">PRINTENDL</references>
+        <references refid="debug_8h_1a3f2d02c5daa1c17be5b20e459ce24f9e" compoundref="debug_8h" startline="26">PRINTPAGESIZE</references>
+        <references refid="debug_8h_1a7278c3d4f8e08244b04af92d033070cc" compoundref="debug_8h" startline="23">PRINTWINDOWPOS</references>
+        <references refid="debug_8h_1a7f2fb4296befff0d0d5d2f3e0c5c7c04" compoundref="debug_8h" startline="20">PRINTWINDOWSIZE</references>
+        <references refid="textoperation_8cpp_1ae4ddefd3b434dcb4436e4da4ed6a8832" compoundref="textoperation_8cpp" startline="126" endline="130">SelectWindowPos</references>
+        <references refid="editbox_8h_1a7cc19c4cad589ffffc2cd5f2ee272f1e" compoundref="editbox_8h" startline="108">STARTPOS</references>
+        <references refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" compoundref="editbox_8h" startline="139">USHEIGHT</references>
+        <references refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" compoundref="editbox_8h" startline="137">USWIDTH</references>
+        <references refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" compoundref="editbox_8h" startline="125">WINDOWPOS</references>
+        <references refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" compoundref="editbox_8h" startline="126">WINDOWSIZE</references>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="textoperation_8cpp_1a515f72edefb28c2e51adc570e5ab378c" compoundref="textoperation_8cpp" startline="106" endline="124">MoveCaret</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textoperation_8cpp_1a515f72edefb28c2e51adc570e5ab378c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL MoveCaret</definition>
+        <argsstring>(HWND hWnd, UINT message, HTEXTINFO hTextInfo)</argsstring>
+        <name>MoveCaret</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+          <declname>hTextInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" line="106" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="106" bodyend="124"/>
+        <references refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</references>
+        <references refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" compoundref="editbox_8h" startline="122">CARETPOS</references>
+        <references refid="_a_p_i_8h_1abddf10fc1bc344eec830edaf4875888f" compoundref="_a_p_i_8h" startline="16">HIDWORD</references>
+        <references refid="editbox_8h_1ac8fd05e77854216993808807dd4021d6" compoundref="editbox_8h" startline="106">HTEXT</references>
+        <references refid="_a_p_i_8h_1a94b6637c5f035545e7b2ac3192d91f19" compoundref="_a_p_i_8h" startline="15">LODWORD</references>
+        <references refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" compoundref="textoperation_8cpp" startline="159" endline="175">SelectCaretPos</references>
+        <references refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" compoundref="textoperation_8cpp" startline="177" endline="195">SelectHighlight</references>
+        <references refid="_a_p_i_8h_1a679aa379b7f856831d6ffb69dbac7b6d" compoundref="_a_p_i_8h" startline="44">UR_ERROR</references>
+        <references refid="_a_p_i_8cpp_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</references>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textoperation_8cpp_1ae4ddefd3b434dcb4436e4da4ed6a8832" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL SelectWindowPos</definition>
+        <argsstring>(HTEXTINFO hTextInfo, POINT thePos)</argsstring>
+        <name>SelectWindowPos</name>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+          <declname>hTextInfo</declname>
+        </param>
+        <param>
+          <type>POINT</type>
+          <declname>thePos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" line="126" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="126" bodyend="130"/>
+        <references refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" compoundref="editbox_8h" startline="125">WINDOWPOS</references>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8ed95b601a777c79a06fc1e95e0aca0" compoundref="textoperation_8cpp" startline="255" endline="275">SelectTitledWindow</referencedby>
+        <referencedby refid="textoperation_8cpp_1ae05ee4ee8873757de8b46582aa9d2d1d" compoundref="textoperation_8cpp" startline="231" endline="254">SelectUntitledWindow</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textoperation_8cpp_1af8fc116326c8fe6d185ba3ff5d2287b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL SelectWindowSize</definition>
+        <argsstring>(HTEXTINFO hTextInfo, LPRECT lpRect)</argsstring>
+        <name>SelectWindowSize</name>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+          <declname>hTextInfo</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1a6fde7073763e612db84cd5c85819e210" kindref="member">LPRECT</ref></type>
+          <declname>lpRect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" line="132" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="132" bodyend="157"/>
+        <references refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" compoundref="editbox_8h" startline="123">CHARSIZE</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" compoundref="editbox_8h" startline="69">_TEXT_INFO::m_hWnd</references>
+        <references refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" compoundref="editbox_8h" startline="127">PAGESIZE</references>
+        <references refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" compoundref="editbox_8h" startline="139">USHEIGHT</references>
+        <references refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" compoundref="editbox_8h" startline="137">USWIDTH</references>
+        <references refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" compoundref="editbox_8h" startline="126">WINDOWSIZE</references>
+        <referencedby refid="textoperation_8cpp_1ab8ed95b601a777c79a06fc1e95e0aca0" compoundref="textoperation_8cpp" startline="255" endline="275">SelectTitledWindow</referencedby>
+        <referencedby refid="textoperation_8cpp_1ae05ee4ee8873757de8b46582aa9d2d1d" compoundref="textoperation_8cpp" startline="231" endline="254">SelectUntitledWindow</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL SelectCaretPos</definition>
+        <argsstring>(HTEXTINFO hTextInfo, POINT thePos)</argsstring>
+        <name>SelectCaretPos</name>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+          <declname>hTextInfo</declname>
+        </param>
+        <param>
+          <type>POINT</type>
+          <declname>thePos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" line="159" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="159" bodyend="175"/>
+        <references refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" compoundref="editbox_8h" startline="122">CARETPOS</references>
+        <references refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" compoundref="editbox_8h" startline="123">CHARSIZE</references>
+        <references refid="editbox_8h_1a4b9ca192ede25b85028a300f9d300e42" compoundref="editbox_8h" startline="133">INRANGEX</references>
+        <references refid="editbox_8h_1afe7c3a921bdff1784bb7bb776d5e4a54" compoundref="editbox_8h" startline="134">INRANGEY</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" compoundref="editbox_8h" startline="69">_TEXT_INFO::m_hWnd</references>
+        <references refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" compoundref="editbox_8h" startline="127">PAGESIZE</references>
+        <references refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" compoundref="editbox_8h" startline="139">USHEIGHT</references>
+        <references refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" compoundref="editbox_8h" startline="137">USWIDTH</references>
+        <references refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" compoundref="editbox_8h" startline="125">WINDOWPOS</references>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="textoperation_8cpp_1a515f72edefb28c2e51adc570e5ab378c" compoundref="textoperation_8cpp" startline="106" endline="124">MoveCaret</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8ed95b601a777c79a06fc1e95e0aca0" compoundref="textoperation_8cpp" startline="255" endline="275">SelectTitledWindow</referencedby>
+        <referencedby refid="textoperation_8cpp_1ae05ee4ee8873757de8b46582aa9d2d1d" compoundref="textoperation_8cpp" startline="231" endline="254">SelectUntitledWindow</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL SelectHighlight</definition>
+        <argsstring>(HTEXTINFO hTextInfo, POINT theStart, POINT theEnd)</argsstring>
+        <name>SelectHighlight</name>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+          <declname>hTextInfo</declname>
+        </param>
+        <param>
+          <type>POINT</type>
+          <declname>theStart</declname>
+        </param>
+        <param>
+          <type>POINT</type>
+          <declname>theEnd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" line="177" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="177" bodyend="195"/>
+        <references refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" compoundref="editbox_8h" startline="123">CHARSIZE</references>
+        <references refid="editbox_8h_1a31e764f7259e6bf9a8d4e17700c4d4c2" compoundref="editbox_8h" startline="109">ENDPOS</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" compoundref="editbox_8h" startline="69">_TEXT_INFO::m_hWnd</references>
+        <references refid="textoperation_8cpp_1a94381ffecfbc96fbaf48576642fd20b4" compoundref="textoperation_8cpp" startline="5" endline="11">MyInvalidateRect</references>
+        <references refid="editbox_8h_1a7cc19c4cad589ffffc2cd5f2ee272f1e" compoundref="editbox_8h" startline="108">STARTPOS</references>
+        <references refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" compoundref="editbox_8h" startline="139">USHEIGHT</references>
+        <references refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" compoundref="editbox_8h" startline="125">WINDOWPOS</references>
+        <references refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" compoundref="editbox_8h" startline="126">WINDOWSIZE</references>
+        <referencedby refid="textoperation_8cpp_1a612b8844c2d272063e8175a2b5b3d457" compoundref="textoperation_8cpp" startline="18" endline="28">AdjustCaretPosBeforeBackspace</referencedby>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="textoperation_8cpp_1a515f72edefb28c2e51adc570e5ab378c" compoundref="textoperation_8cpp" startline="106" endline="124">MoveCaret</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8ed95b601a777c79a06fc1e95e0aca0" compoundref="textoperation_8cpp" startline="255" endline="275">SelectTitledWindow</referencedby>
+        <referencedby refid="textoperation_8cpp_1ae05ee4ee8873757de8b46582aa9d2d1d" compoundref="textoperation_8cpp" startline="231" endline="254">SelectUntitledWindow</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textoperation_8cpp_1abc5dea63027499bf06fc08b0662961d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL SelectTextSize</definition>
+        <argsstring>(HTEXTINFO hTextInfo, POINT theSize)</argsstring>
+        <name>SelectTextSize</name>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+          <declname>hTextInfo</declname>
+        </param>
+        <param>
+          <type>POINT</type>
+          <declname>theSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" line="197" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="197" bodyend="229"/>
+        <references refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" compoundref="editbox_8h" startline="123">CHARSIZE</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" compoundref="editbox_8h" startline="69">_TEXT_INFO::m_hWnd</references>
+        <references refid="editbox_8h_1a3f94d0002f5d3d0b5156b1b3d56c9961" compoundref="editbox_8h" startline="107">TEXTSIZE</references>
+        <references refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" compoundref="editbox_8h" startline="139">USHEIGHT</references>
+        <references refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" compoundref="editbox_8h" startline="137">USWIDTH</references>
+        <references refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" compoundref="editbox_8h" startline="126">WINDOWSIZE</references>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="textoperation_8cpp_1ae05ee4ee8873757de8b46582aa9d2d1d" compoundref="textoperation_8cpp" startline="231" endline="254">SelectUntitledWindow</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textoperation_8cpp_1ae05ee4ee8873757de8b46582aa9d2d1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL SelectUntitledWindow</definition>
+        <argsstring>(HWND hWnd, HTEXTINFO hTextInfo)</argsstring>
+        <name>SelectUntitledWindow</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+          <declname>hTextInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" line="231" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="231" bodyend="254"/>
+        <references refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" compoundref="editbox_8h" startline="122">CARETPOS</references>
+        <references refid="editbox_8h_1a1ecf21a8623aab1d3ea987ad565c434b" compoundref="editbox_8h" startline="124">CARETSIZE</references>
+        <references refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" compoundref="textoperation_8cpp" startline="159" endline="175">SelectCaretPos</references>
+        <references refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" compoundref="textoperation_8cpp" startline="177" endline="195">SelectHighlight</references>
+        <references refid="textoperation_8cpp_1abc5dea63027499bf06fc08b0662961d7" compoundref="textoperation_8cpp" startline="197" endline="229">SelectTextSize</references>
+        <references refid="textoperation_8cpp_1ae4ddefd3b434dcb4436e4da4ed6a8832" compoundref="textoperation_8cpp" startline="126" endline="130">SelectWindowPos</references>
+        <references refid="textoperation_8cpp_1af8fc116326c8fe6d185ba3ff5d2287b8" compoundref="textoperation_8cpp" startline="132" endline="157">SelectWindowSize</references>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textoperation_8cpp_1ab8ed95b601a777c79a06fc1e95e0aca0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL SelectTitledWindow</definition>
+        <argsstring>(HWND hWnd, HTEXTINFO hTextInfo, POINT pTextSize, LPCWSTR lpszFileName)</argsstring>
+        <name>SelectTitledWindow</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+          <declname>hTextInfo</declname>
+        </param>
+        <param>
+          <type>POINT</type>
+          <declname>pTextSize</declname>
+        </param>
+        <param>
+          <type>LPCWSTR</type>
+          <declname>lpszFileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" line="255" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="255" bodyend="275"/>
+        <references refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" compoundref="editbox_8h" startline="122">CARETPOS</references>
+        <references refid="textoperation_8cpp_1a94381ffecfbc96fbaf48576642fd20b4" compoundref="textoperation_8cpp" startline="5" endline="11">MyInvalidateRect</references>
+        <references refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" compoundref="textoperation_8cpp" startline="159" endline="175">SelectCaretPos</references>
+        <references refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" compoundref="textoperation_8cpp" startline="177" endline="195">SelectHighlight</references>
+        <references refid="textoperation_8cpp_1ae4ddefd3b434dcb4436e4da4ed6a8832" compoundref="textoperation_8cpp" startline="126" endline="130">SelectWindowPos</references>
+        <references refid="textoperation_8cpp_1af8fc116326c8fe6d185ba3ff5d2287b8" compoundref="textoperation_8cpp" startline="132" endline="157">SelectWindowSize</references>
+        <references refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" compoundref="editbox_8h" startline="126">WINDOWSIZE</references>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textoperation_8cpp_1a03acee71495158181c790699f67c5401" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL MyScrollWindow</definition>
+        <argsstring>(HWND hWnd, int xOffset, int yOffset)</argsstring>
+        <name>MyScrollWindow</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>xOffset</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>yOffset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" line="277" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="277" bodyend="286"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textoperation_8cpp_1a4c224a6c2076afbc5bdf27c698cf5e50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL DefaultFill</definition>
+        <argsstring>(HWND hWnd, HTEXTINFO hTextInfo)</argsstring>
+        <name>DefaultFill</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+          <declname>hTextInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" line="288" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="288" bodyend="307"/>
+        <references refid="editbox_8h_1a699f42b1b5585d578f0ae96deaa1b894" compoundref="editbox_8h" startline="115">BRUSH</references>
+        <references refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" compoundref="editbox_8h" startline="123">CHARSIZE</references>
+        <references refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" compoundref="editbox_8h" startline="127">PAGESIZE</references>
+        <references refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" compoundref="editbox_8h" startline="139">USHEIGHT</references>
+        <references refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" compoundref="editbox_8h" startline="137">USWIDTH</references>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textoperation_8cpp_1ab8db8eabc16f945fab6970a1144e797e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL PaintWindow</definition>
+        <argsstring>(LPPAINTSTRUCT lpPaint, HTEXTINFO hTextInfo)</argsstring>
+        <name>PaintWindow</name>
+        <param>
+          <type>LPPAINTSTRUCT</type>
+          <declname>lpPaint</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+          <declname>hTextInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" line="309" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="309" bodyend="335"/>
+        <references refid="editbox_8h_1a699f42b1b5585d578f0ae96deaa1b894" compoundref="editbox_8h" startline="115">BRUSH</references>
+        <references refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" compoundref="editbox_8h" startline="123">CHARSIZE</references>
+        <references refid="_a_p_i_8h_1abddf10fc1bc344eec830edaf4875888f" compoundref="_a_p_i_8h" startline="16">HIDWORD</references>
+        <references refid="editbox_8h_1ac8fd05e77854216993808807dd4021d6" compoundref="editbox_8h" startline="106">HTEXT</references>
+        <references refid="_a_p_i_8h_1a94b6637c5f035545e7b2ac3192d91f19" compoundref="_a_p_i_8h" startline="15">LODWORD</references>
+        <references refid="editbox_8h_1a8dca9c84766a55fc972528846a944e2d" compoundref="editbox_8h" startline="113">MEMDC</references>
+        <references refid="editbox_8h_1a9770c66bebb9e0414a2fae54b042b915" compoundref="editbox_8h" startline="81">MyTextOut</references>
+        <references refid="_a_p_i_8h_1aa85a1cfcb4fbb9b6ba83c25723effa41" compoundref="_a_p_i_8h" startline="25">UM_TEXT</references>
+        <references refid="_a_p_i_8h_1a679aa379b7f856831d6ffb69dbac7b6d" compoundref="_a_p_i_8h" startline="44">UR_ERROR</references>
+        <references refid="_a_p_i_8cpp_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</references>
+        <references refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" compoundref="editbox_8h" startline="139">USHEIGHT</references>
+        <references refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" compoundref="editbox_8h" startline="137">USWIDTH</references>
+        <references refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" compoundref="editbox_8h" startline="125">WINDOWPOS</references>
+        <references refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" compoundref="editbox_8h" startline="126">WINDOWSIZE</references>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stdafx_8h" kindref="compound">stdafx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="editbox_8h" kindref="compound">editbox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="debug_8h" kindref="compound">debug.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="textoperation_8cpp_1a94381ffecfbc96fbaf48576642fd20b4" refkind="member"><highlight class="normal">BOOL<sp/><ref refid="textoperation_8cpp_1a94381ffecfbc96fbaf48576642fd20b4" kindref="member">MyInvalidateRect</ref>(HWND<sp/>hWnd,<sp/>LONG<sp/>left,<sp/>LONG<sp/>right,<sp/>LONG<sp/>top,<sp/>LONG<sp/>bottom)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>RECT<sp/>rcPaint{<sp/>left,<sp/>top,<sp/>right,<sp/>bottom<sp/>};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>InvalidateRect(hWnd,<sp/>&amp;rcPaint,<sp/>FALSE);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="textoperation_8cpp_1a08f0a6744ca16873d568b89b74a192b9" refkind="member"><highlight class="normal">BOOL<sp/><ref refid="textoperation_8cpp_1a08f0a6744ca16873d568b89b74a192b9" kindref="member">operator==</ref>(POINT<sp/>left,<sp/>POINT<sp/>right)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(left.x<sp/>==<sp/>right.x)<sp/>&amp;&amp;<sp/>(left.y<sp/>==<sp/>right.y);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="textoperation_8cpp_1a612b8844c2d272063e8175a2b5b3d457" refkind="member"><highlight class="normal">BOOL<sp/><ref refid="textoperation_8cpp_1a612b8844c2d272063e8175a2b5b3d457" kindref="member">AdjustCaretPosBeforeBackspace</ref>(HWND<sp/>hWnd,<sp/><ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">HTEXTINFO</ref><sp/><ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="editbox_8h_1a7cc19c4cad589ffffc2cd5f2ee272f1e" kindref="member">STARTPOS</ref>(hTextInfo)<sp/>==<sp/><ref refid="editbox_8h_1a31e764f7259e6bf9a8d4e17700c4d4c2" kindref="member">ENDPOS</ref>(hTextInfo))</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>当前未选中片段<sp/>删除光标前一个字符</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>POINT<sp/>pOldEndPos<sp/>=<sp/><ref refid="editbox_8h_1a31e764f7259e6bf9a8d4e17700c4d4c2" kindref="member">ENDPOS</ref>(hTextInfo);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>记录选段尾部</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SendMessage(hWnd,<sp/>WM_KEYDOWN,<sp/>VK_LEFT,<sp/>NULL);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>光标左移</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" kindref="member">SelectHighlight</ref>(hTextInfo,<sp/><ref refid="editbox_8h_1a7cc19c4cad589ffffc2cd5f2ee272f1e" kindref="member">STARTPOS</ref>(hTextInfo),<sp/>pOldEndPos);<sp/></highlight><highlight class="comment">//<sp/>重设高亮部分(光标后一个字符)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" refkind="member"><highlight class="normal">BOOL<sp/><ref refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" kindref="member">AdjustWindowPos</ref>(HWND<sp/>hWnd,<sp/><ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">HTEXTINFO</ref><sp/><ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>计算偏移量</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xOffset<sp/>=<sp/><ref refid="editbox_8h_1a4b9ca192ede25b85028a300f9d300e42" kindref="member">INRANGEX</ref>(<ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>(hTextInfo).x,<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).x,<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).x<sp/>+<sp/><ref refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" kindref="member">PAGESIZE</ref>(hTextInfo).x<sp/>*<sp/><ref refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" kindref="member">USWIDTH</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).x)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>)<sp/>?<sp/>0<sp/>:<sp/><ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>(hTextInfo).x<sp/>-<sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).x<sp/>-<sp/>(<ref refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" kindref="member">PAGESIZE</ref>(hTextInfo).x<sp/>&gt;&gt;<sp/>1)<sp/>*<sp/><ref refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" kindref="member">USWIDTH</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).x);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>yOffset<sp/>=<sp/><ref refid="editbox_8h_1afe7c3a921bdff1784bb7bb776d5e4a54" kindref="member">INRANGEY</ref>(<ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>(hTextInfo).y,<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).y,<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).y<sp/>+<sp/><ref refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" kindref="member">PAGESIZE</ref>(hTextInfo).y<sp/>*<sp/><ref refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" kindref="member">USHEIGHT</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).y)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>)<sp/>?<sp/>0<sp/>:<sp/><ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>(hTextInfo).y<sp/>&lt;<sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).y<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>?<sp/><ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>(hTextInfo).y<sp/>-<sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).y</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>(hTextInfo).y<sp/>-<sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).y<sp/>-<sp/>(<ref refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" kindref="member">PAGESIZE</ref>(hTextInfo).y<sp/>-<sp/>1)<sp/>*<sp/><ref refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" kindref="member">USHEIGHT</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).y);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>设置滚动条</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>SCROLLINFO<sp/>shInfo;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>shInfo.cbSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(SCROLLINFO);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>shInfo.fMask<sp/>=<sp/>SIF_POS<sp/>|<sp/>SIF_RANGE<sp/>|<sp/>SIF_PAGE;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>GetScrollInfo(hWnd,<sp/>SB_HORZ,<sp/>&amp;shInfo);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iOldHorzPos<sp/>=<sp/>shInfo.nPos;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>shInfo.nPos<sp/>=<sp/>shInfo.nPos<sp/>+<sp/>xOffset<sp/>/<sp/><ref refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" kindref="member">USWIDTH</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).x);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(shInfo.nPos<sp/>&lt;<sp/>shInfo.nMin)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shInfo.nPos<sp/>=<sp/>shInfo.nMin;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(shInfo.nPos<sp/>&gt;<sp/>shInfo.nMax<sp/>-<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)shInfo.nPage<sp/>+<sp/>1)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shInfo.nPos<sp/>=<sp/>shInfo.nMax<sp/>-<sp/>(int)shInfo.nPage<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iNowHorzPos<sp/>=<sp/>shInfo.nPos;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>shInfo.cbSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(SCROLLINFO);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>shInfo.fMask<sp/>=<sp/>SIF_POS;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>SetScrollInfo(hWnd,<sp/>SB_HORZ,<sp/>&amp;shInfo,<sp/>TRUE);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>SCROLLINFO<sp/>svInfo;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>svInfo.cbSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(SCROLLINFO);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>svInfo.fMask<sp/>=<sp/>SIF_POS<sp/>|<sp/>SIF_RANGE<sp/>|<sp/>SIF_PAGE;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>GetScrollInfo(hWnd,<sp/>SB_VERT,<sp/>&amp;svInfo);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iOldVertPos<sp/>=<sp/>svInfo.nPos;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>svInfo.nPos<sp/>=<sp/>svInfo.nPos<sp/>+<sp/>yOffset<sp/>/<sp/><ref refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" kindref="member">USHEIGHT</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).y);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(svInfo.nPos<sp/>&lt;<sp/>svInfo.nMin)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>svInfo.nPos<sp/>=<sp/>svInfo.nMin;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(svInfo.nPos<sp/>&gt;<sp/>svInfo.nMax<sp/>-<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)svInfo.nPage<sp/>+<sp/>1)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>svInfo.nPos<sp/>=<sp/>svInfo.nMax<sp/>-<sp/>svInfo.nPage<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iNowVertPos<sp/>=<sp/>svInfo.nPos;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>svInfo.cbSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(SCROLLINFO);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>svInfo.fMask<sp/>=<sp/>SIF_POS;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>SetScrollInfo(hWnd,<sp/>SB_VERT,<sp/>&amp;svInfo,<sp/>TRUE);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1ae4ddefd3b434dcb4436e4da4ed6a8832" kindref="member">SelectWindowPos</ref>(hTextInfo,<sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>POINT{<sp/>iNowHorzPos<sp/>*<sp/><ref refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" kindref="member">USWIDTH</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).x),<sp/>iNowVertPos<sp/>*<sp/><ref refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" kindref="member">USHEIGHT</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).y)<sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>);<sp/></highlight><highlight class="comment">//<sp/>设置窗口位置</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1a03acee71495158181c790699f67c5401" kindref="member">MyScrollWindow</ref>(hWnd,<sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(iOldHorzPos<sp/>-<sp/>iNowHorzPos)<sp/>*<sp/><ref refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" kindref="member">USWIDTH</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).x),<sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(iOldVertPos<sp/>-<sp/>iNowVertPos)<sp/>*<sp/><ref refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" kindref="member">USHEIGHT</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).y)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>);<sp/><sp/></highlight><highlight class="comment">//<sp/>滑动窗口</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1a4c224a6c2076afbc5bdf27c698cf5e50" kindref="member">DefaultFill</ref>(hWnd,<sp/>hTextInfo);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1a94381ffecfbc96fbaf48576642fd20b4" kindref="member">MyInvalidateRect</ref>(hWnd,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><ref refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" kindref="member">WINDOWSIZE</ref>(hTextInfo).x,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a7cc19c4cad589ffffc2cd5f2ee272f1e" kindref="member">STARTPOS</ref>(hTextInfo).y<sp/>-<sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).y,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a31e764f7259e6bf9a8d4e17700c4d4c2" kindref="member">ENDPOS</ref>(hTextInfo).y<sp/>-<sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).y<sp/>+<sp/><ref refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" kindref="member">USHEIGHT</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).y));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG</highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="debug_8h_1a07fa3915de3fd9da3bc5ef6f38dbd143" kindref="member">PRINTCARETPOS</ref>(hTextInfo);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="debug_8h_1a7278c3d4f8e08244b04af92d033070cc" kindref="member">PRINTWINDOWPOS</ref>(hTextInfo);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="debug_8h_1a7f2fb4296befff0d0d5d2f3e0c5c7c04" kindref="member">PRINTWINDOWSIZE</ref>(hTextInfo);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="debug_8h_1a3f2d02c5daa1c17be5b20e459ce24f9e" kindref="member">PRINTPAGESIZE</ref>(hTextInfo);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="debug_8h_1a7fce88c2583e5a8cbb4286cb1654f764" kindref="member">PRINTENDL</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>DEBUG</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="textoperation_8cpp_1a515f72edefb28c2e51adc570e5ab378c" refkind="member"><highlight class="normal">BOOL<sp/><ref refid="textoperation_8cpp_1a515f72edefb28c2e51adc570e5ab378c" kindref="member">MoveCaret</ref>(HWND<sp/>hWnd,<sp/>UINT<sp/>message,<sp/><ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">HTEXTINFO</ref><sp/><ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_a_p_i_8h_1a24c037a4ce3050a50519add6a361fc55" kindref="member">RVALUE</ref><sp/>result;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((result<sp/>=</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_a_p_i_8cpp_1a90db10ed3b32a98ecf5f96238b3a4600" kindref="member">UserMessageProc</ref>(<ref refid="editbox_8h_1ac8fd05e77854216993808807dd4021d6" kindref="member">HTEXT</ref>(hTextInfo),</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>(hTextInfo).x,<sp/><ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>(hTextInfo).y,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>message,<sp/>NULL,<sp/>NULL))<sp/>!=<sp/><ref refid="_a_p_i_8h_1a679aa379b7f856831d6ffb69dbac7b6d" kindref="member">UR_ERROR</ref>)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" kindref="member">SelectCaretPos</ref>(hTextInfo,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>POINT{<sp/>(LONG)<ref refid="_a_p_i_8h_1a94b6637c5f035545e7b2ac3192d91f19" kindref="member">LODWORD</ref>(result),<sp/>(LONG)<ref refid="_a_p_i_8h_1abddf10fc1bc344eec830edaf4875888f" kindref="member">HIDWORD</ref>(result)<sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);<sp/><sp/></highlight><highlight class="comment">//<sp/>设置光标位置</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" kindref="member">AdjustWindowPos</ref>(hWnd,<sp/>hTextInfo);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" kindref="member">SelectHighlight</ref>(hTextInfo,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>(hTextInfo),</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>(hTextInfo)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);<sp/><sp/></highlight><highlight class="comment">//<sp/>设置高亮部分(无)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="textoperation_8cpp_1ae4ddefd3b434dcb4436e4da4ed6a8832" refkind="member"><highlight class="normal">BOOL<sp/><ref refid="textoperation_8cpp_1ae4ddefd3b434dcb4436e4da4ed6a8832" kindref="member">SelectWindowPos</ref>(<ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">HTEXTINFO</ref><sp/><ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>,<sp/>POINT<sp/>thePos)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo)<sp/>=<sp/>thePos;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="textoperation_8cpp_1af8fc116326c8fe6d185ba3ff5d2287b8" refkind="member"><highlight class="normal">BOOL<sp/><ref refid="textoperation_8cpp_1af8fc116326c8fe6d185ba3ff5d2287b8" kindref="member">SelectWindowSize</ref>(<ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">HTEXTINFO</ref><sp/><ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>,<sp/><ref refid="editbox_8h_1a6fde7073763e612db84cd5c85819e210" kindref="member">LPRECT</ref><sp/>lpRect)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" kindref="member">WINDOWSIZE</ref>(hTextInfo)<sp/>=<sp/>POINT{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lpRect-&gt;right<sp/>-<sp/>lpRect-&gt;left,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lpRect-&gt;bottom<sp/>-<sp/>lpRect-&gt;top</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" kindref="member">PAGESIZE</ref>(hTextInfo)<sp/>=<sp/>POINT{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" kindref="member">WINDOWSIZE</ref>(hTextInfo).x<sp/>/<sp/><ref refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" kindref="member">USWIDTH</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).x)<sp/>-<sp/>2,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" kindref="member">WINDOWSIZE</ref>(hTextInfo).y<sp/>/<sp/><ref refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" kindref="member">USHEIGHT</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).y)<sp/>-<sp/>1</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>SCROLLINFO<sp/>shInfo;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>shInfo.cbSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(SCROLLINFO);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>shInfo.fMask<sp/>=<sp/>SIF_PAGE;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>shInfo.nPage<sp/>=<sp/><ref refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" kindref="member">PAGESIZE</ref>(hTextInfo).x;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>SetScrollInfo(hTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" kindref="member">m_hWnd</ref>,<sp/>SB_HORZ,<sp/>&amp;shInfo,<sp/>TRUE);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>SCROLLINFO<sp/>svInfo;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>svInfo.cbSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(SCROLLINFO);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>svInfo.fMask<sp/>=<sp/>SIF_PAGE;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>svInfo.nPage<sp/>=<sp/><ref refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" kindref="member">PAGESIZE</ref>(hTextInfo).y;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>SetScrollInfo(hTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" kindref="member">m_hWnd</ref>,<sp/>SB_VERT,<sp/>&amp;svInfo,<sp/>TRUE);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" refkind="member"><highlight class="normal">BOOL<sp/><ref refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" kindref="member">SelectCaretPos</ref>(<ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">HTEXTINFO</ref><sp/><ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>,<sp/>POINT<sp/>thePos)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>(hTextInfo)<sp/>=<sp/>thePos;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="editbox_8h_1a4b9ca192ede25b85028a300f9d300e42" kindref="member">INRANGEX</ref>(thePos.x,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).x,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).x<sp/>+<sp/><ref refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" kindref="member">PAGESIZE</ref>(hTextInfo).x<sp/>*<sp/><ref refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" kindref="member">USWIDTH</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).x))</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>!<ref refid="editbox_8h_1afe7c3a921bdff1784bb7bb776d5e4a54" kindref="member">INRANGEY</ref>(thePos.y,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).y,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).y<sp/>+<sp/><ref refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" kindref="member">PAGESIZE</ref>(hTextInfo).y<sp/>*<sp/><ref refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" kindref="member">USHEIGHT</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).y)))</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>光标未落在窗口内</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HideCaret(hTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" kindref="member">m_hWnd</ref>);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ShowCaret(hTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" kindref="member">m_hWnd</ref>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>SetCaretPos(<ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>(hTextInfo).x<sp/>-<sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).x,<sp/><ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>(hTextInfo).y<sp/>-<sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).y);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" refkind="member"><highlight class="normal">BOOL<sp/><ref refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" kindref="member">SelectHighlight</ref>(<ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">HTEXTINFO</ref><sp/><ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>,<sp/>POINT<sp/>theStart,<sp/>POINT<sp/>theEnd)</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1a94381ffecfbc96fbaf48576642fd20b4" kindref="member">MyInvalidateRect</ref>(hTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" kindref="member">m_hWnd</ref>,</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><ref refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" kindref="member">WINDOWSIZE</ref>(hTextInfo).x,</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a7cc19c4cad589ffffc2cd5f2ee272f1e" kindref="member">STARTPOS</ref>(hTextInfo).y<sp/>-<sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).y,<sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a31e764f7259e6bf9a8d4e17700c4d4c2" kindref="member">ENDPOS</ref>(hTextInfo).y<sp/>-<sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).y<sp/>+<sp/><ref refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" kindref="member">USHEIGHT</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).y)</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a7cc19c4cad589ffffc2cd5f2ee272f1e" kindref="member">STARTPOS</ref>(hTextInfo)<sp/>=<sp/>theStart;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a31e764f7259e6bf9a8d4e17700c4d4c2" kindref="member">ENDPOS</ref>(hTextInfo)<sp/><sp/><sp/>=<sp/>theEnd;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1a94381ffecfbc96fbaf48576642fd20b4" kindref="member">MyInvalidateRect</ref>(hTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" kindref="member">m_hWnd</ref>,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><ref refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" kindref="member">WINDOWSIZE</ref>(hTextInfo).x,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a7cc19c4cad589ffffc2cd5f2ee272f1e" kindref="member">STARTPOS</ref>(hTextInfo).y<sp/>-<sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).y,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a31e764f7259e6bf9a8d4e17700c4d4c2" kindref="member">ENDPOS</ref>(hTextInfo).y<sp/>-<sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).y<sp/>+<sp/><ref refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" kindref="member">USHEIGHT</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).y)</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="textoperation_8cpp_1abc5dea63027499bf06fc08b0662961d7" refkind="member"><highlight class="normal">BOOL<sp/><ref refid="textoperation_8cpp_1abc5dea63027499bf06fc08b0662961d7" kindref="member">SelectTextSize</ref>(<ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">HTEXTINFO</ref><sp/><ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>,<sp/>POINT<sp/>theSize)</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a3f94d0002f5d3d0b5156b1b3d56c9961" kindref="member">TEXTSIZE</ref>(hTextInfo)<sp/>=<sp/>theSize;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>设置滚动条</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>SCROLLINFO<sp/>shInfo;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>shInfo.cbSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(SCROLLINFO);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>shInfo.fMask<sp/>=<sp/>SIF_RANGE<sp/>|<sp/>SIF_PAGE;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>GetScrollInfo(hTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" kindref="member">m_hWnd</ref>,<sp/>SB_HORZ,<sp/>&amp;shInfo);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>shInfo.nPage<sp/>=<sp/><ref refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" kindref="member">WINDOWSIZE</ref>(hTextInfo).x<sp/>/<sp/><ref refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" kindref="member">USWIDTH</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).x)<sp/>-<sp/>2;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>shInfo.nMin<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>shInfo.nMax<sp/>=<sp/>max(theSize.x<sp/>/<sp/><ref refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" kindref="member">USWIDTH</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).x)<sp/>-<sp/>1,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)shInfo.nPage<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>shInfo.cbSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(SCROLLINFO);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>shInfo.fMask<sp/>=<sp/>SIF_RANGE<sp/>|<sp/>SIF_PAGE;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>SetScrollInfo(hTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" kindref="member">m_hWnd</ref>,<sp/>SB_HORZ,<sp/>&amp;shInfo,<sp/>FALSE);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>SCROLLINFO<sp/>svInfo;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>svInfo.cbSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(SCROLLINFO);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>svInfo.fMask<sp/>=<sp/>SIF_RANGE<sp/>|<sp/>SIF_PAGE;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>GetScrollInfo(hTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" kindref="member">m_hWnd</ref>,<sp/>SB_VERT,<sp/>&amp;svInfo);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>svInfo.nPage<sp/>=<sp/><ref refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" kindref="member">WINDOWSIZE</ref>(hTextInfo).y<sp/>/<sp/><ref refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" kindref="member">USHEIGHT</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).y)<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>svInfo.nMin<sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>svInfo.nMax<sp/><sp/>=<sp/>max(theSize.y<sp/>/<sp/><ref refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" kindref="member">USHEIGHT</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).y),<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)svInfo.nPage<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>svInfo.cbSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(SCROLLINFO);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>svInfo.fMask<sp/>=<sp/>SIF_RANGE<sp/>|<sp/>SIF_PAGE;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>SetScrollInfo(hTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" kindref="member">m_hWnd</ref>,<sp/>SB_VERT,<sp/>&amp;svInfo,<sp/>FALSE);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="textoperation_8cpp_1ae05ee4ee8873757de8b46582aa9d2d1d" refkind="member"><highlight class="normal">BOOL<sp/><ref refid="textoperation_8cpp_1ae05ee4ee8873757de8b46582aa9d2d1d" kindref="member">SelectUntitledWindow</ref>(HWND<sp/>hWnd,<sp/><ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">HTEXTINFO</ref><sp/><ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>)</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>SetWindowText(hWnd,<sp/>TEXT(</highlight><highlight class="stringliteral">&quot;Untitled.txt&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>RECT<sp/>rect;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>GetClientRect(hWnd,<sp/>&amp;rect);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1af8fc116326c8fe6d185ba3ff5d2287b8" kindref="member">SelectWindowSize</ref>(hTextInfo,<sp/>&amp;rect);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>设置窗口大小（固定为校准后的显示部分）</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1ae4ddefd3b434dcb4436e4da4ed6a8832" kindref="member">SelectWindowPos</ref>(hTextInfo,<sp/>POINT{<sp/>0,<sp/>0<sp/>});<sp/><sp/></highlight><highlight class="comment">//<sp/>设置窗口位置（左上角）</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1abc5dea63027499bf06fc08b0662961d7" kindref="member">SelectTextSize</ref>(hTextInfo,<sp/>POINT{<sp/>0<sp/>,<sp/>0<sp/>});<sp/><sp/></highlight><highlight class="comment">//<sp/>设置文本范围（空文本）</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>CreateCaret(hWnd,<sp/>NULL,</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a1ecf21a8623aab1d3ea987ad565c434b" kindref="member">CARETSIZE</ref>(hTextInfo).y,</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a1ecf21a8623aab1d3ea987ad565c434b" kindref="member">CARETSIZE</ref>(hTextInfo).y</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>);<sp/></highlight><highlight class="comment">//<sp/>创建光标</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" kindref="member">SelectCaretPos</ref>(hTextInfo,<sp/>POINT{<sp/>0<sp/>,<sp/>0<sp/>});<sp/><sp/></highlight><highlight class="comment">//<sp/>设置光标位置（左上角）</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" kindref="member">SelectHighlight</ref>(hTextInfo,</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>(hTextInfo),</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>(hTextInfo)</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>);<sp/><sp/></highlight><highlight class="comment">//<sp/>设置高亮部分（无）</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="255" refid="textoperation_8cpp_1ab8ed95b601a777c79a06fc1e95e0aca0" refkind="member"><highlight class="normal">BOOL<sp/><ref refid="textoperation_8cpp_1ab8ed95b601a777c79a06fc1e95e0aca0" kindref="member">SelectTitledWindow</ref>(HWND<sp/>hWnd,<sp/><ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">HTEXTINFO</ref><sp/><ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>,<sp/>POINT<sp/>pTextSize,<sp/>LPCWSTR<sp/>lpszFileName)</highlight></codeline>
+<codeline lineno="256"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>SetWindowText(hWnd,<sp/>lpszFileName);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>设置窗口标题为文件名</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>RECT<sp/>rect;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>GetClientRect(hWnd,<sp/>&amp;rect);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1af8fc116326c8fe6d185ba3ff5d2287b8" kindref="member">SelectWindowSize</ref>(hTextInfo,<sp/>&amp;rect);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>设置窗口大小（固定为校准后的显示部分）</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1ae4ddefd3b434dcb4436e4da4ed6a8832" kindref="member">SelectWindowPos</ref>(hTextInfo,<sp/>POINT{<sp/>0,<sp/>0<sp/>});<sp/><sp/></highlight><highlight class="comment">//<sp/>设置窗口位置（左上角）</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" kindref="member">SelectCaretPos</ref>(hTextInfo,<sp/>POINT{<sp/>0,<sp/>0<sp/>});<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>设置光标位置(左上角)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" kindref="member">SelectHighlight</ref>(hTextInfo,</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>(hTextInfo),</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>(hTextInfo)</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>);<sp/><sp/></highlight><highlight class="comment">//<sp/>设置高亮部分(无)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textoperation_8cpp_1a94381ffecfbc96fbaf48576642fd20b4" kindref="member">MyInvalidateRect</ref>(hWnd,</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><ref refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" kindref="member">WINDOWSIZE</ref>(hTextInfo).x,</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><ref refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" kindref="member">WINDOWSIZE</ref>(hTextInfo).y</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>);<sp/><sp/></highlight><highlight class="comment">//<sp/>更新窗口显示(全屏)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277" refid="textoperation_8cpp_1a03acee71495158181c790699f67c5401" refkind="member"><highlight class="normal">BOOL<sp/><ref refid="textoperation_8cpp_1a03acee71495158181c790699f67c5401" kindref="member">MyScrollWindow</ref>(HWND<sp/>hWnd,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xOffset,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>yOffset)</highlight></codeline>
+<codeline lineno="278"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>RECT<sp/>rcScroll;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>GetClientRect(hWnd,<sp/>&amp;rcScroll);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>RECT<sp/>rcPaint;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>ScrollWindowEx(hWnd,<sp/>xOffset,<sp/>yOffset,<sp/>&amp;rcScroll,<sp/>NULL,<sp/>NULL,<sp/>&amp;rcPaint,<sp/>SW_INVALIDATE);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>InvalidateRect(hWnd,<sp/>&amp;rcPaint,<sp/>FALSE);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288" refid="textoperation_8cpp_1a4c224a6c2076afbc5bdf27c698cf5e50" refkind="member"><highlight class="normal">BOOL<sp/><ref refid="textoperation_8cpp_1a4c224a6c2076afbc5bdf27c698cf5e50" kindref="member">DefaultFill</ref>(HWND<sp/>hWnd,<sp/><ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">HTEXTINFO</ref><sp/><ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>)</highlight></codeline>
+<codeline lineno="289"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>GetDC(hWnd);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>RECT<sp/>rcClient;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>GetClientRect(hWnd,<sp/>&amp;rcClient);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>HDC<sp/>hdc<sp/>=<sp/>GetDC(hWnd);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>RECT<sp/>rcRight;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>右边界</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/>SetRect(&amp;rcRight,<sp/><ref refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" kindref="member">PAGESIZE</ref>(hTextInfo).x<sp/>*<sp/><ref refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" kindref="member">USWIDTH</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).x),<sp/>0,<sp/>rcClient.right,<sp/>rcClient.bottom);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/>FillRect(hdc,<sp/>&amp;rcRight,<sp/><ref refid="editbox_8h_1a699f42b1b5585d578f0ae96deaa1b894" kindref="member">BRUSH</ref>(hTextInfo));</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>RECT<sp/>rcBottom;<sp/><sp/></highlight><highlight class="comment">//<sp/>下边界</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>SetRect(&amp;rcBottom,<sp/>0,<sp/><ref refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" kindref="member">PAGESIZE</ref>(hTextInfo).y<sp/>*<sp/><ref refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" kindref="member">USHEIGHT</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).y),<sp/>rcClient.right,<sp/>rcClient.bottom);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>FillRect(hdc,<sp/>&amp;rcBottom,<sp/><ref refid="editbox_8h_1a699f42b1b5585d578f0ae96deaa1b894" kindref="member">BRUSH</ref>(hTextInfo));</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>ReleaseDC(hWnd,<sp/>hdc);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309" refid="textoperation_8cpp_1ab8db8eabc16f945fab6970a1144e797e" refkind="member"><highlight class="normal">BOOL<sp/><ref refid="textoperation_8cpp_1ab8db8eabc16f945fab6970a1144e797e" kindref="member">PaintWindow</ref>(LPPAINTSTRUCT<sp/>lpPaint,<sp/><ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">HTEXTINFO</ref><sp/><ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>)</highlight></codeline>
+<codeline lineno="310"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>RECT<sp/>rect{<sp/>0,<sp/>0,<sp/><ref refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" kindref="member">WINDOWSIZE</ref>(hTextInfo).x,<sp/><ref refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" kindref="member">WINDOWSIZE</ref>(hTextInfo).y<sp/>};</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>FillRect(<ref refid="editbox_8h_1a8dca9c84766a55fc972528846a944e2d" kindref="member">MEMDC</ref>(hTextInfo),<sp/>&amp;rect,<sp/><ref refid="editbox_8h_1a699f42b1b5585d578f0ae96deaa1b894" kindref="member">BRUSH</ref>(hTextInfo));</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_a_p_i_8h_1a24c037a4ce3050a50519add6a361fc55" kindref="member">RVALUE</ref><sp/>result;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>LPWSTR<sp/>lpchText<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(LONG<sp/>yOffset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>yOffset<sp/>&lt;<sp/><ref refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" kindref="member">WINDOWSIZE</ref>(hTextInfo).y;<sp/>yOffset<sp/>+=<sp/><ref refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" kindref="member">USHEIGHT</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo)).y)</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((result<sp/>=</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_a_p_i_8cpp_1a90db10ed3b32a98ecf5f96238b3a4600" kindref="member">UserMessageProc</ref>(<ref refid="editbox_8h_1ac8fd05e77854216993808807dd4021d6" kindref="member">HTEXT</ref>(hTextInfo),<sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).x,<sp/><ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).y<sp/>+<sp/>yOffset,</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_a_p_i_8h_1aa85a1cfcb4fbb9b6ba83c25723effa41" kindref="member">UM_TEXT</ref>,<sp/></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="_a_p_i_8h_1a3196d91578d194ac3ce7b307f67509ba" kindref="member">FPARAM</ref>)((<ref refid="_a_p_i_8h_1a3196d91578d194ac3ce7b307f67509ba" kindref="member">FPARAM</ref>)(<ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).y<sp/>+<sp/>yOffset)<sp/>&lt;&lt;<sp/>32<sp/>|<sp/>(<ref refid="_a_p_i_8h_1a3196d91578d194ac3ce7b307f67509ba" kindref="member">FPARAM</ref>)(<ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>(hTextInfo).x<sp/>+<sp/><ref refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" kindref="member">WINDOWSIZE</ref>(hTextInfo).x<sp/>+<sp/><ref refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" kindref="member">USWIDTH</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).x))),</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="_a_p_i_8h_1a2c1a410fcfeb3e0fd3c16f8c0ffea8dc" kindref="member">SPARAM</ref>)(&amp;lpchText)))<sp/>!=<sp/><ref refid="_a_p_i_8h_1a679aa379b7f856831d6ffb69dbac7b6d" kindref="member">UR_ERROR</ref>)</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/>iCount<sp/>=<sp/>(int)<ref refid="_a_p_i_8h_1abddf10fc1bc344eec830edaf4875888f" kindref="member">HIDWORD</ref>(result);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>iStart<sp/>=<sp/>(short)LOWORD(<ref refid="_a_p_i_8h_1a94b6637c5f035545e7b2ac3192d91f19" kindref="member">LODWORD</ref>(result));</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>iEnd<sp/><sp/><sp/>=<sp/>(short)HIWORD(<ref refid="_a_p_i_8h_1a94b6637c5f035545e7b2ac3192d91f19" kindref="member">LODWORD</ref>(result));</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(iCount<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a9770c66bebb9e0414a2fae54b042b915" kindref="member">MyTextOut</ref>(<ref refid="editbox_8h_1a8dca9c84766a55fc972528846a944e2d" kindref="member">MEMDC</ref>(hTextInfo),<sp/>0,<sp/>yOffset,<sp/></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lpchText,<sp/>iCount,<sp/>iStart,<sp/>iEnd,<sp/><ref refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" kindref="member">USWIDTH</ref>(<ref refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" kindref="member">CHARSIZE</ref>(hTextInfo).x));</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp"/>
+  </compounddef>
+</doxygen>

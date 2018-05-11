@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct___t_e_x_t___g_d_i" kind="struct" prot="public">
+    <compoundname>_TEXT_GDI</compoundname>
+    <includes refid="editbox_8h" local="no">editbox.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___t_e_x_t___g_d_i_1a619c3e6b8b4be4d566a9e664a18ac03e" prot="public" static="no" mutable="no">
+        <type>HDC</type>
+        <definition>HDC _TEXT_GDI::m_hMemDC</definition>
+        <argsstring></argsstring>
+        <name>m_hMemDC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="54" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a00d094f318003965d49b28a2bb9fbdf8" compoundref="textinfo_8cpp" startline="101" endline="122">CreateGDI</referencedby>
+        <referencedby refid="textinfo_8cpp_1a9b18abf4974a65b9b58836269bc039e1" compoundref="textinfo_8cpp" startline="124" endline="132">ReleaseGDI</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_e_x_t___g_d_i_1a24d37f604ec70084f2a8b6e67b90a7ed" prot="public" static="no" mutable="no">
+        <type>HBRUSH</type>
+        <definition>HBRUSH _TEXT_GDI::m_hBrush</definition>
+        <argsstring></argsstring>
+        <name>m_hBrush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="55" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a00d094f318003965d49b28a2bb9fbdf8" compoundref="textinfo_8cpp" startline="101" endline="122">CreateGDI</referencedby>
+        <referencedby refid="textinfo_8cpp_1a9b18abf4974a65b9b58836269bc039e1" compoundref="textinfo_8cpp" startline="124" endline="132">ReleaseGDI</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_e_x_t___g_d_i_1aa53e9b83b1eec7268cfd60c8eda848d9" prot="public" static="no" mutable="no">
+        <type>HBITMAP</type>
+        <definition>HBITMAP _TEXT_GDI::m_hBitmap</definition>
+        <argsstring></argsstring>
+        <name>m_hBitmap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="56" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a00d094f318003965d49b28a2bb9fbdf8" compoundref="textinfo_8cpp" startline="101" endline="122">CreateGDI</referencedby>
+        <referencedby refid="textinfo_8cpp_1a9b18abf4974a65b9b58836269bc039e1" compoundref="textinfo_8cpp" startline="124" endline="132">ReleaseGDI</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_e_x_t___g_d_i_1a7cc58f492c9f540694545864b81cc1c7" prot="public" static="no" mutable="no">
+        <type><ref refid="editbox_8h_1a5f97b8cc533aca3989078513bcfd276c" kindref="member">HTIMER</ref></type>
+        <definition>HTIMER _TEXT_GDI::m_hMouseTimer</definition>
+        <argsstring></argsstring>
+        <name>m_hMouseTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="57" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a00d094f318003965d49b28a2bb9fbdf8" compoundref="textinfo_8cpp" startline="101" endline="122">CreateGDI</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_e_x_t___g_d_i_1a523b7a475a73e7950c785fc0633589fd" prot="public" static="no" mutable="no">
+        <type><ref refid="editbox_8h_1a5f97b8cc533aca3989078513bcfd276c" kindref="member">HTIMER</ref></type>
+        <definition>HTIMER _TEXT_GDI::m_hSaveTimer</definition>
+        <argsstring></argsstring>
+        <name>m_hSaveTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="58" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="58" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a00d094f318003965d49b28a2bb9fbdf8" compoundref="textinfo_8cpp" startline="101" endline="122">CreateGDI</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>_TIMER</label>
+        <link refid="struct___t_i_m_e_r"/>
+      </node>
+      <node id="1">
+        <label>_TEXT_GDI</label>
+        <link refid="struct___t_e_x_t___g_d_i"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_hSaveTimer</edgelabel>
+          <edgelabel>m_hMouseTimer</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="53" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="52" bodyend="59"/>
+    <listofallmembers>
+      <member refid="struct___t_e_x_t___g_d_i_1aa53e9b83b1eec7268cfd60c8eda848d9" prot="public" virt="non-virtual"><scope>_TEXT_GDI</scope><name>m_hBitmap</name></member>
+      <member refid="struct___t_e_x_t___g_d_i_1a24d37f604ec70084f2a8b6e67b90a7ed" prot="public" virt="non-virtual"><scope>_TEXT_GDI</scope><name>m_hBrush</name></member>
+      <member refid="struct___t_e_x_t___g_d_i_1a619c3e6b8b4be4d566a9e664a18ac03e" prot="public" virt="non-virtual"><scope>_TEXT_GDI</scope><name>m_hMemDC</name></member>
+      <member refid="struct___t_e_x_t___g_d_i_1a7cc58f492c9f540694545864b81cc1c7" prot="public" virt="non-virtual"><scope>_TEXT_GDI</scope><name>m_hMouseTimer</name></member>
+      <member refid="struct___t_e_x_t___g_d_i_1a523b7a475a73e7950c785fc0633589fd" prot="public" virt="non-virtual"><scope>_TEXT_GDI</scope><name>m_hSaveTimer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

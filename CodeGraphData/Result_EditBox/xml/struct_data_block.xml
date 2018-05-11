@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct_data_block" kind="struct" prot="public">
+    <compoundname>DataBlock</compoundname>
+    <includes refid="_c_line_8h" local="no">CLine.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_data_block_1af045d11eb055998f55e2a5e562d52519" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_data_block" kindref="compound">DataBlock</ref> *</type>
+        <definition>DataBlock* DataBlock::pNextBlock</definition>
+        <argsstring></argsstring>
+        <name>pNextBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" line="26" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="class_c_line_1a9ba3c94b59bd78d995ebbf7819e3ac20" compoundref="_c_line_8cpp" startline="65" endline="81">CLine::ClearLine</referencedby>
+        <referencedby refid="class_c_line_1af2650c129299a35ffc4b2c4f9044ac65" compoundref="_c_line_8cpp" startline="25" endline="62">CLine::CreateLine</referencedby>
+        <referencedby refid="class_c_line_1a63450973816d9f285f1799cd9966eaa5" compoundref="_c_line_8cpp" startline="108" endline="144">CLine::DeleteLine</referencedby>
+        <referencedby refid="class_c_line_1a172210f2a2b3ce5fd249958d265c4cf2" compoundref="_c_line_8cpp" startline="367" endline="376">CLine::DeleteSpareBlocks</referencedby>
+        <referencedby refid="class_c_line_1a2ff023c084dbcad874bff56688a16145" compoundref="_c_line_8cpp" startline="175" endline="280">CLine::InsertStrings</referencedby>
+        <referencedby refid="class_line__iterator_1a19fe3837430a1fa501e4e8d859602be1" compoundref="_c_line_8cpp" startline="520" endline="538">Line_iterator::operator+</referencedby>
+        <referencedby refid="class_line__iterator_1a0148d963ab43faf7e57fc8b85a7cf302" compoundref="_c_line_8cpp" startline="425" endline="438">Line_iterator::operator++</referencedby>
+        <referencedby refid="class_line__iterator_1ad494ed6a8e445adb409bfd67538ecb9d" compoundref="_c_line_8cpp" startline="447" endline="465">Line_iterator::operator--</referencedby>
+        <referencedby refid="class_c_line_1a641185ca9a1b60c0a2dc7cc403c7e792" compoundref="_c_line_8cpp" startline="83" endline="103">CLine::ShowLineData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_data_block_1aba019074fd9f0faf3420c3f41a15ae57" prot="public" static="no" mutable="no">
+        <type>TCHAR</type>
+        <definition>TCHAR DataBlock::Strings[BLOCK_SIZE]</definition>
+        <argsstring>[BLOCK_SIZE]</argsstring>
+        <name>Strings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" line="27" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_c_line_1af2650c129299a35ffc4b2c4f9044ac65" compoundref="_c_line_8cpp" startline="25" endline="62">CLine::CreateLine</referencedby>
+        <referencedby refid="class_line__iterator_1a6686959fc646c4f566672fed6c6aa2af" compoundref="_c_line_8cpp" startline="395" endline="414">Line_iterator::Line_iterator</referencedby>
+        <referencedby refid="class_line__iterator_1a19fe3837430a1fa501e4e8d859602be1" compoundref="_c_line_8cpp" startline="520" endline="538">Line_iterator::operator+</referencedby>
+        <referencedby refid="class_line__iterator_1a0148d963ab43faf7e57fc8b85a7cf302" compoundref="_c_line_8cpp" startline="425" endline="438">Line_iterator::operator++</referencedby>
+        <referencedby refid="class_line__iterator_1ad494ed6a8e445adb409bfd67538ecb9d" compoundref="_c_line_8cpp" startline="447" endline="465">Line_iterator::operator--</referencedby>
+        <referencedby refid="class_line__iterator_1aa3c7ec6479e1b1b04f923b2eff2280de" compoundref="_c_line_8cpp" startline="491" endline="508">Line_iterator::Set</referencedby>
+        <referencedby refid="class_c_line_1a641185ca9a1b60c0a2dc7cc403c7e792" compoundref="_c_line_8cpp" startline="83" endline="103">CLine::ShowLineData</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_data_block_1ad2e77f59440bc57152e6260026e24632" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DataBlock::DataBlock</definition>
+        <argsstring>()</argsstring>
+        <name>DataBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" line="25" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="43">
+        <label>DataBlock</label>
+        <link refid="struct_data_block"/>
+        <childnode refid="43" relation="usage">
+          <edgelabel>pNextBlock</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" line="24" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" bodystart="23" bodyend="28"/>
+    <listofallmembers>
+      <member refid="struct_data_block_1ad2e77f59440bc57152e6260026e24632" prot="public" virt="non-virtual"><scope>DataBlock</scope><name>DataBlock</name></member>
+      <member refid="struct_data_block_1af045d11eb055998f55e2a5e562d52519" prot="public" virt="non-virtual"><scope>DataBlock</scope><name>pNextBlock</name></member>
+      <member refid="struct_data_block_1aba019074fd9f0faf3420c3f41a15ae57" prot="public" virt="non-virtual"><scope>DataBlock</scope><name>Strings</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

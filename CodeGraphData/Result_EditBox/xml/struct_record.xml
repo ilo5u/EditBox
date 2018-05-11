@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct_record" kind="struct" prot="public">
+    <compoundname>Record</compoundname>
+    <includes refid="_record_8h" local="no">Record.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+        <definition>Position Record::start</definition>
+        <argsstring></argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" line="20" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="struct_record_1afa7f4738b5b61284af2f94dd34e8f917" compoundref="_record_8cpp" startline="78" endline="82">Clear_Choose_Data</referencedby>
+        <referencedby refid="struct_record_1a8bc01d9746033bc55acf407f9b0e8411" compoundref="_record_8cpp" startline="15" endline="50">ReDo</referencedby>
+        <referencedby refid="struct_record_1afdb85f0fa26f8fc5def05eaa2280dd0d" compoundref="_record_8cpp" startline="52" endline="58">Save_Delete_Data</referencedby>
+        <referencedby refid="struct_record_1aca658c6e7d69a2f7fdd0c6acac941972" compoundref="_record_8cpp" startline="60" endline="67">Save_Merge_Line_Data</referencedby>
+        <referencedby refid="struct_record_1a8f3ccd7a97b80ea958ee1881a2e23733" compoundref="_record_8cpp" startline="71" endline="75">Set_Choose_Data</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_record_1a202754ee6c4db7c19277d74a7fd26f77" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+        <definition>Position Record::end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" line="21" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="struct_record_1afa7f4738b5b61284af2f94dd34e8f917" compoundref="_record_8cpp" startline="78" endline="82">Clear_Choose_Data</referencedby>
+        <referencedby refid="struct_record_1a8bc01d9746033bc55acf407f9b0e8411" compoundref="_record_8cpp" startline="15" endline="50">ReDo</referencedby>
+        <referencedby refid="struct_record_1aca658c6e7d69a2f7fdd0c6acac941972" compoundref="_record_8cpp" startline="60" endline="67">Save_Merge_Line_Data</referencedby>
+        <referencedby refid="struct_record_1a8f3ccd7a97b80ea958ee1881a2e23733" compoundref="_record_8cpp" startline="71" endline="75">Set_Choose_Data</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_record_1a27daae22938a602cf1c17927c6302624" prot="public" static="no" mutable="no">
+        <type><ref refid="class_c_text" kindref="compound">CText</ref> *</type>
+        <definition>CText* Record::pText</definition>
+        <argsstring></argsstring>
+        <name>pText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" line="22" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="struct_record_1af52f4c47e4ece83b3530e7cf6d1c53ea" compoundref="_record_8cpp" startline="3" endline="7">Record</referencedby>
+        <referencedby refid="struct_record_1a8bc01d9746033bc55acf407f9b0e8411" compoundref="_record_8cpp" startline="15" endline="50">ReDo</referencedby>
+        <referencedby refid="struct_record_1afdb85f0fa26f8fc5def05eaa2280dd0d" compoundref="_record_8cpp" startline="52" endline="58">Save_Delete_Data</referencedby>
+        <referencedby refid="struct_record_1ad2ce1a99d866834ab53dedd788cb1ea6" compoundref="_record_8cpp" startline="9" endline="12">~Record</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_record_1ae7c5b5f1395433f551d3c27e7ed00fa5" prot="public" static="no" mutable="no">
+        <type>UINT</type>
+        <definition>UINT Record::ACT</definition>
+        <argsstring></argsstring>
+        <name>ACT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" line="23" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="struct_record_1af52f4c47e4ece83b3530e7cf6d1c53ea" compoundref="_record_8cpp" startline="3" endline="7">Record</referencedby>
+        <referencedby refid="struct_record_1a8bc01d9746033bc55acf407f9b0e8411" compoundref="_record_8cpp" startline="15" endline="50">ReDo</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_record_1aa08fba473b16c69c8a589241481b768a" prot="public" static="no" mutable="no">
+        <type>std::wstring</type>
+        <definition>std::wstring Record::Deleted_Data</definition>
+        <argsstring></argsstring>
+        <name>Deleted_Data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" line="24" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="struct_record_1a8bc01d9746033bc55acf407f9b0e8411" compoundref="_record_8cpp" startline="15" endline="50">ReDo</referencedby>
+        <referencedby refid="struct_record_1afdb85f0fa26f8fc5def05eaa2280dd0d" compoundref="_record_8cpp" startline="52" endline="58">Save_Delete_Data</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_record_1af52f4c47e4ece83b3530e7cf6d1c53ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Record::Record</definition>
+        <argsstring>(UINT flag)</argsstring>
+        <name>Record</name>
+        <param>
+          <type>UINT</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" line="13" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.cpp" bodystart="3" bodyend="7"/>
+        <references refid="struct_record_1ae7c5b5f1395433f551d3c27e7ed00fa5" compoundref="_record_8h" startline="23">ACT</references>
+        <references refid="struct_record_1a27daae22938a602cf1c17927c6302624" compoundref="_record_8h" startline="22">pText</references>
+      </memberdef>
+      <memberdef kind="function" id="struct_record_1ad2ce1a99d866834ab53dedd788cb1ea6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Record::~Record</definition>
+        <argsstring>()</argsstring>
+        <name>~Record</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" line="14" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.cpp" bodystart="9" bodyend="12"/>
+        <references refid="struct_record_1a27daae22938a602cf1c17927c6302624" compoundref="_record_8h" startline="22">pText</references>
+      </memberdef>
+      <memberdef kind="function" id="struct_record_1a8bc01d9746033bc55acf407f9b0e8411" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Record::ReDo</definition>
+        <argsstring>(CText *p)</argsstring>
+        <name>ReDo</name>
+        <param>
+          <type><ref refid="class_c_text" kindref="compound">CText</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" line="15" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.cpp" bodystart="15" bodyend="50"/>
+        <references refid="struct_record_1ae7c5b5f1395433f551d3c27e7ed00fa5" compoundref="_record_8h" startline="23">ACT</references>
+        <references refid="class_c_text_1a5baa587ee060cec570e68110bf6e6f2d" compoundref="_c_text_8cpp" startline="136" endline="160">CText::Delete</references>
+        <references refid="struct_record_1aa08fba473b16c69c8a589241481b768a" compoundref="_record_8h" startline="24">Deleted_Data</references>
+        <references refid="class_c_text_1a0728c99dde862c9b11dd0867df790ab5" compoundref="_c_text_8cpp" startline="94" endline="131">CText::DeleteLines</references>
+        <references refid="struct_record_1a202754ee6c4db7c19277d74a7fd26f77" compoundref="_record_8h" startline="21">end</references>
+        <references refid="class_c_text_1ae7356293c6869d990f8cbe9f18d23b05" compoundref="_c_text_8cpp" startline="278" endline="302">CText::EnterNewLine</references>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">CText::GetLinePointer</references>
+        <references refid="class_c_text_1aeb95b8bf7a9517ead86bff6e39841cb1" compoundref="_c_text_8cpp" startline="199" endline="241">CText::Insert</references>
+        <references refid="class_c_line_1a2ff023c084dbcad874bff56688a16145" compoundref="_c_line_8cpp" startline="175" endline="280">CLine::InsertStrings</references>
+        <references refid="struct_position_1a7b72348893583b77254a650b7095c9fc" compoundref="_c_line_8h" startline="11">Position::LineNumber</references>
+        <references refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" compoundref="_c_line_8h" startline="58">CLine::nDataSize</references>
+        <references refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" compoundref="_c_line_8h" startline="55">CLine::pNextLine</references>
+        <references refid="struct_record_1a27daae22938a602cf1c17927c6302624" compoundref="_record_8h" startline="22">pText</references>
+        <references refid="_record_8h_1a6c28ff7d8deac22bb863f05834089d1b" compoundref="_record_8h" startline="7">RD_DELETE</references>
+        <references refid="_record_8h_1a91d73529f704f268f01407d91a579dcc" compoundref="_record_8h" startline="8">RD_INSERT</references>
+        <references refid="_record_8h_1ab34695bf23e76d01f11011676c0f22b6" compoundref="_record_8h" startline="10">RD_MERGE_LINE</references>
+        <references refid="_record_8h_1adc50bf432bdc3e1778b82d8d19bd2468" compoundref="_record_8h" startline="9">RD_RETURN</references>
+        <references refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" compoundref="_c_line_8h" startline="12">Position::Sequence</references>
+        <references refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" compoundref="_record_8h" startline="20">start</references>
+        <references refid="class_c_line_1a858096cef404306ad1a2d7bf8314f46b" compoundref="_c_line_8cpp" startline="297" endline="314">CLine::TransformToWString</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="struct_record_1afdb85f0fa26f8fc5def05eaa2280dd0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Record::Save_Delete_Data</definition>
+        <argsstring>(CText *pc, Position first, Position last)</argsstring>
+        <name>Save_Delete_Data</name>
+        <param>
+          <type><ref refid="class_c_text" kindref="compound">CText</ref> *</type>
+          <declname>pc</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" line="16" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.cpp" bodystart="52" bodyend="58"/>
+        <references refid="class_c_text_1a46f994aaca813d66221125f4295f4fcd" compoundref="_c_text_8cpp" startline="243" endline="268">CText::Copy</references>
+        <references refid="struct_record_1aa08fba473b16c69c8a589241481b768a" compoundref="_record_8h" startline="24">Deleted_Data</references>
+        <references refid="struct_record_1a27daae22938a602cf1c17927c6302624" compoundref="_record_8h" startline="22">pText</references>
+        <references refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" compoundref="_c_line_8h" startline="12">Position::Sequence</references>
+        <references refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" compoundref="_record_8h" startline="20">start</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="struct_record_1aca658c6e7d69a2f7fdd0c6acac941972" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Record::Save_Merge_Line_Data</definition>
+        <argsstring>(CText *p, int LineNumber)</argsstring>
+        <name>Save_Merge_Line_Data</name>
+        <param>
+          <type><ref refid="class_c_text" kindref="compound">CText</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>LineNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" line="17" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.cpp" bodystart="60" bodyend="67"/>
+        <references refid="struct_record_1a202754ee6c4db7c19277d74a7fd26f77" compoundref="_record_8h" startline="21">end</references>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">CText::GetLinePointer</references>
+        <references refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" compoundref="_c_line_8h" startline="58">CLine::nDataSize</references>
+        <references refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" compoundref="_record_8h" startline="20">start</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="struct_record_1a8f3ccd7a97b80ea958ee1881a2e23733" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Record::Set_Choose_Data</definition>
+        <argsstring>(Position first, Position last)</argsstring>
+        <name>Set_Choose_Data</name>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" line="18" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.cpp" bodystart="71" bodyend="75"/>
+        <references refid="struct_record_1a202754ee6c4db7c19277d74a7fd26f77" compoundref="_record_8h" startline="21">end</references>
+        <references refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" compoundref="_record_8h" startline="20">start</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="struct_record_1afa7f4738b5b61284af2f94dd34e8f917" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Record::Clear_Choose_Data</definition>
+        <argsstring>()</argsstring>
+        <name>Clear_Choose_Data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" line="19" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.cpp" bodystart="78" bodyend="82"/>
+        <references refid="struct_record_1a202754ee6c4db7c19277d74a7fd26f77" compoundref="_record_8h" startline="21">end</references>
+        <references refid="struct_position_1a7b72348893583b77254a650b7095c9fc" compoundref="_c_line_8h" startline="11">Position::LineNumber</references>
+        <references refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" compoundref="_c_line_8h" startline="12">Position::Sequence</references>
+        <references refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" compoundref="_record_8h" startline="20">start</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="54">
+        <label>Position</label>
+        <link refid="struct_position"/>
+      </node>
+      <node id="61">
+        <label>std::basic_string&lt; wchar_t &gt;</label>
+      </node>
+      <node id="53">
+        <label>Record</label>
+        <link refid="struct_record"/>
+        <childnode refid="54" relation="usage">
+          <edgelabel>end</edgelabel>
+          <edgelabel>start</edgelabel>
+        </childnode>
+        <childnode refid="55" relation="usage">
+          <edgelabel>pText</edgelabel>
+        </childnode>
+        <childnode refid="60" relation="usage">
+          <edgelabel>Deleted_Data</edgelabel>
+        </childnode>
+      </node>
+      <node id="55">
+        <label>CText</label>
+        <link refid="class_c_text"/>
+        <childnode refid="56" relation="usage">
+          <edgelabel>pFirstLineHead</edgelabel>
+        </childnode>
+        <childnode refid="58" relation="usage">
+          <edgelabel>FileName</edgelabel>
+        </childnode>
+      </node>
+      <node id="59">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="60">
+        <label>std::wstring</label>
+        <childnode refid="61" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>DataBlock</label>
+        <link refid="struct_data_block"/>
+        <childnode refid="57" relation="usage">
+          <edgelabel>pNextBlock</edgelabel>
+        </childnode>
+      </node>
+      <node id="56">
+        <label>CLine</label>
+        <link refid="class_c_line"/>
+        <childnode refid="56" relation="usage">
+          <edgelabel>pNextLine</edgelabel>
+        </childnode>
+        <childnode refid="57" relation="usage">
+          <edgelabel>pLineHead</edgelabel>
+        </childnode>
+      </node>
+      <node id="58">
+        <label>std::string</label>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" line="12" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h" bodystart="11" bodyend="25"/>
+    <listofallmembers>
+      <member refid="struct_record_1ae7c5b5f1395433f551d3c27e7ed00fa5" prot="public" virt="non-virtual"><scope>Record</scope><name>ACT</name></member>
+      <member refid="struct_record_1afa7f4738b5b61284af2f94dd34e8f917" prot="public" virt="non-virtual"><scope>Record</scope><name>Clear_Choose_Data</name></member>
+      <member refid="struct_record_1aa08fba473b16c69c8a589241481b768a" prot="public" virt="non-virtual"><scope>Record</scope><name>Deleted_Data</name></member>
+      <member refid="struct_record_1a202754ee6c4db7c19277d74a7fd26f77" prot="public" virt="non-virtual"><scope>Record</scope><name>end</name></member>
+      <member refid="struct_record_1a27daae22938a602cf1c17927c6302624" prot="public" virt="non-virtual"><scope>Record</scope><name>pText</name></member>
+      <member refid="struct_record_1af52f4c47e4ece83b3530e7cf6d1c53ea" prot="public" virt="non-virtual"><scope>Record</scope><name>Record</name></member>
+      <member refid="struct_record_1a8bc01d9746033bc55acf407f9b0e8411" prot="public" virt="non-virtual"><scope>Record</scope><name>ReDo</name></member>
+      <member refid="struct_record_1afdb85f0fa26f8fc5def05eaa2280dd0d" prot="public" virt="non-virtual"><scope>Record</scope><name>Save_Delete_Data</name></member>
+      <member refid="struct_record_1aca658c6e7d69a2f7fdd0c6acac941972" prot="public" virt="non-virtual"><scope>Record</scope><name>Save_Merge_Line_Data</name></member>
+      <member refid="struct_record_1a8f3ccd7a97b80ea958ee1881a2e23733" prot="public" virt="non-virtual"><scope>Record</scope><name>Set_Choose_Data</name></member>
+      <member refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" prot="public" virt="non-virtual"><scope>Record</scope><name>start</name></member>
+      <member refid="struct_record_1ad2ce1a99d866834ab53dedd788cb1ea6" prot="public" virt="non-virtual"><scope>Record</scope><name>~Record</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

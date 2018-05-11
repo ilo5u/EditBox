@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="stdafx_8h" kind="file">
+    <compoundname>stdafx.h</compoundname>
+    <includes refid="targetver_8h" local="yes">targetver.h</includes>
+    <includes local="no">windows.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">malloc.h</includes>
+    <includes local="no">memory.h</includes>
+    <includes local="no">tchar.h</includes>
+    <includes local="no">Windowsx.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">commdlg.h</includes>
+    <includes local="no">ShlObj.h</includes>
+    <includes refid="_a_p_i_8h" local="yes">API.h</includes>
+    <includedby refid="_a_p_i_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.cpp</includedby>
+    <includedby refid="_c_line_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.cpp</includedby>
+    <includedby refid="_c_text_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp</includedby>
+    <includedby refid="_cursor_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp</includedby>
+    <includedby refid="debug_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp</includedby>
+    <includedby refid="_edit_box_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/EditBox.cpp</includedby>
+    <includedby refid="io_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/io.cpp</includedby>
+    <includedby refid="_record_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.cpp</includedby>
+    <includedby refid="stdafx_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/stdafx.cpp</includedby>
+    <includedby refid="textinfo_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp</includedby>
+    <includedby refid="textoperation_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp</includedby>
+    <includedby refid="timer_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp</includedby>
+    <incdepgraph>
+      <node id="417">
+        <label>queue</label>
+      </node>
+      <node id="399">
+        <label>windows.h</label>
+      </node>
+      <node id="404">
+        <label>Windowsx.h</label>
+      </node>
+      <node id="405">
+        <label>assert.h</label>
+      </node>
+      <node id="410">
+        <label>Cursor.h</label>
+        <link refid="_cursor_8h"/>
+        <childnode refid="411" relation="include">
+        </childnode>
+        <childnode refid="418" relation="include">
+        </childnode>
+      </node>
+      <node id="396">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/stdafx.h</label>
+        <link refid="stdafx.h"/>
+        <childnode refid="397" relation="include">
+        </childnode>
+        <childnode refid="399" relation="include">
+        </childnode>
+        <childnode refid="400" relation="include">
+        </childnode>
+        <childnode refid="401" relation="include">
+        </childnode>
+        <childnode refid="402" relation="include">
+        </childnode>
+        <childnode refid="403" relation="include">
+        </childnode>
+        <childnode refid="404" relation="include">
+        </childnode>
+        <childnode refid="405" relation="include">
+        </childnode>
+        <childnode refid="406" relation="include">
+        </childnode>
+        <childnode refid="407" relation="include">
+        </childnode>
+        <childnode refid="408" relation="include">
+        </childnode>
+        <childnode refid="409" relation="include">
+        </childnode>
+      </node>
+      <node id="400">
+        <label>stdlib.h</label>
+      </node>
+      <node id="398">
+        <label>SDKDDKVer.h</label>
+      </node>
+      <node id="418">
+        <label>Windows.h</label>
+      </node>
+      <node id="419">
+        <label>Record.h</label>
+        <link refid="_record_8h"/>
+        <childnode refid="411" relation="include">
+        </childnode>
+        <childnode refid="410" relation="include">
+        </childnode>
+        <childnode refid="418" relation="include">
+        </childnode>
+      </node>
+      <node id="401">
+        <label>malloc.h</label>
+      </node>
+      <node id="409">
+        <label>API.h</label>
+        <link refid="_a_p_i_8h"/>
+        <childnode refid="410" relation="include">
+        </childnode>
+        <childnode refid="418" relation="include">
+        </childnode>
+        <childnode refid="419" relation="include">
+        </childnode>
+      </node>
+      <node id="415">
+        <label>string</label>
+      </node>
+      <node id="402">
+        <label>memory.h</label>
+      </node>
+      <node id="413">
+        <label>fstream</label>
+      </node>
+      <node id="397">
+        <label>targetver.h</label>
+        <link refid="targetver_8h"/>
+        <childnode refid="398" relation="include">
+        </childnode>
+      </node>
+      <node id="412">
+        <label>sstream</label>
+      </node>
+      <node id="414">
+        <label>CLine.h</label>
+        <link refid="_c_line_8h"/>
+        <childnode refid="403" relation="include">
+        </childnode>
+        <childnode refid="415" relation="include">
+        </childnode>
+        <childnode refid="416" relation="include">
+        </childnode>
+      </node>
+      <node id="407">
+        <label>commdlg.h</label>
+      </node>
+      <node id="408">
+        <label>ShlObj.h</label>
+      </node>
+      <node id="416">
+        <label>iostream</label>
+      </node>
+      <node id="403">
+        <label>tchar.h</label>
+      </node>
+      <node id="411">
+        <label>CText.h</label>
+        <link refid="_c_text_8h"/>
+        <childnode refid="412" relation="include">
+        </childnode>
+        <childnode refid="413" relation="include">
+        </childnode>
+        <childnode refid="414" relation="include">
+        </childnode>
+        <childnode refid="417" relation="include">
+        </childnode>
+        <childnode refid="418" relation="include">
+        </childnode>
+      </node>
+      <node id="406">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="420">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/stdafx.h</label>
+        <link refid="stdafx.h"/>
+        <childnode refid="421" relation="include">
+        </childnode>
+        <childnode refid="422" relation="include">
+        </childnode>
+        <childnode refid="423" relation="include">
+        </childnode>
+        <childnode refid="424" relation="include">
+        </childnode>
+        <childnode refid="425" relation="include">
+        </childnode>
+        <childnode refid="426" relation="include">
+        </childnode>
+        <childnode refid="427" relation="include">
+        </childnode>
+        <childnode refid="428" relation="include">
+        </childnode>
+        <childnode refid="429" relation="include">
+        </childnode>
+        <childnode refid="430" relation="include">
+        </childnode>
+        <childnode refid="431" relation="include">
+        </childnode>
+        <childnode refid="432" relation="include">
+        </childnode>
+      </node>
+      <node id="429">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/stdafx.cpp</label>
+        <link refid="stdafx_8cpp"/>
+      </node>
+      <node id="427">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/io.cpp</label>
+        <link refid="io_8cpp"/>
+      </node>
+      <node id="422">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.cpp</label>
+        <link refid="_c_line_8cpp"/>
+      </node>
+      <node id="432">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp</label>
+        <link refid="timer_8cpp"/>
+      </node>
+      <node id="423">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp</label>
+        <link refid="_c_text_8cpp"/>
+      </node>
+      <node id="421">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.cpp</label>
+        <link refid="_a_p_i_8cpp"/>
+      </node>
+      <node id="425">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp</label>
+        <link refid="debug_8cpp"/>
+      </node>
+      <node id="428">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.cpp</label>
+        <link refid="_record_8cpp"/>
+      </node>
+      <node id="430">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp</label>
+        <link refid="textinfo_8cpp"/>
+      </node>
+      <node id="424">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp</label>
+        <link refid="_cursor_8cpp"/>
+      </node>
+      <node id="431">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp</label>
+        <link refid="textoperation_8cpp"/>
+      </node>
+      <node id="426">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/EditBox.cpp</label>
+        <link refid="_edit_box_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="stdafx_8h_1ac7bef5d85e3dcd73eef56ad39ffc84a9" prot="public" static="no">
+        <name>WIN32_LEAN_AND_MEAN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/stdafx.h" line="10" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/stdafx.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>stdafx.h<sp/>:<sp/>标准系统包含文件的包含文件，</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>或是经常使用但不常更改的</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>特定于项目的包含文件</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="targetver_8h" kindref="compound">targetver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="stdafx_8h_1ac7bef5d85e3dcd73eef56ad39ffc84a9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WIN32_LEAN_AND_MEAN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>从<sp/>Windows<sp/>头中排除极少使用的资料</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="comment">//<sp/>Windows<sp/>头文件:<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>C<sp/>运行时头文件</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;malloc.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tchar.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>在此处引用程序需要的其他头文件</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Windowsx.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;commdlg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ShlObj.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_a_p_i_8h" kindref="compound">API.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_DEBUG</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>_DEBUG</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/stdafx.h"/>
+  </compounddef>
+</doxygen>

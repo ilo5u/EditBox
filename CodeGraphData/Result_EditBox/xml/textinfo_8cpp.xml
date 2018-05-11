@@ -1,0 +1,518 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="textinfo_8cpp" kind="file">
+    <compoundname>textinfo.cpp</compoundname>
+    <includes refid="stdafx_8h" local="yes">stdafx.h</includes>
+    <includes refid="editbox_8h" local="yes">editbox.h</includes>
+    <includes refid="_a_p_i_8h" local="yes">api.h</includes>
+    <incdepgraph>
+      <node id="471">
+        <label>queue</label>
+      </node>
+      <node id="453">
+        <label>windows.h</label>
+      </node>
+      <node id="458">
+        <label>Windowsx.h</label>
+      </node>
+      <node id="459">
+        <label>assert.h</label>
+      </node>
+      <node id="464">
+        <label>Cursor.h</label>
+        <link refid="_cursor_8h"/>
+        <childnode refid="465" relation="include">
+        </childnode>
+        <childnode refid="472" relation="include">
+        </childnode>
+      </node>
+      <node id="450">
+        <label>stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="453" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="455" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="457" relation="include">
+        </childnode>
+        <childnode refid="458" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+        <childnode refid="461" relation="include">
+        </childnode>
+        <childnode refid="462" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+      </node>
+      <node id="454">
+        <label>stdlib.h</label>
+      </node>
+      <node id="452">
+        <label>SDKDDKVer.h</label>
+      </node>
+      <node id="472">
+        <label>Windows.h</label>
+      </node>
+      <node id="473">
+        <label>Record.h</label>
+        <link refid="_record_8h"/>
+        <childnode refid="465" relation="include">
+        </childnode>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="472" relation="include">
+        </childnode>
+      </node>
+      <node id="455">
+        <label>malloc.h</label>
+      </node>
+      <node id="463">
+        <label>API.h</label>
+        <link refid="_a_p_i_8h"/>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="472" relation="include">
+        </childnode>
+        <childnode refid="473" relation="include">
+        </childnode>
+      </node>
+      <node id="475">
+        <label>resource.h</label>
+        <link refid="resource_8h"/>
+      </node>
+      <node id="469">
+        <label>string</label>
+      </node>
+      <node id="456">
+        <label>memory.h</label>
+      </node>
+      <node id="467">
+        <label>fstream</label>
+      </node>
+      <node id="474">
+        <label>editbox.h</label>
+        <link refid="editbox_8h"/>
+        <childnode refid="472" relation="include">
+        </childnode>
+        <childnode refid="475" relation="include">
+        </childnode>
+      </node>
+      <node id="451">
+        <label>targetver.h</label>
+        <link refid="targetver_8h"/>
+        <childnode refid="452" relation="include">
+        </childnode>
+      </node>
+      <node id="449">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp</label>
+        <link refid="textinfo.cpp"/>
+        <childnode refid="450" relation="include">
+        </childnode>
+        <childnode refid="474" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+      </node>
+      <node id="466">
+        <label>sstream</label>
+      </node>
+      <node id="468">
+        <label>CLine.h</label>
+        <link refid="_c_line_8h"/>
+        <childnode refid="457" relation="include">
+        </childnode>
+        <childnode refid="469" relation="include">
+        </childnode>
+        <childnode refid="470" relation="include">
+        </childnode>
+      </node>
+      <node id="461">
+        <label>commdlg.h</label>
+      </node>
+      <node id="462">
+        <label>ShlObj.h</label>
+      </node>
+      <node id="470">
+        <label>iostream</label>
+      </node>
+      <node id="457">
+        <label>tchar.h</label>
+      </node>
+      <node id="465">
+        <label>CText.h</label>
+        <link refid="_c_text_8h"/>
+        <childnode refid="466" relation="include">
+        </childnode>
+        <childnode refid="467" relation="include">
+        </childnode>
+        <childnode refid="468" relation="include">
+        </childnode>
+        <childnode refid="471" relation="include">
+        </childnode>
+        <childnode refid="472" relation="include">
+        </childnode>
+      </node>
+      <node id="460">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="textinfo_8cpp_1a7b4b54d85f18ce957cf547ae22de9fdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref> __stdcall</type>
+        <definition>HTEXTINFO __stdcall CreateTextInfo</definition>
+        <argsstring>(HWND hWnd)</argsstring>
+        <name>CreateTextInfo</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" line="5" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" bodystart="5" bodyend="23"/>
+        <references refid="textinfo_8cpp_1a00d094f318003965d49b28a2bb9fbdf8" compoundref="textinfo_8cpp" startline="101" endline="122">CreateGDI</references>
+        <references refid="textinfo_8cpp_1a073fdf0b934ea2bea409ab94b544d2be" compoundref="textinfo_8cpp" startline="79" endline="93">CreateKernel</references>
+        <references refid="textinfo_8cpp_1a0dca3c70fc95ea6a3554cffc08937a75" compoundref="textinfo_8cpp" startline="35" endline="71">CreateUser</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1a81c05e651784aef5b1b937e39d6252f5" compoundref="editbox_8h" startline="67">_TEXT_INFO::m_hGDI</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1a3da9836c434f5f598edfde16b715999c" compoundref="editbox_8h" startline="66">_TEXT_INFO::m_hKernel</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1a4f58688b30347aeb0a91e8ad63edd643" compoundref="editbox_8h" startline="68">_TEXT_INFO::m_hUser</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" compoundref="editbox_8h" startline="69">_TEXT_INFO::m_hWnd</references>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textinfo_8cpp_1a5f0aedfac2bea6d2d6a8dd003b4ee10f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL __stdcall</type>
+        <definition>BOOL __stdcall ReleaseTextInfo</definition>
+        <argsstring>(HWND hWnd, HTEXTINFO hTextInfo)</argsstring>
+        <name>ReleaseTextInfo</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+          <declname>hTextInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" line="25" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" bodystart="25" bodyend="33"/>
+        <references refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" compoundref="_edit_box_8cpp" startline="19">hTextInfo</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1a81c05e651784aef5b1b937e39d6252f5" compoundref="editbox_8h" startline="67">_TEXT_INFO::m_hGDI</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1a3da9836c434f5f598edfde16b715999c" compoundref="editbox_8h" startline="66">_TEXT_INFO::m_hKernel</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1a4f58688b30347aeb0a91e8ad63edd643" compoundref="editbox_8h" startline="68">_TEXT_INFO::m_hUser</references>
+        <references refid="textinfo_8cpp_1a9b18abf4974a65b9b58836269bc039e1" compoundref="textinfo_8cpp" startline="124" endline="132">ReleaseGDI</references>
+        <references refid="textinfo_8cpp_1a32735553a32a0309482a89dd32f075ab" compoundref="textinfo_8cpp" startline="95" endline="99">ReleaseKernel</references>
+        <references refid="textinfo_8cpp_1aaced21aa00948660bcaf2ea7ec1b2bff" compoundref="textinfo_8cpp" startline="73" endline="77">ReleaseUser</references>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textinfo_8cpp_1a0dca3c70fc95ea6a3554cffc08937a75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="editbox_8h_1a1dda36283a86b4ecc2849c115dca8f64" kindref="member">HTEXTUSER</ref> __stdcall</type>
+        <definition>HTEXTUSER __stdcall CreateUser</definition>
+        <argsstring>(HWND hWnd)</argsstring>
+        <name>CreateUser</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" line="35" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" bodystart="35" bodyend="71"/>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a5ad7522d369bd4e6a3ce4b717689f424" compoundref="editbox_8h" startline="29">_TEXT_USER::m_hFont</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a0a246aeaace7eec8e9e85d01e44e0b70" compoundref="editbox_8h" startline="32">_TEXT_USER::m_pCaretPos</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a931ecfde6be2b53eac3b0a6fd75e2271" compoundref="editbox_8h" startline="31">_TEXT_USER::m_pCaretSize</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a4469adea819d837c6f58e666a0f209b0" compoundref="editbox_8h" startline="30">_TEXT_USER::m_pCharSize</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a646fd63408bf87b038d452c86e3e2190" compoundref="editbox_8h" startline="35">_TEXT_USER::m_pPageSize</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a69a57e825e55fb1937784c05b10bb88e" compoundref="editbox_8h" startline="33">_TEXT_USER::m_pWindowPos</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a936ff142d6f055dcbacc29927a3b67c7" compoundref="editbox_8h" startline="34">_TEXT_USER::m_pWindowSize</references>
+        <references refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" compoundref="editbox_8h" startline="139">USHEIGHT</references>
+        <references refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" compoundref="editbox_8h" startline="137">USWIDTH</references>
+        <referencedby refid="textinfo_8cpp_1a7b4b54d85f18ce957cf547ae22de9fdf" compoundref="textinfo_8cpp" startline="5" endline="23">CreateTextInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textinfo_8cpp_1aaced21aa00948660bcaf2ea7ec1b2bff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL __stdcall</type>
+        <definition>BOOL __stdcall ReleaseUser</definition>
+        <argsstring>(HWND hWnd, HTEXTUSER hUser)</argsstring>
+        <name>ReleaseUser</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1a1dda36283a86b4ecc2849c115dca8f64" kindref="member">HTEXTUSER</ref></type>
+          <declname>hUser</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" line="73" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" bodystart="73" bodyend="77"/>
+        <referencedby refid="textinfo_8cpp_1a5f0aedfac2bea6d2d6a8dd003b4ee10f" compoundref="textinfo_8cpp" startline="25" endline="33">ReleaseTextInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textinfo_8cpp_1a073fdf0b934ea2bea409ab94b544d2be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="editbox_8h_1a3670448d22023cd5d4a26e4a70e1596b" kindref="member">HTEXTKERNEL</ref> __stdcall</type>
+        <definition>HTEXTKERNEL __stdcall CreateKernel</definition>
+        <argsstring>(HWND hWnd, HTEXTUSER hUser)</argsstring>
+        <name>CreateKernel</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1a1dda36283a86b4ecc2849c115dca8f64" kindref="member">HTEXTUSER</ref></type>
+          <declname>hUser</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" line="79" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" bodystart="79" bodyend="93"/>
+        <references refid="_a_p_i_8cpp_1ac576655145c5b4612f504e04a6511a32" compoundref="_a_p_i_8cpp" startline="485" endline="496">CreateText</references>
+        <references refid="struct___t_e_x_t___k_e_r_n_e_l_1aa339ac3387af6d32176612d9d0fdec23" compoundref="editbox_8h" startline="43">_TEXT_KERNEL::m_hText</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a4469adea819d837c6f58e666a0f209b0" compoundref="editbox_8h" startline="30">_TEXT_USER::m_pCharSize</references>
+        <references refid="struct___t_e_x_t___k_e_r_n_e_l_1ae4b8a90c1e22c53e8ab54f276b9c5f00" compoundref="editbox_8h" startline="46">_TEXT_KERNEL::m_pEndPos</references>
+        <references refid="struct___t_e_x_t___k_e_r_n_e_l_1a713269904e0857c20f80aa841cb9ec4f" compoundref="editbox_8h" startline="45">_TEXT_KERNEL::m_pStartPos</references>
+        <references refid="struct___t_e_x_t___k_e_r_n_e_l_1a37fbc5eb7482a7fd70159dfdabe9482f" compoundref="editbox_8h" startline="44">_TEXT_KERNEL::m_pTextSize</references>
+        <referencedby refid="textinfo_8cpp_1a7b4b54d85f18ce957cf547ae22de9fdf" compoundref="textinfo_8cpp" startline="5" endline="23">CreateTextInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textinfo_8cpp_1a32735553a32a0309482a89dd32f075ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL __stdcall</type>
+        <definition>BOOL __stdcall ReleaseKernel</definition>
+        <argsstring>(HWND hWnd, HTEXTKERNEL hKernel)</argsstring>
+        <name>ReleaseKernel</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1a3670448d22023cd5d4a26e4a70e1596b" kindref="member">HTEXTKERNEL</ref></type>
+          <declname>hKernel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" line="95" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" bodystart="95" bodyend="99"/>
+        <referencedby refid="textinfo_8cpp_1a5f0aedfac2bea6d2d6a8dd003b4ee10f" compoundref="textinfo_8cpp" startline="25" endline="33">ReleaseTextInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textinfo_8cpp_1a00d094f318003965d49b28a2bb9fbdf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="editbox_8h_1aa145cfae480ef1908e3f0a307af216db" kindref="member">HTEXTGDI</ref> __stdcall</type>
+        <definition>HTEXTGDI __stdcall CreateGDI</definition>
+        <argsstring>(HWND hWnd, HTEXTUSER hUser)</argsstring>
+        <name>CreateGDI</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1a1dda36283a86b4ecc2849c115dca8f64" kindref="member">HTEXTUSER</ref></type>
+          <declname>hUser</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" line="101" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" bodystart="101" bodyend="122"/>
+        <references refid="struct___t_e_x_t___g_d_i_1aa53e9b83b1eec7268cfd60c8eda848d9" compoundref="editbox_8h" startline="56">_TEXT_GDI::m_hBitmap</references>
+        <references refid="struct___t_e_x_t___g_d_i_1a24d37f604ec70084f2a8b6e67b90a7ed" compoundref="editbox_8h" startline="55">_TEXT_GDI::m_hBrush</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a5ad7522d369bd4e6a3ce4b717689f424" compoundref="editbox_8h" startline="29">_TEXT_USER::m_hFont</references>
+        <references refid="struct___t_e_x_t___g_d_i_1a619c3e6b8b4be4d566a9e664a18ac03e" compoundref="editbox_8h" startline="54">_TEXT_GDI::m_hMemDC</references>
+        <references refid="struct___t_e_x_t___g_d_i_1a7cc58f492c9f540694545864b81cc1c7" compoundref="editbox_8h" startline="57">_TEXT_GDI::m_hMouseTimer</references>
+        <references refid="struct___t_e_x_t___g_d_i_1a523b7a475a73e7950c785fc0633589fd" compoundref="editbox_8h" startline="58">_TEXT_GDI::m_hSaveTimer</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a936ff142d6f055dcbacc29927a3b67c7" compoundref="editbox_8h" startline="34">_TEXT_USER::m_pWindowSize</references>
+        <referencedby refid="textinfo_8cpp_1a7b4b54d85f18ce957cf547ae22de9fdf" compoundref="textinfo_8cpp" startline="5" endline="23">CreateTextInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="textinfo_8cpp_1a9b18abf4974a65b9b58836269bc039e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL __stdcall</type>
+        <definition>BOOL __stdcall ReleaseGDI</definition>
+        <argsstring>(HWND hWnd, HTEXTGDI hGDI)</argsstring>
+        <name>ReleaseGDI</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1aa145cfae480ef1908e3f0a307af216db" kindref="member">HTEXTGDI</ref></type>
+          <declname>hGDI</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" line="124" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" bodystart="124" bodyend="132"/>
+        <references refid="struct___t_e_x_t___g_d_i_1aa53e9b83b1eec7268cfd60c8eda848d9" compoundref="editbox_8h" startline="56">_TEXT_GDI::m_hBitmap</references>
+        <references refid="struct___t_e_x_t___g_d_i_1a24d37f604ec70084f2a8b6e67b90a7ed" compoundref="editbox_8h" startline="55">_TEXT_GDI::m_hBrush</references>
+        <references refid="struct___t_e_x_t___g_d_i_1a619c3e6b8b4be4d566a9e664a18ac03e" compoundref="editbox_8h" startline="54">_TEXT_GDI::m_hMemDC</references>
+        <referencedby refid="textinfo_8cpp_1a5f0aedfac2bea6d2d6a8dd003b4ee10f" compoundref="textinfo_8cpp" startline="25" endline="33">ReleaseTextInfo</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stdafx_8h" kindref="compound">stdafx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="editbox_8h" kindref="compound">editbox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_a_p_i_8h" kindref="compound">api.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="textinfo_8cpp_1a7b4b54d85f18ce957cf547ae22de9fdf" refkind="member"><highlight class="normal"><ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">HTEXTINFO</ref><sp/>__stdcall<sp/><ref refid="textinfo_8cpp_1a7b4b54d85f18ce957cf547ae22de9fdf" kindref="member">CreateTextInfo</ref>(HWND<sp/>hWnd)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">LPTEXTINFO</ref><sp/>lpTextInfo<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">TEXTINFO</ref>{};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!lpTextInfo)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref>(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(lpTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1a4f58688b30347aeb0a91e8ad63edd643" kindref="member">m_hUser</ref><sp/>=<sp/><ref refid="textinfo_8cpp_1a0dca3c70fc95ea6a3554cffc08937a75" kindref="member">CreateUser</ref>(hWnd)))</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref>(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(lpTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1a3da9836c434f5f598edfde16b715999c" kindref="member">m_hKernel</ref><sp/>=<sp/><ref refid="textinfo_8cpp_1a073fdf0b934ea2bea409ab94b544d2be" kindref="member">CreateKernel</ref>(hWnd,<sp/>lpTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1a4f58688b30347aeb0a91e8ad63edd643" kindref="member">m_hUser</ref>)))</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref>(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(lpTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1a81c05e651784aef5b1b937e39d6252f5" kindref="member">m_hGDI</ref><sp/>=<sp/><ref refid="textinfo_8cpp_1a00d094f318003965d49b28a2bb9fbdf8" kindref="member">CreateGDI</ref>(hWnd,<sp/>lpTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1a4f58688b30347aeb0a91e8ad63edd643" kindref="member">m_hUser</ref>)))</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref>(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>lpTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" kindref="member">m_hWnd</ref><sp/>=<sp/>hWnd;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref>(lpTextInfo);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="textinfo_8cpp_1a5f0aedfac2bea6d2d6a8dd003b4ee10f" refkind="member"><highlight class="normal">BOOL<sp/>__stdcall<sp/><ref refid="textinfo_8cpp_1a5f0aedfac2bea6d2d6a8dd003b4ee10f" kindref="member">ReleaseTextInfo</ref>(HWND<sp/>hWnd,<sp/><ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">HTEXTINFO</ref><sp/><ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textinfo_8cpp_1a9b18abf4974a65b9b58836269bc039e1" kindref="member">ReleaseGDI</ref>(hWnd,<sp/>hTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1a81c05e651784aef5b1b937e39d6252f5" kindref="member">m_hGDI</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textinfo_8cpp_1a32735553a32a0309482a89dd32f075ab" kindref="member">ReleaseKernel</ref>(hWnd,<sp/>hTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1a3da9836c434f5f598edfde16b715999c" kindref="member">m_hKernel</ref>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="textinfo_8cpp_1aaced21aa00948660bcaf2ea7ec1b2bff" kindref="member">ReleaseUser</ref>(hWnd,<sp/>hTextInfo-&gt;<ref refid="struct___t_e_x_t___i_n_f_o_1a4f58688b30347aeb0a91e8ad63edd643" kindref="member">m_hUser</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="textinfo_8cpp_1a0dca3c70fc95ea6a3554cffc08937a75" refkind="member"><highlight class="normal"><ref refid="struct___t_e_x_t___u_s_e_r" kindref="compound">HTEXTUSER</ref><sp/>__stdcall<sp/><ref refid="textinfo_8cpp_1a0dca3c70fc95ea6a3554cffc08937a75" kindref="member">CreateUser</ref>(HWND<sp/>hWnd)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___t_e_x_t___u_s_e_r" kindref="compound">LPTEXTUSER</ref><sp/>lpUser<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="struct___t_e_x_t___u_s_e_r" kindref="compound">TEXTUSER</ref>{};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!lpUser)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="editbox_8h_1a1dda36283a86b4ecc2849c115dca8f64" kindref="member">HTEXTUSER</ref>(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>lpUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a4469adea819d837c6f58e666a0f209b0" kindref="member">m_pCharSize</ref><sp/>=<sp/>POINT{<sp/>8,<sp/>16<sp/>};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>lpUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a5ad7522d369bd4e6a3ce4b717689f424" kindref="member">m_hFont</ref><sp/>=<sp/>CreateFont(</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lpUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a4469adea819d837c6f58e666a0f209b0" kindref="member">m_pCharSize</ref>.y,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>高度</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lpUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a4469adea819d837c6f58e666a0f209b0" kindref="member">m_pCharSize</ref>.x,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>宽度</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>水平</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>倾斜</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>400,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>粗度</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>不倾斜</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>无下划线</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>无中划线</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GB2312_CHARSET,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>字符集</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OUT_DEFAULT_PRECIS,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>输出精度</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CLIP_DEFAULT_PRECIS,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>裁剪精度</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFAULT_QUALITY,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>输出质量</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEFAULT_PITCH<sp/>|<sp/>FF_DONTCARE,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>间距</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TEXT(</highlight><highlight class="stringliteral">&quot;New<sp/>Curier&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>名称</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>lpUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a931ecfde6be2b53eac3b0a6fd75e2271" kindref="member">m_pCaretSize</ref><sp/>=<sp/>POINT{<sp/>1,<sp/>16<sp/>};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>lpUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a0a246aeaace7eec8e9e85d01e44e0b70" kindref="member">m_pCaretPos</ref><sp/><sp/>=<sp/>POINT{<sp/>0,<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>RECT<sp/>rcClient;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>GetClientRect(hWnd,<sp/>&amp;rcClient);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>lpUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a936ff142d6f055dcbacc29927a3b67c7" kindref="member">m_pWindowSize</ref><sp/>=<sp/>POINT{<sp/>rcClient.right<sp/>-<sp/>rcClient.left,<sp/>rcClient.bottom<sp/>-<sp/>rcClient.top<sp/>};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>lpUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a69a57e825e55fb1937784c05b10bb88e" kindref="member">m_pWindowPos</ref><sp/><sp/>=<sp/>POINT{<sp/>0,<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>lpUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a646fd63408bf87b038d452c86e3e2190" kindref="member">m_pPageSize</ref><sp/><sp/><sp/>=<sp/>POINT{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lpUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a936ff142d6f055dcbacc29927a3b67c7" kindref="member">m_pWindowSize</ref>.x<sp/>/<sp/><ref refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" kindref="member">USWIDTH</ref>(lpUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a4469adea819d837c6f58e666a0f209b0" kindref="member">m_pCharSize</ref>.x),</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lpUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a936ff142d6f055dcbacc29927a3b67c7" kindref="member">m_pWindowSize</ref>.y<sp/>/<sp/><ref refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" kindref="member">USHEIGHT</ref>(lpUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a4469adea819d837c6f58e666a0f209b0" kindref="member">m_pCharSize</ref>.y)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="editbox_8h_1a1dda36283a86b4ecc2849c115dca8f64" kindref="member">HTEXTUSER</ref>(lpUser);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="textinfo_8cpp_1aaced21aa00948660bcaf2ea7ec1b2bff" refkind="member"><highlight class="normal">BOOL<sp/>__stdcall<sp/><ref refid="textinfo_8cpp_1aaced21aa00948660bcaf2ea7ec1b2bff" kindref="member">ReleaseUser</ref>(HWND<sp/>hWnd,<sp/><ref refid="struct___t_e_x_t___u_s_e_r" kindref="compound">HTEXTUSER</ref><sp/>hUser)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>hUser;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="textinfo_8cpp_1a073fdf0b934ea2bea409ab94b544d2be" refkind="member"><highlight class="normal"><ref refid="struct___t_e_x_t___k_e_r_n_e_l" kindref="compound">HTEXTKERNEL</ref><sp/>__stdcall<sp/><ref refid="textinfo_8cpp_1a073fdf0b934ea2bea409ab94b544d2be" kindref="member">CreateKernel</ref>(HWND<sp/>hWnd,<sp/><ref refid="struct___t_e_x_t___u_s_e_r" kindref="compound">HTEXTUSER</ref><sp/>hUser)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___t_e_x_t___k_e_r_n_e_l" kindref="compound">LPTEXTKERNEL</ref><sp/>lpKernel<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="struct___t_e_x_t___k_e_r_n_e_l" kindref="compound">TEXTKERNEL</ref>{};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!lpKernel)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="editbox_8h_1a3670448d22023cd5d4a26e4a70e1596b" kindref="member">HTEXTKERNEL</ref>(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(lpKernel-&gt;<ref refid="struct___t_e_x_t___k_e_r_n_e_l_1aa339ac3387af6d32176612d9d0fdec23" kindref="member">m_hText</ref><sp/>=<sp/><ref refid="_a_p_i_8cpp_1ac576655145c5b4612f504e04a6511a32" kindref="member">CreateText</ref>(hUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a4469adea819d837c6f58e666a0f209b0" kindref="member">m_pCharSize</ref>.x,<sp/>hUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a4469adea819d837c6f58e666a0f209b0" kindref="member">m_pCharSize</ref>.y)))</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="editbox_8h_1a3670448d22023cd5d4a26e4a70e1596b" kindref="member">HTEXTKERNEL</ref>(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>lpKernel-&gt;<ref refid="struct___t_e_x_t___k_e_r_n_e_l_1a37fbc5eb7482a7fd70159dfdabe9482f" kindref="member">m_pTextSize</ref><sp/>=<sp/>POINT{<sp/>0,<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>lpKernel-&gt;<ref refid="struct___t_e_x_t___k_e_r_n_e_l_1a713269904e0857c20f80aa841cb9ec4f" kindref="member">m_pStartPos</ref><sp/>=<sp/>POINT{<sp/>0,<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>lpKernel-&gt;<ref refid="struct___t_e_x_t___k_e_r_n_e_l_1ae4b8a90c1e22c53e8ab54f276b9c5f00" kindref="member">m_pEndPos</ref><sp/><sp/><sp/>=<sp/>POINT{<sp/>0,<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="editbox_8h_1a3670448d22023cd5d4a26e4a70e1596b" kindref="member">HTEXTKERNEL</ref>(lpKernel);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="textinfo_8cpp_1a32735553a32a0309482a89dd32f075ab" refkind="member"><highlight class="normal">BOOL<sp/>__stdcall<sp/><ref refid="textinfo_8cpp_1a32735553a32a0309482a89dd32f075ab" kindref="member">ReleaseKernel</ref>(HWND<sp/>hWnd,<sp/><ref refid="struct___t_e_x_t___k_e_r_n_e_l" kindref="compound">HTEXTKERNEL</ref><sp/>hKernel)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>hKernel;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="textinfo_8cpp_1a00d094f318003965d49b28a2bb9fbdf8" refkind="member"><highlight class="normal"><ref refid="struct___t_e_x_t___g_d_i" kindref="compound">HTEXTGDI</ref><sp/>__stdcall<sp/><ref refid="textinfo_8cpp_1a00d094f318003965d49b28a2bb9fbdf8" kindref="member">CreateGDI</ref>(HWND<sp/>hWnd,<sp/><ref refid="struct___t_e_x_t___u_s_e_r" kindref="compound">HTEXTUSER</ref><sp/>hUser)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___t_e_x_t___g_d_i" kindref="compound">LPTEXTGDI</ref><sp/>lpGDI<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="struct___t_e_x_t___g_d_i" kindref="compound">TEXTGDI</ref>{};</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!lpGDI)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="editbox_8h_1aa145cfae480ef1908e3f0a307af216db" kindref="member">HTEXTGDI</ref>(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>HDC<sp/>hdc<sp/>=<sp/>GetDC(hWnd);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>lpGDI-&gt;<ref refid="struct___t_e_x_t___g_d_i_1a619c3e6b8b4be4d566a9e664a18ac03e" kindref="member">m_hMemDC</ref><sp/><sp/>=<sp/>CreateCompatibleDC(hdc);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>lpGDI-&gt;<ref refid="struct___t_e_x_t___g_d_i_1aa53e9b83b1eec7268cfd60c8eda848d9" kindref="member">m_hBitmap</ref><sp/>=<sp/>CreateCompatibleBitmap(hdc,<sp/>hUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a936ff142d6f055dcbacc29927a3b67c7" kindref="member">m_pWindowSize</ref>.x,<sp/>hUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a936ff142d6f055dcbacc29927a3b67c7" kindref="member">m_pWindowSize</ref>.y);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>lpGDI-&gt;<ref refid="struct___t_e_x_t___g_d_i_1a24d37f604ec70084f2a8b6e67b90a7ed" kindref="member">m_hBrush</ref><sp/><sp/>=<sp/>CreateSolidBrush(RGB(0xFF,<sp/>0xFF,<sp/>0xFF));</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>SelectObject(lpGDI-&gt;<ref refid="struct___t_e_x_t___g_d_i_1a619c3e6b8b4be4d566a9e664a18ac03e" kindref="member">m_hMemDC</ref>,<sp/>lpGDI-&gt;<ref refid="struct___t_e_x_t___g_d_i_1aa53e9b83b1eec7268cfd60c8eda848d9" kindref="member">m_hBitmap</ref>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>SelectObject(lpGDI-&gt;<ref refid="struct___t_e_x_t___g_d_i_1a619c3e6b8b4be4d566a9e664a18ac03e" kindref="member">m_hMemDC</ref>,<sp/>lpGDI-&gt;<ref refid="struct___t_e_x_t___g_d_i_1a24d37f604ec70084f2a8b6e67b90a7ed" kindref="member">m_hBrush</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>SelectObject(lpGDI-&gt;<ref refid="struct___t_e_x_t___g_d_i_1a619c3e6b8b4be4d566a9e664a18ac03e" kindref="member">m_hMemDC</ref>,<sp/>hUser-&gt;<ref refid="struct___t_e_x_t___u_s_e_r_1a5ad7522d369bd4e6a3ce4b717689f424" kindref="member">m_hFont</ref>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>ReleaseDC(hWnd,<sp/>hdc);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>待扩展</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>lpGDI-&gt;<ref refid="struct___t_e_x_t___g_d_i_1a7cc58f492c9f540694545864b81cc1c7" kindref="member">m_hMouseTimer</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>lpGDI-&gt;<ref refid="struct___t_e_x_t___g_d_i_1a523b7a475a73e7950c785fc0633589fd" kindref="member">m_hSaveTimer</ref><sp/><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="editbox_8h_1aa145cfae480ef1908e3f0a307af216db" kindref="member">HTEXTGDI</ref>(lpGDI);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="textinfo_8cpp_1a9b18abf4974a65b9b58836269bc039e1" refkind="member"><highlight class="normal">BOOL<sp/>__stdcall<sp/><ref refid="textinfo_8cpp_1a9b18abf4974a65b9b58836269bc039e1" kindref="member">ReleaseGDI</ref>(HWND<sp/>hWnd,<sp/><ref refid="struct___t_e_x_t___g_d_i" kindref="compound">HTEXTGDI</ref><sp/>hGDI)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>DeleteObject(hGDI-&gt;<ref refid="struct___t_e_x_t___g_d_i_1aa53e9b83b1eec7268cfd60c8eda848d9" kindref="member">m_hBitmap</ref>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>DeleteObject(hGDI-&gt;<ref refid="struct___t_e_x_t___g_d_i_1a24d37f604ec70084f2a8b6e67b90a7ed" kindref="member">m_hBrush</ref>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>DeleteObject(hGDI-&gt;<ref refid="struct___t_e_x_t___g_d_i_1a619c3e6b8b4be4d566a9e664a18ac03e" kindref="member">m_hMemDC</ref>);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>hGDI;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(TRUE);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp"/>
+  </compounddef>
+</doxygen>

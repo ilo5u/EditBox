@@ -1,0 +1,410 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_c_text_8h" kind="file">
+    <compoundname>CText.h</compoundname>
+    <includes local="no">sstream</includes>
+    <includes local="no">fstream</includes>
+    <includes refid="_c_line_8h" local="yes">CLine.h</includes>
+    <includes local="no">queue</includes>
+    <includes local="no">Windows.h</includes>
+    <includedby refid="_cursor_8h" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h</includedby>
+    <includedby refid="_record_8h" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h</includedby>
+    <incdepgraph>
+      <node id="135">
+        <label>queue</label>
+      </node>
+      <node id="136">
+        <label>Windows.h</label>
+      </node>
+      <node id="133">
+        <label>string</label>
+      </node>
+      <node id="130">
+        <label>fstream</label>
+      </node>
+      <node id="129">
+        <label>sstream</label>
+      </node>
+      <node id="131">
+        <label>CLine.h</label>
+        <link refid="_c_line_8h"/>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+      </node>
+      <node id="134">
+        <label>iostream</label>
+      </node>
+      <node id="132">
+        <label>tchar.h</label>
+      </node>
+      <node id="128">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h</label>
+        <link refid="CText.h"/>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="138">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h</label>
+        <link refid="_cursor_8h"/>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+      </node>
+      <node id="140">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="148" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+      </node>
+      <node id="149">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/stdafx.cpp</label>
+        <link refid="stdafx_8cpp"/>
+      </node>
+      <node id="153">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h</label>
+        <link refid="_record_8h"/>
+        <childnode refid="139" relation="include">
+        </childnode>
+      </node>
+      <node id="147">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/io.cpp</label>
+        <link refid="io_8cpp"/>
+      </node>
+      <node id="139">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h</label>
+        <link refid="_a_p_i_8h"/>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+      </node>
+      <node id="142">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.cpp</label>
+        <link refid="_c_line_8cpp"/>
+      </node>
+      <node id="152">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp</label>
+        <link refid="timer_8cpp"/>
+      </node>
+      <node id="143">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp</label>
+        <link refid="_c_text_8cpp"/>
+      </node>
+      <node id="141">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.cpp</label>
+        <link refid="_a_p_i_8cpp"/>
+      </node>
+      <node id="145">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp</label>
+        <link refid="debug_8cpp"/>
+      </node>
+      <node id="148">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.cpp</label>
+        <link refid="_record_8cpp"/>
+      </node>
+      <node id="150">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp</label>
+        <link refid="textinfo_8cpp"/>
+      </node>
+      <node id="144">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp</label>
+        <link refid="_cursor_8cpp"/>
+      </node>
+      <node id="151">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp</label>
+        <link refid="textoperation_8cpp"/>
+      </node>
+      <node id="146">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/EditBox.cpp</label>
+        <link refid="_edit_box_8cpp"/>
+      </node>
+      <node id="137">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h</label>
+        <link refid="CText.h"/>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_c_text" prot="public">CText</innerclass>
+    <innerclass refid="class_text__iterator" prot="public">Text_iterator</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_c_text_8h_1a09ecca53f2cd1b8d1c566bedb245e141" prot="public" static="no">
+        <name>UNICODE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="3" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_c_text_8h_1af55fb814559f06f900a5181c8439dffa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int *</type>
+        <definition>int* GetNextValArray</definition>
+        <argsstring>(std::wstring SubStr)</argsstring>
+        <name>GetNextValArray</name>
+        <param>
+          <type>std::wstring</type>
+          <declname>SubStr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="79" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="621" bodyend="642"/>
+        <referencedby refid="class_c_text_1aa3fefff896b218007b90cdd671f732f8" compoundref="_c_text_8cpp" startline="305" endline="335">CText::SeekStrings</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_c_text_8h_1aceaef535e92b0b4c238fd859352f05f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t NumberOfZH</definition>
+        <argsstring>(const std::wstring &amp;wstr)</argsstring>
+        <name>NumberOfZH</name>
+        <param>
+          <type>const std::wstring &amp;</type>
+          <declname>wstr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="80" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="644" bodyend="654"/>
+        <referencedby refid="_c_text_8h_1af569eb0346b1cb75b5b5c1c3ed9afda0" compoundref="_c_text_8cpp" startline="673" endline="686">WStringToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_c_text_8h_1a4a7fc45da60a491092a6d2e67a580d77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::wstring</type>
+        <definition>std::wstring StringToWString</definition>
+        <argsstring>(const std::string &amp;s)</argsstring>
+        <name>StringToWString</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="81" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="658" bodyend="670"/>
+        <referencedby refid="class_c_text_1af08d08cbfeb491ec0e3fa58da5747b07" compoundref="_c_text_8cpp" startline="26" endline="61">CText::ReadText</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_c_text_8h_1af569eb0346b1cb75b5b5c1c3ed9afda0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string WStringToString</definition>
+        <argsstring>(const std::wstring &amp;ws)</argsstring>
+        <name>WStringToString</name>
+        <param>
+          <type>const std::wstring &amp;</type>
+          <declname>ws</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="82" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="673" bodyend="686"/>
+        <references refid="_c_text_8cpp_1aceaef535e92b0b4c238fd859352f05f8" compoundref="_c_text_8cpp" startline="644" endline="654">NumberOfZH</references>
+        <referencedby refid="class_c_text_1afa2569e6f696901abcd3fe1394513921" compoundref="_c_text_8cpp" startline="348" endline="365">CText::Save</referencedby>
+        <referencedby refid="_c_text_8h_1a9c57831810845e2dc5cb6471c7454ca8" compoundref="_c_text_8cpp" startline="688" endline="697">wchTostring</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_c_text_8h_1a9c57831810845e2dc5cb6471c7454ca8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string wchTostring</definition>
+        <argsstring>(TCHAR *pwch)</argsstring>
+        <name>wchTostring</name>
+        <param>
+          <type>TCHAR *</type>
+          <declname>pwch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="83" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="688" bodyend="697"/>
+        <references refid="_c_text_8cpp_1af569eb0346b1cb75b5b5c1c3ed9afda0" compoundref="_c_text_8cpp" startline="673" endline="686">WStringToString</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_c_text_8h_1a67fa7de2cdde9085fd860d7f8a65aab9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WStringToWch</definition>
+        <argsstring>(const std::wstring &amp;ws, TCHAR *&amp;pwch)</argsstring>
+        <name>WStringToWch</name>
+        <param>
+          <type>const std::wstring &amp;</type>
+          <declname>ws</declname>
+        </param>
+        <param>
+          <type>TCHAR *&amp;</type>
+          <declname>pwch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="84" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="699" bodyend="706"/>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_c_text_8h_1a3a03889707f93befc61f5b35f22bd30d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::queue&lt; std::wstring &gt;</type>
+        <definition>std::queue&lt;std::wstring&gt; WStrToLineWStr</definition>
+        <argsstring>(std::wstring WSTR)</argsstring>
+        <name>WStrToLineWStr</name>
+        <param>
+          <type>std::wstring</type>
+          <declname>WSTR</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="85" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="708" bodyend="726"/>
+        <referencedby refid="class_c_text_1aeb95b8bf7a9517ead86bff6e39841cb1" compoundref="_c_text_8cpp" startline="199" endline="241">CText::Insert</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifndef<sp/>UNICODE</highlight></codeline>
+<codeline lineno="3" refid="_c_text_8h_1a09ecca53f2cd1b8d1c566bedb245e141" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UNICODE</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>!UNICODE</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include&quot;<ref refid="_c_line_8h" kindref="compound">CLine.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;queue&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;Windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//文本存储结构</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_c_text" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_text" kindref="compound">CText</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14" refid="class_c_text_1a7846beece47c0269ad9fa44d851a22ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref>;</highlight></codeline>
+<codeline lineno="15" refid="class_c_text_1a9591eb6f6543f40292912e27b74f4d27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cursor" kindref="compound">Cursor</ref>;</highlight></codeline>
+<codeline lineno="16" refid="class_c_text_1a17c0c5b58fd032e805b50a87a755c678" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_record" kindref="compound">Record</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_text_1af837cea14f98ba12e37139cb702eb57e" kindref="member">CText</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_text_1acf85c241b5e80ef93883d2b25e330b49" kindref="member">~CText</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_text_1a3ccc06d79ea85f40426f21ed7219d4a8" kindref="member">NewFile</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//新建文件</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_text_1af08d08cbfeb491ec0e3fa58da5747b07" kindref="member">ReadText</ref>(std::string<sp/>filename);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//打开文件进行编辑</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_text_1afa2569e6f696901abcd3fe1394513921" kindref="member">Save</ref>(std::string<sp/>filename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isChange<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//保存到文本<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_text_1a3e246ed1385aafa70441a021be3e7ee1" kindref="member">ClearAll</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//清空文本</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_text_1ae4b10318f3186e0c603d8e811420f86f" kindref="member">ShowText</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_text_1a0728c99dde862c9b11dd0867df790ab5" kindref="member">DeleteLines</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>first,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>last);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//删除整行</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_position" kindref="compound">Position</ref><sp/><ref refid="class_c_text_1a5baa587ee060cec570e68110bf6e6f2d" kindref="member">Delete</ref>(<ref refid="struct_position" kindref="compound">Position</ref><sp/>first,<sp/><ref refid="struct_position" kindref="compound">Position</ref><sp/>last);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//删除选中部分</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_position" kindref="compound">Position</ref><sp/><sp/><sp/><sp/><ref refid="class_c_text_1a8b4cd3375f2f673e7daeb8caae3299dd" kindref="member">BackSpace</ref>(<ref refid="struct_position" kindref="compound">Position</ref><sp/>position);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//退格键</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_position" kindref="compound">Position</ref><sp/><sp/><sp/><sp/><ref refid="class_c_text_1aeb95b8bf7a9517ead86bff6e39841cb1" kindref="member">Insert</ref>(<ref refid="struct_position" kindref="compound">Position</ref><sp/><ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref>,<sp/>std::wstring<sp/>String);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//插入字符串</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>std::wstring<sp/><ref refid="class_c_text_1a46f994aaca813d66221125f4295f4fcd" kindref="member">Copy</ref>(<ref refid="struct_position" kindref="compound">Position</ref><sp/><ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref>,<sp/><ref refid="struct_position" kindref="compound">Position</ref><sp/><ref refid="struct_record_1a202754ee6c4db7c19277d74a7fd26f77" kindref="member">end</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//拷贝段落</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_position" kindref="compound">Position</ref><sp/><sp/><sp/><sp/><ref refid="class_c_text_1ae7356293c6869d990f8cbe9f18d23b05" kindref="member">EnterNewLine</ref>(<ref refid="struct_position" kindref="compound">Position</ref><sp/>position);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//光标在position后按回车</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_text_1aa3fefff896b218007b90cdd671f732f8" kindref="member">SeekStrings</ref>(std::wstring<sp/>Str,<sp/><ref refid="struct_position" kindref="compound">Position</ref>&amp;<sp/><ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref>,<sp/><ref refid="struct_position" kindref="compound">Position</ref>&amp;<sp/><ref refid="struct_record_1a202754ee6c4db7c19277d74a7fd26f77" kindref="member">end</ref>);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//查找字符串</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_position" kindref="compound">Position</ref><sp/><sp/><sp/><sp/><ref refid="class_c_text_1a62eee26c0c1dd6f67d0b6ecca5d59a70" kindref="member">Replace</ref>(<ref refid="struct_position" kindref="compound">Position</ref><sp/><ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref>,<sp/><ref refid="struct_position" kindref="compound">Position</ref><sp/><ref refid="struct_record_1a202754ee6c4db7c19277d74a7fd26f77" kindref="member">end</ref>,<sp/>std::wstring<sp/>Str);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//替换字符串</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_text_1adfbfca8b8512249320e44923ffb30165" kindref="member">isSaved</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//是否保存</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_c_text_1a2caf6d91ed3647c812aa7ef7cb7d95b7" kindref="member">FilePath</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//返回文件路径</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//交互函数</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_text_1af5f4ba7568e0d2dceaa80fa49f4d36b7" kindref="member">Line_Size</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LineNumber);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//返回某行字符数量</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_text_1aa7f303a9de41a6d9215fb05c2d1400b3" kindref="member">Line_Width</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LineNumber,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_record_1a202754ee6c4db7c19277d74a7fd26f77" kindref="member">end</ref><sp/>=<sp/>0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//返回当前行所占位宽</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_text_1afc86a44065dfc1e03c51126a57bd1b66" kindref="member">Max_Line_Width</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Width);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//文本最大行宽</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_text_1a823b5a708158bcf403f099768ccfa280" kindref="member">Line_Number</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//返回行数</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_line" kindref="compound">CLine</ref>*<sp/><ref refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" kindref="member">GetLinePointer</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LineNumber);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//获取行指针</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_position" kindref="compound">Position</ref><sp/><ref refid="class_c_text_1adabfa437bcb579070acca49c058bfadc" kindref="member">First_Position</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//返回文本第一个字符位置</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_position" kindref="compound">Position</ref><sp/><ref refid="class_c_text_1a6914c55bbd4bb8352517f672b1986545" kindref="member">End_Position</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//返回文本最后一个字符位置</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45" refid="class_c_text_1a6de3303300a1ff02082de92b183cc4fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_line" kindref="compound">CLine</ref><sp/>*<sp/><ref refid="class_c_text_1a6de3303300a1ff02082de92b183cc4fa" kindref="member">pFirstLineHead</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//行首地址</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_c_text_1a0fbd8b65d0861a892e2c7b7bea5648f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_text_1a0fbd8b65d0861a892e2c7b7bea5648f9" kindref="member">nLineNumbers</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//行数</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_c_text_1ae19a9e36fe00935533ebb683dc9b0632" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_c_text_1ae19a9e36fe00935533ebb683dc9b0632" kindref="member">FileName</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//文件名<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="class_c_text_1ad0f99adc5e1f43ba93836861dac3d9eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_text_1ad0f99adc5e1f43ba93836861dac3d9eb" kindref="member">bSave</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//是否保存</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_text_1aeda642a670bea4acb514a5a7ec2496ba" kindref="member">UpDataLineNumber</ref>(<ref refid="class_c_line" kindref="compound">CLine</ref>*<sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Start);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//更新行号</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_text_1a25ac3e1c862882f89d9515ce8c6a7dc3" kindref="member">InsertLine</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>AfterLineNumber);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//在行号后面插入空行</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*全文本迭代器*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_text__iterator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_text__iterator_1a58eff6fbd7be8422ed8af1f2fbd3affb" kindref="member">Text_iterator</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_text__iterator_1a58eff6fbd7be8422ed8af1f2fbd3affb" kindref="member">Text_iterator</ref>(<ref refid="class_c_text" kindref="compound">CText</ref><sp/>&amp;<sp/>Text,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LineNumber<sp/>=<sp/>1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>position<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_text__iterator_1ae69a919a10648ed1d571162e1f06dd42" kindref="member">~Text_iterator</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_text__iterator_1a7ec78e7e057bf205d62bf7487faee1fc" kindref="member">isEnd</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//是否为行末</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_text__iterator_1a6fafa43cf62867ecadb47524a5771dec" kindref="member">GoPosition</ref>(<ref refid="struct_position" kindref="compound">Position</ref><sp/>position);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//定位</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_text__iterator_1a2e7a32115ef11481d791333840138e72" kindref="member">GoEnd</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//转到行末</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_position" kindref="compound">Position</ref><sp/><ref refid="class_text__iterator_1a5828a1d8a40e197491579a7840b090e5" kindref="member">GetCurPositin</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//当前位置</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_text__iterator_1a50cbffa9d9c843877f5152a16e55c262" kindref="member">CurrentLineNumber</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//当前行号</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//operators</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>TCHAR<sp/><ref refid="class_text__iterator_1a1db3aac9b492864382c47c3b37498235" kindref="member">operator*</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref>&amp;<sp/><ref refid="class_text__iterator_1ac9403569982df04eb9141282b738acd8" kindref="member">operator++</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref><sp/><sp/><ref refid="class_text__iterator_1ac9403569982df04eb9141282b738acd8" kindref="member">operator++</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref>&amp;<sp/><ref refid="class_text__iterator_1ae6c88cae4a7b534df1ad354c30d97dce" kindref="member">operator--</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref><sp/><sp/><ref refid="class_text__iterator_1ae6c88cae4a7b534df1ad354c30d97dce" kindref="member">operator--</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref>&amp;<sp/><ref refid="class_text__iterator_1afba92592856bd7a121818e6beff86163" kindref="member">operator+</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref>&amp;<sp/><ref refid="class_text__iterator_1abbba8281b4bafab9a4d628db73a7ac7c" kindref="member">operator-</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_text__iterator_1ab851a4cf74ff0ce0fc38b94c74099a49" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref>&amp;<sp/>Text);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_text__iterator_1abe4df17cc9e72310ba27756fa00de411" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref>&amp;<sp/>Text);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="76" refid="class_text__iterator_1af33ad5bc623ccba42b1dc216ecd2061a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_text" kindref="compound">CText</ref><sp/>*<sp/><ref refid="class_text__iterator_1af33ad5bc623ccba42b1dc216ecd2061a" kindref="member">pText</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//指向文本文件对象的指针</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="class_text__iterator_1a83895cc8647c04ad4c67e8eb8d01119a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref><sp/><ref refid="class_text__iterator_1a83895cc8647c04ad4c67e8eb8d01119a" kindref="member">currLine</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//绑定的当前行迭代器</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/><ref refid="_c_text_8h_1af55fb814559f06f900a5181c8439dffa" kindref="member">GetNextValArray</ref>(std::wstring<sp/>SubStr);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//获取字串的NextVal数组</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="_c_text_8h_1aceaef535e92b0b4c238fd859352f05f8" kindref="member">NumberOfZH</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::wstring<sp/>&amp;wstr);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//宽字符串中中文字符数量</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">std::wstring<sp/><ref refid="_c_text_8h_1a4a7fc45da60a491092a6d2e67a580d77" kindref="member">StringToWString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>s);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//实现字符转换</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">std::string<sp/><ref refid="_c_text_8h_1af569eb0346b1cb75b5b5c1c3ed9afda0" kindref="member">WStringToString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::wstring&amp;<sp/>ws);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//实现字符转换</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">std::string<sp/><ref refid="_c_text_8h_1a9c57831810845e2dc5cb6471c7454ca8" kindref="member">wchTostring</ref>(TCHAR*<sp/>pwch);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//宽字符指针转换为string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_c_text_8h_1a67fa7de2cdde9085fd860d7f8a65aab9" kindref="member">WStringToWch</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::wstring<sp/>&amp;ws,<sp/>TCHAR*<sp/>&amp;pwch);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//宽字符串转化为指针</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">std::queue&lt;std::wstring&gt;<sp/><ref refid="_c_text_8h_1a3a03889707f93befc61f5b35f22bd30d" kindref="member">WStrToLineWStr</ref>(std::wstring<sp/>WSTR);<sp/></highlight><highlight class="comment">//将包含换行符的字符串转化为不同行的字符串(不含换行符)<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_c_line_8h" kind="file">
+    <compoundname>CLine.h</compoundname>
+    <includes local="no">tchar.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="_c_text_8h" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h</includedby>
+    <incdepgraph>
+      <node id="81">
+        <label>string</label>
+      </node>
+      <node id="79">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h</label>
+        <link refid="CLine.h"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>iostream</label>
+      </node>
+      <node id="80">
+        <label>tchar.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="85">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h</label>
+        <link refid="_cursor_8h"/>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+      </node>
+      <node id="96">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/stdafx.cpp</label>
+        <link refid="stdafx_8cpp"/>
+      </node>
+      <node id="100">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.h</label>
+        <link refid="_record_8h"/>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/io.cpp</label>
+        <link refid="io_8cpp"/>
+      </node>
+      <node id="86">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.h</label>
+        <link refid="_a_p_i_8h"/>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.cpp</label>
+        <link refid="_c_line_8cpp"/>
+      </node>
+      <node id="99">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp</label>
+        <link refid="timer_8cpp"/>
+      </node>
+      <node id="90">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp</label>
+        <link refid="_c_text_8cpp"/>
+      </node>
+      <node id="88">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/API.cpp</label>
+        <link refid="_a_p_i_8cpp"/>
+      </node>
+      <node id="92">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp</label>
+        <link refid="debug_8cpp"/>
+      </node>
+      <node id="95">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.cpp</label>
+        <link refid="_record_8cpp"/>
+      </node>
+      <node id="97">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp</label>
+        <link refid="textinfo_8cpp"/>
+      </node>
+      <node id="83">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h</label>
+        <link refid="CLine.h"/>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp</label>
+        <link refid="_cursor_8cpp"/>
+      </node>
+      <node id="98">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp</label>
+        <link refid="textoperation_8cpp"/>
+      </node>
+      <node id="93">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/EditBox.cpp</label>
+        <link refid="_edit_box_8cpp"/>
+      </node>
+      <node id="84">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h</label>
+        <link refid="_c_text_8h"/>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_position" prot="public">Position</innerclass>
+    <innerclass refid="struct_data_block" prot="public">DataBlock</innerclass>
+    <innerclass refid="class_c_line" prot="public">CLine</innerclass>
+    <innerclass refid="class_line__iterator" prot="public">Line_iterator</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_c_line_8h_1a09ecca53f2cd1b8d1c566bedb245e141" prot="public" static="no">
+        <name>UNICODE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" line="3" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_c_line_8h_1ad51ded0bbd705f02f73fc60c0b721ced" prot="public" static="no">
+        <name>BLOCK_SIZE</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" line="8" column="14" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_c_line_1af2650c129299a35ffc4b2c4f9044ac65" compoundref="_c_line_8cpp" startline="25" endline="62">CLine::CreateLine</referencedby>
+        <referencedby refid="class_c_line_1a63450973816d9f285f1799cd9966eaa5" compoundref="_c_line_8cpp" startline="108" endline="144">CLine::DeleteLine</referencedby>
+        <referencedby refid="class_c_line_1a2ff023c084dbcad874bff56688a16145" compoundref="_c_line_8cpp" startline="175" endline="280">CLine::InsertStrings</referencedby>
+        <referencedby refid="class_line__iterator_1a19fe3837430a1fa501e4e8d859602be1" compoundref="_c_line_8cpp" startline="520" endline="538">Line_iterator::operator+</referencedby>
+        <referencedby refid="class_line__iterator_1a0148d963ab43faf7e57fc8b85a7cf302" compoundref="_c_line_8cpp" startline="425" endline="438">Line_iterator::operator++</referencedby>
+        <referencedby refid="class_line__iterator_1ad494ed6a8e445adb409bfd67538ecb9d" compoundref="_c_line_8cpp" startline="447" endline="465">Line_iterator::operator--</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_c_line_8h_1a23eb64002a788709729bd0ee12fbdc07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t operator-</definition>
+        <argsstring>(Line_iterator last, Line_iterator first)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref></type>
+          <declname>last</declname>
+        </param>
+        <param>
+          <type><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref></type>
+          <declname>first</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" line="96" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.cpp" bodystart="581" bodyend="590"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_line_8h_1aa145739f65e622f88b7fd6aad8bbba62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref></type>
+        <definition>Line_iterator copy</definition>
+        <argsstring>(Line_iterator start, Line_iterator first, Line_iterator last)</argsstring>
+        <name>copy</name>
+        <param>
+          <type><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref></type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref></type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref></type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" line="98" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.cpp" bodystart="592" bodyend="602"/>
+        <referencedby refid="class_c_line_1a63450973816d9f285f1799cd9966eaa5" compoundref="_c_line_8cpp" startline="108" endline="144">CLine::DeleteLine</referencedby>
+        <referencedby refid="class_c_line_1a2ff023c084dbcad874bff56688a16145" compoundref="_c_line_8cpp" startline="175" endline="280">CLine::InsertStrings</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifndef<sp/>UNICODE</highlight></codeline>
+<codeline lineno="3" refid="_c_line_8h_1a09ecca53f2cd1b8d1c566bedb245e141" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UNICODE</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>!UNICODE</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include&lt;tchar.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="_c_line_8h_1ad51ded0bbd705f02f73fc60c0b721ced" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLOCK_SIZE<sp/><sp/>5</highlight></codeline>
+<codeline lineno="9" refid="struct_position" refkind="compound"><highlight class="preprocessor"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_position" kindref="compound">Position</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11" refid="struct_position_1a7b72348893583b77254a650b7095c9fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_position_1a7b72348893583b77254a650b7095c9fc" kindref="member">LineNumber</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//所在行号</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" kindref="member">Sequence</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//所在序号</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//operators</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_position_1ae98c73389cd21a818748465ff954316b" kindref="member">operator&lt;</ref>(<ref refid="struct_position" kindref="compound">Position</ref>&amp;<sp/>position);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_position_1a2aa07f5a219c065f328697bd608c10d6" kindref="member">operator&lt;=</ref>(<ref refid="struct_position" kindref="compound">Position</ref>&amp;<sp/>position);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_position_1a814e4fac37f4df5495a9f62b66186309" kindref="member">operator&gt;</ref>(<ref refid="struct_position" kindref="compound">Position</ref>&amp;<sp/>position);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_position_1a501e9a2930b09db2d4c82e0749c92f5d" kindref="member">operator&gt;=</ref>(<ref refid="struct_position" kindref="compound">Position</ref>&amp;<sp/>position);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_position_1a025cef8fd5176f84cf755520aed96dfc" kindref="member">operator==</ref>(<ref refid="struct_position" kindref="compound">Position</ref>&amp;<sp/>position);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_position_1ae4e29f220f7e4d5af87a1e00af086ef9" kindref="member">operator!=</ref>(<ref refid="struct_position" kindref="compound">Position</ref>&amp;<sp/>position);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//每次分配的数据块</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//行迭代器</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="struct_data_block" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_data_block" kindref="compound">DataBlock</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25" refid="struct_data_block_1ad2e77f59440bc57152e6260026e24632" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_data_block_1ad2e77f59440bc57152e6260026e24632" kindref="member">DataBlock</ref>()<sp/>:<ref refid="struct_data_block_1af045d11eb055998f55e2a5e562d52519" kindref="member">pNextBlock</ref>(NULL)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="26" refid="struct_data_block_1af045d11eb055998f55e2a5e562d52519" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_data_block" kindref="compound">DataBlock</ref>*<sp/><ref refid="struct_data_block_1af045d11eb055998f55e2a5e562d52519" kindref="member">pNextBlock</ref>;</highlight></codeline>
+<codeline lineno="27" refid="struct_data_block_1aba019074fd9f0faf3420c3f41a15ae57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>TCHAR<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_data_block_1aba019074fd9f0faf3420c3f41a15ae57" kindref="member">Strings</ref>[<ref refid="_c_line_8h_1ad51ded0bbd705f02f73fc60c0b721ced" kindref="member">BLOCK_SIZE</ref>];</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="29" refid="class_c_line" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_line" kindref="compound">CLine</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31" refid="class_c_line_1ab207fa106c81656ca5f20728929c5360" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref>;</highlight></codeline>
+<codeline lineno="32" refid="class_c_line_1a9e5e7081ae982774eb57a2bcbbf66a72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_text" kindref="compound">CText</ref>;</highlight></codeline>
+<codeline lineno="33" refid="class_c_line_1a9591eb6f6543f40292912e27b74f4d27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cursor" kindref="compound">Cursor</ref>;</highlight></codeline>
+<codeline lineno="34" refid="class_c_line_1a7846beece47c0269ad9fa44d851a22ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref>;</highlight></codeline>
+<codeline lineno="35" refid="class_c_line_1a17c0c5b58fd032e805b50a87a755c678" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_record" kindref="compound">Record</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_line_1a66266d40af9f8f0f98a7316a1ba186d5" kindref="member">CLine</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LNum,<sp/><ref refid="class_c_line" kindref="compound">CLine</ref>*<sp/>pNext<sp/>=<sp/>NULL);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_line_1a66266d40af9f8f0f98a7316a1ba186d5" kindref="member">CLine</ref>(<ref refid="class_c_line" kindref="compound">CLine</ref>&amp;<sp/>L);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_line_1a619444bef4c4f422b86411404fd23519" kindref="member">~CLine</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_line_1af2650c129299a35ffc4b2c4f9044ac65" kindref="member">CreateLine</ref>(std::wstring&amp;<sp/>String);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//创建行</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_line_1a9ba3c94b59bd78d995ebbf7819e3ac20" kindref="member">ClearLine</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//清空行</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_line_1a641185ca9a1b60c0a2dc7cc403c7e792" kindref="member">ShowLineData</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//显示当前行字符串</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref><sp/><ref refid="class_c_line_1a63450973816d9f285f1799cd9966eaa5" kindref="member">DeleteLine</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>first,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>last);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//删除当前行[first,end]内的字符串<sp/><sp/><sp/><sp/><sp/>字符从1开始返回删除后的第一位</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_c_line_1a5aa15f3309c620d7972eebd58d9793a2" kindref="member">BackSpace</ref>(<ref refid="struct_position" kindref="compound">Position</ref><sp/>position);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//退格键<sp/><sp/>删除Position<sp/>位置上的字符<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref><sp/><ref refid="class_c_line_1a2ff023c084dbcad874bff56688a16145" kindref="member">InsertStrings</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref>,<sp/>std::wstring<sp/>String);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//在start<sp/>&quot;后面&quot;<sp/>加入字符串</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref><sp/><ref refid="class_c_line_1a3d5107f7724e638329c6137b1c7f50e6" kindref="member">begin</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//返回指向行首字符的迭代器</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref><sp/><ref refid="class_c_line_1a149f8f0f52d308c2f471c24866f9ba5f" kindref="member">end</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//返回指向行尾字符的迭代器</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>std::wstring<sp/><sp/><ref refid="class_c_line_1a858096cef404306ad1a2d7bf8314f46b" kindref="member">TransformToWString</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>first,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>last);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//以wstringf的形式返回[first,last]中的字符串</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_c_line_1abb59b5d84db0204be11c14d829d47ef1" kindref="member">size</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//返回本行字符串数量</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_line" kindref="compound">CLine</ref>&amp;<sp/><ref refid="class_c_line_1acbaea9d8faad6943fc4e35ae276c79b8" kindref="member">operator=</ref>(<ref refid="class_c_line" kindref="compound">CLine</ref>&amp;<sp/>Line);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//赋值</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_line_1aef155ee29a549e03cc4e4b1199191f6b" kindref="member">SetLineNumber</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Number);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//设置/更改行号</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_c_line_1ad9bf5c665f0ee07ffee62d31531771e9" kindref="member">isBlankLine</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//返回当前行是否为空</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="class_c_line_1a6a02a6e68649d707504f1c9ab8470d33" kindref="member">Line_Width</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_line_1a149f8f0f52d308c2f471c24866f9ba5f" kindref="member">end</ref><sp/>=<sp/>0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//返回当前行行宽</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="55" refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_line" kindref="compound">CLine</ref><sp/>*<sp/><ref refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" kindref="member">pNextLine</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//下一行</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_c_line_1a1f6a0f9ee01244643b538dec11b0ec68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_data_block" kindref="compound">DataBlock</ref>*<sp/><sp/><ref refid="class_c_line_1a1f6a0f9ee01244643b538dec11b0ec68" kindref="member">pLineHead</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//行首</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="class_c_line_1aa1aed03c5292b8299dd7bcd037a06bf3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_line_1aa1aed03c5292b8299dd7bcd037a06bf3" kindref="member">nLineNumber</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//当前行号</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" kindref="member">nDataSize</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//当前行字符数量</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="class_c_line_1a433008623c03e406324de238a27a03f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_line_1a433008623c03e406324de238a27a03f3" kindref="member">nBlocks</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//堆块个数</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="class_c_line_1aeaf95dd3dc1f5d66238c7b268b0405f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_line_1aeaf95dd3dc1f5d66238c7b268b0405f8" kindref="member">bBlankLine</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//是否为空行</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_line_1a172210f2a2b3ce5fd249958d265c4cf2" kindref="member">DeleteSpareBlocks</ref>(<ref refid="struct_data_block" kindref="compound">DataBlock</ref>*<sp/>p);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_line_1a6abaf8e331ae6957d7e56722413d1d82" kindref="member">UpDataLineNumber</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//更新行号</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="class_line__iterator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67" refid="class_line__iterator_1af36bc8c502fcf2ceb7c97288d37f8bbc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_line" kindref="compound">CLine</ref>;</highlight></codeline>
+<codeline lineno="68" refid="class_line__iterator_1a7846beece47c0269ad9fa44d851a22ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_text__iterator" kindref="compound">Text_iterator</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line__iterator_1a477eed7fc47cd4719cd1f9284b0d58d0" kindref="member">Line_iterator</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line__iterator_1a477eed7fc47cd4719cd1f9284b0d58d0" kindref="member">Line_iterator</ref>(<ref refid="class_c_line" kindref="compound">CLine</ref>&amp;<sp/>theLine,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line__iterator_1a477eed7fc47cd4719cd1f9284b0d58d0" kindref="member">Line_iterator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref>&amp;<sp/>m);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line__iterator_1a46b3cce519dc76c4c9a379d77f9d5e51" kindref="member">~Line_iterator</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_line__iterator_1aa3c7ec6479e1b1b04f923b2eff2280de" kindref="member">Set</ref>(<ref refid="class_c_line" kindref="compound">CLine</ref>&amp;<sp/>theLine,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//设定绑定行</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_line__iterator_1ac9b7eab9762d2ff694b10eb8f530d091" kindref="member">CurrentPosition</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//返回当前迭代器指向位置</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_line" kindref="compound">CLine</ref>*<sp/><ref refid="class_line__iterator_1a2d33b3ebe0d62dd8245e5e560e9c6a7e" kindref="member">GetLinePointer</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//返回当前行首指针</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_line__iterator_1ae145ec61d5166fafe8f2d63ed42920b8" kindref="member">isValid</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//是否为有效(非空)的行</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//operators</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref>&amp;<sp/><ref refid="class_line__iterator_1a0148d963ab43faf7e57fc8b85a7cf302" kindref="member">operator++</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref><sp/><ref refid="class_line__iterator_1a0148d963ab43faf7e57fc8b85a7cf302" kindref="member">operator++</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref>&amp;<sp/><ref refid="class_line__iterator_1ad494ed6a8e445adb409bfd67538ecb9d" kindref="member">operator--</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref><sp/><ref refid="class_line__iterator_1ad494ed6a8e445adb409bfd67538ecb9d" kindref="member">operator--</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref>&amp;<sp/><ref refid="class_line__iterator_1a19fe3837430a1fa501e4e8d859602be1" kindref="member">operator+</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref>&amp;<sp/><ref refid="class_line__iterator_1adb409d67774ebcdc9154c0f500df9df5" kindref="member">operator-</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>TCHAR&amp;<sp/><sp/><ref refid="class_line__iterator_1a07c42eac2f9d437ffb2bfdce03779117" kindref="member">operator*</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref>&amp;<sp/><ref refid="class_line__iterator_1acb47a17dc5d50a3a2789525e8a896bb9" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref>&amp;<sp/>m);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_line__iterator_1ac9ab5b9e08de51adf0513c1f74dcddf2" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref>&amp;<sp/>m);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_line__iterator_1a7f24116f14499f5c4a43b4ca88d5dcf3" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref>&amp;<sp/>m);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="90" refid="class_line__iterator_1ae749f39727d5fe5536d3a996ecb5bd94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_line" kindref="compound">CLine</ref><sp/>*<sp/><ref refid="class_line__iterator_1ae749f39727d5fe5536d3a996ecb5bd94" kindref="member">pLine</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//当前行指针<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="class_line__iterator_1a5b2e2fbfc3678036a9791418670f7fa7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>TCHAR<sp/>*<sp/><sp/><sp/><sp/><sp/><ref refid="class_line__iterator_1a5b2e2fbfc3678036a9791418670f7fa7" kindref="member">pWChar</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//指向CLine中的一个字符</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="class_line__iterator_1ac876f68f47f43fa467b659f53c671df9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_data_block" kindref="compound">DataBlock</ref>*<sp/><sp/><ref refid="class_line__iterator_1ac876f68f47f43fa467b659f53c671df9" kindref="member">pBlock</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//当前指向字符所在数据块</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="class_line__iterator_1a318d558e773e8e03b868942a37663b36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_line__iterator_1a318d558e773e8e03b868942a37663b36" kindref="member">nIndex</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//当前指向的字符在行中的位置(注：不是下标，从1开始)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">//得到两迭代器[first,last]之间的字符数</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="_c_line_8h_1a23eb64002a788709729bd0ee12fbdc07" kindref="member">operator-</ref>(<ref refid="class_line__iterator" kindref="compound">Line_iterator</ref><sp/>last,<sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref><sp/>first);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment">//同一行中，将[first,last]的字符从start开始拷贝到</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref><sp/><ref refid="_c_line_8h_1aa145739f65e622f88b7fd6aad8bbba62" kindref="member">copy</ref>(<ref refid="class_line__iterator" kindref="compound">Line_iterator</ref><sp/>start,<sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref><sp/>first,<sp/><ref refid="class_line__iterator" kindref="compound">Line_iterator</ref><sp/><sp/>last);</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h"/>
+  </compounddef>
+</doxygen>

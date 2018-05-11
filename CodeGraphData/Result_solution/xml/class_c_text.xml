@@ -1,0 +1,860 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_c_text" kind="class" prot="public">
+    <compoundname>CText</compoundname>
+    <includes refid="_c_text_8h" local="no">CText.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_c_text_1a7846beece47c0269ad9fa44d851a22ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Text_iterator</definition>
+        <argsstring></argsstring>
+        <name>Text_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="14" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_c_text_1a9591eb6f6543f40292912e27b74f4d27" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Cursor</definition>
+        <argsstring></argsstring>
+        <name>Cursor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="15" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_c_text_1a17c0c5b58fd032e805b50a87a755c678" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend struct</type>
+        <definition>friend struct Record</definition>
+        <argsstring></argsstring>
+        <name>Record</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="16" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_c_text_1a6de3303300a1ff02082de92b183cc4fa" prot="private" static="no" mutable="no">
+        <type><ref refid="class_c_line" kindref="compound">CLine</ref> *</type>
+        <definition>CLine* CText::pFirstLineHead</definition>
+        <argsstring></argsstring>
+        <name>pFirstLineHead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="45" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="class_c_text_1a8b4cd3375f2f673e7daeb8caae3299dd" compoundref="_c_text_8cpp" startline="166" endline="189">BackSpace</referencedby>
+        <referencedby refid="class_c_text_1a3e246ed1385aafa70441a021be3e7ee1" compoundref="_c_text_8cpp" startline="65" endline="77">ClearAll</referencedby>
+        <referencedby refid="class_c_text_1af837cea14f98ba12e37139cb702eb57e" compoundref="_c_text_8cpp" startline="4" endline="9">CText</referencedby>
+        <referencedby refid="class_c_text_1a0728c99dde862c9b11dd0867df790ab5" compoundref="_c_text_8cpp" startline="94" endline="131">DeleteLines</referencedby>
+        <referencedby refid="class_c_text_1adabfa437bcb579070acca49c058bfadc" compoundref="_c_text_8cpp" startline="470" endline="476">First_Position</referencedby>
+        <referencedby refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">GetLinePointer</referencedby>
+        <referencedby refid="class_c_text_1a25ac3e1c862882f89d9515ce8c6a7dc3" compoundref="_c_text_8cpp" startline="432" endline="456">InsertLine</referencedby>
+        <referencedby refid="class_c_text_1afc86a44065dfc1e03c51126a57bd1b66" compoundref="_c_text_8cpp" startline="394" endline="405">Max_Line_Width</referencedby>
+        <referencedby refid="class_c_text_1a3ccc06d79ea85f40426f21ed7219d4a8" compoundref="_c_text_8cpp" startline="16" endline="24">NewFile</referencedby>
+        <referencedby refid="class_c_text_1af08d08cbfeb491ec0e3fa58da5747b07" compoundref="_c_text_8cpp" startline="26" endline="61">ReadText</referencedby>
+        <referencedby refid="class_c_text_1afa2569e6f696901abcd3fe1394513921" compoundref="_c_text_8cpp" startline="348" endline="365">Save</referencedby>
+        <referencedby refid="class_c_text_1ae4b10318f3186e0c603d8e811420f86f" compoundref="_c_text_8cpp" startline="79" endline="90">ShowText</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_text_1a0fbd8b65d0861a892e2c7b7bea5648f9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CText::nLineNumbers</definition>
+        <argsstring></argsstring>
+        <name>nLineNumbers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="46" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="class_c_text_1a3e246ed1385aafa70441a021be3e7ee1" compoundref="_c_text_8cpp" startline="65" endline="77">ClearAll</referencedby>
+        <referencedby refid="class_c_text_1af837cea14f98ba12e37139cb702eb57e" compoundref="_c_text_8cpp" startline="4" endline="9">CText</referencedby>
+        <referencedby refid="class_c_text_1a0728c99dde862c9b11dd0867df790ab5" compoundref="_c_text_8cpp" startline="94" endline="131">DeleteLines</referencedby>
+        <referencedby refid="class_c_text_1a6914c55bbd4bb8352517f672b1986545" compoundref="_c_text_8cpp" startline="478" endline="485">End_Position</referencedby>
+        <referencedby refid="class_c_text_1a823b5a708158bcf403f099768ccfa280" compoundref="_c_text_8cpp" startline="407" endline="410">Line_Number</referencedby>
+        <referencedby refid="class_c_text_1a3ccc06d79ea85f40426f21ed7219d4a8" compoundref="_c_text_8cpp" startline="16" endline="24">NewFile</referencedby>
+        <referencedby refid="class_c_text_1af08d08cbfeb491ec0e3fa58da5747b07" compoundref="_c_text_8cpp" startline="26" endline="61">ReadText</referencedby>
+        <referencedby refid="class_c_text_1aeda642a670bea4acb514a5a7ec2496ba" compoundref="_c_text_8cpp" startline="417" endline="426">UpDataLineNumber</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_text_1ae19a9e36fe00935533ebb683dc9b0632" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CText::FileName</definition>
+        <argsstring></argsstring>
+        <name>FileName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="47" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" bodystart="47" bodyend="-1"/>
+        <referencedby refid="class_c_text_1a3e246ed1385aafa70441a021be3e7ee1" compoundref="_c_text_8cpp" startline="65" endline="77">ClearAll</referencedby>
+        <referencedby refid="class_c_text_1af837cea14f98ba12e37139cb702eb57e" compoundref="_c_text_8cpp" startline="4" endline="9">CText</referencedby>
+        <referencedby refid="class_c_text_1a2caf6d91ed3647c812aa7ef7cb7d95b7" compoundref="_c_text_8cpp" startline="372" endline="378">FilePath</referencedby>
+        <referencedby refid="class_c_text_1a3ccc06d79ea85f40426f21ed7219d4a8" compoundref="_c_text_8cpp" startline="16" endline="24">NewFile</referencedby>
+        <referencedby refid="class_c_text_1af08d08cbfeb491ec0e3fa58da5747b07" compoundref="_c_text_8cpp" startline="26" endline="61">ReadText</referencedby>
+        <referencedby refid="class_c_text_1afa2569e6f696901abcd3fe1394513921" compoundref="_c_text_8cpp" startline="348" endline="365">Save</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_text_1ad0f99adc5e1f43ba93836861dac3d9eb" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CText::bSave</definition>
+        <argsstring></argsstring>
+        <name>bSave</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="48" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="class_c_text_1a8b4cd3375f2f673e7daeb8caae3299dd" compoundref="_c_text_8cpp" startline="166" endline="189">BackSpace</referencedby>
+        <referencedby refid="class_c_text_1a3e246ed1385aafa70441a021be3e7ee1" compoundref="_c_text_8cpp" startline="65" endline="77">ClearAll</referencedby>
+        <referencedby refid="class_c_text_1a5baa587ee060cec570e68110bf6e6f2d" compoundref="_c_text_8cpp" startline="136" endline="160">Delete</referencedby>
+        <referencedby refid="class_c_text_1a0728c99dde862c9b11dd0867df790ab5" compoundref="_c_text_8cpp" startline="94" endline="131">DeleteLines</referencedby>
+        <referencedby refid="class_c_text_1ae7356293c6869d990f8cbe9f18d23b05" compoundref="_c_text_8cpp" startline="278" endline="302">EnterNewLine</referencedby>
+        <referencedby refid="class_c_text_1aeb95b8bf7a9517ead86bff6e39841cb1" compoundref="_c_text_8cpp" startline="199" endline="241">Insert</referencedby>
+        <referencedby refid="class_c_text_1adfbfca8b8512249320e44923ffb30165" compoundref="_c_text_8cpp" startline="367" endline="370">isSaved</referencedby>
+        <referencedby refid="class_c_text_1a3ccc06d79ea85f40426f21ed7219d4a8" compoundref="_c_text_8cpp" startline="16" endline="24">NewFile</referencedby>
+        <referencedby refid="class_c_text_1af08d08cbfeb491ec0e3fa58da5747b07" compoundref="_c_text_8cpp" startline="26" endline="61">ReadText</referencedby>
+        <referencedby refid="class_c_text_1afa2569e6f696901abcd3fe1394513921" compoundref="_c_text_8cpp" startline="348" endline="365">Save</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_text_1af837cea14f98ba12e37139cb702eb57e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CText::CText</definition>
+        <argsstring>()</argsstring>
+        <name>CText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="18" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="4" bodyend="9"/>
+        <references refid="class_c_text_1ae19a9e36fe00935533ebb683dc9b0632" compoundref="_c_text_8h" startline="47">FileName</references>
+        <references refid="class_c_text_1a0fbd8b65d0861a892e2c7b7bea5648f9" compoundref="_c_text_8h" startline="46">nLineNumbers</references>
+        <references refid="class_c_text_1a6de3303300a1ff02082de92b183cc4fa" compoundref="_c_text_8h" startline="45">pFirstLineHead</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1acf85c241b5e80ef93883d2b25e330b49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CText::~CText</definition>
+        <argsstring>()</argsstring>
+        <name>~CText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="19" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="11" bodyend="14"/>
+        <references refid="class_c_text_1a3e246ed1385aafa70441a021be3e7ee1" compoundref="_c_text_8cpp" startline="65" endline="77">ClearAll</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1a3ccc06d79ea85f40426f21ed7219d4a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CText::NewFile</definition>
+        <argsstring>()</argsstring>
+        <name>NewFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="20" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="16" bodyend="24"/>
+        <references refid="class_c_text_1ad0f99adc5e1f43ba93836861dac3d9eb" compoundref="_c_text_8h" startline="48">bSave</references>
+        <references refid="class_c_text_1a3e246ed1385aafa70441a021be3e7ee1" compoundref="_c_text_8cpp" startline="65" endline="77">ClearAll</references>
+        <references refid="class_c_text_1ae19a9e36fe00935533ebb683dc9b0632" compoundref="_c_text_8h" startline="47">FileName</references>
+        <references refid="class_c_text_1a0fbd8b65d0861a892e2c7b7bea5648f9" compoundref="_c_text_8h" startline="46">nLineNumbers</references>
+        <references refid="class_c_text_1a6de3303300a1ff02082de92b183cc4fa" compoundref="_c_text_8h" startline="45">pFirstLineHead</references>
+        <referencedby refid="_a_p_i_8h_1ac576655145c5b4612f504e04a6511a32" compoundref="_a_p_i_8cpp" startline="485" endline="496">CreateText</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1af08d08cbfeb491ec0e3fa58da5747b07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CText::ReadText</definition>
+        <argsstring>(std::string filename)</argsstring>
+        <name>ReadText</name>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="21" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="26" bodyend="61"/>
+        <references refid="class_c_text_1ad0f99adc5e1f43ba93836861dac3d9eb" compoundref="_c_text_8h" startline="48">bSave</references>
+        <references refid="class_c_text_1a3e246ed1385aafa70441a021be3e7ee1" compoundref="_c_text_8cpp" startline="65" endline="77">ClearAll</references>
+        <references refid="class_c_line_1af2650c129299a35ffc4b2c4f9044ac65" compoundref="_c_line_8cpp" startline="25" endline="62">CLine::CreateLine</references>
+        <references refid="class_c_text_1ae19a9e36fe00935533ebb683dc9b0632" compoundref="_c_text_8h" startline="47">FileName</references>
+        <references refid="class_c_text_1a0fbd8b65d0861a892e2c7b7bea5648f9" compoundref="_c_text_8h" startline="46">nLineNumbers</references>
+        <references refid="class_c_text_1a6de3303300a1ff02082de92b183cc4fa" compoundref="_c_text_8h" startline="45">pFirstLineHead</references>
+        <references refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" compoundref="_c_line_8h" startline="55">CLine::pNextLine</references>
+        <references refid="_c_text_8cpp_1a4a7fc45da60a491092a6d2e67a580d77" compoundref="_c_text_8cpp" startline="658" endline="670">StringToWString</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1afa2569e6f696901abcd3fe1394513921" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CText::Save</definition>
+        <argsstring>(std::string filename=&quot;&quot;, bool isChange=false)</argsstring>
+        <name>Save</name>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isChange</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="22" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="348" bodyend="365"/>
+        <references refid="class_c_text_1ad0f99adc5e1f43ba93836861dac3d9eb" compoundref="_c_text_8h" startline="48">bSave</references>
+        <references refid="class_c_text_1ae19a9e36fe00935533ebb683dc9b0632" compoundref="_c_text_8h" startline="47">FileName</references>
+        <references refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" compoundref="_c_line_8h" startline="58">CLine::nDataSize</references>
+        <references refid="class_c_text_1a6de3303300a1ff02082de92b183cc4fa" compoundref="_c_text_8h" startline="45">pFirstLineHead</references>
+        <references refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" compoundref="_c_line_8h" startline="55">CLine::pNextLine</references>
+        <references refid="class_c_line_1a858096cef404306ad1a2d7bf8314f46b" compoundref="_c_line_8cpp" startline="297" endline="314">CLine::TransformToWString</references>
+        <references refid="_c_text_8cpp_1af569eb0346b1cb75b5b5c1c3ed9afda0" compoundref="_c_text_8cpp" startline="673" endline="686">WStringToString</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1a3e246ed1385aafa70441a021be3e7ee1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CText::ClearAll</definition>
+        <argsstring>()</argsstring>
+        <name>ClearAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="23" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="65" bodyend="77"/>
+        <references refid="class_c_text_1ad0f99adc5e1f43ba93836861dac3d9eb" compoundref="_c_text_8h" startline="48">bSave</references>
+        <references refid="class_c_text_1ae19a9e36fe00935533ebb683dc9b0632" compoundref="_c_text_8h" startline="47">FileName</references>
+        <references refid="class_c_text_1a0fbd8b65d0861a892e2c7b7bea5648f9" compoundref="_c_text_8h" startline="46">nLineNumbers</references>
+        <references refid="class_c_text_1a6de3303300a1ff02082de92b183cc4fa" compoundref="_c_text_8h" startline="45">pFirstLineHead</references>
+        <references refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" compoundref="_c_line_8h" startline="55">CLine::pNextLine</references>
+        <referencedby refid="class_c_text_1a0728c99dde862c9b11dd0867df790ab5" compoundref="_c_text_8cpp" startline="94" endline="131">DeleteLines</referencedby>
+        <referencedby refid="class_c_text_1a3ccc06d79ea85f40426f21ed7219d4a8" compoundref="_c_text_8cpp" startline="16" endline="24">NewFile</referencedby>
+        <referencedby refid="class_c_text_1af08d08cbfeb491ec0e3fa58da5747b07" compoundref="_c_text_8cpp" startline="26" endline="61">ReadText</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+        <referencedby refid="class_c_text_1acf85c241b5e80ef93883d2b25e330b49" compoundref="_c_text_8cpp" startline="11" endline="14">~CText</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1ae4b10318f3186e0c603d8e811420f86f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CText::ShowText</definition>
+        <argsstring>() const </argsstring>
+        <name>ShowText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="24" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="79" bodyend="90"/>
+        <references refid="class_c_text_1a6de3303300a1ff02082de92b183cc4fa" compoundref="_c_text_8h" startline="45">pFirstLineHead</references>
+        <references refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" compoundref="_c_line_8h" startline="55">CLine::pNextLine</references>
+        <references refid="class_c_line_1a641185ca9a1b60c0a2dc7cc403c7e792" compoundref="_c_line_8cpp" startline="83" endline="103">CLine::ShowLineData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1a0728c99dde862c9b11dd0867df790ab5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CText::DeleteLines</definition>
+        <argsstring>(int first, int last)</argsstring>
+        <name>DeleteLines</name>
+        <param>
+          <type>int</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="25" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="94" bodyend="131"/>
+        <references refid="class_c_text_1ad0f99adc5e1f43ba93836861dac3d9eb" compoundref="_c_text_8h" startline="48">bSave</references>
+        <references refid="class_c_text_1a3e246ed1385aafa70441a021be3e7ee1" compoundref="_c_text_8cpp" startline="65" endline="77">ClearAll</references>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">GetLinePointer</references>
+        <references refid="class_c_line_1aa1aed03c5292b8299dd7bcd037a06bf3" compoundref="_c_line_8h" startline="57">CLine::nLineNumber</references>
+        <references refid="class_c_text_1a0fbd8b65d0861a892e2c7b7bea5648f9" compoundref="_c_text_8h" startline="46">nLineNumbers</references>
+        <references refid="class_c_text_1a6de3303300a1ff02082de92b183cc4fa" compoundref="_c_text_8h" startline="45">pFirstLineHead</references>
+        <references refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" compoundref="_c_line_8h" startline="55">CLine::pNextLine</references>
+        <references refid="class_c_text_1aeda642a670bea4acb514a5a7ec2496ba" compoundref="_c_text_8cpp" startline="417" endline="426">UpDataLineNumber</references>
+        <referencedby refid="class_c_text_1a8b4cd3375f2f673e7daeb8caae3299dd" compoundref="_c_text_8cpp" startline="166" endline="189">BackSpace</referencedby>
+        <referencedby refid="class_c_text_1a5baa587ee060cec570e68110bf6e6f2d" compoundref="_c_text_8cpp" startline="136" endline="160">Delete</referencedby>
+        <referencedby refid="struct_record_1a8bc01d9746033bc55acf407f9b0e8411" compoundref="_record_8cpp" startline="15" endline="50">Record::ReDo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1a5baa587ee060cec570e68110bf6e6f2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+        <definition>Position CText::Delete</definition>
+        <argsstring>(Position first, Position last)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="26" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="136" bodyend="160"/>
+        <references refid="class_c_text_1ad0f99adc5e1f43ba93836861dac3d9eb" compoundref="_c_text_8h" startline="48">bSave</references>
+        <references refid="class_c_line_1a63450973816d9f285f1799cd9966eaa5" compoundref="_c_line_8cpp" startline="108" endline="144">CLine::DeleteLine</references>
+        <references refid="class_c_text_1a0728c99dde862c9b11dd0867df790ab5" compoundref="_c_text_8cpp" startline="94" endline="131">DeleteLines</references>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">GetLinePointer</references>
+        <references refid="class_c_line_1a2ff023c084dbcad874bff56688a16145" compoundref="_c_line_8cpp" startline="175" endline="280">CLine::InsertStrings</references>
+        <references refid="struct_position_1a7b72348893583b77254a650b7095c9fc" compoundref="_c_line_8h" startline="11">Position::LineNumber</references>
+        <references refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" compoundref="_c_line_8h" startline="58">CLine::nDataSize</references>
+        <references refid="class_c_line_1aa1aed03c5292b8299dd7bcd037a06bf3" compoundref="_c_line_8h" startline="57">CLine::nLineNumber</references>
+        <references refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" compoundref="_c_line_8h" startline="55">CLine::pNextLine</references>
+        <references refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" compoundref="_c_line_8h" startline="12">Position::Sequence</references>
+        <references refid="class_c_line_1a858096cef404306ad1a2d7bf8314f46b" compoundref="_c_line_8cpp" startline="297" endline="314">CLine::TransformToWString</references>
+        <referencedby refid="struct_record_1a8bc01d9746033bc55acf407f9b0e8411" compoundref="_record_8cpp" startline="15" endline="50">Record::ReDo</referencedby>
+        <referencedby refid="class_c_text_1a62eee26c0c1dd6f67d0b6ecca5d59a70" compoundref="_c_text_8cpp" startline="341" endline="346">Replace</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1a8b4cd3375f2f673e7daeb8caae3299dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+        <definition>Position CText::BackSpace</definition>
+        <argsstring>(Position position)</argsstring>
+        <name>BackSpace</name>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="27" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="166" bodyend="189"/>
+        <references refid="class_c_line_1a5aa15f3309c620d7972eebd58d9793a2" compoundref="_c_line_8cpp" startline="150" endline="164">CLine::BackSpace</references>
+        <references refid="class_c_text_1ad0f99adc5e1f43ba93836861dac3d9eb" compoundref="_c_text_8h" startline="48">bSave</references>
+        <references refid="class_c_text_1a0728c99dde862c9b11dd0867df790ab5" compoundref="_c_text_8cpp" startline="94" endline="131">DeleteLines</references>
+        <references refid="class_c_line_1a2ff023c084dbcad874bff56688a16145" compoundref="_c_line_8cpp" startline="175" endline="280">CLine::InsertStrings</references>
+        <references refid="struct_position_1a7b72348893583b77254a650b7095c9fc" compoundref="_c_line_8h" startline="11">Position::LineNumber</references>
+        <references refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" compoundref="_c_line_8h" startline="58">CLine::nDataSize</references>
+        <references refid="class_c_line_1aa1aed03c5292b8299dd7bcd037a06bf3" compoundref="_c_line_8h" startline="57">CLine::nLineNumber</references>
+        <references refid="class_c_text_1a6de3303300a1ff02082de92b183cc4fa" compoundref="_c_text_8h" startline="45">pFirstLineHead</references>
+        <references refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" compoundref="_c_line_8h" startline="55">CLine::pNextLine</references>
+        <references refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" compoundref="_c_line_8h" startline="12">Position::Sequence</references>
+        <references refid="class_c_line_1a858096cef404306ad1a2d7bf8314f46b" compoundref="_c_line_8cpp" startline="297" endline="314">CLine::TransformToWString</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1aeb95b8bf7a9517ead86bff6e39841cb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+        <definition>Position CText::Insert</definition>
+        <argsstring>(Position start, std::wstring String)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>std::wstring</type>
+          <declname>String</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="28" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="199" bodyend="241"/>
+        <references refid="class_c_text_1ad0f99adc5e1f43ba93836861dac3d9eb" compoundref="_c_text_8h" startline="48">bSave</references>
+        <references refid="class_c_text_1ae7356293c6869d990f8cbe9f18d23b05" compoundref="_c_text_8cpp" startline="278" endline="302">EnterNewLine</references>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">GetLinePointer</references>
+        <references refid="class_c_line_1a2ff023c084dbcad874bff56688a16145" compoundref="_c_line_8cpp" startline="175" endline="280">CLine::InsertStrings</references>
+        <references refid="struct_position_1a7b72348893583b77254a650b7095c9fc" compoundref="_c_line_8h" startline="11">Position::LineNumber</references>
+        <references refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" compoundref="_c_line_8h" startline="55">CLine::pNextLine</references>
+        <references refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" compoundref="_c_line_8h" startline="12">Position::Sequence</references>
+        <references refid="_c_text_8cpp_1a3a03889707f93befc61f5b35f22bd30d" compoundref="_c_text_8cpp" startline="708" endline="726">WStrToLineWStr</references>
+        <referencedby refid="struct_record_1a8bc01d9746033bc55acf407f9b0e8411" compoundref="_record_8cpp" startline="15" endline="50">Record::ReDo</referencedby>
+        <referencedby refid="class_c_text_1a62eee26c0c1dd6f67d0b6ecca5d59a70" compoundref="_c_text_8cpp" startline="341" endline="346">Replace</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1a46f994aaca813d66221125f4295f4fcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::wstring</type>
+        <definition>std::wstring CText::Copy</definition>
+        <argsstring>(Position start, Position end)</argsstring>
+        <name>Copy</name>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="29" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="243" bodyend="268"/>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">GetLinePointer</references>
+        <references refid="struct_position_1a7b72348893583b77254a650b7095c9fc" compoundref="_c_line_8h" startline="11">Position::LineNumber</references>
+        <references refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" compoundref="_c_line_8h" startline="58">CLine::nDataSize</references>
+        <references refid="class_c_line_1aa1aed03c5292b8299dd7bcd037a06bf3" compoundref="_c_line_8h" startline="57">CLine::nLineNumber</references>
+        <references refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" compoundref="_c_line_8h" startline="55">CLine::pNextLine</references>
+        <references refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" compoundref="_c_line_8h" startline="12">Position::Sequence</references>
+        <references refid="class_c_line_1a858096cef404306ad1a2d7bf8314f46b" compoundref="_c_line_8cpp" startline="297" endline="314">CLine::TransformToWString</references>
+        <referencedby refid="struct_record_1afdb85f0fa26f8fc5def05eaa2280dd0d" compoundref="_record_8cpp" startline="52" endline="58">Record::Save_Delete_Data</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1ae7356293c6869d990f8cbe9f18d23b05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+        <definition>Position CText::EnterNewLine</definition>
+        <argsstring>(Position position)</argsstring>
+        <name>EnterNewLine</name>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="30" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="278" bodyend="302"/>
+        <references refid="class_c_line_1aeaf95dd3dc1f5d66238c7b268b0405f8" compoundref="_c_line_8h" startline="60">CLine::bBlankLine</references>
+        <references refid="class_c_text_1ad0f99adc5e1f43ba93836861dac3d9eb" compoundref="_c_text_8h" startline="48">bSave</references>
+        <references refid="class_c_line_1af2650c129299a35ffc4b2c4f9044ac65" compoundref="_c_line_8cpp" startline="25" endline="62">CLine::CreateLine</references>
+        <references refid="class_c_line_1a63450973816d9f285f1799cd9966eaa5" compoundref="_c_line_8cpp" startline="108" endline="144">CLine::DeleteLine</references>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">GetLinePointer</references>
+        <references refid="class_c_text_1a25ac3e1c862882f89d9515ce8c6a7dc3" compoundref="_c_text_8cpp" startline="432" endline="456">InsertLine</references>
+        <references refid="struct_position_1a7b72348893583b77254a650b7095c9fc" compoundref="_c_line_8h" startline="11">Position::LineNumber</references>
+        <references refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" compoundref="_c_line_8h" startline="58">CLine::nDataSize</references>
+        <references refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" compoundref="_c_line_8h" startline="55">CLine::pNextLine</references>
+        <references refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" compoundref="_c_line_8h" startline="12">Position::Sequence</references>
+        <references refid="class_c_line_1a858096cef404306ad1a2d7bf8314f46b" compoundref="_c_line_8cpp" startline="297" endline="314">CLine::TransformToWString</references>
+        <referencedby refid="class_c_text_1aeb95b8bf7a9517ead86bff6e39841cb1" compoundref="_c_text_8cpp" startline="199" endline="241">Insert</referencedby>
+        <referencedby refid="struct_record_1a8bc01d9746033bc55acf407f9b0e8411" compoundref="_record_8cpp" startline="15" endline="50">Record::ReDo</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1aa3fefff896b218007b90cdd671f732f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CText::SeekStrings</definition>
+        <argsstring>(std::wstring Str, Position &amp;start, Position &amp;end)</argsstring>
+        <name>SeekStrings</name>
+        <param>
+          <type>std::wstring</type>
+          <declname>Str</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref> &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref> &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="31" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="305" bodyend="335"/>
+        <references refid="class_text__iterator_1a5828a1d8a40e197491579a7840b090e5" compoundref="_c_text_8cpp" startline="608" endline="613">Text_iterator::GetCurPositin</references>
+        <references refid="_c_text_8cpp_1af55fb814559f06f900a5181c8439dffa" compoundref="_c_text_8cpp" startline="621" endline="642">GetNextValArray</references>
+        <references refid="class_text__iterator_1a2e7a32115ef11481d791333840138e72" compoundref="_c_text_8cpp" startline="601" endline="606">Text_iterator::GoEnd</references>
+        <references refid="class_text__iterator_1a6fafa43cf62867ecadb47524a5771dec" compoundref="_c_text_8cpp" startline="595" endline="599">Text_iterator::GoPosition</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1a62eee26c0c1dd6f67d0b6ecca5d59a70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+        <definition>Position CText::Replace</definition>
+        <argsstring>(Position start, Position end, std::wstring Str)</argsstring>
+        <name>Replace</name>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>std::wstring</type>
+          <declname>Str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="32" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="341" bodyend="346"/>
+        <references refid="class_c_text_1a5baa587ee060cec570e68110bf6e6f2d" compoundref="_c_text_8cpp" startline="136" endline="160">Delete</references>
+        <references refid="class_c_text_1aeb95b8bf7a9517ead86bff6e39841cb1" compoundref="_c_text_8cpp" startline="199" endline="241">Insert</references>
+        <references refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" compoundref="_c_line_8h" startline="12">Position::Sequence</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1adfbfca8b8512249320e44923ffb30165" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CText::isSaved</definition>
+        <argsstring>()</argsstring>
+        <name>isSaved</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="33" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="367" bodyend="370"/>
+        <references refid="class_c_text_1ad0f99adc5e1f43ba93836861dac3d9eb" compoundref="_c_text_8h" startline="48">bSave</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1a2caf6d91ed3647c812aa7ef7cb7d95b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string CText::FilePath</definition>
+        <argsstring>()</argsstring>
+        <name>FilePath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="34" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="372" bodyend="378"/>
+        <references refid="class_c_text_1ae19a9e36fe00935533ebb683dc9b0632" compoundref="_c_text_8h" startline="47">FileName</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1af5f4ba7568e0d2dceaa80fa49f4d36b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CText::Line_Size</definition>
+        <argsstring>(int LineNumber)</argsstring>
+        <name>Line_Size</name>
+        <param>
+          <type>int</type>
+          <declname>LineNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="37" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="380" bodyend="384"/>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">GetLinePointer</references>
+        <references refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" compoundref="_c_line_8h" startline="58">CLine::nDataSize</references>
+        <referencedby refid="class_cursor_1a1c0097f56a21a934c39c60baa1d05008" compoundref="_cursor_8cpp" startline="40" endline="54">Cursor::isEnAfter</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1aa7f303a9de41a6d9215fb05c2d1400b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CText::Line_Width</definition>
+        <argsstring>(int LineNumber, int Width, int end=0)</argsstring>
+        <name>Line_Width</name>
+        <param>
+          <type>int</type>
+          <declname>LineNumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="38" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="387" bodyend="393"/>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">GetLinePointer</references>
+        <references refid="class_c_line_1a6a02a6e68649d707504f1c9ab8470d33" compoundref="_c_line_8cpp" startline="345" endline="364">CLine::Line_Width</references>
+        <referencedby refid="class_cursor_1a600f57bb2ab36d2632cffcf73016f7b5" compoundref="_cursor_8cpp" startline="157" endline="173">Cursor::CursorLocation</referencedby>
+        <referencedby refid="class_cursor_1aa651fe435ded2561b306da89ea6bcc04" compoundref="_cursor_8cpp" startline="220" endline="229">Cursor::PositionToCursor</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1afc86a44065dfc1e03c51126a57bd1b66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CText::Max_Line_Width</definition>
+        <argsstring>(int Width)</argsstring>
+        <name>Max_Line_Width</name>
+        <param>
+          <type>int</type>
+          <declname>Width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="39" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="394" bodyend="405"/>
+        <references refid="class_c_line_1a6a02a6e68649d707504f1c9ab8470d33" compoundref="_c_line_8cpp" startline="345" endline="364">CLine::Line_Width</references>
+        <references refid="class_c_text_1a6de3303300a1ff02082de92b183cc4fa" compoundref="_c_text_8h" startline="45">pFirstLineHead</references>
+        <references refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" compoundref="_c_line_8h" startline="55">CLine::pNextLine</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1a823b5a708158bcf403f099768ccfa280" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CText::Line_Number</definition>
+        <argsstring>() const </argsstring>
+        <name>Line_Number</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="40" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="407" bodyend="410"/>
+        <references refid="class_c_text_1a0fbd8b65d0861a892e2c7b7bea5648f9" compoundref="_c_text_8h" startline="46">nLineNumbers</references>
+        <referencedby refid="class_cursor_1ab52b823114daf6409a3e292a2e1cd815" compoundref="_cursor_8cpp" startline="199" endline="216">Cursor::CursorToPosition_After</referencedby>
+        <referencedby refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">GetLinePointer</referencedby>
+        <referencedby refid="class_text__iterator_1a2e7a32115ef11481d791333840138e72" compoundref="_c_text_8cpp" startline="601" endline="606">Text_iterator::GoEnd</referencedby>
+        <referencedby refid="class_text__iterator_1a7ec78e7e057bf205d62bf7487faee1fc" compoundref="_c_text_8cpp" startline="586" endline="593">Text_iterator::isEnd</referencedby>
+        <referencedby refid="class_cursor_1a3decae7bfe7197dc8975c3ff6349be55" compoundref="_cursor_8cpp" startline="85" endline="102">Cursor::isTextTail</referencedby>
+        <referencedby refid="class_text__iterator_1ac9403569982df04eb9141282b738acd8" compoundref="_c_text_8cpp" startline="510" endline="526">Text_iterator::operator++</referencedby>
+        <referencedby refid="class_text__iterator_1a1a9abe224d85f442243bc07305357be6" compoundref="_c_text_8cpp" startline="487" endline="495">Text_iterator::Text_iterator</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_line" kindref="compound">CLine</ref> *</type>
+        <definition>CLine * CText::GetLinePointer</definition>
+        <argsstring>(int LineNumber)</argsstring>
+        <name>GetLinePointer</name>
+        <param>
+          <type>int</type>
+          <declname>LineNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="41" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="458" bodyend="468"/>
+        <references refid="class_c_text_1a823b5a708158bcf403f099768ccfa280" compoundref="_c_text_8cpp" startline="407" endline="410">Line_Number</references>
+        <references refid="class_c_line_1aa1aed03c5292b8299dd7bcd037a06bf3" compoundref="_c_line_8h" startline="57">CLine::nLineNumber</references>
+        <references refid="class_c_text_1a6de3303300a1ff02082de92b183cc4fa" compoundref="_c_text_8h" startline="45">pFirstLineHead</references>
+        <references refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" compoundref="_c_line_8h" startline="55">CLine::pNextLine</references>
+        <referencedby refid="class_cursor_1a6a42225dc8a5cbb8c7c1cd14691e55a4" compoundref="_cursor_8cpp" startline="105" endline="126">Cursor::Characters_before_Cursor</referencedby>
+        <referencedby refid="class_cursor_1a232dccb43dd8bfaa9a3662d7f6f69d5a" compoundref="_cursor_8cpp" startline="134" endline="150">Cursor::CharactersProperty_before_Cursor</referencedby>
+        <referencedby refid="class_c_text_1a46f994aaca813d66221125f4295f4fcd" compoundref="_c_text_8cpp" startline="243" endline="268">Copy</referencedby>
+        <referencedby refid="class_cursor_1ab52b823114daf6409a3e292a2e1cd815" compoundref="_cursor_8cpp" startline="199" endline="216">Cursor::CursorToPosition_After</referencedby>
+        <referencedby refid="class_c_text_1a5baa587ee060cec570e68110bf6e6f2d" compoundref="_c_text_8cpp" startline="136" endline="160">Delete</referencedby>
+        <referencedby refid="class_c_text_1a0728c99dde862c9b11dd0867df790ab5" compoundref="_c_text_8cpp" startline="94" endline="131">DeleteLines</referencedby>
+        <referencedby refid="class_c_text_1a6914c55bbd4bb8352517f672b1986545" compoundref="_c_text_8cpp" startline="478" endline="485">End_Position</referencedby>
+        <referencedby refid="class_c_text_1ae7356293c6869d990f8cbe9f18d23b05" compoundref="_c_text_8cpp" startline="278" endline="302">EnterNewLine</referencedby>
+        <referencedby refid="class_text__iterator_1a2e7a32115ef11481d791333840138e72" compoundref="_c_text_8cpp" startline="601" endline="606">Text_iterator::GoEnd</referencedby>
+        <referencedby refid="class_text__iterator_1a6fafa43cf62867ecadb47524a5771dec" compoundref="_c_text_8cpp" startline="595" endline="599">Text_iterator::GoPosition</referencedby>
+        <referencedby refid="class_c_text_1aeb95b8bf7a9517ead86bff6e39841cb1" compoundref="_c_text_8cpp" startline="199" endline="241">Insert</referencedby>
+        <referencedby refid="class_cursor_1a1c0097f56a21a934c39c60baa1d05008" compoundref="_cursor_8cpp" startline="40" endline="54">Cursor::isEnAfter</referencedby>
+        <referencedby refid="class_text__iterator_1a7ec78e7e057bf205d62bf7487faee1fc" compoundref="_c_text_8cpp" startline="586" endline="593">Text_iterator::isEnd</referencedby>
+        <referencedby refid="class_cursor_1a6b66a6210267c25f37ac6594ec4175de" compoundref="_cursor_8cpp" startline="56" endline="82">Cursor::isLegalCursor</referencedby>
+        <referencedby refid="class_cursor_1a3decae7bfe7197dc8975c3ff6349be55" compoundref="_cursor_8cpp" startline="85" endline="102">Cursor::isTextTail</referencedby>
+        <referencedby refid="class_c_text_1af5f4ba7568e0d2dceaa80fa49f4d36b7" compoundref="_c_text_8cpp" startline="380" endline="384">Line_Size</referencedby>
+        <referencedby refid="class_c_text_1aa7f303a9de41a6d9215fb05c2d1400b3" compoundref="_c_text_8cpp" startline="387" endline="393">Line_Width</referencedby>
+        <referencedby refid="class_text__iterator_1ae6c88cae4a7b534df1ad354c30d97dce" compoundref="_c_text_8cpp" startline="535" endline="551">Text_iterator::operator--</referencedby>
+        <referencedby refid="struct_record_1a8bc01d9746033bc55acf407f9b0e8411" compoundref="_record_8cpp" startline="15" endline="50">Record::ReDo</referencedby>
+        <referencedby refid="struct_record_1aca658c6e7d69a2f7fdd0c6acac941972" compoundref="_record_8cpp" startline="60" endline="67">Record::Save_Merge_Line_Data</referencedby>
+        <referencedby refid="class_text__iterator_1a1a9abe224d85f442243bc07305357be6" compoundref="_c_text_8cpp" startline="487" endline="495">Text_iterator::Text_iterator</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1adabfa437bcb579070acca49c058bfadc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+        <definition>Position CText::First_Position</definition>
+        <argsstring>()</argsstring>
+        <name>First_Position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="42" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="470" bodyend="476"/>
+        <references refid="class_c_text_1a6de3303300a1ff02082de92b183cc4fa" compoundref="_c_text_8h" startline="45">pFirstLineHead</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1a6914c55bbd4bb8352517f672b1986545" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+        <definition>Position CText::End_Position</definition>
+        <argsstring>()</argsstring>
+        <name>End_Position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="43" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="478" bodyend="485"/>
+        <references refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" compoundref="_c_text_8cpp" startline="458" endline="468">GetLinePointer</references>
+        <references refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" compoundref="_c_line_8h" startline="58">CLine::nDataSize</references>
+        <references refid="class_c_text_1a0fbd8b65d0861a892e2c7b7bea5648f9" compoundref="_c_text_8h" startline="46">nLineNumbers</references>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_c_text_1aeda642a670bea4acb514a5a7ec2496ba" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CText::UpDataLineNumber</definition>
+        <argsstring>(CLine *p, int Start)</argsstring>
+        <name>UpDataLineNumber</name>
+        <param>
+          <type><ref refid="class_c_line" kindref="compound">CLine</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Start</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="49" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="417" bodyend="426"/>
+        <references refid="class_c_text_1a0fbd8b65d0861a892e2c7b7bea5648f9" compoundref="_c_text_8h" startline="46">nLineNumbers</references>
+        <references refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" compoundref="_c_line_8h" startline="55">CLine::pNextLine</references>
+        <references refid="class_c_line_1aef155ee29a549e03cc4e4b1199191f6b" compoundref="_c_line_8cpp" startline="334" endline="337">CLine::SetLineNumber</references>
+        <referencedby refid="class_c_text_1a0728c99dde862c9b11dd0867df790ab5" compoundref="_c_text_8cpp" startline="94" endline="131">DeleteLines</referencedby>
+        <referencedby refid="class_c_text_1a25ac3e1c862882f89d9515ce8c6a7dc3" compoundref="_c_text_8cpp" startline="432" endline="456">InsertLine</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_text_1a25ac3e1c862882f89d9515ce8c6a7dc3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CText::InsertLine</definition>
+        <argsstring>(int AfterLineNumber)</argsstring>
+        <name>InsertLine</name>
+        <param>
+          <type>int</type>
+          <declname>AfterLineNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="50" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp" bodystart="432" bodyend="456"/>
+        <references refid="class_c_line_1aa1aed03c5292b8299dd7bcd037a06bf3" compoundref="_c_line_8h" startline="57">CLine::nLineNumber</references>
+        <references refid="class_c_text_1a6de3303300a1ff02082de92b183cc4fa" compoundref="_c_text_8h" startline="45">pFirstLineHead</references>
+        <references refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" compoundref="_c_line_8h" startline="55">CLine::pNextLine</references>
+        <references refid="class_c_text_1aeda642a670bea4acb514a5a7ec2496ba" compoundref="_c_text_8cpp" startline="417" endline="426">UpDataLineNumber</references>
+        <referencedby refid="class_c_text_1ae7356293c6869d990f8cbe9f18d23b05" compoundref="_c_text_8cpp" startline="278" endline="302">EnterNewLine</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="29">
+        <label>CText</label>
+        <link refid="class_c_text"/>
+        <childnode refid="30" relation="usage">
+          <edgelabel>pFirstLineHead</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>FileName</edgelabel>
+        </childnode>
+      </node>
+      <node id="33">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="31">
+        <label>DataBlock</label>
+        <link refid="struct_data_block"/>
+        <childnode refid="31" relation="usage">
+          <edgelabel>pNextBlock</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>CLine</label>
+        <link refid="class_c_line"/>
+        <childnode refid="30" relation="usage">
+          <edgelabel>pNextLine</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>pLineHead</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>std::string</label>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" line="13" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.h" bodystart="12" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_c_text_1a8b4cd3375f2f673e7daeb8caae3299dd" prot="public" virt="non-virtual"><scope>CText</scope><name>BackSpace</name></member>
+      <member refid="class_c_text_1ad0f99adc5e1f43ba93836861dac3d9eb" prot="private" virt="non-virtual"><scope>CText</scope><name>bSave</name></member>
+      <member refid="class_c_text_1a3e246ed1385aafa70441a021be3e7ee1" prot="public" virt="non-virtual"><scope>CText</scope><name>ClearAll</name></member>
+      <member refid="class_c_text_1a46f994aaca813d66221125f4295f4fcd" prot="public" virt="non-virtual"><scope>CText</scope><name>Copy</name></member>
+      <member refid="class_c_text_1af837cea14f98ba12e37139cb702eb57e" prot="public" virt="non-virtual"><scope>CText</scope><name>CText</name></member>
+      <member refid="class_c_text_1a9591eb6f6543f40292912e27b74f4d27" prot="private" virt="non-virtual"><scope>CText</scope><name>Cursor</name></member>
+      <member refid="class_c_text_1a5baa587ee060cec570e68110bf6e6f2d" prot="public" virt="non-virtual"><scope>CText</scope><name>Delete</name></member>
+      <member refid="class_c_text_1a0728c99dde862c9b11dd0867df790ab5" prot="public" virt="non-virtual"><scope>CText</scope><name>DeleteLines</name></member>
+      <member refid="class_c_text_1a6914c55bbd4bb8352517f672b1986545" prot="public" virt="non-virtual"><scope>CText</scope><name>End_Position</name></member>
+      <member refid="class_c_text_1ae7356293c6869d990f8cbe9f18d23b05" prot="public" virt="non-virtual"><scope>CText</scope><name>EnterNewLine</name></member>
+      <member refid="class_c_text_1ae19a9e36fe00935533ebb683dc9b0632" prot="private" virt="non-virtual"><scope>CText</scope><name>FileName</name></member>
+      <member refid="class_c_text_1a2caf6d91ed3647c812aa7ef7cb7d95b7" prot="public" virt="non-virtual"><scope>CText</scope><name>FilePath</name></member>
+      <member refid="class_c_text_1adabfa437bcb579070acca49c058bfadc" prot="public" virt="non-virtual"><scope>CText</scope><name>First_Position</name></member>
+      <member refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" prot="public" virt="non-virtual"><scope>CText</scope><name>GetLinePointer</name></member>
+      <member refid="class_c_text_1aeb95b8bf7a9517ead86bff6e39841cb1" prot="public" virt="non-virtual"><scope>CText</scope><name>Insert</name></member>
+      <member refid="class_c_text_1a25ac3e1c862882f89d9515ce8c6a7dc3" prot="private" virt="non-virtual"><scope>CText</scope><name>InsertLine</name></member>
+      <member refid="class_c_text_1adfbfca8b8512249320e44923ffb30165" prot="public" virt="non-virtual"><scope>CText</scope><name>isSaved</name></member>
+      <member refid="class_c_text_1a823b5a708158bcf403f099768ccfa280" prot="public" virt="non-virtual"><scope>CText</scope><name>Line_Number</name></member>
+      <member refid="class_c_text_1af5f4ba7568e0d2dceaa80fa49f4d36b7" prot="public" virt="non-virtual"><scope>CText</scope><name>Line_Size</name></member>
+      <member refid="class_c_text_1aa7f303a9de41a6d9215fb05c2d1400b3" prot="public" virt="non-virtual"><scope>CText</scope><name>Line_Width</name></member>
+      <member refid="class_c_text_1afc86a44065dfc1e03c51126a57bd1b66" prot="public" virt="non-virtual"><scope>CText</scope><name>Max_Line_Width</name></member>
+      <member refid="class_c_text_1a3ccc06d79ea85f40426f21ed7219d4a8" prot="public" virt="non-virtual"><scope>CText</scope><name>NewFile</name></member>
+      <member refid="class_c_text_1a0fbd8b65d0861a892e2c7b7bea5648f9" prot="private" virt="non-virtual"><scope>CText</scope><name>nLineNumbers</name></member>
+      <member refid="class_c_text_1a6de3303300a1ff02082de92b183cc4fa" prot="private" virt="non-virtual"><scope>CText</scope><name>pFirstLineHead</name></member>
+      <member refid="class_c_text_1af08d08cbfeb491ec0e3fa58da5747b07" prot="public" virt="non-virtual"><scope>CText</scope><name>ReadText</name></member>
+      <member refid="class_c_text_1a17c0c5b58fd032e805b50a87a755c678" prot="private" virt="non-virtual"><scope>CText</scope><name>Record</name></member>
+      <member refid="class_c_text_1a62eee26c0c1dd6f67d0b6ecca5d59a70" prot="public" virt="non-virtual"><scope>CText</scope><name>Replace</name></member>
+      <member refid="class_c_text_1afa2569e6f696901abcd3fe1394513921" prot="public" virt="non-virtual"><scope>CText</scope><name>Save</name></member>
+      <member refid="class_c_text_1aa3fefff896b218007b90cdd671f732f8" prot="public" virt="non-virtual"><scope>CText</scope><name>SeekStrings</name></member>
+      <member refid="class_c_text_1ae4b10318f3186e0c603d8e811420f86f" prot="public" virt="non-virtual"><scope>CText</scope><name>ShowText</name></member>
+      <member refid="class_c_text_1a7846beece47c0269ad9fa44d851a22ed" prot="private" virt="non-virtual"><scope>CText</scope><name>Text_iterator</name></member>
+      <member refid="class_c_text_1aeda642a670bea4acb514a5a7ec2496ba" prot="private" virt="non-virtual"><scope>CText</scope><name>UpDataLineNumber</name></member>
+      <member refid="class_c_text_1acf85c241b5e80ef93883d2b25e330b49" prot="public" virt="non-virtual"><scope>CText</scope><name>~CText</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

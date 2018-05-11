@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="debug_8h" kind="file">
+    <compoundname>debug.h</compoundname>
+    <includes local="no">Windows.h</includes>
+    <includedby refid="_c_text_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp</includedby>
+    <includedby refid="_edit_box_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/EditBox.cpp</includedby>
+    <includedby refid="textoperation_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp</includedby>
+    <incdepgraph>
+      <node id="235">
+        <label>Windows.h</label>
+      </node>
+      <node id="234">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h</label>
+        <link refid="debug.h"/>
+        <childnode refid="235" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="237">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CText.cpp</label>
+        <link refid="_c_text_8cpp"/>
+      </node>
+      <node id="236">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h</label>
+        <link refid="debug.h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+      </node>
+      <node id="239">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp</label>
+        <link refid="textoperation_8cpp"/>
+      </node>
+      <node id="238">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/EditBox.cpp</label>
+        <link refid="_edit_box_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="debug_8h_1ad72dbcf6d0153db1b8d8a58001feed83" prot="public" static="no">
+        <name>DEBUG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h" line="5" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="debug_8h_1a07fa3915de3fd9da3bc5ef6f38dbd143" prot="public" static="no">
+        <name>PRINTCARETPOS</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>wprintf_s(TEXT(&quot;CaretPos = (%d, %d) &quot;), CARETPOS((<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>)).x, <ref refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" kindref="member">CARETPOS</ref>((<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>)).y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h" line="17" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="debug_8h_1a7f2fb4296befff0d0d5d2f3e0c5c7c04" prot="public" static="no">
+        <name>PRINTWINDOWSIZE</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>wprintf_s(TEXT(&quot;WindowSize = (%d, %d) &quot;), WINDOWSIZE((<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>)).x, <ref refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" kindref="member">WINDOWSIZE</ref>((<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>)).y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h" line="20" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="debug_8h_1a7278c3d4f8e08244b04af92d033070cc" prot="public" static="no">
+        <name>PRINTWINDOWPOS</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>wprintf_s(TEXT(&quot;WindowPos = (%d, %d) &quot;), WINDOWPOS((<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>)).x, <ref refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" kindref="member">WINDOWPOS</ref>((<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>)).y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h" line="23" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="debug_8h_1a3f2d02c5daa1c17be5b20e459ce24f9e" prot="public" static="no">
+        <name>PRINTPAGESIZE</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>wprintf_s(TEXT(&quot;PageSize = (%d, %d) &quot;), PAGESIZE((<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>)).x, <ref refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" kindref="member">PAGESIZE</ref>((<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>)).y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h" line="26" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="debug_8h_1a7fce88c2583e5a8cbb4286cb1654f764" prot="public" static="no">
+        <name>PRINTENDL</name>
+        <initializer>wprintf_s(TEXT(&quot;\n&quot;));</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h" line="29" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="debug_8h_1a073c979c78c71f57e1fad28aed7ba43f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void chDEBUGPRINTBOX</definition>
+        <argsstring>(LPCWSTR msg)</argsstring>
+        <name>chDEBUGPRINTBOX</name>
+        <param>
+          <type>LPCWSTR</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h" line="9" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp" bodystart="4" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="debug_8h_1a51da6b1c0fc0272e608451748156dc98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void chDEBUGMESSAGEBOX</definition>
+        <argsstring>(LPCWSTR lpszFmt,...)</argsstring>
+        <name>chDEBUGMESSAGEBOX</name>
+        <param>
+          <type>LPCWSTR</type>
+          <declname>lpszFmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h" line="11" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp" bodystart="16" bodyend="23"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="debug_8h_1abe1d3bfc8cd875bbdbf2756f41d94ceb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void chDEBUGTEXTOUT</definition>
+        <argsstring>(HWND hWnd, LPCWSTR lpString, int x, int y)</argsstring>
+        <name>chDEBUGTEXTOUT</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>LPCWSTR</type>
+          <declname>lpString</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h" line="13" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp" bodystart="9" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="debug_8h_1ad72dbcf6d0153db1b8d8a58001feed83" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEBUG</highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>++++++++++++++++++++<sp/>DEBUG<sp/>INFO<sp/>MESSAGEBOX<sp/>OUTPUT<sp/>MACRO<sp/>++++++++++++++<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="debug_8h_1a073c979c78c71f57e1fad28aed7ba43f" kindref="member">chDEBUGPRINTBOX</ref>(LPCWSTR<sp/>msg);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="debug_8h_1a51da6b1c0fc0272e608451748156dc98" kindref="member">chDEBUGMESSAGEBOX</ref>(LPCWSTR<sp/>lpszFmt,<sp/>...);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="debug_8h_1abe1d3bfc8cd875bbdbf2756f41d94ceb" kindref="member">chDEBUGTEXTOUT</ref>(HWND<sp/>hWnd,<sp/>LPCWSTR<sp/>lpString,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>++++++++++++++++++++++++++++++++<sp/>END<sp/>+++++++++++++++++++++++++++++++++<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>++++++++++++++++++++++++++++<sp/>DEBUG<sp/>INFO<sp/>CONSOLE<sp/>OUTPUT<sp/>MACRO<sp/>++++++++++++++++++++++++++++++++<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="debug_8h_1a07fa3915de3fd9da3bc5ef6f38dbd143" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRINTCARETPOS(hTextInfo)<sp/>\</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>wprintf_s(TEXT(&quot;CaretPos<sp/>=<sp/>(%d,<sp/>%d)<sp/>&quot;),<sp/>CARETPOS((hTextInfo)).x,<sp/>CARETPOS((hTextInfo)).y)</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="debug_8h_1a7f2fb4296befff0d0d5d2f3e0c5c7c04" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRINTWINDOWSIZE(hTextInfo)<sp/>\</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>wprintf_s(TEXT(&quot;WindowSize<sp/>=<sp/>(%d,<sp/>%d)<sp/>&quot;),<sp/>WINDOWSIZE((hTextInfo)).x,<sp/>WINDOWSIZE((hTextInfo)).y)</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="debug_8h_1a7278c3d4f8e08244b04af92d033070cc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRINTWINDOWPOS(hTextInfo)<sp/>\</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>wprintf_s(TEXT(&quot;WindowPos<sp/>=<sp/>(%d,<sp/>%d)<sp/>&quot;),<sp/>WINDOWPOS((hTextInfo)).x,<sp/>WINDOWPOS((hTextInfo)).y)</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="debug_8h_1a3f2d02c5daa1c17be5b20e459ce24f9e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRINTPAGESIZE(hTextInfo)<sp/>\</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>wprintf_s(TEXT(&quot;PageSize<sp/>=<sp/>(%d,<sp/>%d)<sp/>&quot;),<sp/>PAGESIZE((hTextInfo)).x,<sp/>PAGESIZE((hTextInfo)).y)</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="debug_8h_1a7fce88c2583e5a8cbb4286cb1654f764" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRINTENDL<sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>wprintf_s(TEXT(&quot;\n&quot;));</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="comment">//<sp/>++++++++++++++++++++++++++++++++++++++++++<sp/>END<sp/>++++++++++++++++++++++++++++++++++++++++++++++<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>DEBUG</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.h"/>
+  </compounddef>
+</doxygen>

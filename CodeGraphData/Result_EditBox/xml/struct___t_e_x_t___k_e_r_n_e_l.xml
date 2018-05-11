@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct___t_e_x_t___k_e_r_n_e_l" kind="struct" prot="public">
+    <compoundname>_TEXT_KERNEL</compoundname>
+    <includes refid="editbox_8h" local="no">editbox.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___t_e_x_t___k_e_r_n_e_l_1aa339ac3387af6d32176612d9d0fdec23" prot="public" static="no" mutable="no">
+        <type><ref refid="_a_p_i_8h_1aa9413ed7069327593b65b1fbe743f019" kindref="member">HTEXT</ref></type>
+        <definition>HTEXT _TEXT_KERNEL::m_hText</definition>
+        <argsstring></argsstring>
+        <name>m_hText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="43" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a073fdf0b934ea2bea409ab94b544d2be" compoundref="textinfo_8cpp" startline="79" endline="93">CreateKernel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_e_x_t___k_e_r_n_e_l_1a37fbc5eb7482a7fd70159dfdabe9482f" prot="public" static="no" mutable="no">
+        <type>POINT</type>
+        <definition>POINT _TEXT_KERNEL::m_pTextSize</definition>
+        <argsstring></argsstring>
+        <name>m_pTextSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="44" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a073fdf0b934ea2bea409ab94b544d2be" compoundref="textinfo_8cpp" startline="79" endline="93">CreateKernel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_e_x_t___k_e_r_n_e_l_1a713269904e0857c20f80aa841cb9ec4f" prot="public" static="no" mutable="no">
+        <type>POINT</type>
+        <definition>POINT _TEXT_KERNEL::m_pStartPos</definition>
+        <argsstring></argsstring>
+        <name>m_pStartPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="45" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a073fdf0b934ea2bea409ab94b544d2be" compoundref="textinfo_8cpp" startline="79" endline="93">CreateKernel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_e_x_t___k_e_r_n_e_l_1ae4b8a90c1e22c53e8ab54f276b9c5f00" prot="public" static="no" mutable="no">
+        <type>POINT</type>
+        <definition>POINT _TEXT_KERNEL::m_pEndPos</definition>
+        <argsstring></argsstring>
+        <name>m_pEndPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="46" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a073fdf0b934ea2bea409ab94b544d2be" compoundref="textinfo_8cpp" startline="79" endline="93">CreateKernel</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="16">
+        <label>CText</label>
+        <link refid="class_c_text"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>pFirstLineHead</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>FileName</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="18">
+        <label>DataBlock</label>
+        <link refid="struct_data_block"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>pNextBlock</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>CLine</label>
+        <link refid="class_c_line"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>pNextLine</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>pLineHead</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>_TEXT_KERNEL</label>
+        <link refid="struct___t_e_x_t___k_e_r_n_e_l"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>m_hText</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>std::string</label>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="42" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="41" bodyend="47"/>
+    <listofallmembers>
+      <member refid="struct___t_e_x_t___k_e_r_n_e_l_1aa339ac3387af6d32176612d9d0fdec23" prot="public" virt="non-virtual"><scope>_TEXT_KERNEL</scope><name>m_hText</name></member>
+      <member refid="struct___t_e_x_t___k_e_r_n_e_l_1ae4b8a90c1e22c53e8ab54f276b9c5f00" prot="public" virt="non-virtual"><scope>_TEXT_KERNEL</scope><name>m_pEndPos</name></member>
+      <member refid="struct___t_e_x_t___k_e_r_n_e_l_1a713269904e0857c20f80aa841cb9ec4f" prot="public" virt="non-virtual"><scope>_TEXT_KERNEL</scope><name>m_pStartPos</name></member>
+      <member refid="struct___t_e_x_t___k_e_r_n_e_l_1a37fbc5eb7482a7fd70159dfdabe9482f" prot="public" virt="non-virtual"><scope>_TEXT_KERNEL</scope><name>m_pTextSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

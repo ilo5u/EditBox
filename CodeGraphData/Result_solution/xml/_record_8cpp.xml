@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_record_8cpp" kind="file">
+    <compoundname>Record.cpp</compoundname>
+    <includes refid="stdafx_8h" local="yes">stdafx.h</includes>
+    <incdepgraph>
+      <node id="331">
+        <label>queue</label>
+      </node>
+      <node id="313">
+        <label>windows.h</label>
+      </node>
+      <node id="318">
+        <label>Windowsx.h</label>
+      </node>
+      <node id="319">
+        <label>assert.h</label>
+      </node>
+      <node id="324">
+        <label>Cursor.h</label>
+        <link refid="_cursor_8h"/>
+        <childnode refid="325" relation="include">
+        </childnode>
+        <childnode refid="332" relation="include">
+        </childnode>
+      </node>
+      <node id="310">
+        <label>stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="311" relation="include">
+        </childnode>
+        <childnode refid="313" relation="include">
+        </childnode>
+        <childnode refid="314" relation="include">
+        </childnode>
+        <childnode refid="315" relation="include">
+        </childnode>
+        <childnode refid="316" relation="include">
+        </childnode>
+        <childnode refid="317" relation="include">
+        </childnode>
+        <childnode refid="318" relation="include">
+        </childnode>
+        <childnode refid="319" relation="include">
+        </childnode>
+        <childnode refid="320" relation="include">
+        </childnode>
+        <childnode refid="321" relation="include">
+        </childnode>
+        <childnode refid="322" relation="include">
+        </childnode>
+        <childnode refid="323" relation="include">
+        </childnode>
+      </node>
+      <node id="314">
+        <label>stdlib.h</label>
+      </node>
+      <node id="312">
+        <label>SDKDDKVer.h</label>
+      </node>
+      <node id="332">
+        <label>Windows.h</label>
+      </node>
+      <node id="333">
+        <label>Record.h</label>
+        <link refid="_record_8h"/>
+        <childnode refid="325" relation="include">
+        </childnode>
+        <childnode refid="324" relation="include">
+        </childnode>
+        <childnode refid="332" relation="include">
+        </childnode>
+      </node>
+      <node id="315">
+        <label>malloc.h</label>
+      </node>
+      <node id="323">
+        <label>API.h</label>
+        <link refid="_a_p_i_8h"/>
+        <childnode refid="324" relation="include">
+        </childnode>
+        <childnode refid="332" relation="include">
+        </childnode>
+        <childnode refid="333" relation="include">
+        </childnode>
+      </node>
+      <node id="329">
+        <label>string</label>
+      </node>
+      <node id="316">
+        <label>memory.h</label>
+      </node>
+      <node id="327">
+        <label>fstream</label>
+      </node>
+      <node id="311">
+        <label>targetver.h</label>
+        <link refid="targetver_8h"/>
+        <childnode refid="312" relation="include">
+        </childnode>
+      </node>
+      <node id="309">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.cpp</label>
+        <link refid="Record.cpp"/>
+        <childnode refid="310" relation="include">
+        </childnode>
+      </node>
+      <node id="326">
+        <label>sstream</label>
+      </node>
+      <node id="328">
+        <label>CLine.h</label>
+        <link refid="_c_line_8h"/>
+        <childnode refid="317" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
+        </childnode>
+        <childnode refid="330" relation="include">
+        </childnode>
+      </node>
+      <node id="321">
+        <label>commdlg.h</label>
+      </node>
+      <node id="322">
+        <label>ShlObj.h</label>
+      </node>
+      <node id="330">
+        <label>iostream</label>
+      </node>
+      <node id="317">
+        <label>tchar.h</label>
+      </node>
+      <node id="325">
+        <label>CText.h</label>
+        <link refid="_c_text_8h"/>
+        <childnode refid="326" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+        <childnode refid="331" relation="include">
+        </childnode>
+        <childnode refid="332" relation="include">
+        </childnode>
+      </node>
+      <node id="320">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include&quot;<ref refid="stdafx_8h" kindref="compound">stdafx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="struct_record_1af52f4c47e4ece83b3530e7cf6d1c53ea" refkind="member"><highlight class="normal"><ref refid="struct_record_1af52f4c47e4ece83b3530e7cf6d1c53ea" kindref="member">Record::Record</ref>(UINT<sp/>flag)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_record_1ae7c5b5f1395433f551d3c27e7ed00fa5" kindref="member">ACT</ref><sp/>=<sp/>flag;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_record_1a27daae22938a602cf1c17927c6302624" kindref="member">pText</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="struct_record_1ad2ce1a99d866834ab53dedd788cb1ea6" refkind="member"><highlight class="normal"><ref refid="struct_record_1ad2ce1a99d866834ab53dedd788cb1ea6" kindref="member">Record::~Record</ref>()</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_record_1a27daae22938a602cf1c17927c6302624" kindref="member">pText</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//撤销<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="struct_record_1a8bc01d9746033bc55acf407f9b0e8411" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_record_1a8bc01d9746033bc55acf407f9b0e8411" kindref="member">Record::ReDo</ref>(<ref refid="class_c_text" kindref="compound">CText</ref>*<sp/>p)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_record_1a27daae22938a602cf1c17927c6302624" kindref="member">pText</ref><sp/>=<sp/>p;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="struct_record_1ae7c5b5f1395433f551d3c27e7ed00fa5" kindref="member">ACT</ref>)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_record_8h_1a6c28ff7d8deac22bb863f05834089d1b" kindref="member">RD_DELETE</ref>:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_record_1a202754ee6c4db7c19277d74a7fd26f77" kindref="member">end</ref><sp/>=<sp/><ref refid="struct_record_1a27daae22938a602cf1c17927c6302624" kindref="member">pText</ref>-&gt;<ref refid="class_c_text_1aeb95b8bf7a9517ead86bff6e39841cb1" kindref="member">Insert</ref>(<ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref>,<sp/><ref refid="struct_record_1aa08fba473b16c69c8a589241481b768a" kindref="member">Deleted_Data</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//end记录恢复删除后最后一个字符的位置</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_record_1aa08fba473b16c69c8a589241481b768a" kindref="member">Deleted_Data</ref>.clear();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//清空删除信息</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref>.<ref refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" kindref="member">Sequence</ref>++;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//start记录恢复删除后第一个字符位置</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_record_8h_1a91d73529f704f268f01407d91a579dcc" kindref="member">RD_INSERT</ref>:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref><sp/>=<sp/><ref refid="struct_record_1a27daae22938a602cf1c17927c6302624" kindref="member">pText</ref>-&gt;<ref refid="class_c_text_1a5baa587ee060cec570e68110bf6e6f2d" kindref="member">Delete</ref>(<ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref>,<sp/><ref refid="struct_record_1a202754ee6c4db7c19277d74a7fd26f77" kindref="member">end</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_record_8h_1adc50bf432bdc3e1778b82d8d19bd2468" kindref="member">RD_RETURN</ref>:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LineNumber<sp/>=<sp/><ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref>.<ref refid="struct_position_1a7b72348893583b77254a650b7095c9fc" kindref="member">LineNumber</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nextLineNumber<sp/>=<sp/>LineNumber<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_line" kindref="compound">CLine</ref>*<sp/>pLine<sp/>=<sp/><ref refid="struct_record_1a27daae22938a602cf1c17927c6302624" kindref="member">pText</ref>-&gt;<ref refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" kindref="member">GetLinePointer</ref>(LineNumber);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_line" kindref="compound">CLine</ref>*<sp/>pNextLine<sp/>=<sp/>pLine-&gt;<ref refid="class_c_line_1af8c7e68855cebc4e3a7fc3e1aead4734" kindref="member">pNextLine</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::wstring<sp/>Str<sp/>=<sp/>pNextLine-&gt;<ref refid="class_c_line_1a858096cef404306ad1a2d7bf8314f46b" kindref="member">TransformToWString</ref>(1,<sp/>pNextLine-&gt;<ref refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" kindref="member">nDataSize</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_record_1a27daae22938a602cf1c17927c6302624" kindref="member">pText</ref>-&gt;<ref refid="class_c_text_1a0728c99dde862c9b11dd0867df790ab5" kindref="member">DeleteLines</ref>(nextLineNumber,<sp/>nextLineNumber);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pLine-&gt;<ref refid="class_c_line_1a2ff023c084dbcad874bff56688a16145" kindref="member">InsertStrings</ref>(<ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref>.<ref refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" kindref="member">Sequence</ref>,<sp/>Str);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_record_8h_1ab34695bf23e76d01f11011676c0f22b6" kindref="member">RD_MERGE_LINE</ref>:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref><sp/>=<sp/><ref refid="struct_record_1a27daae22938a602cf1c17927c6302624" kindref="member">pText</ref>-&gt;<ref refid="class_c_text_1ae7356293c6869d990f8cbe9f18d23b05" kindref="member">EnterNewLine</ref>(<ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="struct_record_1afdb85f0fa26f8fc5def05eaa2280dd0d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_record_1afdb85f0fa26f8fc5def05eaa2280dd0d" kindref="member">Record::Save_Delete_Data</ref>(<ref refid="class_c_text" kindref="compound">CText</ref><sp/>*<sp/>pc,<sp/><ref refid="struct_position" kindref="compound">Position</ref><sp/>first,<sp/><ref refid="struct_position" kindref="compound">Position</ref><sp/>last)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_record_1a27daae22938a602cf1c17927c6302624" kindref="member">pText</ref><sp/>=<sp/>pc;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_record_1aa08fba473b16c69c8a589241481b768a" kindref="member">Deleted_Data</ref><sp/>=<sp/><ref refid="struct_record_1a27daae22938a602cf1c17927c6302624" kindref="member">pText</ref>-&gt;<ref refid="class_c_text_1a46f994aaca813d66221125f4295f4fcd" kindref="member">Copy</ref>(first,<sp/>last);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//拷贝删除的字符串</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref><sp/>=<sp/>first;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref>.<ref refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" kindref="member">Sequence</ref>--;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="struct_record_1aca658c6e7d69a2f7fdd0c6acac941972" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_record_1aca658c6e7d69a2f7fdd0c6acac941972" kindref="member">Record::Save_Merge_Line_Data</ref>(<ref refid="class_c_text" kindref="compound">CText</ref><sp/>*<sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LineNumber)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>LineNumber--;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(LineNumber<sp/>&lt;<sp/>1)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::invalid_argument(</highlight><highlight class="stringliteral">&quot;行号小于1，传参错误&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_line" kindref="compound">CLine</ref>*<sp/>pLine<sp/>=<sp/>p-&gt;<ref refid="class_c_text_1aeb7818eed5b9b6ab6a2687695d64409c" kindref="member">GetLinePointer</ref>(LineNumber);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref><sp/>=<sp/><ref refid="struct_record_1a202754ee6c4db7c19277d74a7fd26f77" kindref="member">end</ref><sp/>=<sp/>{<sp/>LineNumber,pLine-&gt;<ref refid="class_c_line_1a392c71cdea4bb5878af962215a8fdf26" kindref="member">nDataSize</ref><sp/>};<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//保存EnterNewLine位置</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="struct_record_1a8f3ccd7a97b80ea958ee1881a2e23733" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_record_1a8f3ccd7a97b80ea958ee1881a2e23733" kindref="member">Record::Set_Choose_Data</ref>(<ref refid="struct_position" kindref="compound">Position</ref><sp/>first,<sp/><ref refid="struct_position" kindref="compound">Position</ref><sp/>last)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref><sp/>=<sp/>first;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_record_1a202754ee6c4db7c19277d74a7fd26f77" kindref="member">end</ref><sp/>=<sp/>last;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//清空选中信息</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="struct_record_1afa7f4738b5b61284af2f94dd34e8f917" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_record_1afa7f4738b5b61284af2f94dd34e8f917" kindref="member">Record::Clear_Choose_Data</ref>()</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref>.<ref refid="struct_position_1a7b72348893583b77254a650b7095c9fc" kindref="member">LineNumber</ref><sp/>=<sp/><ref refid="struct_record_1a8f300068f9e16328dafcf645c12a3e2e" kindref="member">start</ref>.<ref refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" kindref="member">Sequence</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_record_1a202754ee6c4db7c19277d74a7fd26f77" kindref="member">end</ref>.<ref refid="struct_position_1a7b72348893583b77254a650b7095c9fc" kindref="member">LineNumber</ref><sp/>=<sp/><ref refid="struct_record_1a202754ee6c4db7c19277d74a7fd26f77" kindref="member">end</ref>.<ref refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" kindref="member">Sequence</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Record.cpp"/>
+  </compounddef>
+</doxygen>

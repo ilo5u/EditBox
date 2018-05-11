@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct___t_e_x_t___i_n_f_o" kind="struct" prot="public">
+    <compoundname>_TEXT_INFO</compoundname>
+    <includes refid="editbox_8h" local="no">editbox.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___t_e_x_t___i_n_f_o_1a3da9836c434f5f598edfde16b715999c" prot="public" static="no" mutable="no">
+        <type><ref refid="editbox_8h_1a3670448d22023cd5d4a26e4a70e1596b" kindref="member">HTEXTKERNEL</ref></type>
+        <definition>HTEXTKERNEL _TEXT_INFO::m_hKernel</definition>
+        <argsstring></argsstring>
+        <name>m_hKernel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="66" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a7b4b54d85f18ce957cf547ae22de9fdf" compoundref="textinfo_8cpp" startline="5" endline="23">CreateTextInfo</referencedby>
+        <referencedby refid="textinfo_8cpp_1a5f0aedfac2bea6d2d6a8dd003b4ee10f" compoundref="textinfo_8cpp" startline="25" endline="33">ReleaseTextInfo</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_e_x_t___i_n_f_o_1a81c05e651784aef5b1b937e39d6252f5" prot="public" static="no" mutable="no">
+        <type><ref refid="editbox_8h_1aa145cfae480ef1908e3f0a307af216db" kindref="member">HTEXTGDI</ref></type>
+        <definition>HTEXTGDI _TEXT_INFO::m_hGDI</definition>
+        <argsstring></argsstring>
+        <name>m_hGDI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="67" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a7b4b54d85f18ce957cf547ae22de9fdf" compoundref="textinfo_8cpp" startline="5" endline="23">CreateTextInfo</referencedby>
+        <referencedby refid="textinfo_8cpp_1a5f0aedfac2bea6d2d6a8dd003b4ee10f" compoundref="textinfo_8cpp" startline="25" endline="33">ReleaseTextInfo</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_e_x_t___i_n_f_o_1a4f58688b30347aeb0a91e8ad63edd643" prot="public" static="no" mutable="no">
+        <type><ref refid="editbox_8h_1a1dda36283a86b4ecc2849c115dca8f64" kindref="member">HTEXTUSER</ref></type>
+        <definition>HTEXTUSER _TEXT_INFO::m_hUser</definition>
+        <argsstring></argsstring>
+        <name>m_hUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="68" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a7b4b54d85f18ce957cf547ae22de9fdf" compoundref="textinfo_8cpp" startline="5" endline="23">CreateTextInfo</referencedby>
+        <referencedby refid="textinfo_8cpp_1a5f0aedfac2bea6d2d6a8dd003b4ee10f" compoundref="textinfo_8cpp" startline="25" endline="33">ReleaseTextInfo</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" prot="public" static="no" mutable="no">
+        <type>HWND</type>
+        <definition>HWND _TEXT_INFO::m_hWnd</definition>
+        <argsstring></argsstring>
+        <name>m_hWnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="69" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="69" bodyend="-1"/>
+        <referencedby refid="textinfo_8cpp_1a7b4b54d85f18ce957cf547ae22de9fdf" compoundref="textinfo_8cpp" startline="5" endline="23">CreateTextInfo</referencedby>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" compoundref="textoperation_8cpp" startline="159" endline="175">SelectCaretPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" compoundref="textoperation_8cpp" startline="177" endline="195">SelectHighlight</referencedby>
+        <referencedby refid="textoperation_8cpp_1abc5dea63027499bf06fc08b0662961d7" compoundref="textoperation_8cpp" startline="197" endline="229">SelectTextSize</referencedby>
+        <referencedby refid="textoperation_8cpp_1af8fc116326c8fe6d185ba3ff5d2287b8" compoundref="textoperation_8cpp" startline="132" endline="157">SelectWindowSize</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="11">
+        <label>_TEXT_USER</label>
+        <link refid="struct___t_e_x_t___u_s_e_r"/>
+      </node>
+      <node id="13">
+        <label>_TIMER</label>
+        <link refid="struct___t_i_m_e_r"/>
+      </node>
+      <node id="12">
+        <label>_TEXT_GDI</label>
+        <link refid="struct___t_e_x_t___g_d_i"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>m_hSaveTimer</edgelabel>
+          <edgelabel>m_hMouseTimer</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>CText</label>
+        <link refid="class_c_text"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>pFirstLineHead</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>FileName</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="4">
+        <label>_TEXT_INFO</label>
+        <link refid="struct___t_e_x_t___i_n_f_o"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_hKernel</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_hUser</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_hGDI</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>DataBlock</label>
+        <link refid="struct_data_block"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>pNextBlock</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>CLine</label>
+        <link refid="class_c_line"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>pNextLine</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>pLineHead</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>_TEXT_KERNEL</label>
+        <link refid="struct___t_e_x_t___k_e_r_n_e_l"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_hText</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>std::string</label>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="65" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="64" bodyend="70"/>
+    <listofallmembers>
+      <member refid="struct___t_e_x_t___i_n_f_o_1a81c05e651784aef5b1b937e39d6252f5" prot="public" virt="non-virtual"><scope>_TEXT_INFO</scope><name>m_hGDI</name></member>
+      <member refid="struct___t_e_x_t___i_n_f_o_1a3da9836c434f5f598edfde16b715999c" prot="public" virt="non-virtual"><scope>_TEXT_INFO</scope><name>m_hKernel</name></member>
+      <member refid="struct___t_e_x_t___i_n_f_o_1a4f58688b30347aeb0a91e8ad63edd643" prot="public" virt="non-virtual"><scope>_TEXT_INFO</scope><name>m_hUser</name></member>
+      <member refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" prot="public" virt="non-virtual"><scope>_TEXT_INFO</scope><name>m_hWnd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

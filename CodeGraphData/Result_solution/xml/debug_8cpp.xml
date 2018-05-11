@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="debug_8cpp" kind="file">
+    <compoundname>debug.cpp</compoundname>
+    <includes refid="stdafx_8h" local="yes">stdafx.h</includes>
+    <includes refid="editbox_8h" local="yes">editbox.h</includes>
+    <incdepgraph>
+      <node id="228">
+        <label>queue</label>
+      </node>
+      <node id="210">
+        <label>windows.h</label>
+      </node>
+      <node id="215">
+        <label>Windowsx.h</label>
+      </node>
+      <node id="216">
+        <label>assert.h</label>
+      </node>
+      <node id="221">
+        <label>Cursor.h</label>
+        <link refid="_cursor_8h"/>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+      </node>
+      <node id="207">
+        <label>stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="208" relation="include">
+        </childnode>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+      </node>
+      <node id="211">
+        <label>stdlib.h</label>
+      </node>
+      <node id="209">
+        <label>SDKDDKVer.h</label>
+      </node>
+      <node id="229">
+        <label>Windows.h</label>
+      </node>
+      <node id="230">
+        <label>Record.h</label>
+        <link refid="_record_8h"/>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+      </node>
+      <node id="212">
+        <label>malloc.h</label>
+      </node>
+      <node id="220">
+        <label>API.h</label>
+        <link refid="_a_p_i_8h"/>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="230" relation="include">
+        </childnode>
+      </node>
+      <node id="232">
+        <label>resource.h</label>
+        <link refid="resource_8h"/>
+      </node>
+      <node id="226">
+        <label>string</label>
+      </node>
+      <node id="213">
+        <label>memory.h</label>
+      </node>
+      <node id="224">
+        <label>fstream</label>
+      </node>
+      <node id="206">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp</label>
+        <link refid="debug.cpp"/>
+        <childnode refid="207" relation="include">
+        </childnode>
+        <childnode refid="231" relation="include">
+        </childnode>
+      </node>
+      <node id="231">
+        <label>editbox.h</label>
+        <link refid="editbox_8h"/>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+      </node>
+      <node id="208">
+        <label>targetver.h</label>
+        <link refid="targetver_8h"/>
+        <childnode refid="209" relation="include">
+        </childnode>
+      </node>
+      <node id="223">
+        <label>sstream</label>
+      </node>
+      <node id="225">
+        <label>CLine.h</label>
+        <link refid="_c_line_8h"/>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+      </node>
+      <node id="218">
+        <label>commdlg.h</label>
+      </node>
+      <node id="219">
+        <label>ShlObj.h</label>
+      </node>
+      <node id="227">
+        <label>iostream</label>
+      </node>
+      <node id="214">
+        <label>tchar.h</label>
+      </node>
+      <node id="222">
+        <label>CText.h</label>
+        <link refid="_c_text_8h"/>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+      </node>
+      <node id="217">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="debug_8cpp_1a073c979c78c71f57e1fad28aed7ba43f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void chDEBUGPRINTBOX</definition>
+        <argsstring>(LPCWSTR msg)</argsstring>
+        <name>chDEBUGPRINTBOX</name>
+        <param>
+          <type>LPCWSTR</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp" line="4" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp" bodystart="4" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="debug_8cpp_1abe1d3bfc8cd875bbdbf2756f41d94ceb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void chDEBUGTEXTOUT</definition>
+        <argsstring>(HWND hWnd, LPCWSTR lpString, int x, int y)</argsstring>
+        <name>chDEBUGTEXTOUT</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>LPCWSTR</type>
+          <declname>lpString</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp" line="9" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp" bodystart="9" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="debug_8cpp_1a51da6b1c0fc0272e608451748156dc98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void chDEBUGMESSAGEBOX</definition>
+        <argsstring>(LPCWSTR lpszFmt,...)</argsstring>
+        <name>chDEBUGMESSAGEBOX</name>
+        <param>
+          <type>LPCWSTR</type>
+          <declname>lpszFmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp" line="16" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp" bodystart="16" bodyend="23"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stdafx_8h" kindref="compound">stdafx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="editbox_8h" kindref="compound">editbox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="debug_8h_1a073c979c78c71f57e1fad28aed7ba43f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="debug_8cpp_1a073c979c78c71f57e1fad28aed7ba43f" kindref="member">chDEBUGPRINTBOX</ref>(LPCWSTR<sp/>msg)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageBox(NULL,<sp/>msg,<sp/>TEXT(</highlight><highlight class="stringliteral">&quot;DEBUG&quot;</highlight><highlight class="normal">),<sp/>MB_OKCANCEL);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="debug_8h_1abe1d3bfc8cd875bbdbf2756f41d94ceb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="debug_8cpp_1abe1d3bfc8cd875bbdbf2756f41d94ceb" kindref="member">chDEBUGTEXTOUT</ref>(HWND<sp/>hWnd,<sp/>LPCWSTR<sp/>lpString,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>HDC<sp/>hdc<sp/>=<sp/>GetDC(hWnd);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>TextOut(hdc,<sp/>x,<sp/>y,<sp/>lpString,<sp/>lstrlen(lpString));</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>ReleaseDC(hWnd,<sp/>hdc);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="debug_8h_1a51da6b1c0fc0272e608451748156dc98" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="debug_8cpp_1a51da6b1c0fc0272e608451748156dc98" kindref="member">chDEBUGMESSAGEBOX</ref>(LPCWSTR<sp/>lpszFmt,<sp/>...)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>TCHAR<sp/>out[1000]<sp/>=<sp/>{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>va_list<sp/>arg_ptr;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>va_start(arg_ptr,<sp/>lpszFmt);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>_vsnwprintf_s(out,<sp/>_countof(out),<sp/>lpszFmt,<sp/>arg_ptr);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>MessageBox(NULL,<sp/>out,<sp/>TEXT(</highlight><highlight class="stringliteral">&quot;DEBUG&quot;</highlight><highlight class="normal">),<sp/>MB_OKCANCEL);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct_install" kind="struct" prot="public">
+    <compoundname>Install</compoundname>
+    <includes refid="_cursor_8h" local="no">Cursor.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="struct_install_1a9a4a643ecdd588aaba72f0ac73498a75" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Install::Width</definition>
+        <argsstring></argsstring>
+        <name>Width</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="42" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1ac576655145c5b4612f504e04a6511a32" compoundref="_a_p_i_8cpp" startline="485" endline="496">CreateText</referencedby>
+        <referencedby refid="struct_install_1afea58421c6e63f56e81fca838dee106e" compoundref="_cursor_8cpp" startline="253" endline="256">SetWidth</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_install_1a0cdbcbe4a70a2c24000a98d0465da90b" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Install::Height</definition>
+        <argsstring></argsstring>
+        <name>Height</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="43" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="_a_p_i_8h_1ac576655145c5b4612f504e04a6511a32" compoundref="_a_p_i_8cpp" startline="485" endline="496">CreateText</referencedby>
+        <referencedby refid="struct_install_1aea838501d4455b17a15695f4958c2d57" compoundref="_cursor_8cpp" startline="258" endline="261">SetHeight</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_install_1afea58421c6e63f56e81fca838dee106e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Install::SetWidth</definition>
+        <argsstring>(int width)</argsstring>
+        <name>SetWidth</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="40" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="253" bodyend="256"/>
+        <references refid="struct_install_1a9a4a643ecdd588aaba72f0ac73498a75" compoundref="_cursor_8h" startline="42">Width</references>
+      </memberdef>
+      <memberdef kind="function" id="struct_install_1aea838501d4455b17a15695f4958c2d57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Install::SetHeight</definition>
+        <argsstring>(int height)</argsstring>
+        <name>SetHeight</name>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="41" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.cpp" bodystart="258" bodyend="261"/>
+        <references refid="struct_install_1a0cdbcbe4a70a2c24000a98d0465da90b" compoundref="_cursor_8h" startline="43">Height</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" line="39" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/Cursor.h" bodystart="38" bodyend="44"/>
+    <listofallmembers>
+      <member refid="struct_install_1a0cdbcbe4a70a2c24000a98d0465da90b" prot="public" virt="non-virtual"><scope>Install</scope><name>Height</name></member>
+      <member refid="struct_install_1aea838501d4455b17a15695f4958c2d57" prot="public" virt="non-virtual"><scope>Install</scope><name>SetHeight</name></member>
+      <member refid="struct_install_1afea58421c6e63f56e81fca838dee106e" prot="public" virt="non-virtual"><scope>Install</scope><name>SetWidth</name></member>
+      <member refid="struct_install_1a9a4a643ecdd588aaba72f0ac73498a75" prot="public" virt="non-virtual"><scope>Install</scope><name>Width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -42,7 +42,7 @@ public:
 	void ShowLineData();											//显示当前行字符串
 	Line_iterator DeleteLine(int first, int last);					//删除当前行[first,end]内的字符串		字符从1开始返回删除后的第一位
 	bool BackSpace(Position position);								//退格键  删除Position 位置上的字符  
-	Line_iterator InsertStrings(int start, std::wstring String);		//在start "后面" 加入字符串
+	Line_iterator InsertStrings(int start, std::wstring String);	//在start "后面" 加入字符串
 	Line_iterator begin();											//返回指向行首字符的迭代器
 	Line_iterator end();											//返回指向行尾字符的迭代器
 	std::wstring  TransformToWString(int first, int last);			//以wstringf的形式返回[first,last]中的字符串
@@ -52,7 +52,7 @@ public:
 	bool isBlankLine()const;										//返回当前行是否为空
 	int  Line_Width(int Width, int end = 0);						//返回当前行行宽
 private:
-	CLine * pNextLine;											//下一行
+	CLine * pNextLine;												//下一行
 	DataBlock*	pLineHead;											//行首
 	int			nLineNumber;										//当前行号
 	int			nDataSize;											//当前行字符数量
@@ -80,14 +80,14 @@ public:
 	Line_iterator operator++(int);
 	Line_iterator& operator--();
 	Line_iterator operator--(int);
-	Line_iterator& operator+(int n);
-	Line_iterator& operator-(int n);
+	Line_iterator operator+(int n);
+	Line_iterator operator-(int n);
 	TCHAR&	operator*();
 	Line_iterator& operator=(const Line_iterator& m);
 	bool operator==(const Line_iterator& m);
 	bool operator!=(const Line_iterator& m);
 private:
-	CLine * pLine;			//当前行指针			
+	CLine * pLine;				//当前行指针			
 	TCHAR *		pWChar;			//指向CLine中的一个字符
 	DataBlock*	pBlock;			//当前指向字符所在数据块
 	int			nIndex;			//当前指向的字符在行中的位置(注：不是下标，从1开始)	

@@ -1,0 +1,1632 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="editbox_8h" kind="file">
+    <compoundname>editbox.h</compoundname>
+    <includes local="no">Windows.h</includes>
+    <includes refid="resource_8h" local="yes">resource.h</includes>
+    <includedby refid="debug_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp</includedby>
+    <includedby refid="_edit_box_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/EditBox.cpp</includedby>
+    <includedby refid="io_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/io.cpp</includedby>
+    <includedby refid="textinfo_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp</includedby>
+    <includedby refid="textoperation_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp</includedby>
+    <includedby refid="timer_8cpp" local="yes">C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp</includedby>
+    <incdepgraph>
+      <node id="271">
+        <label>Windows.h</label>
+      </node>
+      <node id="272">
+        <label>resource.h</label>
+        <link refid="resource_8h"/>
+      </node>
+      <node id="270">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h</label>
+        <link refid="editbox.h"/>
+        <childnode refid="271" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="276">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/io.cpp</label>
+        <link refid="io_8cpp"/>
+      </node>
+      <node id="279">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp</label>
+        <link refid="timer_8cpp"/>
+      </node>
+      <node id="274">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/debug.cpp</label>
+        <link refid="debug_8cpp"/>
+      </node>
+      <node id="273">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h</label>
+        <link refid="editbox.h"/>
+        <childnode refid="274" relation="include">
+        </childnode>
+        <childnode refid="275" relation="include">
+        </childnode>
+        <childnode refid="276" relation="include">
+        </childnode>
+        <childnode refid="277" relation="include">
+        </childnode>
+        <childnode refid="278" relation="include">
+        </childnode>
+        <childnode refid="279" relation="include">
+        </childnode>
+      </node>
+      <node id="277">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp</label>
+        <link refid="textinfo_8cpp"/>
+      </node>
+      <node id="278">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp</label>
+        <link refid="textoperation_8cpp"/>
+      </node>
+      <node id="275">
+        <label>C:/Users/ilo5u/Source/Repos/EditBox/EditBox/EditBox.cpp</label>
+        <link refid="_edit_box_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct___t_i_m_e_r" prot="public">_TIMER</innerclass>
+    <innerclass refid="struct___t_e_x_t___u_s_e_r" prot="public">_TEXT_USER</innerclass>
+    <innerclass refid="struct___t_e_x_t___k_e_r_n_e_l" prot="public">_TEXT_KERNEL</innerclass>
+    <innerclass refid="struct___t_e_x_t___g_d_i" prot="public">_TEXT_GDI</innerclass>
+    <innerclass refid="struct___t_e_x_t___i_n_f_o" prot="public">_TEXT_INFO</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="editbox_8h_1a9770c66bebb9e0414a2fae54b042b915" prot="public" static="no">
+        <name>MyTextOut</name>
+        <initializer>MyTextOutA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="81" column="10" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="81" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1ab8db8eabc16f945fab6970a1144e797e" compoundref="textoperation_8cpp" startline="309" endline="335">PaintWindow</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1ac8fd05e77854216993808807dd4021d6" prot="public" static="no">
+        <name>HTEXT</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>(<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>-&gt;m_hKernel-&gt;m_hText)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="106" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="106" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="textoperation_8cpp_1a515f72edefb28c2e51adc570e5ab378c" compoundref="textoperation_8cpp" startline="106" endline="124">MoveCaret</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8db8eabc16f945fab6970a1144e797e" compoundref="textoperation_8cpp" startline="309" endline="335">PaintWindow</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1a3f94d0002f5d3d0b5156b1b3d56c9961" prot="public" static="no">
+        <name>TEXTSIZE</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>(<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>-&gt;m_hKernel-&gt;m_pTextSize)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="107" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="107" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="textoperation_8cpp_1abc5dea63027499bf06fc08b0662961d7" compoundref="textoperation_8cpp" startline="197" endline="229">SelectTextSize</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1a7cc19c4cad589ffffc2cd5f2ee272f1e" prot="public" static="no">
+        <name>STARTPOS</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>(<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>-&gt;m_hKernel-&gt;m_pStartPos)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="108" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="108" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1a612b8844c2d272063e8175a2b5b3d457" compoundref="textoperation_8cpp" startline="18" endline="28">AdjustCaretPosBeforeBackspace</referencedby>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" compoundref="textoperation_8cpp" startline="177" endline="195">SelectHighlight</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1a31e764f7259e6bf9a8d4e17700c4d4c2" prot="public" static="no">
+        <name>ENDPOS</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>(<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>-&gt;m_hKernel-&gt;m_pEndPos)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="109" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="109" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1a612b8844c2d272063e8175a2b5b3d457" compoundref="textoperation_8cpp" startline="18" endline="28">AdjustCaretPosBeforeBackspace</referencedby>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" compoundref="textoperation_8cpp" startline="177" endline="195">SelectHighlight</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1a8dca9c84766a55fc972528846a944e2d" prot="public" static="no">
+        <name>MEMDC</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>(<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>-&gt;m_hGDI-&gt;m_hMemDC)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="113" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="113" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1ab8db8eabc16f945fab6970a1144e797e" compoundref="textoperation_8cpp" startline="309" endline="335">PaintWindow</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1aa994b0cdbb8e77db687d4110908cacd0" prot="public" static="no">
+        <name>BITMAP</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>(<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>-&gt;m_hGDI-&gt;m_hBitmap)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="114" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1a699f42b1b5585d578f0ae96deaa1b894" prot="public" static="no">
+        <name>BRUSH</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>(<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>-&gt;m_hGDI-&gt;m_hBrush)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="115" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="115" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1a4c224a6c2076afbc5bdf27c698cf5e50" compoundref="textoperation_8cpp" startline="288" endline="307">DefaultFill</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8db8eabc16f945fab6970a1144e797e" compoundref="textoperation_8cpp" startline="309" endline="335">PaintWindow</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1afa6e8e36ab043344eb0d4a8de362f49a" prot="public" static="no">
+        <name>MTIMER</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>(<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>-&gt;m_hGDI-&gt;m_hMouseTimer)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="116" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="116" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1a381d1886146aa628f957a19d819989c2" prot="public" static="no">
+        <name>STIMER</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>(<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>-&gt;m_hGDI-&gt;m_hSaveTimer)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="117" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1afa07ce96cdffc89cbe48c0ea532a19bd" prot="public" static="no">
+        <name>FONT</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>(<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>-&gt;m_hUser-&gt;m_hFont)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="121" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" prot="public" static="no">
+        <name>CARETPOS</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>(<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>-&gt;m_hUser-&gt;m_pCaretPos)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="122" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="122" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="textoperation_8cpp_1a515f72edefb28c2e51adc570e5ab378c" compoundref="textoperation_8cpp" startline="106" endline="124">MoveCaret</referencedby>
+        <referencedby refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" compoundref="textoperation_8cpp" startline="159" endline="175">SelectCaretPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8ed95b601a777c79a06fc1e95e0aca0" compoundref="textoperation_8cpp" startline="255" endline="275">SelectTitledWindow</referencedby>
+        <referencedby refid="textoperation_8cpp_1ae05ee4ee8873757de8b46582aa9d2d1d" compoundref="textoperation_8cpp" startline="231" endline="254">SelectUntitledWindow</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" prot="public" static="no">
+        <name>CHARSIZE</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>(<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>-&gt;m_hUser-&gt;m_pCharSize)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="123" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1a4c224a6c2076afbc5bdf27c698cf5e50" compoundref="textoperation_8cpp" startline="288" endline="307">DefaultFill</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8db8eabc16f945fab6970a1144e797e" compoundref="textoperation_8cpp" startline="309" endline="335">PaintWindow</referencedby>
+        <referencedby refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" compoundref="textoperation_8cpp" startline="159" endline="175">SelectCaretPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" compoundref="textoperation_8cpp" startline="177" endline="195">SelectHighlight</referencedby>
+        <referencedby refid="textoperation_8cpp_1abc5dea63027499bf06fc08b0662961d7" compoundref="textoperation_8cpp" startline="197" endline="229">SelectTextSize</referencedby>
+        <referencedby refid="textoperation_8cpp_1af8fc116326c8fe6d185ba3ff5d2287b8" compoundref="textoperation_8cpp" startline="132" endline="157">SelectWindowSize</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1a1ecf21a8623aab1d3ea987ad565c434b" prot="public" static="no">
+        <name>CARETSIZE</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>(<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>-&gt;m_hUser-&gt;m_pCaretSize)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="124" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="124" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1ae05ee4ee8873757de8b46582aa9d2d1d" compoundref="textoperation_8cpp" startline="231" endline="254">SelectUntitledWindow</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" prot="public" static="no">
+        <name>WINDOWPOS</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>(<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>-&gt;m_hUser-&gt;m_pWindowPos)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="125" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="125" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8db8eabc16f945fab6970a1144e797e" compoundref="textoperation_8cpp" startline="309" endline="335">PaintWindow</referencedby>
+        <referencedby refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" compoundref="textoperation_8cpp" startline="159" endline="175">SelectCaretPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" compoundref="textoperation_8cpp" startline="177" endline="195">SelectHighlight</referencedby>
+        <referencedby refid="textoperation_8cpp_1ae4ddefd3b434dcb4436e4da4ed6a8832" compoundref="textoperation_8cpp" startline="126" endline="130">SelectWindowPos</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1a2195511da5a6064a316b017b10a2365d" prot="public" static="no">
+        <name>WINDOWSIZE</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>(<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>-&gt;m_hUser-&gt;m_pWindowSize)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="126" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="126" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8db8eabc16f945fab6970a1144e797e" compoundref="textoperation_8cpp" startline="309" endline="335">PaintWindow</referencedby>
+        <referencedby refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" compoundref="textoperation_8cpp" startline="177" endline="195">SelectHighlight</referencedby>
+        <referencedby refid="textoperation_8cpp_1abc5dea63027499bf06fc08b0662961d7" compoundref="textoperation_8cpp" startline="197" endline="229">SelectTextSize</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8ed95b601a777c79a06fc1e95e0aca0" compoundref="textoperation_8cpp" startline="255" endline="275">SelectTitledWindow</referencedby>
+        <referencedby refid="textoperation_8cpp_1af8fc116326c8fe6d185ba3ff5d2287b8" compoundref="textoperation_8cpp" startline="132" endline="157">SelectWindowSize</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" prot="public" static="no">
+        <name>PAGESIZE</name>
+        <param><defname>hTextInfo</defname></param>
+        <initializer>(<ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>-&gt;m_hUser-&gt;m_pPageSize)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="127" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="127" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1a4c224a6c2076afbc5bdf27c698cf5e50" compoundref="textoperation_8cpp" startline="288" endline="307">DefaultFill</referencedby>
+        <referencedby refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" compoundref="textoperation_8cpp" startline="159" endline="175">SelectCaretPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1af8fc116326c8fe6d185ba3ff5d2287b8" compoundref="textoperation_8cpp" startline="132" endline="157">SelectWindowSize</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1a4b9ca192ede25b85028a300f9d300e42" prot="public" static="no">
+        <name>INRANGEX</name>
+        <param><defname>x</defname></param>
+        <param><defname>l</defname></param>
+        <param><defname>r</defname></param>
+        <initializer>((x) &gt;= (l) &amp;&amp; (x) &lt;= (r))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="133" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="133" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" compoundref="textoperation_8cpp" startline="159" endline="175">SelectCaretPos</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1afe7c3a921bdff1784bb7bb776d5e4a54" prot="public" static="no">
+        <name>INRANGEY</name>
+        <param><defname>y</defname></param>
+        <param><defname>t</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>((y) &gt;= (t) &amp;&amp; (y) &lt;  (b))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="134" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="134" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" compoundref="textoperation_8cpp" startline="159" endline="175">SelectCaretPos</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1a7ed34e644ab97769d456a8edcb6c5ae1" prot="public" static="no">
+        <name>ZHWIDTH</name>
+        <param><defname>l</defname></param>
+        <initializer>((l) &lt;&lt; 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="136" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" prot="public" static="no">
+        <name>USWIDTH</name>
+        <param><defname>l</defname></param>
+        <initializer>(l)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="137" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="137" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="textinfo_8cpp_1a0dca3c70fc95ea6a3554cffc08937a75" compoundref="textinfo_8cpp" startline="35" endline="71">CreateUser</referencedby>
+        <referencedby refid="textoperation_8cpp_1a4c224a6c2076afbc5bdf27c698cf5e50" compoundref="textoperation_8cpp" startline="288" endline="307">DefaultFill</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8db8eabc16f945fab6970a1144e797e" compoundref="textoperation_8cpp" startline="309" endline="335">PaintWindow</referencedby>
+        <referencedby refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" compoundref="textoperation_8cpp" startline="159" endline="175">SelectCaretPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1abc5dea63027499bf06fc08b0662961d7" compoundref="textoperation_8cpp" startline="197" endline="229">SelectTextSize</referencedby>
+        <referencedby refid="textoperation_8cpp_1af8fc116326c8fe6d185ba3ff5d2287b8" compoundref="textoperation_8cpp" startline="132" endline="157">SelectWindowSize</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1a031dc7d9b2ac832e022b6bf8c60d0aee" prot="public" static="no">
+        <name>ZHHEIGHT</name>
+        <param><defname>l</defname></param>
+        <initializer>(l)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="138" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" prot="public" static="no">
+        <name>USHEIGHT</name>
+        <param><defname>l</defname></param>
+        <initializer>(l)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="139" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="139" bodyend="-1"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="textinfo_8cpp_1a0dca3c70fc95ea6a3554cffc08937a75" compoundref="textinfo_8cpp" startline="35" endline="71">CreateUser</referencedby>
+        <referencedby refid="textoperation_8cpp_1a4c224a6c2076afbc5bdf27c698cf5e50" compoundref="textoperation_8cpp" startline="288" endline="307">DefaultFill</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8db8eabc16f945fab6970a1144e797e" compoundref="textoperation_8cpp" startline="309" endline="335">PaintWindow</referencedby>
+        <referencedby refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" compoundref="textoperation_8cpp" startline="159" endline="175">SelectCaretPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" compoundref="textoperation_8cpp" startline="177" endline="195">SelectHighlight</referencedby>
+        <referencedby refid="textoperation_8cpp_1abc5dea63027499bf06fc08b0662961d7" compoundref="textoperation_8cpp" startline="197" endline="229">SelectTextSize</referencedby>
+        <referencedby refid="textoperation_8cpp_1af8fc116326c8fe6d185ba3ff5d2287b8" compoundref="textoperation_8cpp" startline="132" endline="157">SelectWindowSize</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1a0c674cc89ac253ef5d9d40d972d9018d" prot="public" static="no">
+        <name>AFTER_CARET</name>
+        <initializer>0x00000004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="143" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="143" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1a12fed1e41e7f72f9464cfe3bf6b3fb28" prot="public" static="no">
+        <name>BEFORE_CARET</name>
+        <initializer>0x00000008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="144" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="144" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1a3c2661ddd2ae823e33081c6fc484153b" prot="public" static="no">
+        <name>WHOLE_TEXT</name>
+        <initializer>0x00000010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="145" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="145" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1ad9ee182c6e9d1c3e11a19ea996ac8762" prot="public" static="no">
+        <name>FIND</name>
+        <initializer>0x00000020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="146" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="146" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="editbox_8h_1ac5e6ea3bc12db0b69fd25d64090fcb93" prot="public" static="no">
+        <name>REPLACE</name>
+        <initializer>0x00000040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="147" column="9" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="147" bodyend="-1"/>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="editbox_8h_1a4c028ba3ef3b605c3a4b35febb960394" prot="public" static="no">
+        <type>struct <ref refid="struct___t_i_m_e_r" kindref="compound">_TIMER</ref></type>
+        <definition>typedef struct _TIMER  TIMER</definition>
+        <argsstring></argsstring>
+        <name>TIMER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="17" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="editbox_8h_1a5f97b8cc533aca3989078513bcfd276c" prot="public" static="no">
+        <type>struct <ref refid="struct___t_i_m_e_r" kindref="compound">_TIMER</ref> *</type>
+        <definition>typedef struct _TIMER * HTIMER</definition>
+        <argsstring></argsstring>
+        <name>HTIMER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="17" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="editbox_8h_1aa9413ed7069327593b65b1fbe743f019" prot="public" static="no">
+        <type><ref refid="class_c_text" kindref="compound">CText</ref> *</type>
+        <definition>typedef CText* HTEXT</definition>
+        <argsstring></argsstring>
+        <name>HTEXT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="24" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="editbox_8h_1ad47055efd58f6fc48a2855875009a64b" prot="public" static="no">
+        <type><ref refid="class_c_text" kindref="compound">CText</ref> *</type>
+        <definition>typedef CText * LPTEXT</definition>
+        <argsstring></argsstring>
+        <name>LPTEXT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="24" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="editbox_8h_1a792917bdc8944c23165755496ad7e6d7" prot="public" static="no">
+        <type>struct <ref refid="struct___t_e_x_t___u_s_e_r" kindref="compound">_TEXT_USER</ref></type>
+        <definition>typedef struct _TEXT_USER  TEXTUSER</definition>
+        <argsstring></argsstring>
+        <name>TEXTUSER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="editbox_8h_1a5ca7aedb42813aad3bb36f6a3e9eb793" prot="public" static="no">
+        <type>struct <ref refid="struct___t_e_x_t___u_s_e_r" kindref="compound">_TEXT_USER</ref> *</type>
+        <definition>typedef struct _TEXT_USER * LPTEXTUSER</definition>
+        <argsstring></argsstring>
+        <name>LPTEXTUSER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="editbox_8h_1a1dda36283a86b4ecc2849c115dca8f64" prot="public" static="no">
+        <type>struct <ref refid="struct___t_e_x_t___u_s_e_r" kindref="compound">_TEXT_USER</ref> *</type>
+        <definition>typedef struct _TEXT_USER * HTEXTUSER</definition>
+        <argsstring></argsstring>
+        <name>HTEXTUSER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="editbox_8h_1aaece05b3566eafda29bb81389eb4d008" prot="public" static="no">
+        <type>struct <ref refid="struct___t_e_x_t___k_e_r_n_e_l" kindref="compound">_TEXT_KERNEL</ref></type>
+        <definition>typedef struct _TEXT_KERNEL  TEXTKERNEL</definition>
+        <argsstring></argsstring>
+        <name>TEXTKERNEL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="editbox_8h_1a872af82bbc3d5503ed93b525503783dc" prot="public" static="no">
+        <type>struct <ref refid="struct___t_e_x_t___k_e_r_n_e_l" kindref="compound">_TEXT_KERNEL</ref> *</type>
+        <definition>typedef struct _TEXT_KERNEL * LPTEXTKERNEL</definition>
+        <argsstring></argsstring>
+        <name>LPTEXTKERNEL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="editbox_8h_1a3670448d22023cd5d4a26e4a70e1596b" prot="public" static="no">
+        <type>struct <ref refid="struct___t_e_x_t___k_e_r_n_e_l" kindref="compound">_TEXT_KERNEL</ref> *</type>
+        <definition>typedef struct _TEXT_KERNEL * HTEXTKERNEL</definition>
+        <argsstring></argsstring>
+        <name>HTEXTKERNEL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="editbox_8h_1afd16df4da3b2964ba6d68371b589ed7f" prot="public" static="no">
+        <type>struct <ref refid="struct___t_e_x_t___g_d_i" kindref="compound">_TEXT_GDI</ref></type>
+        <definition>typedef struct _TEXT_GDI  TEXTGDI</definition>
+        <argsstring></argsstring>
+        <name>TEXTGDI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="editbox_8h_1a22d2e35ca6de77e44bb55d7d264de1fb" prot="public" static="no">
+        <type>struct <ref refid="struct___t_e_x_t___g_d_i" kindref="compound">_TEXT_GDI</ref> *</type>
+        <definition>typedef struct _TEXT_GDI * LPTEXTGDI</definition>
+        <argsstring></argsstring>
+        <name>LPTEXTGDI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="editbox_8h_1aa145cfae480ef1908e3f0a307af216db" prot="public" static="no">
+        <type>struct <ref refid="struct___t_e_x_t___g_d_i" kindref="compound">_TEXT_GDI</ref> *</type>
+        <definition>typedef struct _TEXT_GDI * HTEXTGDI</definition>
+        <argsstring></argsstring>
+        <name>HTEXTGDI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="editbox_8h_1a7499dac89783d9f864059a334341213e" prot="public" static="no">
+        <type>struct <ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">_TEXT_INFO</ref></type>
+        <definition>typedef struct _TEXT_INFO  TEXTINFO</definition>
+        <argsstring></argsstring>
+        <name>TEXTINFO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="editbox_8h_1ac726139ed1f3e2d4ea3f58b4e5f77b39" prot="public" static="no">
+        <type>struct <ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">_TEXT_INFO</ref> *</type>
+        <definition>typedef struct _TEXT_INFO * LPTEXTINFO</definition>
+        <argsstring></argsstring>
+        <name>LPTEXTINFO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="editbox_8h_1ade72794a74e8882580d7edf9854d194a" prot="public" static="no">
+        <type>struct <ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">_TEXT_INFO</ref> *</type>
+        <definition>typedef struct _TEXT_INFO * HTEXTINFO</definition>
+        <argsstring></argsstring>
+        <name>HTEXTINFO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="editbox_8h_1a6fde7073763e612db84cd5c85819e210" prot="public" static="no">
+        <type>RECT *</type>
+        <definition>typedef RECT* LPRECT</definition>
+        <argsstring></argsstring>
+        <name>LPRECT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="73" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="editbox_8h_1aa86faaca2fb82cb257d6dad837d717cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="editbox_8h_1a5f97b8cc533aca3989078513bcfd276c" kindref="member">HTIMER</ref> _stdcall</type>
+        <definition>HTIMER _stdcall CreateTimer</definition>
+        <argsstring>(DWORD time_length)</argsstring>
+        <name>CreateTimer</name>
+        <param>
+          <type>DWORD</type>
+          <declname>time_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="18" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp" bodystart="40" bodyend="44"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a6fd74aab9cf779f90331139c6d4ffe0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL _stdcall</type>
+        <definition>BOOL _stdcall KillTimer</definition>
+        <argsstring>(HTIMER timer)</argsstring>
+        <name>KillTimer</name>
+        <param>
+          <type><ref refid="editbox_8h_1a5f97b8cc533aca3989078513bcfd276c" kindref="member">HTIMER</ref></type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="19" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp" bodystart="46" bodyend="50"/>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a98ac40abd297710a7c905920dbe88c56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL IsTimerStopped</definition>
+        <argsstring>(HTIMER hTimer)</argsstring>
+        <name>IsTimerStopped</name>
+        <param>
+          <type><ref refid="editbox_8h_1a5f97b8cc533aca3989078513bcfd276c" kindref="member">HTIMER</ref></type>
+          <declname>hTimer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="20" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp" bodystart="15" bodyend="22"/>
+        <references refid="struct___t_i_m_e_r_1a58bb9d8ba3aa17d241d70b4de084c4e9" compoundref="editbox_8h" startline="15">_TIMER::time_mutex</references>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a0dca3c70fc95ea6a3554cffc08937a75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="editbox_8h_1a1dda36283a86b4ecc2849c115dca8f64" kindref="member">HTEXTUSER</ref> __stdcall</type>
+        <definition>HTEXTUSER __stdcall CreateUser</definition>
+        <argsstring>(HWND hWnd)</argsstring>
+        <name>CreateUser</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="37" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" bodystart="35" bodyend="71"/>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a5ad7522d369bd4e6a3ce4b717689f424" compoundref="editbox_8h" startline="29">_TEXT_USER::m_hFont</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a0a246aeaace7eec8e9e85d01e44e0b70" compoundref="editbox_8h" startline="32">_TEXT_USER::m_pCaretPos</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a931ecfde6be2b53eac3b0a6fd75e2271" compoundref="editbox_8h" startline="31">_TEXT_USER::m_pCaretSize</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a4469adea819d837c6f58e666a0f209b0" compoundref="editbox_8h" startline="30">_TEXT_USER::m_pCharSize</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a646fd63408bf87b038d452c86e3e2190" compoundref="editbox_8h" startline="35">_TEXT_USER::m_pPageSize</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a69a57e825e55fb1937784c05b10bb88e" compoundref="editbox_8h" startline="33">_TEXT_USER::m_pWindowPos</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a936ff142d6f055dcbacc29927a3b67c7" compoundref="editbox_8h" startline="34">_TEXT_USER::m_pWindowSize</references>
+        <references refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" compoundref="editbox_8h" startline="139">USHEIGHT</references>
+        <references refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" compoundref="editbox_8h" startline="137">USWIDTH</references>
+        <referencedby refid="textinfo_8cpp_1a7b4b54d85f18ce957cf547ae22de9fdf" compoundref="textinfo_8cpp" startline="5" endline="23">CreateTextInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1aaced21aa00948660bcaf2ea7ec1b2bff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL __stdcall</type>
+        <definition>BOOL __stdcall ReleaseUser</definition>
+        <argsstring>(HWND hWnd, HTEXTUSER hUser)</argsstring>
+        <name>ReleaseUser</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1a1dda36283a86b4ecc2849c115dca8f64" kindref="member">HTEXTUSER</ref></type>
+          <declname>hUser</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="38" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" bodystart="73" bodyend="77"/>
+        <referencedby refid="textinfo_8cpp_1a5f0aedfac2bea6d2d6a8dd003b4ee10f" compoundref="textinfo_8cpp" startline="25" endline="33">ReleaseTextInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a073fdf0b934ea2bea409ab94b544d2be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="editbox_8h_1a3670448d22023cd5d4a26e4a70e1596b" kindref="member">HTEXTKERNEL</ref> __stdcall</type>
+        <definition>HTEXTKERNEL __stdcall CreateKernel</definition>
+        <argsstring>(HWND hWnd, HTEXTUSER hUser)</argsstring>
+        <name>CreateKernel</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1a1dda36283a86b4ecc2849c115dca8f64" kindref="member">HTEXTUSER</ref></type>
+          <declname>hUser</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="48" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" bodystart="79" bodyend="93"/>
+        <references refid="_a_p_i_8cpp_1ac576655145c5b4612f504e04a6511a32" compoundref="_a_p_i_8cpp" startline="485" endline="496">CreateText</references>
+        <references refid="struct___t_e_x_t___k_e_r_n_e_l_1aa339ac3387af6d32176612d9d0fdec23" compoundref="editbox_8h" startline="43">_TEXT_KERNEL::m_hText</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a4469adea819d837c6f58e666a0f209b0" compoundref="editbox_8h" startline="30">_TEXT_USER::m_pCharSize</references>
+        <references refid="struct___t_e_x_t___k_e_r_n_e_l_1ae4b8a90c1e22c53e8ab54f276b9c5f00" compoundref="editbox_8h" startline="46">_TEXT_KERNEL::m_pEndPos</references>
+        <references refid="struct___t_e_x_t___k_e_r_n_e_l_1a713269904e0857c20f80aa841cb9ec4f" compoundref="editbox_8h" startline="45">_TEXT_KERNEL::m_pStartPos</references>
+        <references refid="struct___t_e_x_t___k_e_r_n_e_l_1a37fbc5eb7482a7fd70159dfdabe9482f" compoundref="editbox_8h" startline="44">_TEXT_KERNEL::m_pTextSize</references>
+        <referencedby refid="textinfo_8cpp_1a7b4b54d85f18ce957cf547ae22de9fdf" compoundref="textinfo_8cpp" startline="5" endline="23">CreateTextInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a32735553a32a0309482a89dd32f075ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL __stdcall</type>
+        <definition>BOOL __stdcall ReleaseKernel</definition>
+        <argsstring>(HWND hWnd, HTEXTKERNEL hKernel)</argsstring>
+        <name>ReleaseKernel</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1a3670448d22023cd5d4a26e4a70e1596b" kindref="member">HTEXTKERNEL</ref></type>
+          <declname>hKernel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="49" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" bodystart="95" bodyend="99"/>
+        <referencedby refid="textinfo_8cpp_1a5f0aedfac2bea6d2d6a8dd003b4ee10f" compoundref="textinfo_8cpp" startline="25" endline="33">ReleaseTextInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a00d094f318003965d49b28a2bb9fbdf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="editbox_8h_1aa145cfae480ef1908e3f0a307af216db" kindref="member">HTEXTGDI</ref> __stdcall</type>
+        <definition>HTEXTGDI __stdcall CreateGDI</definition>
+        <argsstring>(HWND hWnd, HTEXTUSER hUser)</argsstring>
+        <name>CreateGDI</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1a1dda36283a86b4ecc2849c115dca8f64" kindref="member">HTEXTUSER</ref></type>
+          <declname>hUser</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="60" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" bodystart="101" bodyend="122"/>
+        <references refid="struct___t_e_x_t___g_d_i_1aa53e9b83b1eec7268cfd60c8eda848d9" compoundref="editbox_8h" startline="56">_TEXT_GDI::m_hBitmap</references>
+        <references refid="struct___t_e_x_t___g_d_i_1a24d37f604ec70084f2a8b6e67b90a7ed" compoundref="editbox_8h" startline="55">_TEXT_GDI::m_hBrush</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a5ad7522d369bd4e6a3ce4b717689f424" compoundref="editbox_8h" startline="29">_TEXT_USER::m_hFont</references>
+        <references refid="struct___t_e_x_t___g_d_i_1a619c3e6b8b4be4d566a9e664a18ac03e" compoundref="editbox_8h" startline="54">_TEXT_GDI::m_hMemDC</references>
+        <references refid="struct___t_e_x_t___g_d_i_1a7cc58f492c9f540694545864b81cc1c7" compoundref="editbox_8h" startline="57">_TEXT_GDI::m_hMouseTimer</references>
+        <references refid="struct___t_e_x_t___g_d_i_1a523b7a475a73e7950c785fc0633589fd" compoundref="editbox_8h" startline="58">_TEXT_GDI::m_hSaveTimer</references>
+        <references refid="struct___t_e_x_t___u_s_e_r_1a936ff142d6f055dcbacc29927a3b67c7" compoundref="editbox_8h" startline="34">_TEXT_USER::m_pWindowSize</references>
+        <referencedby refid="textinfo_8cpp_1a7b4b54d85f18ce957cf547ae22de9fdf" compoundref="textinfo_8cpp" startline="5" endline="23">CreateTextInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a9b18abf4974a65b9b58836269bc039e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL __stdcall</type>
+        <definition>BOOL __stdcall ReleaseGDI</definition>
+        <argsstring>(HWND hWnd, HTEXTGDI hGDI)</argsstring>
+        <name>ReleaseGDI</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1aa145cfae480ef1908e3f0a307af216db" kindref="member">HTEXTGDI</ref></type>
+          <declname>hGDI</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="61" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" bodystart="124" bodyend="132"/>
+        <references refid="struct___t_e_x_t___g_d_i_1aa53e9b83b1eec7268cfd60c8eda848d9" compoundref="editbox_8h" startline="56">_TEXT_GDI::m_hBitmap</references>
+        <references refid="struct___t_e_x_t___g_d_i_1a24d37f604ec70084f2a8b6e67b90a7ed" compoundref="editbox_8h" startline="55">_TEXT_GDI::m_hBrush</references>
+        <references refid="struct___t_e_x_t___g_d_i_1a619c3e6b8b4be4d566a9e664a18ac03e" compoundref="editbox_8h" startline="54">_TEXT_GDI::m_hMemDC</references>
+        <referencedby refid="textinfo_8cpp_1a5f0aedfac2bea6d2d6a8dd003b4ee10f" compoundref="textinfo_8cpp" startline="25" endline="33">ReleaseTextInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a7b4b54d85f18ce957cf547ae22de9fdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref> __stdcall</type>
+        <definition>HTEXTINFO __stdcall CreateTextInfo</definition>
+        <argsstring>(HWND hWnd)</argsstring>
+        <name>CreateTextInfo</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="71" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" bodystart="5" bodyend="23"/>
+        <references refid="textinfo_8cpp_1a00d094f318003965d49b28a2bb9fbdf8" compoundref="textinfo_8cpp" startline="101" endline="122">CreateGDI</references>
+        <references refid="textinfo_8cpp_1a073fdf0b934ea2bea409ab94b544d2be" compoundref="textinfo_8cpp" startline="79" endline="93">CreateKernel</references>
+        <references refid="textinfo_8cpp_1a0dca3c70fc95ea6a3554cffc08937a75" compoundref="textinfo_8cpp" startline="35" endline="71">CreateUser</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1a81c05e651784aef5b1b937e39d6252f5" compoundref="editbox_8h" startline="67">_TEXT_INFO::m_hGDI</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1a3da9836c434f5f598edfde16b715999c" compoundref="editbox_8h" startline="66">_TEXT_INFO::m_hKernel</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1a4f58688b30347aeb0a91e8ad63edd643" compoundref="editbox_8h" startline="68">_TEXT_INFO::m_hUser</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" compoundref="editbox_8h" startline="69">_TEXT_INFO::m_hWnd</references>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a5f0aedfac2bea6d2d6a8dd003b4ee10f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL __stdcall</type>
+        <definition>BOOL __stdcall ReleaseTextInfo</definition>
+        <argsstring>(HWND hWnd, HTEXTINFO hTextInfo)</argsstring>
+        <name>ReleaseTextInfo</name>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+          <declname>hTextInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="72" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textinfo.cpp" bodystart="25" bodyend="33"/>
+        <references refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" compoundref="_edit_box_8cpp" startline="19">hTextInfo</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1a81c05e651784aef5b1b937e39d6252f5" compoundref="editbox_8h" startline="67">_TEXT_INFO::m_hGDI</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1a3da9836c434f5f598edfde16b715999c" compoundref="editbox_8h" startline="66">_TEXT_INFO::m_hKernel</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1a4f58688b30347aeb0a91e8ad63edd643" compoundref="editbox_8h" startline="68">_TEXT_INFO::m_hUser</references>
+        <references refid="textinfo_8cpp_1a9b18abf4974a65b9b58836269bc039e1" compoundref="textinfo_8cpp" startline="124" endline="132">ReleaseGDI</references>
+        <references refid="textinfo_8cpp_1a32735553a32a0309482a89dd32f075ab" compoundref="textinfo_8cpp" startline="95" endline="99">ReleaseKernel</references>
+        <references refid="textinfo_8cpp_1aaced21aa00948660bcaf2ea7ec1b2bff" compoundref="textinfo_8cpp" startline="73" endline="77">ReleaseUser</references>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a02177b6631a901375169990362472ba0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL WINAPI</type>
+        <definition>BOOL WINAPI MyTextOutW</definition>
+        <argsstring>(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCWSTR lpString, _In_ int c, _In_ short s, _In_ short e, _In_ int width)</argsstring>
+        <name>MyTextOutW</name>
+        <param>
+          <type>_In_ HDC</type>
+          <declname>hdc</declname>
+        </param>
+        <param>
+          <type>_In_ int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>_In_ int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>_In_reads_(c) LPCWSTR</type>
+          <declname>lpString</declname>
+        </param>
+        <param>
+          <type>_In_ int</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>_In_ short</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>_In_ short</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>_In_ int</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="76" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/io.cpp" bodystart="5" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1ae048d9f60f71892f04bfd649ce81d38c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL MyInvalidateRect</definition>
+        <argsstring>(HWND, LONG, LONG, LONG, LONG)</argsstring>
+        <name>MyInvalidateRect</name>
+        <param>
+          <type>HWND</type>
+        </param>
+        <param>
+          <type>LONG</type>
+        </param>
+        <param>
+          <type>LONG</type>
+        </param>
+        <param>
+          <type>LONG</type>
+        </param>
+        <param>
+          <type>LONG</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="85" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="5" bodyend="11"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" compoundref="textoperation_8cpp" startline="177" endline="195">SelectHighlight</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8ed95b601a777c79a06fc1e95e0aca0" compoundref="textoperation_8cpp" startline="255" endline="275">SelectTitledWindow</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a7ea6831ba284a9b1a978327316f685a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL AdjustCaretPosBeforeBackspace</definition>
+        <argsstring>(HWND, HTEXTINFO)</argsstring>
+        <name>AdjustCaretPosBeforeBackspace</name>
+        <param>
+          <type>HWND</type>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="87" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="18" bodyend="28"/>
+        <references refid="editbox_8h_1a31e764f7259e6bf9a8d4e17700c4d4c2" compoundref="editbox_8h" startline="109">ENDPOS</references>
+        <references refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" compoundref="textoperation_8cpp" startline="177" endline="195">SelectHighlight</references>
+        <references refid="editbox_8h_1a7cc19c4cad589ffffc2cd5f2ee272f1e" compoundref="editbox_8h" startline="108">STARTPOS</references>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1ab226a5d01754e06f6c5f7844fc47bc33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL AdjustWindowPos</definition>
+        <argsstring>(HWND, HTEXTINFO)</argsstring>
+        <name>AdjustWindowPos</name>
+        <param>
+          <type>HWND</type>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="88" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="30" bodyend="104"/>
+        <references refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" compoundref="editbox_8h" startline="122">CARETPOS</references>
+        <references refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" compoundref="editbox_8h" startline="123">CHARSIZE</references>
+        <references refid="textoperation_8cpp_1a4c224a6c2076afbc5bdf27c698cf5e50" compoundref="textoperation_8cpp" startline="288" endline="307">DefaultFill</references>
+        <references refid="editbox_8h_1a31e764f7259e6bf9a8d4e17700c4d4c2" compoundref="editbox_8h" startline="109">ENDPOS</references>
+        <references refid="editbox_8h_1a4b9ca192ede25b85028a300f9d300e42" compoundref="editbox_8h" startline="133">INRANGEX</references>
+        <references refid="editbox_8h_1afe7c3a921bdff1784bb7bb776d5e4a54" compoundref="editbox_8h" startline="134">INRANGEY</references>
+        <references refid="textoperation_8cpp_1a94381ffecfbc96fbaf48576642fd20b4" compoundref="textoperation_8cpp" startline="5" endline="11">MyInvalidateRect</references>
+        <references refid="textoperation_8cpp_1a03acee71495158181c790699f67c5401" compoundref="textoperation_8cpp" startline="277" endline="286">MyScrollWindow</references>
+        <references refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" compoundref="editbox_8h" startline="127">PAGESIZE</references>
+        <references refid="debug_8h_1a07fa3915de3fd9da3bc5ef6f38dbd143" compoundref="debug_8h" startline="17">PRINTCARETPOS</references>
+        <references refid="debug_8h_1a7fce88c2583e5a8cbb4286cb1654f764" compoundref="debug_8h" startline="29">PRINTENDL</references>
+        <references refid="debug_8h_1a3f2d02c5daa1c17be5b20e459ce24f9e" compoundref="debug_8h" startline="26">PRINTPAGESIZE</references>
+        <references refid="debug_8h_1a7278c3d4f8e08244b04af92d033070cc" compoundref="debug_8h" startline="23">PRINTWINDOWPOS</references>
+        <references refid="debug_8h_1a7f2fb4296befff0d0d5d2f3e0c5c7c04" compoundref="debug_8h" startline="20">PRINTWINDOWSIZE</references>
+        <references refid="textoperation_8cpp_1ae4ddefd3b434dcb4436e4da4ed6a8832" compoundref="textoperation_8cpp" startline="126" endline="130">SelectWindowPos</references>
+        <references refid="editbox_8h_1a7cc19c4cad589ffffc2cd5f2ee272f1e" compoundref="editbox_8h" startline="108">STARTPOS</references>
+        <references refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" compoundref="editbox_8h" startline="139">USHEIGHT</references>
+        <references refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" compoundref="editbox_8h" startline="137">USWIDTH</references>
+        <references refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" compoundref="editbox_8h" startline="125">WINDOWPOS</references>
+        <references refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" compoundref="editbox_8h" startline="126">WINDOWSIZE</references>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="textoperation_8cpp_1a515f72edefb28c2e51adc570e5ab378c" compoundref="textoperation_8cpp" startline="106" endline="124">MoveCaret</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a860b75d671a389399a3d14c7fc3cf4d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL MoveCaret</definition>
+        <argsstring>(HWND, UINT, HTEXTINFO)</argsstring>
+        <name>MoveCaret</name>
+        <param>
+          <type>HWND</type>
+        </param>
+        <param>
+          <type>UINT</type>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="89" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="106" bodyend="124"/>
+        <references refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</references>
+        <references refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" compoundref="editbox_8h" startline="122">CARETPOS</references>
+        <references refid="_a_p_i_8h_1abddf10fc1bc344eec830edaf4875888f" compoundref="_a_p_i_8h" startline="16">HIDWORD</references>
+        <references refid="editbox_8h_1ac8fd05e77854216993808807dd4021d6" compoundref="editbox_8h" startline="106">HTEXT</references>
+        <references refid="_a_p_i_8h_1a94b6637c5f035545e7b2ac3192d91f19" compoundref="_a_p_i_8h" startline="15">LODWORD</references>
+        <references refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" compoundref="textoperation_8cpp" startline="159" endline="175">SelectCaretPos</references>
+        <references refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" compoundref="textoperation_8cpp" startline="177" endline="195">SelectHighlight</references>
+        <references refid="_a_p_i_8h_1a679aa379b7f856831d6ffb69dbac7b6d" compoundref="_a_p_i_8h" startline="44">UR_ERROR</references>
+        <references refid="_a_p_i_8cpp_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</references>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a4d28a9d750581f1c6d3ad04801f9dee6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL SelectWindowPos</definition>
+        <argsstring>(HTEXTINFO, POINT)</argsstring>
+        <name>SelectWindowPos</name>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+        </param>
+        <param>
+          <type>POINT</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="91" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="126" bodyend="130"/>
+        <references refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" compoundref="editbox_8h" startline="125">WINDOWPOS</references>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8ed95b601a777c79a06fc1e95e0aca0" compoundref="textoperation_8cpp" startline="255" endline="275">SelectTitledWindow</referencedby>
+        <referencedby refid="textoperation_8cpp_1ae05ee4ee8873757de8b46582aa9d2d1d" compoundref="textoperation_8cpp" startline="231" endline="254">SelectUntitledWindow</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1af8fc116326c8fe6d185ba3ff5d2287b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL SelectWindowSize</definition>
+        <argsstring>(HTEXTINFO hTextInfo, LPRECT lpRect)</argsstring>
+        <name>SelectWindowSize</name>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+          <declname>hTextInfo</declname>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1a6fde7073763e612db84cd5c85819e210" kindref="member">LPRECT</ref></type>
+          <declname>lpRect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="92" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="132" bodyend="157"/>
+        <references refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" compoundref="editbox_8h" startline="123">CHARSIZE</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" compoundref="editbox_8h" startline="69">_TEXT_INFO::m_hWnd</references>
+        <references refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" compoundref="editbox_8h" startline="127">PAGESIZE</references>
+        <references refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" compoundref="editbox_8h" startline="139">USHEIGHT</references>
+        <references refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" compoundref="editbox_8h" startline="137">USWIDTH</references>
+        <references refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" compoundref="editbox_8h" startline="126">WINDOWSIZE</references>
+        <referencedby refid="textoperation_8cpp_1ab8ed95b601a777c79a06fc1e95e0aca0" compoundref="textoperation_8cpp" startline="255" endline="275">SelectTitledWindow</referencedby>
+        <referencedby refid="textoperation_8cpp_1ae05ee4ee8873757de8b46582aa9d2d1d" compoundref="textoperation_8cpp" startline="231" endline="254">SelectUntitledWindow</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a522210d9795ecde8c5cc681c42a74f91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL SelectCaretPos</definition>
+        <argsstring>(HTEXTINFO, POINT)</argsstring>
+        <name>SelectCaretPos</name>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+        </param>
+        <param>
+          <type>POINT</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="93" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="159" bodyend="175"/>
+        <references refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" compoundref="editbox_8h" startline="122">CARETPOS</references>
+        <references refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" compoundref="editbox_8h" startline="123">CHARSIZE</references>
+        <references refid="editbox_8h_1a4b9ca192ede25b85028a300f9d300e42" compoundref="editbox_8h" startline="133">INRANGEX</references>
+        <references refid="editbox_8h_1afe7c3a921bdff1784bb7bb776d5e4a54" compoundref="editbox_8h" startline="134">INRANGEY</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" compoundref="editbox_8h" startline="69">_TEXT_INFO::m_hWnd</references>
+        <references refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" compoundref="editbox_8h" startline="127">PAGESIZE</references>
+        <references refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" compoundref="editbox_8h" startline="139">USHEIGHT</references>
+        <references refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" compoundref="editbox_8h" startline="137">USWIDTH</references>
+        <references refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" compoundref="editbox_8h" startline="125">WINDOWPOS</references>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="textoperation_8cpp_1a515f72edefb28c2e51adc570e5ab378c" compoundref="textoperation_8cpp" startline="106" endline="124">MoveCaret</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8ed95b601a777c79a06fc1e95e0aca0" compoundref="textoperation_8cpp" startline="255" endline="275">SelectTitledWindow</referencedby>
+        <referencedby refid="textoperation_8cpp_1ae05ee4ee8873757de8b46582aa9d2d1d" compoundref="textoperation_8cpp" startline="231" endline="254">SelectUntitledWindow</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a8f4df0dd5907a4a074e8f089b15b6cb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL SelectHighlight</definition>
+        <argsstring>(HTEXTINFO, POINT, POINT)</argsstring>
+        <name>SelectHighlight</name>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+        </param>
+        <param>
+          <type>POINT</type>
+        </param>
+        <param>
+          <type>POINT</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="94" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="177" bodyend="195"/>
+        <references refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" compoundref="editbox_8h" startline="123">CHARSIZE</references>
+        <references refid="editbox_8h_1a31e764f7259e6bf9a8d4e17700c4d4c2" compoundref="editbox_8h" startline="109">ENDPOS</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" compoundref="editbox_8h" startline="69">_TEXT_INFO::m_hWnd</references>
+        <references refid="textoperation_8cpp_1a94381ffecfbc96fbaf48576642fd20b4" compoundref="textoperation_8cpp" startline="5" endline="11">MyInvalidateRect</references>
+        <references refid="editbox_8h_1a7cc19c4cad589ffffc2cd5f2ee272f1e" compoundref="editbox_8h" startline="108">STARTPOS</references>
+        <references refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" compoundref="editbox_8h" startline="139">USHEIGHT</references>
+        <references refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" compoundref="editbox_8h" startline="125">WINDOWPOS</references>
+        <references refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" compoundref="editbox_8h" startline="126">WINDOWSIZE</references>
+        <referencedby refid="textoperation_8cpp_1a612b8844c2d272063e8175a2b5b3d457" compoundref="textoperation_8cpp" startline="18" endline="28">AdjustCaretPosBeforeBackspace</referencedby>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="textoperation_8cpp_1a515f72edefb28c2e51adc570e5ab378c" compoundref="textoperation_8cpp" startline="106" endline="124">MoveCaret</referencedby>
+        <referencedby refid="textoperation_8cpp_1ab8ed95b601a777c79a06fc1e95e0aca0" compoundref="textoperation_8cpp" startline="255" endline="275">SelectTitledWindow</referencedby>
+        <referencedby refid="textoperation_8cpp_1ae05ee4ee8873757de8b46582aa9d2d1d" compoundref="textoperation_8cpp" startline="231" endline="254">SelectUntitledWindow</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a2ab1cb2b1e413babe4a97bc7bb2fdcf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL SelectTextSize</definition>
+        <argsstring>(HTEXTINFO, POINT)</argsstring>
+        <name>SelectTextSize</name>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+        </param>
+        <param>
+          <type>POINT</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="95" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="197" bodyend="229"/>
+        <references refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" compoundref="editbox_8h" startline="123">CHARSIZE</references>
+        <references refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" compoundref="editbox_8h" startline="69">_TEXT_INFO::m_hWnd</references>
+        <references refid="editbox_8h_1a3f94d0002f5d3d0b5156b1b3d56c9961" compoundref="editbox_8h" startline="107">TEXTSIZE</references>
+        <references refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" compoundref="editbox_8h" startline="139">USHEIGHT</references>
+        <references refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" compoundref="editbox_8h" startline="137">USWIDTH</references>
+        <references refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" compoundref="editbox_8h" startline="126">WINDOWSIZE</references>
+        <referencedby refid="_edit_box_8cpp_1abb911e5096890f0eac51080d80782733" compoundref="_edit_box_8cpp" startline="968" endline="1079">Find</referencedby>
+        <referencedby refid="textoperation_8cpp_1ae05ee4ee8873757de8b46582aa9d2d1d" compoundref="textoperation_8cpp" startline="231" endline="254">SelectUntitledWindow</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a5fb60c75169478be6fd6cdc1a9555610" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL SelectUntitledWindow</definition>
+        <argsstring>(HWND, HTEXTINFO)</argsstring>
+        <name>SelectUntitledWindow</name>
+        <param>
+          <type>HWND</type>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="96" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="231" bodyend="254"/>
+        <references refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" compoundref="editbox_8h" startline="122">CARETPOS</references>
+        <references refid="editbox_8h_1a1ecf21a8623aab1d3ea987ad565c434b" compoundref="editbox_8h" startline="124">CARETSIZE</references>
+        <references refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" compoundref="textoperation_8cpp" startline="159" endline="175">SelectCaretPos</references>
+        <references refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" compoundref="textoperation_8cpp" startline="177" endline="195">SelectHighlight</references>
+        <references refid="textoperation_8cpp_1abc5dea63027499bf06fc08b0662961d7" compoundref="textoperation_8cpp" startline="197" endline="229">SelectTextSize</references>
+        <references refid="textoperation_8cpp_1ae4ddefd3b434dcb4436e4da4ed6a8832" compoundref="textoperation_8cpp" startline="126" endline="130">SelectWindowPos</references>
+        <references refid="textoperation_8cpp_1af8fc116326c8fe6d185ba3ff5d2287b8" compoundref="textoperation_8cpp" startline="132" endline="157">SelectWindowSize</references>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a32a90ff0f7b2544a74413e78fa1c2667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL SelectTitledWindow</definition>
+        <argsstring>(HWND, HTEXTINFO, POINT, LPCWSTR)</argsstring>
+        <name>SelectTitledWindow</name>
+        <param>
+          <type>HWND</type>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+        </param>
+        <param>
+          <type>POINT</type>
+        </param>
+        <param>
+          <type>LPCWSTR</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="97" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="255" bodyend="275"/>
+        <references refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" compoundref="editbox_8h" startline="122">CARETPOS</references>
+        <references refid="textoperation_8cpp_1a94381ffecfbc96fbaf48576642fd20b4" compoundref="textoperation_8cpp" startline="5" endline="11">MyInvalidateRect</references>
+        <references refid="textoperation_8cpp_1ad726a981f47e6f32a909bcee5fbbfc24" compoundref="textoperation_8cpp" startline="159" endline="175">SelectCaretPos</references>
+        <references refid="textoperation_8cpp_1af02e886cc15a29a1272a26f21aeff4df" compoundref="textoperation_8cpp" startline="177" endline="195">SelectHighlight</references>
+        <references refid="textoperation_8cpp_1ae4ddefd3b434dcb4436e4da4ed6a8832" compoundref="textoperation_8cpp" startline="126" endline="130">SelectWindowPos</references>
+        <references refid="textoperation_8cpp_1af8fc116326c8fe6d185ba3ff5d2287b8" compoundref="textoperation_8cpp" startline="132" endline="157">SelectWindowSize</references>
+        <references refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" compoundref="editbox_8h" startline="126">WINDOWSIZE</references>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a38e697b94115e2cc6177d6bdda033a56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL MyScrollWindow</definition>
+        <argsstring>(HWND, int, int)</argsstring>
+        <name>MyScrollWindow</name>
+        <param>
+          <type>HWND</type>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="99" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="277" bodyend="286"/>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a63ab25e3f7f0da025f158ee1f0f0b2c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL DefaultFill</definition>
+        <argsstring>(HWND, HTEXTINFO)</argsstring>
+        <name>DefaultFill</name>
+        <param>
+          <type>HWND</type>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="100" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="288" bodyend="307"/>
+        <references refid="editbox_8h_1a699f42b1b5585d578f0ae96deaa1b894" compoundref="editbox_8h" startline="115">BRUSH</references>
+        <references refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" compoundref="editbox_8h" startline="123">CHARSIZE</references>
+        <references refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" compoundref="editbox_8h" startline="127">PAGESIZE</references>
+        <references refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" compoundref="editbox_8h" startline="139">USHEIGHT</references>
+        <references refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" compoundref="editbox_8h" startline="137">USWIDTH</references>
+        <referencedby refid="textoperation_8cpp_1acb321028e09e55935248211d0c741997" compoundref="textoperation_8cpp" startline="30" endline="104">AdjustWindowPos</referencedby>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1afb24e127bc0d65b3b1f5854cf7d7357a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL PaintWindow</definition>
+        <argsstring>(LPPAINTSTRUCT, HTEXTINFO)</argsstring>
+        <name>PaintWindow</name>
+        <param>
+          <type>LPPAINTSTRUCT</type>
+        </param>
+        <param>
+          <type><ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="102" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="309" bodyend="335"/>
+        <references refid="editbox_8h_1a699f42b1b5585d578f0ae96deaa1b894" compoundref="editbox_8h" startline="115">BRUSH</references>
+        <references refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" compoundref="editbox_8h" startline="123">CHARSIZE</references>
+        <references refid="_a_p_i_8h_1abddf10fc1bc344eec830edaf4875888f" compoundref="_a_p_i_8h" startline="16">HIDWORD</references>
+        <references refid="editbox_8h_1ac8fd05e77854216993808807dd4021d6" compoundref="editbox_8h" startline="106">HTEXT</references>
+        <references refid="_a_p_i_8h_1a94b6637c5f035545e7b2ac3192d91f19" compoundref="_a_p_i_8h" startline="15">LODWORD</references>
+        <references refid="editbox_8h_1a8dca9c84766a55fc972528846a944e2d" compoundref="editbox_8h" startline="113">MEMDC</references>
+        <references refid="editbox_8h_1a9770c66bebb9e0414a2fae54b042b915" compoundref="editbox_8h" startline="81">MyTextOut</references>
+        <references refid="_a_p_i_8h_1aa85a1cfcb4fbb9b6ba83c25723effa41" compoundref="_a_p_i_8h" startline="25">UM_TEXT</references>
+        <references refid="_a_p_i_8h_1a679aa379b7f856831d6ffb69dbac7b6d" compoundref="_a_p_i_8h" startline="44">UR_ERROR</references>
+        <references refid="_a_p_i_8cpp_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</references>
+        <references refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" compoundref="editbox_8h" startline="139">USHEIGHT</references>
+        <references refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" compoundref="editbox_8h" startline="137">USWIDTH</references>
+        <references refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" compoundref="editbox_8h" startline="125">WINDOWPOS</references>
+        <references refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" compoundref="editbox_8h" startline="126">WINDOWSIZE</references>
+        <referencedby refid="_edit_box_8cpp_1a9135ea2a0d6fce68ba3b858226a31a4f" compoundref="_edit_box_8cpp" startline="154" endline="945">WndProc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="editbox_8h_1a08f0a6744ca16873d568b89b74a192b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>BOOL operator==</definition>
+        <argsstring>(POINT left, POINT right)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>POINT</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>POINT</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="131" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/textoperation.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="resource_8h" kindref="compound">resource.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>定时器</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="struct___t_i_m_e_r" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___t_i_m_e_r" kindref="compound">_TIMER</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___t_i_m_e_r_1a87e7f6317a93602a297e8df61502f828" kindref="member">_TIMER</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>DWORD&amp;<sp/>tr);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___t_i_m_e_r_1a5ae095f7617927db3aa70724c708c455" kindref="member">~_TIMER</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="struct___t_i_m_e_r_1a7262c637a4ca0a84f6958055b0c75887" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>DWORD<sp/><sp/><sp/><sp/><sp/><ref refid="struct___t_i_m_e_r_1a7262c637a4ca0a84f6958055b0c75887" kindref="member">time_rest</ref>;</highlight></codeline>
+<codeline lineno="15" refid="struct___t_i_m_e_r_1a58bb9d8ba3aa17d241d70b4de084c4e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE<sp/><sp/><sp/><sp/><ref refid="struct___t_i_m_e_r_1a58bb9d8ba3aa17d241d70b4de084c4e9" kindref="member">time_mutex</ref>;</highlight></codeline>
+<codeline lineno="16" refid="struct___t_i_m_e_r_1ab4816b5a1b667fd50f17f5f725b11625" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE<sp/><sp/><sp/><sp/><ref refid="struct___t_i_m_e_r_1ab4816b5a1b667fd50f17f5f725b11625" kindref="member">time_thread_id</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}<sp/><ref refid="editbox_8h_1a4c028ba3ef3b605c3a4b35febb960394" kindref="member">TIMER</ref>,<sp/>*<ref refid="editbox_8h_1a5f97b8cc533aca3989078513bcfd276c" kindref="member">HTIMER</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">HTIMER<sp/>_stdcall<sp/><ref refid="editbox_8h_1aa86faaca2fb82cb257d6dad837d717cd" kindref="member">CreateTimer</ref>(DWORD<sp/>time_length);<sp/></highlight><highlight class="comment">//<sp/>创建一次性定时器</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">BOOL<sp/><sp/><sp/>_stdcall<sp/><ref refid="editbox_8h_1a6fd74aab9cf779f90331139c6d4ffe0b" kindref="member">KillTimer</ref>(HTIMER<sp/>timer);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>销毁一次性定时器</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a98ac40abd297710a7c905920dbe88c56" kindref="member">IsTimerStopped</ref>(HTIMER<sp/>hTimer);<sp/><sp/></highlight><highlight class="comment">//<sp/>定时器是否停止</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RESOURCE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="editbox_8h_1ad47055efd58f6fc48a2855875009a64b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_text" kindref="compound">CText</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="class_c_text" kindref="compound">CText</ref><sp/>*<ref refid="editbox_8h_1ac8fd05e77854216993808807dd4021d6" kindref="member">HTEXT</ref>,<sp/>*<ref refid="editbox_8h_1ad47055efd58f6fc48a2855875009a64b" kindref="member">LPTEXT</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>文本用户结构</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="struct___t_e_x_t___u_s_e_r" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___t_e_x_t___u_s_e_r" kindref="compound">_TEXT_USER</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29" refid="struct___t_e_x_t___u_s_e_r_1a5ad7522d369bd4e6a3ce4b717689f424" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>HFONT<sp/><ref refid="struct___t_e_x_t___u_s_e_r_1a5ad7522d369bd4e6a3ce4b717689f424" kindref="member">m_hFont</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>字体实例</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="struct___t_e_x_t___u_s_e_r_1a4469adea819d837c6f58e666a0f209b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>POINT<sp/><ref refid="struct___t_e_x_t___u_s_e_r_1a4469adea819d837c6f58e666a0f209b0" kindref="member">m_pCharSize</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>字符大小</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="struct___t_e_x_t___u_s_e_r_1a931ecfde6be2b53eac3b0a6fd75e2271" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>POINT<sp/><ref refid="struct___t_e_x_t___u_s_e_r_1a931ecfde6be2b53eac3b0a6fd75e2271" kindref="member">m_pCaretSize</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>光标大小</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="struct___t_e_x_t___u_s_e_r_1a0a246aeaace7eec8e9e85d01e44e0b70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>POINT<sp/><ref refid="struct___t_e_x_t___u_s_e_r_1a0a246aeaace7eec8e9e85d01e44e0b70" kindref="member">m_pCaretPos</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>光标位置</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="struct___t_e_x_t___u_s_e_r_1a69a57e825e55fb1937784c05b10bb88e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>POINT<sp/><ref refid="struct___t_e_x_t___u_s_e_r_1a69a57e825e55fb1937784c05b10bb88e" kindref="member">m_pWindowPos</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>窗口位置</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="struct___t_e_x_t___u_s_e_r_1a936ff142d6f055dcbacc29927a3b67c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>POINT<sp/><ref refid="struct___t_e_x_t___u_s_e_r_1a936ff142d6f055dcbacc29927a3b67c7" kindref="member">m_pWindowSize</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>窗口大小</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="struct___t_e_x_t___u_s_e_r_1a646fd63408bf87b038d452c86e3e2190" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>POINT<sp/><ref refid="struct___t_e_x_t___u_s_e_r_1a646fd63408bf87b038d452c86e3e2190" kindref="member">m_pPageSize</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>页面范围</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}<sp/><ref refid="editbox_8h_1a792917bdc8944c23165755496ad7e6d7" kindref="member">TEXTUSER</ref>,<sp/>*<ref refid="editbox_8h_1a5ca7aedb42813aad3bb36f6a3e9eb793" kindref="member">LPTEXTUSER</ref>,<sp/>*<ref refid="editbox_8h_1a1dda36283a86b4ecc2849c115dca8f64" kindref="member">HTEXTUSER</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">HTEXTUSER<sp/>__stdcall<sp/><ref refid="editbox_8h_1a0dca3c70fc95ea6a3554cffc08937a75" kindref="member">CreateUser</ref>(HWND<sp/>hWnd);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><sp/><sp/>__stdcall<sp/><ref refid="editbox_8h_1aaced21aa00948660bcaf2ea7ec1b2bff" kindref="member">ReleaseUser</ref>(HWND<sp/>hWnd,<sp/>HTEXTUSER<sp/>hUser);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>文本内核结构</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="struct___t_e_x_t___k_e_r_n_e_l" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___t_e_x_t___k_e_r_n_e_l" kindref="compound">_TEXT_KERNEL</ref></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43" refid="struct___t_e_x_t___k_e_r_n_e_l_1aa339ac3387af6d32176612d9d0fdec23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_text" kindref="compound">HTEXT</ref><sp/><ref refid="struct___t_e_x_t___k_e_r_n_e_l_1aa339ac3387af6d32176612d9d0fdec23" kindref="member">m_hText</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>文本实例</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="struct___t_e_x_t___k_e_r_n_e_l_1a37fbc5eb7482a7fd70159dfdabe9482f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>POINT<sp/><ref refid="struct___t_e_x_t___k_e_r_n_e_l_1a37fbc5eb7482a7fd70159dfdabe9482f" kindref="member">m_pTextSize</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>文本范围</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="struct___t_e_x_t___k_e_r_n_e_l_1a713269904e0857c20f80aa841cb9ec4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>POINT<sp/><ref refid="struct___t_e_x_t___k_e_r_n_e_l_1a713269904e0857c20f80aa841cb9ec4f" kindref="member">m_pStartPos</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>选段起点</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="struct___t_e_x_t___k_e_r_n_e_l_1ae4b8a90c1e22c53e8ab54f276b9c5f00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>POINT<sp/><ref refid="struct___t_e_x_t___k_e_r_n_e_l_1ae4b8a90c1e22c53e8ab54f276b9c5f00" kindref="member">m_pEndPos</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>选段终点</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}<sp/><ref refid="editbox_8h_1aaece05b3566eafda29bb81389eb4d008" kindref="member">TEXTKERNEL</ref>,<sp/>*<ref refid="editbox_8h_1a872af82bbc3d5503ed93b525503783dc" kindref="member">LPTEXTKERNEL</ref>,<sp/>*<ref refid="editbox_8h_1a3670448d22023cd5d4a26e4a70e1596b" kindref="member">HTEXTKERNEL</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">HTEXTKERNEL<sp/>__stdcall<sp/><ref refid="editbox_8h_1a073fdf0b934ea2bea409ab94b544d2be" kindref="member">CreateKernel</ref>(HWND<sp/>hWnd,<sp/>HTEXTUSER<sp/>hUser);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__stdcall<sp/><ref refid="editbox_8h_1a32735553a32a0309482a89dd32f075ab" kindref="member">ReleaseKernel</ref>(HWND<sp/>hWnd,<sp/>HTEXTKERNEL<sp/>hKernel);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/>文本图形设备结构</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="struct___t_e_x_t___g_d_i" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___t_e_x_t___g_d_i" kindref="compound">_TEXT_GDI</ref></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54" refid="struct___t_e_x_t___g_d_i_1a619c3e6b8b4be4d566a9e664a18ac03e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>HDC<sp/><sp/><sp/><sp/><sp/><ref refid="struct___t_e_x_t___g_d_i_1a619c3e6b8b4be4d566a9e664a18ac03e" kindref="member">m_hMemDC</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>缓冲设备</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="struct___t_e_x_t___g_d_i_1a24d37f604ec70084f2a8b6e67b90a7ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>HBRUSH<sp/><sp/><ref refid="struct___t_e_x_t___g_d_i_1a24d37f604ec70084f2a8b6e67b90a7ed" kindref="member">m_hBrush</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>默认背景刷</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="struct___t_e_x_t___g_d_i_1aa53e9b83b1eec7268cfd60c8eda848d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>HBITMAP<sp/><ref refid="struct___t_e_x_t___g_d_i_1aa53e9b83b1eec7268cfd60c8eda848d9" kindref="member">m_hBitmap</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>缓冲位图</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="struct___t_e_x_t___g_d_i_1a7cc58f492c9f540694545864b81cc1c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>HTIMER<sp/><sp/><ref refid="struct___t_e_x_t___g_d_i_1a7cc58f492c9f540694545864b81cc1c7" kindref="member">m_hMouseTimer</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>鼠标移动定时器</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="struct___t_e_x_t___g_d_i_1a523b7a475a73e7950c785fc0633589fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>HTIMER<sp/><sp/><ref refid="struct___t_e_x_t___g_d_i_1a523b7a475a73e7950c785fc0633589fd" kindref="member">m_hSaveTimer</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>自动保存定时器</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}<sp/><ref refid="editbox_8h_1afd16df4da3b2964ba6d68371b589ed7f" kindref="member">TEXTGDI</ref>,<sp/>*<ref refid="editbox_8h_1a22d2e35ca6de77e44bb55d7d264de1fb" kindref="member">LPTEXTGDI</ref>,<sp/>*<ref refid="editbox_8h_1aa145cfae480ef1908e3f0a307af216db" kindref="member">HTEXTGDI</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">HTEXTGDI<sp/>__stdcall<sp/><ref refid="editbox_8h_1a00d094f318003965d49b28a2bb9fbdf8" kindref="member">CreateGDI</ref>(HWND<sp/>hWnd,<sp/>HTEXTUSER<sp/>hUser);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><sp/>__stdcall<sp/><ref refid="editbox_8h_1a9b18abf4974a65b9b58836269bc039e1" kindref="member">ReleaseGDI</ref>(HWND<sp/>hWnd,<sp/>HTEXTGDI<sp/>hGDI);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//<sp/>文本结构</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="struct___t_e_x_t___i_n_f_o" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___t_e_x_t___i_n_f_o" kindref="compound">_TEXT_INFO</ref></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66" refid="struct___t_e_x_t___i_n_f_o_1a3da9836c434f5f598edfde16b715999c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>HTEXTKERNEL<sp/><ref refid="struct___t_e_x_t___i_n_f_o_1a3da9836c434f5f598edfde16b715999c" kindref="member">m_hKernel</ref>;</highlight></codeline>
+<codeline lineno="67" refid="struct___t_e_x_t___i_n_f_o_1a81c05e651784aef5b1b937e39d6252f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>HTEXTGDI<sp/><sp/><sp/><sp/><ref refid="struct___t_e_x_t___i_n_f_o_1a81c05e651784aef5b1b937e39d6252f5" kindref="member">m_hGDI</ref>;</highlight></codeline>
+<codeline lineno="68" refid="struct___t_e_x_t___i_n_f_o_1a4f58688b30347aeb0a91e8ad63edd643" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>HTEXTUSER<sp/><sp/><sp/><ref refid="struct___t_e_x_t___i_n_f_o_1a4f58688b30347aeb0a91e8ad63edd643" kindref="member">m_hUser</ref>;</highlight></codeline>
+<codeline lineno="69" refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>HWND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct___t_e_x_t___i_n_f_o_1ace2ea9b0669920b9b4ee5190c9a6667d" kindref="member">m_hWnd</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}<sp/><ref refid="editbox_8h_1a7499dac89783d9f864059a334341213e" kindref="member">TEXTINFO</ref>,<sp/>*<ref refid="editbox_8h_1ac726139ed1f3e2d4ea3f58b4e5f77b39" kindref="member">LPTEXTINFO</ref>,<sp/>*<ref refid="editbox_8h_1ade72794a74e8882580d7edf9854d194a" kindref="member">HTEXTINFO</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">HTEXTINFO<sp/>__stdcall<sp/><ref refid="editbox_8h_1a7b4b54d85f18ce957cf547ae22de9fdf" kindref="member">CreateTextInfo</ref>(HWND<sp/>hWnd);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><sp/><sp/>__stdcall<sp/><ref refid="editbox_8h_1a5f0aedfac2bea6d2d6a8dd003b4ee10f" kindref="member">ReleaseTextInfo</ref>(HWND<sp/>hWnd,<sp/>HTEXTINFO<sp/><ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>);</highlight></codeline>
+<codeline lineno="73" refid="editbox_8h_1a6fde7073763e612db84cd5c85819e210" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>RECT<sp/>*<ref refid="editbox_8h_1a6fde7073763e612db84cd5c85819e210" kindref="member">LPRECT</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//<sp/>IO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">BOOL<sp/>WINAPI<sp/><ref refid="editbox_8h_1a02177b6631a901375169990362472ba0" kindref="member">MyTextOutW</ref>(_In_<sp/>HDC<sp/>hdc,<sp/>_In_<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/>_In_<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/>_In_reads_(c)<sp/>LPCWSTR<sp/>lpString,<sp/>_In_<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c,<sp/>_In_<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>s,<sp/>_In_<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>e,<sp/>_In_<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>UNICODE</highlight></codeline>
+<codeline lineno="79"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MyTextOut<sp/>MyTextOutW</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="81" refid="editbox_8h_1a9770c66bebb9e0414a2fae54b042b915" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MyTextOut<sp/>MyTextOutA</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>UNICODE</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Operation<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><ref refid="editbox_8h_1ae048d9f60f71892f04bfd649ce81d38c" kindref="member">MyInvalidateRect</ref>(HWND,<sp/>LONG,<sp/>LONG,<sp/>LONG,<sp/>LONG);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>设置无效区域</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a7ea6831ba284a9b1a978327316f685a3" kindref="member">AdjustCaretPosBeforeBackspace</ref>(HWND,<sp/>HTEXTINFO);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>用户按Backspace键时<sp/>调整光标位置</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><ref refid="editbox_8h_1ab226a5d01754e06f6c5f7844fc47bc33" kindref="member">AdjustWindowPos</ref>(HWND,<sp/>HTEXTINFO);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>滑动窗口</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a860b75d671a389399a3d14c7fc3cf4d9" kindref="member">MoveCaret</ref>(HWND,<sp/>UINT,<sp/>HTEXTINFO);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>移动光标</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a4d28a9d750581f1c6d3ad04801f9dee6" kindref="member">SelectWindowPos</ref>(HTEXTINFO,<sp/>POINT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>设置窗口位置</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><ref refid="editbox_8h_1af8fc116326c8fe6d185ba3ff5d2287b8" kindref="member">SelectWindowSize</ref>(HTEXTINFO<sp/><ref refid="_edit_box_8cpp_1ad06f95eefbc275ab2b6e2656137050aa" kindref="member">hTextInfo</ref>,<sp/><ref refid="editbox_8h_1a6fde7073763e612db84cd5c85819e210" kindref="member">LPRECT</ref><sp/>lpRect);<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>设置窗口范围</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a522210d9795ecde8c5cc681c42a74f91" kindref="member">SelectCaretPos</ref>(HTEXTINFO,<sp/>POINT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>设置光标位置</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a8f4df0dd5907a4a074e8f089b15b6cb6" kindref="member">SelectHighlight</ref>(HTEXTINFO,<sp/>POINT,<sp/>POINT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>设置高亮部分</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a2ab1cb2b1e413babe4a97bc7bb2fdcf4" kindref="member">SelectTextSize</ref>(HTEXTINFO,<sp/>POINT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>设置文本范围</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a5fb60c75169478be6fd6cdc1a9555610" kindref="member">SelectUntitledWindow</ref>(HWND,<sp/>HTEXTINFO);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>默认文本窗口显示</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a32a90ff0f7b2544a74413e78fa1c2667" kindref="member">SelectTitledWindow</ref>(HWND,<sp/>HTEXTINFO,<sp/>POINT,<sp/>LPCWSTR);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>命名文本窗口显示</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a38e697b94115e2cc6177d6bdda033a56" kindref="member">MyScrollWindow</ref>(HWND,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>滑动窗口</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><ref refid="editbox_8h_1a63ab25e3f7f0da025f158ee1f0f0b2c7" kindref="member">DefaultFill</ref>(HWND,<sp/>HTEXTINFO);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>描边</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">BOOL<sp/><sp/><sp/><sp/><ref refid="editbox_8h_1afb24e127bc0d65b3b1f5854cf7d7357a" kindref="member">PaintWindow</ref>(LPPAINTSTRUCT,<sp/>HTEXTINFO);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>重绘窗口</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Convenient<sp/>macro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">//<sp/>+++++++++++++++++++++++++++<sp/>Kernel<sp/>++++++++++++++++++++++++++<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="editbox_8h_1ac8fd05e77854216993808807dd4021d6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTEXT(hTextInfo)<sp/><sp/><sp/><sp/>(hTextInfo-&gt;m_hKernel-&gt;m_hText)</highlight></codeline>
+<codeline lineno="107" refid="editbox_8h_1a3f94d0002f5d3d0b5156b1b3d56c9961" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TEXTSIZE(hTextInfo)<sp/>(hTextInfo-&gt;m_hKernel-&gt;m_pTextSize)</highlight></codeline>
+<codeline lineno="108" refid="editbox_8h_1a7cc19c4cad589ffffc2cd5f2ee272f1e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>STARTPOS(hTextInfo)<sp/>(hTextInfo-&gt;m_hKernel-&gt;m_pStartPos)</highlight></codeline>
+<codeline lineno="109" refid="editbox_8h_1a31e764f7259e6bf9a8d4e17700c4d4c2" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ENDPOS(hTextInfo)<sp/><sp/><sp/>(hTextInfo-&gt;m_hKernel-&gt;m_pEndPos)</highlight></codeline>
+<codeline lineno="110"><highlight class="preprocessor"></highlight><highlight class="comment">//<sp/>+++++++++++++++++++++++++++<sp/><sp/><sp/>End<sp/><sp/>++++++++++++++++++++++++++<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">//<sp/>+++++++++++++++++++++++++++<sp/><sp/><sp/>GDI<sp/><sp/>++++++++++++++++++++++++++<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="editbox_8h_1a8dca9c84766a55fc972528846a944e2d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEMDC(hTextInfo)<sp/><sp/>(hTextInfo-&gt;m_hGDI-&gt;m_hMemDC)</highlight></codeline>
+<codeline lineno="114" refid="editbox_8h_1aa994b0cdbb8e77db687d4110908cacd0" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BITMAP(hTextInfo)<sp/>(hTextInfo-&gt;m_hGDI-&gt;m_hBitmap)</highlight></codeline>
+<codeline lineno="115" refid="editbox_8h_1a699f42b1b5585d578f0ae96deaa1b894" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BRUSH(hTextInfo)<sp/><sp/>(hTextInfo-&gt;m_hGDI-&gt;m_hBrush)</highlight></codeline>
+<codeline lineno="116" refid="editbox_8h_1afa6e8e36ab043344eb0d4a8de362f49a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MTIMER(hTextInfo)<sp/>(hTextInfo-&gt;m_hGDI-&gt;m_hMouseTimer)</highlight></codeline>
+<codeline lineno="117" refid="editbox_8h_1a381d1886146aa628f957a19d819989c2" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>STIMER(hTextInfo)<sp/>(hTextInfo-&gt;m_hGDI-&gt;m_hSaveTimer)</highlight></codeline>
+<codeline lineno="118"><highlight class="preprocessor"></highlight><highlight class="comment">//<sp/>+++++++++++++++++++++++++++<sp/><sp/><sp/>End<sp/><sp/>++++++++++++++++++++++++++<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">//<sp/>+++++++++++++++++++++++++++<sp/><sp/><sp/>User<sp/>++++++++++++++++++++++++++<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="editbox_8h_1afa07ce96cdffc89cbe48c0ea532a19bd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FONT(hTextInfo)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(hTextInfo-&gt;m_hUser-&gt;m_hFont)</highlight></codeline>
+<codeline lineno="122" refid="editbox_8h_1a2a29391bf7b00a8f4d4250d81f2d2dea" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CARETPOS(hTextInfo)<sp/><sp/><sp/>(hTextInfo-&gt;m_hUser-&gt;m_pCaretPos)</highlight></codeline>
+<codeline lineno="123" refid="editbox_8h_1a3bfd7f9a87a2126392a6dd3ab762bc90" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CHARSIZE(hTextInfo)<sp/><sp/><sp/>(hTextInfo-&gt;m_hUser-&gt;m_pCharSize)</highlight></codeline>
+<codeline lineno="124" refid="editbox_8h_1a1ecf21a8623aab1d3ea987ad565c434b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CARETSIZE(hTextInfo)<sp/><sp/>(hTextInfo-&gt;m_hUser-&gt;m_pCaretSize)</highlight></codeline>
+<codeline lineno="125" refid="editbox_8h_1a57686577c5345a9a8cb2faa700a9787f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>WINDOWPOS(hTextInfo)<sp/><sp/>(hTextInfo-&gt;m_hUser-&gt;m_pWindowPos)</highlight></codeline>
+<codeline lineno="126" refid="editbox_8h_1a2195511da5a6064a316b017b10a2365d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>WINDOWSIZE(hTextInfo)<sp/>(hTextInfo-&gt;m_hUser-&gt;m_pWindowSize)</highlight></codeline>
+<codeline lineno="127" refid="editbox_8h_1aa7d8c98ee30bb13b5cdda138f37f3b52" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PAGESIZE(hTextInfo)<sp/><sp/><sp/>(hTextInfo-&gt;m_hUser-&gt;m_pPageSize)</highlight></codeline>
+<codeline lineno="128"><highlight class="preprocessor"></highlight><highlight class="comment">//<sp/>+++++++++++++++++++++++++++<sp/><sp/><sp/>End<sp/><sp/>++++++++++++++++++++++++++<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">//<sp/>++++++++++++++<sp/>Convenient<sp/>Operation<sp/>++++++++++++++<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">BOOL<sp/><ref refid="editbox_8h_1a08f0a6744ca16873d568b89b74a192b9" kindref="member">operator==</ref>(POINT<sp/>left,<sp/>POINT<sp/>right);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="editbox_8h_1a4b9ca192ede25b85028a300f9d300e42" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INRANGEX(x,<sp/>l,<sp/>r)<sp/>((x)<sp/>&gt;=<sp/>(l)<sp/>&amp;&amp;<sp/>(x)<sp/>&lt;=<sp/>(r))</highlight></codeline>
+<codeline lineno="134" refid="editbox_8h_1afe7c3a921bdff1784bb7bb776d5e4a54" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INRANGEY(y,<sp/>t,<sp/>b)<sp/>((y)<sp/>&gt;=<sp/>(t)<sp/>&amp;&amp;<sp/>(y)<sp/>&lt;<sp/><sp/>(b))</highlight></codeline>
+<codeline lineno="135"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="editbox_8h_1a7ed34e644ab97769d456a8edcb6c5ae1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZHWIDTH(l)<sp/><sp/>((l)<sp/>&lt;&lt;<sp/>1)</highlight></codeline>
+<codeline lineno="137" refid="editbox_8h_1ad277887f738e8fd19d43cf022f8df891" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>USWIDTH(l)<sp/><sp/>(l)</highlight></codeline>
+<codeline lineno="138" refid="editbox_8h_1a031dc7d9b2ac832e022b6bf8c60d0aee" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ZHHEIGHT(l)<sp/>(l)</highlight></codeline>
+<codeline lineno="139" refid="editbox_8h_1abd617936ce7ed42a4d0015012b6c9b33" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>USHEIGHT(l)<sp/>(l)</highlight></codeline>
+<codeline lineno="140"><highlight class="preprocessor"></highlight><highlight class="comment">//<sp/>++++++++++++++++++++++<sp/>END<sp/>+++++++++++++++++++++++<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="comment">//<sp/>+++++++++++<sp/>FIND<sp/>MACRO<sp/>+++++++++++<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="editbox_8h_1a0c674cc89ac253ef5d9d40d972d9018d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFTER_CARET<sp/><sp/><sp/>0x00000004</highlight></codeline>
+<codeline lineno="144" refid="editbox_8h_1a12fed1e41e7f72f9464cfe3bf6b3fb28" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BEFORE_CARET<sp/><sp/>0x00000008</highlight></codeline>
+<codeline lineno="145" refid="editbox_8h_1a3c2661ddd2ae823e33081c6fc484153b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>WHOLE_TEXT<sp/><sp/><sp/><sp/>0x00000010</highlight></codeline>
+<codeline lineno="146" refid="editbox_8h_1ad9ee182c6e9d1c3e11a19ea996ac8762" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FIND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000020</highlight></codeline>
+<codeline lineno="147" refid="editbox_8h_1ac5e6ea3bc12db0b69fd25d64090fcb93" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>REPLACE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000040</highlight></codeline>
+<codeline lineno="148"><highlight class="preprocessor">//<sp/>+++++++++++++++<sp/>END<sp/>++++++++++++++<sp/>//</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h"/>
+  </compounddef>
+</doxygen>

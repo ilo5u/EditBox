@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct_position" kind="struct" prot="public">
+    <compoundname>Position</compoundname>
+    <includes refid="_c_line_8h" local="no">CLine.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_position_1a7b72348893583b77254a650b7095c9fc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Position::LineNumber</definition>
+        <argsstring></argsstring>
+        <name>LineNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" line="11" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" bodystart="11" bodyend="-1"/>
+        <referencedby refid="class_c_text_1a8b4cd3375f2f673e7daeb8caae3299dd" compoundref="_c_text_8cpp" startline="166" endline="189">CText::BackSpace</referencedby>
+        <referencedby refid="class_c_line_1a5aa15f3309c620d7972eebd58d9793a2" compoundref="_c_line_8cpp" startline="150" endline="164">CLine::BackSpace</referencedby>
+        <referencedby refid="struct_record_1afa7f4738b5b61284af2f94dd34e8f917" compoundref="_record_8cpp" startline="78" endline="82">Record::Clear_Choose_Data</referencedby>
+        <referencedby refid="class_c_text_1a46f994aaca813d66221125f4295f4fcd" compoundref="_c_text_8cpp" startline="243" endline="268">CText::Copy</referencedby>
+        <referencedby refid="class_c_text_1a5baa587ee060cec570e68110bf6e6f2d" compoundref="_c_text_8cpp" startline="136" endline="160">CText::Delete</referencedby>
+        <referencedby refid="class_c_text_1ae7356293c6869d990f8cbe9f18d23b05" compoundref="_c_text_8cpp" startline="278" endline="302">CText::EnterNewLine</referencedby>
+        <referencedby refid="class_text__iterator_1a6fafa43cf62867ecadb47524a5771dec" compoundref="_c_text_8cpp" startline="595" endline="599">Text_iterator::GoPosition</referencedby>
+        <referencedby refid="class_c_text_1aeb95b8bf7a9517ead86bff6e39841cb1" compoundref="_c_text_8cpp" startline="199" endline="241">CText::Insert</referencedby>
+        <referencedby refid="struct_position_1ae98c73389cd21a818748465ff954316b" compoundref="_c_line_8cpp" startline="604" endline="610">operator&lt;</referencedby>
+        <referencedby refid="struct_position_1a025cef8fd5176f84cf755520aed96dfc" compoundref="_c_line_8cpp" startline="627" endline="630">operator==</referencedby>
+        <referencedby refid="class_cursor_1aa651fe435ded2561b306da89ea6bcc04" compoundref="_cursor_8cpp" startline="220" endline="229">Cursor::PositionToCursor</referencedby>
+        <referencedby refid="struct_record_1a8bc01d9746033bc55acf407f9b0e8411" compoundref="_record_8cpp" startline="15" endline="50">Record::ReDo</referencedby>
+        <referencedby refid="_a_p_i_8h_1aa38f364cf105c6943a1920fc8e71b901" compoundref="_a_p_i_8cpp" startline="550" endline="587">Set_Height_Light</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_position_1ae88c7f07952695e2d545109bc5e84d20" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Position::Sequence</definition>
+        <argsstring></argsstring>
+        <name>Sequence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" line="12" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_c_text_1a8b4cd3375f2f673e7daeb8caae3299dd" compoundref="_c_text_8cpp" startline="166" endline="189">CText::BackSpace</referencedby>
+        <referencedby refid="class_c_line_1a5aa15f3309c620d7972eebd58d9793a2" compoundref="_c_line_8cpp" startline="150" endline="164">CLine::BackSpace</referencedby>
+        <referencedby refid="struct_record_1afa7f4738b5b61284af2f94dd34e8f917" compoundref="_record_8cpp" startline="78" endline="82">Record::Clear_Choose_Data</referencedby>
+        <referencedby refid="class_c_text_1a46f994aaca813d66221125f4295f4fcd" compoundref="_c_text_8cpp" startline="243" endline="268">CText::Copy</referencedby>
+        <referencedby refid="class_cursor_1ab52b823114daf6409a3e292a2e1cd815" compoundref="_cursor_8cpp" startline="199" endline="216">Cursor::CursorToPosition_After</referencedby>
+        <referencedby refid="class_c_text_1a5baa587ee060cec570e68110bf6e6f2d" compoundref="_c_text_8cpp" startline="136" endline="160">CText::Delete</referencedby>
+        <referencedby refid="class_c_text_1ae7356293c6869d990f8cbe9f18d23b05" compoundref="_c_text_8cpp" startline="278" endline="302">CText::EnterNewLine</referencedby>
+        <referencedby refid="class_text__iterator_1a6fafa43cf62867ecadb47524a5771dec" compoundref="_c_text_8cpp" startline="595" endline="599">Text_iterator::GoPosition</referencedby>
+        <referencedby refid="class_c_text_1aeb95b8bf7a9517ead86bff6e39841cb1" compoundref="_c_text_8cpp" startline="199" endline="241">CText::Insert</referencedby>
+        <referencedby refid="class_cursor_1a3decae7bfe7197dc8975c3ff6349be55" compoundref="_cursor_8cpp" startline="85" endline="102">Cursor::isTextTail</referencedby>
+        <referencedby refid="struct_position_1ae98c73389cd21a818748465ff954316b" compoundref="_c_line_8cpp" startline="604" endline="610">operator&lt;</referencedby>
+        <referencedby refid="struct_position_1a025cef8fd5176f84cf755520aed96dfc" compoundref="_c_line_8cpp" startline="627" endline="630">operator==</referencedby>
+        <referencedby refid="class_cursor_1aa651fe435ded2561b306da89ea6bcc04" compoundref="_cursor_8cpp" startline="220" endline="229">Cursor::PositionToCursor</referencedby>
+        <referencedby refid="struct_record_1a8bc01d9746033bc55acf407f9b0e8411" compoundref="_record_8cpp" startline="15" endline="50">Record::ReDo</referencedby>
+        <referencedby refid="class_c_text_1a62eee26c0c1dd6f67d0b6ecca5d59a70" compoundref="_c_text_8cpp" startline="341" endline="346">CText::Replace</referencedby>
+        <referencedby refid="struct_record_1afdb85f0fa26f8fc5def05eaa2280dd0d" compoundref="_record_8cpp" startline="52" endline="58">Record::Save_Delete_Data</referencedby>
+        <referencedby refid="_a_p_i_8h_1aa38f364cf105c6943a1920fc8e71b901" compoundref="_a_p_i_8cpp" startline="550" endline="587">Set_Height_Light</referencedby>
+        <referencedby refid="_a_p_i_8h_1a90db10ed3b32a98ecf5f96238b3a4600" compoundref="_a_p_i_8cpp" startline="10" endline="483">UserMessageProc</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_position_1ae98c73389cd21a818748465ff954316b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Position::operator&lt;</definition>
+        <argsstring>(Position &amp;position)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref> &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" line="14" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.cpp" bodystart="604" bodyend="610"/>
+        <references refid="struct_position_1a7b72348893583b77254a650b7095c9fc" compoundref="_c_line_8h" startline="11">LineNumber</references>
+        <references refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" compoundref="_c_line_8h" startline="12">Sequence</references>
+      </memberdef>
+      <memberdef kind="function" id="struct_position_1a2aa07f5a219c065f328697bd608c10d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Position::operator&lt;=</definition>
+        <argsstring>(Position &amp;position)</argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref> &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" line="15" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.cpp" bodystart="612" bodyend="615"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_position_1a814e4fac37f4df5495a9f62b66186309" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Position::operator&gt;</definition>
+        <argsstring>(Position &amp;position)</argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref> &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" line="16" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.cpp" bodystart="617" bodyend="620"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_position_1a501e9a2930b09db2d4c82e0749c92f5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Position::operator&gt;=</definition>
+        <argsstring>(Position &amp;position)</argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref> &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" line="17" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.cpp" bodystart="622" bodyend="625"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_position_1a025cef8fd5176f84cf755520aed96dfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Position::operator==</definition>
+        <argsstring>(Position &amp;position)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref> &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" line="18" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.cpp" bodystart="627" bodyend="630"/>
+        <references refid="struct_position_1a7b72348893583b77254a650b7095c9fc" compoundref="_c_line_8h" startline="11">LineNumber</references>
+        <references refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" compoundref="_c_line_8h" startline="12">Sequence</references>
+      </memberdef>
+      <memberdef kind="function" id="struct_position_1ae4e29f220f7e4d5af87a1e00af086ef9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Position::operator!=</definition>
+        <argsstring>(Position &amp;position)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type><ref refid="struct_position" kindref="compound">Position</ref> &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" line="19" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.cpp" bodystart="632" bodyend="635"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" line="10" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/CLine.h" bodystart="9" bodyend="20"/>
+    <listofallmembers>
+      <member refid="struct_position_1a7b72348893583b77254a650b7095c9fc" prot="public" virt="non-virtual"><scope>Position</scope><name>LineNumber</name></member>
+      <member refid="struct_position_1ae4e29f220f7e4d5af87a1e00af086ef9" prot="public" virt="non-virtual"><scope>Position</scope><name>operator!=</name></member>
+      <member refid="struct_position_1ae98c73389cd21a818748465ff954316b" prot="public" virt="non-virtual"><scope>Position</scope><name>operator&lt;</name></member>
+      <member refid="struct_position_1a2aa07f5a219c065f328697bd608c10d6" prot="public" virt="non-virtual"><scope>Position</scope><name>operator&lt;=</name></member>
+      <member refid="struct_position_1a025cef8fd5176f84cf755520aed96dfc" prot="public" virt="non-virtual"><scope>Position</scope><name>operator==</name></member>
+      <member refid="struct_position_1a814e4fac37f4df5495a9f62b66186309" prot="public" virt="non-virtual"><scope>Position</scope><name>operator&gt;</name></member>
+      <member refid="struct_position_1a501e9a2930b09db2d4c82e0749c92f5d" prot="public" virt="non-virtual"><scope>Position</scope><name>operator&gt;=</name></member>
+      <member refid="struct_position_1ae88c7f07952695e2d545109bc5e84d20" prot="public" virt="non-virtual"><scope>Position</scope><name>Sequence</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

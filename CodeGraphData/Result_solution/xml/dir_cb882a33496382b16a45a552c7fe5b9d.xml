@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_cb882a33496382b16a45a552c7fe5b9d" kind="dir">
+    <compoundname>C:/Users/ilo5u/Source/Repos/EditBox/EditBox</compoundname>
+    <innerfile refid="_a_p_i_8cpp">API.cpp</innerfile>
+    <innerfile refid="_a_p_i_8h">API.h</innerfile>
+    <innerfile refid="_c_line_8cpp">CLine.cpp</innerfile>
+    <innerfile refid="_c_line_8h">CLine.h</innerfile>
+    <innerfile refid="_c_text_8cpp">CText.cpp</innerfile>
+    <innerfile refid="_c_text_8h">CText.h</innerfile>
+    <innerfile refid="_cursor_8cpp">Cursor.cpp</innerfile>
+    <innerfile refid="_cursor_8h">Cursor.h</innerfile>
+    <innerfile refid="debug_8cpp">debug.cpp</innerfile>
+    <innerfile refid="debug_8h">debug.h</innerfile>
+    <innerfile refid="_edit_box_8cpp">EditBox.cpp</innerfile>
+    <innerfile refid="editbox_8h">editbox.h</innerfile>
+    <innerfile refid="io_8cpp">io.cpp</innerfile>
+    <innerfile refid="_record_8cpp">Record.cpp</innerfile>
+    <innerfile refid="_record_8h">Record.h</innerfile>
+    <innerfile refid="resource_8h">resource.h</innerfile>
+    <innerfile refid="stdafx_8cpp">stdafx.cpp</innerfile>
+    <innerfile refid="stdafx_8h">stdafx.h</innerfile>
+    <innerfile refid="targetver_8h">targetver.h</innerfile>
+    <innerfile refid="textinfo_8cpp">textinfo.cpp</innerfile>
+    <innerfile refid="textoperation_8cpp">textoperation.cpp</innerfile>
+    <innerfile refid="timer_8cpp">timer.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/"/>
+  </compounddef>
+</doxygen>

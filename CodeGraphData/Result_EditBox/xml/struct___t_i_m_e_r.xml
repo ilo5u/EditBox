@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct___t_i_m_e_r" kind="struct" prot="public">
+    <compoundname>_TIMER</compoundname>
+    <includes refid="editbox_8h" local="no">editbox.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___t_i_m_e_r_1a7262c637a4ca0a84f6958055b0c75887" prot="public" static="no" mutable="no">
+        <type>DWORD</type>
+        <definition>DWORD _TIMER::time_rest</definition>
+        <argsstring></argsstring>
+        <name>time_rest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="14" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="timer_8cpp_1ae4ef7e95fabe58ab3f15273a396ff190" compoundref="timer_8cpp" startline="5" endline="13">RunTimer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_i_m_e_r_1a58bb9d8ba3aa17d241d70b4de084c4e9" prot="public" static="no" mutable="no">
+        <type>HANDLE</type>
+        <definition>HANDLE _TIMER::time_mutex</definition>
+        <argsstring></argsstring>
+        <name>time_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="15" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="struct___t_i_m_e_r_1a87e7f6317a93602a297e8df61502f828" compoundref="timer_8cpp" startline="24" endline="29">_TIMER</referencedby>
+        <referencedby refid="timer_8cpp_1a98ac40abd297710a7c905920dbe88c56" compoundref="timer_8cpp" startline="15" endline="22">IsTimerStopped</referencedby>
+        <referencedby refid="timer_8cpp_1ae4ef7e95fabe58ab3f15273a396ff190" compoundref="timer_8cpp" startline="5" endline="13">RunTimer</referencedby>
+        <referencedby refid="struct___t_i_m_e_r_1a5ae095f7617927db3aa70724c708c455" compoundref="timer_8cpp" startline="31" endline="38">~_TIMER</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct___t_i_m_e_r_1ab4816b5a1b667fd50f17f5f725b11625" prot="public" static="no" mutable="no">
+        <type>HANDLE</type>
+        <definition>HANDLE _TIMER::time_thread_id</definition>
+        <argsstring></argsstring>
+        <name>time_thread_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="16" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="struct___t_i_m_e_r_1a87e7f6317a93602a297e8df61502f828" compoundref="timer_8cpp" startline="24" endline="29">_TIMER</referencedby>
+        <referencedby refid="struct___t_i_m_e_r_1a5ae095f7617927db3aa70724c708c455" compoundref="timer_8cpp" startline="31" endline="38">~_TIMER</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct___t_i_m_e_r_1a87e7f6317a93602a297e8df61502f828" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>_TIMER::_TIMER</definition>
+        <argsstring>(const DWORD &amp;tr)</argsstring>
+        <name>_TIMER</name>
+        <param>
+          <type>const DWORD &amp;</type>
+          <declname>tr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="11" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp" bodystart="24" bodyend="29"/>
+        <references refid="timer_8cpp_1ae4ef7e95fabe58ab3f15273a396ff190" compoundref="timer_8cpp" startline="5" endline="13">RunTimer</references>
+        <references refid="struct___t_i_m_e_r_1a58bb9d8ba3aa17d241d70b4de084c4e9" compoundref="editbox_8h" startline="15">time_mutex</references>
+        <references refid="struct___t_i_m_e_r_1ab4816b5a1b667fd50f17f5f725b11625" compoundref="editbox_8h" startline="16">time_thread_id</references>
+      </memberdef>
+      <memberdef kind="function" id="struct___t_i_m_e_r_1a5ae095f7617927db3aa70724c708c455" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>_TIMER::~_TIMER</definition>
+        <argsstring>()</argsstring>
+        <name>~_TIMER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="12" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/timer.cpp" bodystart="31" bodyend="38"/>
+        <references refid="struct___t_i_m_e_r_1a58bb9d8ba3aa17d241d70b4de084c4e9" compoundref="editbox_8h" startline="15">time_mutex</references>
+        <references refid="struct___t_i_m_e_r_1ab4816b5a1b667fd50f17f5f725b11625" compoundref="editbox_8h" startline="16">time_thread_id</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" line="9" column="1" bodyfile="C:/Users/ilo5u/Source/Repos/EditBox/EditBox/editbox.h" bodystart="8" bodyend="17"/>
+    <listofallmembers>
+      <member refid="struct___t_i_m_e_r_1a87e7f6317a93602a297e8df61502f828" prot="public" virt="non-virtual"><scope>_TIMER</scope><name>_TIMER</name></member>
+      <member refid="struct___t_i_m_e_r_1a58bb9d8ba3aa17d241d70b4de084c4e9" prot="public" virt="non-virtual"><scope>_TIMER</scope><name>time_mutex</name></member>
+      <member refid="struct___t_i_m_e_r_1a7262c637a4ca0a84f6958055b0c75887" prot="public" virt="non-virtual"><scope>_TIMER</scope><name>time_rest</name></member>
+      <member refid="struct___t_i_m_e_r_1ab4816b5a1b667fd50f17f5f725b11625" prot="public" virt="non-virtual"><scope>_TIMER</scope><name>time_thread_id</name></member>
+      <member refid="struct___t_i_m_e_r_1a5ae095f7617927db3aa70724c708c455" prot="public" virt="non-virtual"><scope>_TIMER</scope><name>~_TIMER</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
