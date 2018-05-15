@@ -157,7 +157,7 @@ int Cursor::CharactersProperty_before_Cursor(int LineNumber, int x)
 int Cursor::CursorLocation(int LineNumber, int x)
 {
 	int Length = pText->Line_Width(LineNumber, nWidth);
-	if (x >= Length)
+	if (x > Length)
 		return Length;
 	else
 	{
@@ -202,7 +202,7 @@ Position Cursor::CursorToPosition_After(int x, int y)
 	Position p1 = CursorToPosition(x, y);		//光标前字符位置
 	CLine* p = pText->GetLinePointer(LineNumber);
 	//光标位于行尾
-	if (p != NULL && p->nDataSize == p1.Sequence)
+	if (p->nDataSize == p1.Sequence)
 	{
 		if (p->nLineNumber == pText->Line_Number())
 		{
@@ -227,6 +227,22 @@ POINT Cursor::PositionToCursor(Position position)
 	point.y = y;
 	return point;
 }
+/*
+返回position位置前的光标POINT信息
+*/
+POINT Cursor::PositionToCursor_Before(Position position)
+{
+	POINT point;
+	int x, y;
+	y = (position.LineNumber - 1)*nHeight;
+	if (position.Sequence <= 1)
+		x = 0;
+	else
+		x = pText->Line_Width(position.LineNumber, nWidth, position.Sequence - 1);
+	point.x = x;
+	point.y = y;
+	return point;
+}
 
 void Cursor::Choose(Position s, Position e)
 {
@@ -237,7 +253,7 @@ void Cursor::Choose(Position s, Position e)
 
 void Cursor::SetChoose()
 {
-	bChoose = 0;
+	bChoose = 1;
 }
 
 void Cursor::ResetChoose()

@@ -329,9 +329,11 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 			return RVALUE(0);
 		}
 		pCursor->CursorLocation(LineNumber, x);
+
 		int iCount = 0;					//显示的字符数量
 		short int iStart = 0;			//高亮部分的开始点
 		short int iEnd = 0;				//高亮部分结束点
+
 		int end_x = LODWORD(fParam);
 		CLine* pLine = hText->GetLinePointer(LineNumber);
 		Position position_start;		//字符显示起点
@@ -403,34 +405,40 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 		if (pRecord->empty())			//当前没有待撤销的步骤
 			return UR_NOTCANCEL;
 		Record* p = pRecord->top();
-		//取出最近一次的操作
+		//撤销最近一次的操作
 		p->ReDo(hText);
 		pCursor->ResetChoose();			//清空之前的选中信息
 		switch (p->ACT)
 		{
-		case RD_MERGE_LINE:
-		{
-			(*(POINT*)fParam) = (*(POINT*)sParam) = pCursor->PositionToCursor(p->start);
-			break;
-		}
-		case RD_INSERT :
-		{
-			(*(POINT*)fParam) = (*(POINT*)sParam) = pCursor->PositionToCursor(p->start);
-			break;
-		}
-		case RD_RETURN :
-		{
-			(*(POINT*)fParam) = (*(POINT*)sParam) = pCursor->PositionToCursor(p->start);
-			break;
-		}
-		case RD_DELETE:
-		{
-			(*(POINT*)fParam) = pCursor->PositionToCursor({ p->start.LineNumber,p->start.Sequence - 1 });
-			(*(POINT*)sParam) = pCursor->PositionToCursor(p->end);
-			pCursor->Choose(p->start, p->end);			//鼠标设置选段信息
-			break;
-		}
-		default:break;
+			case RD_MERGE_LINE:
+			{
+				(*(POINT*)fParam) = (*(POINT*)sParam) = pCursor->PositionToCursor(p->start);
+				break;
+			}
+			case RD_INSERT :
+			{
+				(*(POINT*)fParam) = (*(POINT*)sParam) = pCursor->PositionToCursor(p->start);
+				break;
+			}
+			case RD_RETURN :
+			{
+				(*(POINT*)fParam) = (*(POINT*)sParam) = pCursor->PositionToCursor(p->start);
+				break;
+			}
+			case RD_DELETE:
+			{
+				(*(POINT*)fParam) = pCursor->PositionToCursor({ p->start.LineNumber,p->start.Sequence - 1 });
+				(*(POINT*)sParam) = pCursor->PositionToCursor(p->end);
+				pCursor->Choose(p->start, p->end);			//鼠标设置选段信息
+				break;
+			}
+			case RD_REPLACE:
+			{
+				(*(POINT*)fParam) = (*(POINT*)sParam) = pCursor->PositionToCursor(p->start);
+				pCursor->Choose(p->start, p->end);
+				break;
+			}
+			default:break;
 		}
 
 
@@ -525,9 +533,15 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 		Position start = pCursor->CursorToPosition_After(x, y);
 		Position end = pCursor->CursorToPosition(((POINT*)fParam)->x, ((POINT*)fParam)->y);
 
-		end = hText->Replace(start, end, Str);
-		pCursor->Choose(start, end);
+		/*设置撤销 保存被替换字符串*/
+		Record* rd = new Record(RD_REPLACE);
+		rd->Save_Delete_Data(hText, start, end);
 
+		end = hText->Replace(start, end, Str);
+
+		pCursor->Choose(start, end);
+		rd->Set_Choose_Data(start, end);
+		pRecord->push(rd);
 		POINT p = pCursor->PositionToCursor(end);
 		return RVALUE(p.x) << 32 | hText->Max_Line_Width(Width_EN);
 	}

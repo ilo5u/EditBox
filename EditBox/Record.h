@@ -8,6 +8,7 @@
 #define RD_INSERT		0x00000010
 #define RD_RETURN		0x00000100
 #define RD_MERGE_LINE	0x00010000
+#define RD_REPLACE		0x00100000
 struct Record
 {
 	Record(UINT flag);
@@ -72,4 +73,14 @@ RD_MERGE_LINE
 start 记录按下回车的位置（此例中为{1,5}）
 Save_Merge_Line_Data(CText* p,int LineNumber);
 合并前第二行行号
+*/
+
+/*
+RD_REPLACE
+对替换的元素做还原操作
+start 记录替换字符串的起始位置
+end   记录替换字符的终点位置
+Delete_Data 记录被替换的字符串
+
+恢复后start 和 end 记录选中起点和终点
 */

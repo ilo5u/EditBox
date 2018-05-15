@@ -20,6 +20,7 @@ public:
 	Position CursorToPosition(int x, int y);							//（合法）光标位置前的字符位置转化到文本位置
 	Position CursorToPosition_After(int x, int y);						//（合法）光标位置后的字符位置转化到文本位置
 	POINT    PositionToCursor(Position position);						//返回position后的光标位置	
+	POINT    PositionToCursor_Before(Position position);				//返回position前的光标位置	
 	void Choose(Position s, Position e);								//设置选段信息
 	void SetChoose();													//设置选中
 	void ResetChoose();													//清空选中

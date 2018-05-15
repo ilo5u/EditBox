@@ -85,20 +85,11 @@ BOOL AdjustWindowPos(HWND hWnd, HTEXTINFO hTextInfo)
 		(iOldHorzPos - iNowHorzPos) * USWIDTH(CHARSIZE(hTextInfo).x), 
 		(iOldVertPos - iNowVertPos) * USHEIGHT(CHARSIZE(hTextInfo).y)
 	);	// »¬¶¯´°¿Ú
-	DefaultFill(hWnd, hTextInfo);
 
 	MyInvalidateRect(hWnd,
 		0, WINDOWSIZE(hTextInfo).x,
 		STARTPOS(hTextInfo).y - WINDOWPOS(hTextInfo).y,
 		ENDPOS(hTextInfo).y - WINDOWPOS(hTextInfo).y + USHEIGHT(CHARSIZE(hTextInfo).y));
-
-#ifdef DEBUG
-	PRINTCARETPOS(hTextInfo);
-	PRINTWINDOWPOS(hTextInfo);
-	PRINTWINDOWSIZE(hTextInfo);
-	PRINTPAGESIZE(hTextInfo);
-	PRINTENDL;
-#endif // DEBUG
 
 	return (TRUE);
 }
@@ -329,6 +320,11 @@ BOOL PaintWindow(LPPAINTSTRUCT lpPaint, HTEXTINFO hTextInfo)
 			if (iCount > 0)
 				MyTextOut(MEMDC(hTextInfo), 0, yOffset, 
 					lpchText, iCount, iStart, iEnd, USWIDTH(CHARSIZE(hTextInfo).x));
+#ifdef DEBUG
+			if (iCount > 0 && INRANGEY(yOffset, lpPaint->rcPaint.top, lpPaint->rcPaint.bottom))
+				wprintf(TEXT("At y = %d, The line is: %ls\n"), yOffset, lpchText);
+#endif // DEBUG
+
 		}
 	}
 	return (TRUE);

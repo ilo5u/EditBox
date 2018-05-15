@@ -231,13 +231,7 @@ Line_iterator CLine::InsertStrings(int start, std::wstring String)
 			pnewLine->pLineHead = NULL;
 			delete pnewLine;
 		}
-		else
-		{
-			if (n != 0)
-			{
-				*(it_start + 1) = L'\0';
-			}
-		}
+
 	}
 	else if (start == 0)	//在行首插入
 	{
@@ -429,10 +423,7 @@ Line_iterator & Line_iterator::operator++()
 		pBlock = pBlock->pNextBlock;
 		pWChar = pBlock->Strings;
 	}
-	else
-	{
-		pWChar++;
-	}
+
 	nIndex++;
 	return *this;
 }
@@ -453,13 +444,10 @@ Line_iterator & Line_iterator::operator--()
 		{
 			p = p->pNextBlock;
 		}
-		pWChar = &(p->Strings[BLOCK_SIZE - 1]);
+		pWChar = p->Strings;
 		pBlock = p;
 	}
-	else
-	{
-		pWChar--;
-	}
+
 	nIndex--;
 	return *this;
 }
@@ -520,20 +508,10 @@ CLine * Line_iterator::GetLinePointer()
 Line_iterator  Line_iterator::operator+(int n)
 {
 	Line_iterator temp(*this);
-	int BeginIndex = temp.nIndex % BLOCK_SIZE - 1;		//当前所在块中下标
-	int Blocks_to_add = n / BLOCK_SIZE;
-	int Remainder = n % BLOCK_SIZE;					//相对偏移量
-	temp.nIndex += Blocks_to_add * BLOCK_SIZE;
-	while (Blocks_to_add)
+	while (n)
 	{
-		temp.pBlock = temp.pBlock->pNextBlock;
-		Blocks_to_add--;
-	}
-	pWChar = &(pBlock->Strings[BeginIndex]);
-	while (Remainder)
-	{
-		++(temp);
-		--Remainder;
+		++temp;
+		--n;
 	}
 	return temp;
 }
@@ -554,7 +532,7 @@ Line_iterator  Line_iterator::operator-(int n)
 */
 TCHAR& Line_iterator::operator*()
 {
-	return *pWChar;
+	return pWChar[(nIndex + BLOCK_SIZE - 1) % BLOCK_SIZE];
 }
 /*
 主要用于*访问前判断

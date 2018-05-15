@@ -26,13 +26,10 @@ typedef CText *HTEXT, *LPTEXT;
 // 文本用户结构
 typedef struct _TEXT_USER
 {
-	HFONT m_hFont;			// 字体实例
-	POINT m_pCharSize;		// 字符大小
-	POINT m_pCaretSize;		// 光标大小
-	POINT m_pCaretPos;		// 光标位置
-	POINT m_pWindowPos;		// 窗口位置
-	POINT m_pWindowSize;	// 窗口大小
-	POINT m_pPageSize;		// 页面范围
+	HFONT m_hFont;			  // 字体实例
+	POINT m_pCharPixelSize;   // 字符像素大小
+	POINT m_pCaretPixelSize;  // 光标像素大小
+	POINT m_pCaretPixelPos;   // 光标像素位置
 } TEXTUSER, *LPTEXTUSER, *HTEXTUSER;
 HTEXTUSER __stdcall CreateUser(HWND hWnd);
 BOOL      __stdcall ReleaseUser(HWND hWnd, HTEXTUSER hUser);
@@ -40,10 +37,10 @@ BOOL      __stdcall ReleaseUser(HWND hWnd, HTEXTUSER hUser);
 // 文本内核结构
 typedef struct _TEXT_KERNEL
 {
-	HTEXT m_hText;			// 文本实例
-	POINT m_pTextSize;		// 文本范围
-	POINT m_pStartPos;		// 选段起点
-	POINT m_pEndPos;		// 选段终点
+	HTEXT m_hText;          // 文本对象实例
+	POINT m_pTextPixelSize; // 文本像素大小
+	POINT m_pStartPixelPos; // 起点像素位置
+	POINT m_pEndPixelPos;   // 终点像素位置
 } TEXTKERNEL, *LPTEXTKERNEL, *HTEXTKERNEL;
 HTEXTKERNEL __stdcall CreateKernel(HWND hWnd, HTEXTUSER hUser);
 BOOL        __stdcall ReleaseKernel(HWND hWnd, HTEXTKERNEL hKernel);
@@ -51,13 +48,21 @@ BOOL        __stdcall ReleaseKernel(HWND hWnd, HTEXTKERNEL hKernel);
 // 文本图形设备结构
 typedef struct _TEXT_GDI
 {
-	HDC     m_hMemDC;		// 缓冲设备
-	HBRUSH  m_hBrush;		// 默认背景刷
-	HBITMAP m_hBitmap;		// 缓冲位图
-	HTIMER  m_hMouseTimer;	// 鼠标移动定时器
-	HTIMER  m_hSaveTimer;	// 自动保存定时器
+	POINT   m_pClientPixelSize; // 显示区像素大小
+	POINT   m_pPaintPixelPos;   // 绘图区像素位置
+	POINT   m_pPaintPixelSize;  // 绘图区像素大小
+	POINT   m_pPageSize;        // 页面范围(X行 Y列)
+
+	HWND    m_hStatus;          // 状态栏窗口
+	POINT   m_pBufferPixelSize; // 缓冲位图像素大小
+	HDC     m_hMemDC;           // 缓冲设备
+	HBRUSH  m_hBrush;           // 默认背景刷
+	HBITMAP m_hBitmap;          // 缓冲位图
+
+	HTIMER  m_hMouseTimer;      // 鼠标移动定时器
+	HTIMER  m_hSaveTimer;       // 自动保存定时器
 } TEXTGDI, *LPTEXTGDI, *HTEXTGDI;
-HTEXTGDI __stdcall CreateGDI(HWND hWnd, HTEXTUSER hUser);
+HTEXTGDI __stdcall CreateGDI(HWND hWnd, HINSTANCE hInst, HTEXTUSER hUser);
 BOOL     __stdcall ReleaseGDI(HWND hWnd, HTEXTGDI hGDI);
 
 // 文本结构
@@ -67,8 +72,9 @@ typedef struct _TEXT_INFO
 	HTEXTGDI	m_hGDI;
 	HTEXTUSER	m_hUser;
 	HWND		m_hWnd;
+	HINSTANCE   m_hInst;
 } TEXTINFO, *LPTEXTINFO, *HTEXTINFO;
-HTEXTINFO __stdcall CreateTextInfo(HWND hWnd);
+HTEXTINFO __stdcall CreateTextInfo(HWND hWnd, HINSTANCE hInst);
 BOOL      __stdcall ReleaseTextInfo(HWND hWnd, HTEXTINFO hTextInfo);
 typedef RECT *LPRECT;
 
@@ -94,7 +100,7 @@ BOOL    SelectCaretPos(HTEXTINFO, POINT);                       // 设置光标位置
 BOOL    SelectHighlight(HTEXTINFO, POINT, POINT);               // 设置高亮部分
 BOOL    SelectTextSize(HTEXTINFO, POINT);                       // 设置文本范围
 BOOL    SelectUntitledWindow(HWND, HTEXTINFO);                  // 默认文本窗口显示
-BOOL    SelectTitledWindow(HWND, HTEXTINFO, POINT, LPCWSTR);    // 命名文本窗口显示
+BOOL    SelectWindow(HWND, HTEXTINFO, POINT, LPCWSTR);          // 命名文本窗口显示
 
 BOOL    MyScrollWindow(HWND, int, int);                         // 滑动窗口
 BOOL    DefaultFill(HWND, HTEXTINFO);                           // 描边
@@ -104,27 +110,28 @@ BOOL    PaintWindow(LPPAINTSTRUCT, HTEXTINFO);                  // 重绘窗口
 // Convenient macro
 // +++++++++++++++++++++++++++ Kernel ++++++++++++++++++++++++++ //
 #define HTEXT(hTextInfo)    (hTextInfo->m_hKernel->m_hText)
-#define TEXTSIZE(hTextInfo) (hTextInfo->m_hKernel->m_pTextSize)
-#define STARTPOS(hTextInfo) (hTextInfo->m_hKernel->m_pStartPos)
-#define ENDPOS(hTextInfo)   (hTextInfo->m_hKernel->m_pEndPos)
+#define TEXTSIZE(hTextInfo) (hTextInfo->m_hKernel->m_pTextPixelSize)
+#define STARTPOS(hTextInfo) (hTextInfo->m_hKernel->m_pStartPixelPos)
+#define ENDPOS(hTextInfo)   (hTextInfo->m_hKernel->m_pEndPixelPos)
 // +++++++++++++++++++++++++++   End  ++++++++++++++++++++++++++ //
 
 // +++++++++++++++++++++++++++   GDI  ++++++++++++++++++++++++++ //
-#define MEMDC(hTextInfo)  (hTextInfo->m_hGDI->m_hMemDC)
-#define BITMAP(hTextInfo) (hTextInfo->m_hGDI->m_hBitmap)
-#define BRUSH(hTextInfo)  (hTextInfo->m_hGDI->m_hBrush)
-#define MTIMER(hTextInfo) (hTextInfo->m_hGDI->m_hMouseTimer)
-#define STIMER(hTextInfo) (hTextInfo->m_hGDI->m_hSaveTimer)
+#define PAINTSIZE(hTextInfo)  (hTextInfo->m_hGDI->m_pPaintPixelSize)
+#define PAINTPOS(hTextInfo)   (hTextInfo->m_hGDI->m_pPaintPixelPos)
+#define CLIENTSIZE(hTextInfo) (hTextInfo->m_hGDI->m_pClientPixelSize)
+#define PAGESIZE(hTextInfo)   (hTextInfo->m_hGDI->m_pPageSize)
+#define MEMDC(hTextInfo)      (hTextInfo->m_hGDI->m_hMemDC)
+#define BITMAP(hTextInfo)     (hTextInfo->m_hGDI->m_hBitmap)
+#define BRUSH(hTextInfo)      (hTextInfo->m_hGDI->m_hBrush)
+#define MTIMER(hTextInfo)     (hTextInfo->m_hGDI->m_hMouseTimer)
+#define STIMER(hTextInfo)     (hTextInfo->m_hGDI->m_hSaveTimer)
 // +++++++++++++++++++++++++++   End  ++++++++++++++++++++++++++ //
 
 // +++++++++++++++++++++++++++   User ++++++++++++++++++++++++++ //
 #define FONT(hTextInfo)       (hTextInfo->m_hUser->m_hFont)
-#define CARETPOS(hTextInfo)   (hTextInfo->m_hUser->m_pCaretPos)
-#define CHARSIZE(hTextInfo)   (hTextInfo->m_hUser->m_pCharSize)
-#define CARETSIZE(hTextInfo)  (hTextInfo->m_hUser->m_pCaretSize)
-#define WINDOWPOS(hTextInfo)  (hTextInfo->m_hUser->m_pWindowPos)
-#define WINDOWSIZE(hTextInfo) (hTextInfo->m_hUser->m_pWindowSize)
-#define PAGESIZE(hTextInfo)   (hTextInfo->m_hUser->m_pPageSize)
+#define CARETPOS(hTextInfo)   (hTextInfo->m_hUser->m_pCaretPixelPos)
+#define CHARSIZE(hTextInfo)   (hTextInfo->m_hUser->m_pCharPixelSize)
+#define CARETSIZE(hTextInfo)  (hTextInfo->m_hUser->m_pCaretPixelSize)
 // +++++++++++++++++++++++++++   End  ++++++++++++++++++++++++++ //
 
 // ++++++++++++++ Convenient Operation ++++++++++++++ //

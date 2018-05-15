@@ -19,10 +19,15 @@ void Record::ReDo(CText* p)
 	{
 	case RD_DELETE:
 	{
+		start.Sequence--;									//修正插入点
 		end = pText->Insert(start, Deleted_Data);			//end记录恢复删除后最后一个字符的位置
 		Deleted_Data.clear();								//清空删除信息
 		start.Sequence++;									//start记录恢复删除后第一个字符位置
 		break;
+	}
+	case RD_REPLACE:
+	{
+		end = p->Replace(start, end, Deleted_Data);			//反向替换
 	}
 	case RD_INSERT:
 	{
@@ -54,7 +59,6 @@ void Record::Save_Delete_Data(CText * pc, Position first, Position last)
 	pText = pc;
 	Deleted_Data = pText->Copy(first, last);		//拷贝删除的字符串
 	start = first;
-	start.Sequence--;
 }
 
 void Record::Save_Merge_Line_Data(CText * p, int LineNumber)

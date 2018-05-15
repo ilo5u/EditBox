@@ -2,7 +2,7 @@
 #include "editbox.h"
 #include "api.h"
 
-HTEXTINFO __stdcall CreateTextInfo(HWND hWnd)
+HTEXTINFO __stdcall CreateTextInfo(HWND hWnd, HINSTANCE hInst)
 {
 	LPTEXTINFO lpTextInfo = new TEXTINFO{};
 	if (!lpTextInfo)
@@ -14,10 +14,11 @@ HTEXTINFO __stdcall CreateTextInfo(HWND hWnd)
 	if (!(lpTextInfo->m_hKernel = CreateKernel(hWnd, lpTextInfo->m_hUser)))
 		return HTEXTINFO(nullptr);
 
-	if (!(lpTextInfo->m_hGDI = CreateGDI(hWnd, lpTextInfo->m_hUser)))
+	if (!(lpTextInfo->m_hGDI = CreateGDI(hWnd, hInst, lpTextInfo->m_hUser)))
 		return HTEXTINFO(nullptr);
 
-	lpTextInfo->m_hWnd = hWnd;
+	lpTextInfo->m_hWnd  = hWnd;
+	lpTextInfo->m_hInst = hInst;
 
 	return HTEXTINFO(lpTextInfo);
 }
@@ -38,10 +39,10 @@ HTEXTUSER __stdcall CreateUser(HWND hWnd)
 	if (!lpUser)
 		return HTEXTUSER(nullptr);
 
-	lpUser->m_pCharSize = POINT{ 8, 16 };
+	lpUser->m_pCharPixelSize = POINT{ 8, 16 };
 	lpUser->m_hFont = CreateFont(
-		lpUser->m_pCharSize.y,		// 高度
-		lpUser->m_pCharSize.x,		// 宽度
+		lpUser->m_pCharPixelSize.y,		// 高度
+		lpUser->m_pCharPixelSize.x,		// 宽度
 		0,		// 水平
 		0,		// 倾斜
 		400,	// 粗度
@@ -55,17 +56,8 @@ HTEXTUSER __stdcall CreateUser(HWND hWnd)
 		DEFAULT_PITCH | FF_DONTCARE,	// 间距
 		TEXT("New Curier")				// 名称
 	);
-	lpUser->m_pCaretSize = POINT{ 1, 16 };
-	lpUser->m_pCaretPos  = POINT{ 0, 0 };
-
-	RECT rcClient;
-	GetClientRect(hWnd, &rcClient);
-	lpUser->m_pWindowSize = POINT{ rcClient.right - rcClient.left, rcClient.bottom - rcClient.top };
-	lpUser->m_pWindowPos  = POINT{ 0, 0 };
-	lpUser->m_pPageSize   = POINT{
-		lpUser->m_pWindowSize.x / USWIDTH(lpUser->m_pCharSize.x),
-		lpUser->m_pWindowSize.y / USHEIGHT(lpUser->m_pCharSize.y)
-	};
+	lpUser->m_pCaretPixelSize = POINT{ 1, 16 };
+	lpUser->m_pCaretPixelPos  = POINT{ 0, 0 };
 
 	return HTEXTUSER(lpUser);
 }
@@ -82,12 +74,12 @@ HTEXTKERNEL __stdcall CreateKernel(HWND hWnd, HTEXTUSER hUser)
 	if (!lpKernel)
 		return HTEXTKERNEL(nullptr);
 
-	if (!(lpKernel->m_hText = CreateText(hUser->m_pCharSize.x, hUser->m_pCharSize.y)))
+	if (!(lpKernel->m_hText = CreateText(hUser->m_pCharPixelSize.x, hUser->m_pCharPixelSize.y)))
 		return HTEXTKERNEL(nullptr);
 
-	lpKernel->m_pTextSize = POINT{ 0, 0 };
-	lpKernel->m_pStartPos = POINT{ 0, 0 };
-	lpKernel->m_pEndPos   = POINT{ 0, 0 };
+	lpKernel->m_pTextPixelSize = POINT{ 0, 0 };
+	lpKernel->m_pStartPixelPos = POINT{ 0, 0 };
+	lpKernel->m_pEndPixelPos   = POINT{ 0, 0 };
 
 	return HTEXTKERNEL(lpKernel);
 }
@@ -98,15 +90,85 @@ BOOL __stdcall ReleaseKernel(HWND hWnd, HTEXTKERNEL hKernel)
 	return (TRUE);
 }
 
-HTEXTGDI __stdcall CreateGDI(HWND hWnd, HTEXTUSER hUser)
+HTEXTGDI __stdcall CreateGDI(HWND hWnd, HINSTANCE hInst, HTEXTUSER hUser)
 {
 	LPTEXTGDI lpGDI = new TEXTGDI{};
 	if (!lpGDI)
 		return HTEXTGDI(nullptr);
 
+	// 获取显示区大小
+	RECT rcClient;
+	GetClientRect(hWnd, &rcClient);
+	lpGDI->m_pClientPixelSize = POINT{
+		rcClient.right  - rcClient.left,
+		rcClient.bottom - rcClient.top
+	};
+
+	// 绘制滚动条
+	SCROLLINFO shInfo;
+	shInfo.cbSize = sizeof(SCROLLINFO);
+	shInfo.fMask  = SIF_ALL | SIF_DISABLENOSCROLL;
+	GetScrollInfo(hWnd, SB_HORZ, &shInfo);
+
+	shInfo.nMin  = 0;
+	shInfo.nMax  = 0;
+	shInfo.nPage = 0;
+
+	shInfo.cbSize = sizeof(SCROLLINFO);
+	shInfo.fMask  = SIF_ALL | SIF_DISABLENOSCROLL;
+	SetScrollInfo(hWnd, SB_HORZ, &shInfo, TRUE);
+
+	SCROLLINFO svInfo;
+	svInfo.cbSize = sizeof(SCROLLINFO);
+	svInfo.fMask  = SIF_ALL | SIF_DISABLENOSCROLL;
+	GetScrollInfo(hWnd, SB_VERT, &svInfo);
+
+	svInfo.nMin  = 0;
+	svInfo.nMax  = 0;
+	svInfo.nPage = 0;
+
+	svInfo.cbSize = sizeof(SCROLLINFO);
+	svInfo.fMask  = SIF_ALL | SIF_DISABLENOSCROLL;
+	SetScrollInfo(hWnd, SB_VERT, &svInfo, TRUE);
+
+	// 绘制状态栏
+	INITCOMMONCONTROLSEX icex;
+	icex.dwSize = sizeof(INITCOMMONCONTROLSEX);
+	icex.dwICC = ICC_BAR_CLASSES;
+	InitCommonControlsEx(&icex);
+	lpGDI->m_hStatus = CreateWindow(STATUSCLASSNAME, TEXT(""), WS_CHILD | WS_VISIBLE | SBARS_SIZEGRIP,
+		0, 0, 0, 0, hWnd, NULL, hInst, NULL);
+	int nSize[2] = { (int)lpGDI->m_pClientPixelSize.x * 3 / 4, -1 };
+	SendMessage(lpGDI->m_hStatus, SB_SETPARTS, sizeof(nSize) / sizeof(nSize[0]), (LPARAM)nSize);
+
+	TCHAR szCaretCoord[MAX_PATH];
+	wsprintf(szCaretCoord, TEXT("%d rows, %d cols"), 0, 0);
+	SendMessage(lpGDI->m_hStatus, SB_SETTEXT, SBT_NOBORDERS | (WORD)0x01, (LPARAM)szCaretCoord);
+
+	// 设置绘图区域大小
+	RECT rcStatus;
+	SendMessage(lpGDI->m_hStatus, SB_GETRECT, NULL, (LPARAM)&rcStatus);
+	lpGDI->m_pPaintPixelSize = POINT{
+		lpGDI->m_pClientPixelSize.x,
+		lpGDI->m_pClientPixelSize.y - rcStatus.bottom
+	};
+	lpGDI->m_pPaintPixelPos = POINT{ 0, 0 };
+
+	// 设置页面的行列数
+	lpGDI->m_pPageSize = POINT{
+		lpGDI->m_pPaintPixelSize.x / hUser->m_pCharPixelSize.x,
+		lpGDI->m_pPaintPixelSize.y / hUser->m_pCharPixelSize.y
+	};
+
+	// 设置缓冲位图的大小
+	lpGDI->m_pBufferPixelSize = POINT{
+		lpGDI->m_pPageSize.x * hUser->m_pCharPixelSize.x,
+		lpGDI->m_pPageSize.y * hUser->m_pCharPixelSize.y
+	};
+
 	HDC hdc = GetDC(hWnd);
 	lpGDI->m_hMemDC  = CreateCompatibleDC(hdc);
-	lpGDI->m_hBitmap = CreateCompatibleBitmap(hdc, hUser->m_pWindowSize.x, hUser->m_pWindowSize.y);
+	lpGDI->m_hBitmap = CreateCompatibleBitmap(hdc, lpGDI->m_pBufferPixelSize.x, lpGDI->m_pBufferPixelSize.y);
 	lpGDI->m_hBrush  = CreateSolidBrush(RGB(0xFF, 0xFF, 0xFF));
 
 	SelectObject(lpGDI->m_hMemDC, lpGDI->m_hBitmap);
