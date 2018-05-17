@@ -5,6 +5,7 @@ CText::CText()
 	pFirstLineHead = NULL;
 	nLineNumbers = 1;
 	FileName = "";
+	hAuto_Save = NULL;
 }
 
 CText::~CText()
@@ -15,51 +16,48 @@ CText::~CText()
 /*新建文本 保存默认文件名*/
 void CText::NewFile()
 {
-	if (pFirstLineHead != NULL)
-		ClearAll();
-	pFirstLineHead = new CLine(1);
+	ClearAll();
 	nLineNumbers = 1;
+	/*待修正  增设默认文件名 */
 	FileName = "";		//默认文件名及其类型
 	bSave = 1;
+	 // hAuto_Save = (HANDLE)_beginthreadex(NULL, 0, Auto_Save_Timer_Thread, NULL, 0, NULL);
 }
 //传递文件名路径及其后缀
 void CText::ReadText(std::string filename)
 {
-	if (pFirstLineHead != NULL)
-		ClearAll();
+	ClearAll();
+	// hAuto_Save = (HANDLE)_beginthreadex(NULL, 0, Auto_Save_Timer_Thread, NULL, 0, NULL);
 	FileName = filename;
 	std::ifstream	File_r(FileName, std::wifstream::in);		//以读的方式打开txt文件
+	/*读取文件失败*/
+	if (!File_r)
+		throw Read_Text_Failed("找不到文件");
 	std::string LineStr;
 	std::wstring LineWStr;
 	CLine* p = NULL;
+	nLineNumbers = 0;
 	while (std::getline(File_r, LineStr))
 	{
+		nLineNumbers++;
+		LineWStr = StringToWString(LineStr);
 		if (nLineNumbers == 1)
 		{
-			if (LineStr.empty())		//空文件
-			{
-				File_r.close();
-				return;
-			}
-			LineWStr = StringToWString(LineStr);
-			pFirstLineHead = new CLine(nLineNumbers);
 			pFirstLineHead->CreateLine(LineWStr);
 			p = pFirstLineHead;
 		}
 		else
 		{
-			LineWStr = StringToWString(LineStr);
 			p->pNextLine = new CLine(nLineNumbers);
 			p = p->pNextLine;
 			p->CreateLine(LineWStr);
 		}
-		nLineNumbers++;
 	}
 	File_r.close();
 	bSave = 1;
 }
 /*
-清空文本
+清空文本和定时器
 */
 void CText::ClearAll()
 {
@@ -73,6 +71,7 @@ void CText::ClearAll()
 	pFirstLineHead = new CLine(1);
 	nLineNumbers = 1;
 	bSave = 0;
+	CloseHandle(hAuto_Save);
 }
 
 void CText::ShowText() const
@@ -485,6 +484,23 @@ bool CText::upper_lower_match(TCHAR ch1, TCHAR ch2, bool upper_lower)
 	else
 		return ch1 == ch2;
 }
+/*
+UINT __stdcall CText::Auto_Save_Timer_Thread(LPVOID)
+{
+	while (true)
+	{
+		if (isSaved)
+		{
+			Start_Time = clock() / 1000;
+			continue;
+		}
+		int Current_time = clock() / 1000;							//当前时间(s)
+		if (Current_time - Start_Time >= AUTO_SAVE_TIME)
+			Save();
+	}
+	return 0;
+}*/
+
 //获取行首指针
 CLine * CText::GetLinePointer(int LineNumber)
 {

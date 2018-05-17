@@ -58,6 +58,10 @@ HTEXTUSER __stdcall CreateUser(HWND hWnd)
 	);
 	lpUser->m_pCaretPixelSize = POINT{ 1, 16 };
 	lpUser->m_pCaretPixelPos  = POINT{ 0, 0 };
+	lpUser->m_cCaretCoord     = COORD{ 0, 0 };
+
+	lpUser->m_pMinCharPixelSize = POINT{ 8, 16 };
+	lpUser->m_pMaxCharPixelSize = POINT{ 16, 32 };
 
 	return HTEXTUSER(lpUser);
 }
@@ -142,7 +146,7 @@ HTEXTGDI __stdcall CreateGDI(HWND hWnd, HINSTANCE hInst, HTEXTUSER hUser)
 	SendMessage(lpGDI->m_hStatus, SB_SETPARTS, sizeof(nSize) / sizeof(nSize[0]), (LPARAM)nSize);
 
 	TCHAR szCaretCoord[MAX_PATH];
-	wsprintf(szCaretCoord, TEXT("%d rows, %d cols"), 0, 0);
+	wsprintf(szCaretCoord, TEXT("%d rows, %d cols"), hUser->m_cCaretCoord.Y, hUser->m_cCaretCoord.X);
 	SendMessage(lpGDI->m_hStatus, SB_SETTEXT, SBT_NOBORDERS | (WORD)0x01, (LPARAM)szCaretCoord);
 
 	// 设置绘图区域大小
@@ -162,8 +166,8 @@ HTEXTGDI __stdcall CreateGDI(HWND hWnd, HINSTANCE hInst, HTEXTUSER hUser)
 
 	// 设置缓冲位图的大小
 	lpGDI->m_pBufferPixelSize = POINT{
-		lpGDI->m_pPageSize.x * hUser->m_pCharPixelSize.x,
-		lpGDI->m_pPageSize.y * hUser->m_pCharPixelSize.y
+		(lpGDI->m_pPageSize.x + 1) * hUser->m_pCharPixelSize.x,
+		(lpGDI->m_pPageSize.y + 1) * hUser->m_pCharPixelSize.y
 	};
 
 	HDC hdc = GetDC(hWnd);

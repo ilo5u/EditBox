@@ -30,6 +30,10 @@ typedef struct _TEXT_USER
 	POINT m_pCharPixelSize;   // 字符像素大小
 	POINT m_pCaretPixelSize;  // 光标像素大小
 	POINT m_pCaretPixelPos;   // 光标像素位置
+	COORD m_cCaretCoord;      // 光标逻辑坐标(X列 Y行)
+
+	POINT m_pMinCharPixelSize;
+	POINT m_pMaxCharPixelSize;
 } TEXTUSER, *LPTEXTUSER, *HTEXTUSER;
 HTEXTUSER __stdcall CreateUser(HWND hWnd);
 BOOL      __stdcall ReleaseUser(HWND hWnd, HTEXTUSER hUser);
@@ -45,13 +49,13 @@ typedef struct _TEXT_KERNEL
 HTEXTKERNEL __stdcall CreateKernel(HWND hWnd, HTEXTUSER hUser);
 BOOL        __stdcall ReleaseKernel(HWND hWnd, HTEXTKERNEL hKernel);
 
-// 文本图形设备结构
+/* 文本图形设备结构 */
 typedef struct _TEXT_GDI
 {
 	POINT   m_pClientPixelSize; // 显示区像素大小
 	POINT   m_pPaintPixelPos;   // 绘图区像素位置
 	POINT   m_pPaintPixelSize;  // 绘图区像素大小
-	POINT   m_pPageSize;        // 页面范围(X行 Y列)
+	POINT   m_pPageSize;        // 页面范围(X列 Y行)
 
 	HWND    m_hStatus;          // 状态栏窗口
 	POINT   m_pBufferPixelSize; // 缓冲位图像素大小
@@ -88,24 +92,24 @@ BOOL WINAPI MyTextOutW(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCWS
 #endif // UNICODE
 
 // Operation function
-BOOL	MyInvalidateRect(HWND, LONG, LONG, LONG, LONG);         // 设置无效区域
+BOOL	MyInvalidateRect(HTEXTINFO, LONG, LONG, LONG, LONG);         // 设置无效区域
 
-BOOL    AdjustCaretPosBeforeBackspace(HWND, HTEXTINFO);         // 用户按Backspace键时 调整光标位置
-BOOL    AdjustWindowPos(HWND, HTEXTINFO);                       // 滑动窗口
-BOOL    MoveCaret(HWND, UINT, HTEXTINFO);                       // 移动光标
+BOOL    AdjustCaretPosBeforeBackspace(HTEXTINFO); // 用户按Backspace键时 调整光标位置
+BOOL    AdjustPaintPos(HTEXTINFO);                // 滑动窗口
+BOOL    MoveCaret(HTEXTINFO, UINT);               // 移动光标
 
-BOOL    SelectWindowPos(HTEXTINFO, POINT);                      // 设置窗口位置
-BOOL    SelectWindowSize(HTEXTINFO hTextInfo, LPRECT lpRect);   // 设置窗口范围
-BOOL    SelectCaretPos(HTEXTINFO, POINT);                       // 设置光标位置
-BOOL    SelectHighlight(HTEXTINFO, POINT, POINT);               // 设置高亮部分
-BOOL    SelectTextSize(HTEXTINFO, POINT);                       // 设置文本范围
-BOOL    SelectUntitledWindow(HWND, HTEXTINFO);                  // 默认文本窗口显示
-BOOL    SelectWindow(HWND, HTEXTINFO, POINT, LPCWSTR);          // 命名文本窗口显示
+BOOL    SelectPaintPos(HTEXTINFO, POINT);         // 设置窗口位置
+BOOL    SelectCaretPos(HTEXTINFO, POINT, COORD);         // 设置光标位置
+BOOL    SelectHighlight(HTEXTINFO, POINT, POINT); // 设置高亮部分
+BOOL    SelectTextSize(HTEXTINFO, POINT);         // 设置文本范围
+BOOL    SelectWindow(HTEXTINFO, POINT, LPCWSTR);  // 命名文本窗口显示
 
-BOOL    MyScrollWindow(HWND, int, int);                         // 滑动窗口
-BOOL    DefaultFill(HWND, HTEXTINFO);                           // 描边
+BOOL    MyScrollWindow(HTEXTINFO, int, int);      // 滑动窗口
 
-BOOL    PaintWindow(LPPAINTSTRUCT, HTEXTINFO);                  // 重绘窗口
+BOOL    PaintWindow(LPRECT, HTEXTINFO);           // 重绘窗口
+
+BOOL    SelectClientSize(HTEXTINFO, LPRECT);      // 设置显示区大小(WM_SIZE)
+BOOL    SelectCharSize(HTEXTINFO, LONG, LONG);    // 设置字体大小
 
 // Convenient macro
 // +++++++++++++++++++++++++++ Kernel ++++++++++++++++++++++++++ //
@@ -120,18 +124,23 @@ BOOL    PaintWindow(LPPAINTSTRUCT, HTEXTINFO);                  // 重绘窗口
 #define PAINTPOS(hTextInfo)   (hTextInfo->m_hGDI->m_pPaintPixelPos)
 #define CLIENTSIZE(hTextInfo) (hTextInfo->m_hGDI->m_pClientPixelSize)
 #define PAGESIZE(hTextInfo)   (hTextInfo->m_hGDI->m_pPageSize)
+#define BUFFERSIZE(hTextInfo) (hTextInfo->m_hGDI->m_pBufferPixelSize)
 #define MEMDC(hTextInfo)      (hTextInfo->m_hGDI->m_hMemDC)
 #define BITMAP(hTextInfo)     (hTextInfo->m_hGDI->m_hBitmap)
 #define BRUSH(hTextInfo)      (hTextInfo->m_hGDI->m_hBrush)
 #define MTIMER(hTextInfo)     (hTextInfo->m_hGDI->m_hMouseTimer)
 #define STIMER(hTextInfo)     (hTextInfo->m_hGDI->m_hSaveTimer)
+#define STATUS(hTextInfo)     (hTextInfo->m_hGDI->m_hStatus)
 // +++++++++++++++++++++++++++   End  ++++++++++++++++++++++++++ //
 
 // +++++++++++++++++++++++++++   User ++++++++++++++++++++++++++ //
-#define FONT(hTextInfo)       (hTextInfo->m_hUser->m_hFont)
-#define CARETPOS(hTextInfo)   (hTextInfo->m_hUser->m_pCaretPixelPos)
-#define CHARSIZE(hTextInfo)   (hTextInfo->m_hUser->m_pCharPixelSize)
-#define CARETSIZE(hTextInfo)  (hTextInfo->m_hUser->m_pCaretPixelSize)
+#define FONT(hTextInfo)        (hTextInfo->m_hUser->m_hFont)
+#define CARETPOS(hTextInfo)    (hTextInfo->m_hUser->m_pCaretPixelPos)
+#define CHARSIZE(hTextInfo)    (hTextInfo->m_hUser->m_pCharPixelSize)
+#define CARETSIZE(hTextInfo)   (hTextInfo->m_hUser->m_pCaretPixelSize)
+#define CARETCOORD(hTextInfo)  (hTextInfo->m_hUser->m_cCaretCoord)
+#define MINCHARSIZE(hTextInfo) (hTextInfo->m_hUser->m_pMinCharPixelSize)
+#define MAXCHARSIZE(hTextInfo) (hTextInfo->m_hUser->m_pMaxCharPixelSize)
 // +++++++++++++++++++++++++++   End  ++++++++++++++++++++++++++ //
 
 // ++++++++++++++ Convenient Operation ++++++++++++++ //
@@ -147,8 +156,6 @@ BOOL operator==(POINT left, POINT right);
 // ++++++++++++++++++++++ END +++++++++++++++++++++++ //
 
 // +++++++++++ FIND MACRO +++++++++++ //
-#define AFTER_CARET   0x00000004
-#define BEFORE_CARET  0x00000008
 #define WHOLE_TEXT    0x00000010
 #define FIND          0x00000020
 #define REPLACE       0x00000040

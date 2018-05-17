@@ -68,13 +68,13 @@
     <ClCompile Include="timer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="textinfo.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="textoperation.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="debug.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="operation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="struture.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

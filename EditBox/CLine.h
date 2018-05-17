@@ -42,7 +42,7 @@ public:
 	void ShowLineData();											//显示当前行字符串
 	Line_iterator DeleteLine(int first, int last);					//删除当前行[first,end]内的字符串		字符从1开始返回删除后的第一位
 	bool BackSpace(Position position);								//退格键  删除Position 位置上的字符  
-	Line_iterator InsertStrings(int start, std::wstring String);	//在start "后面" 加入字符串
+	void InsertStrings(int start, std::wstring String);				//在start "后面" 加入字符串
 	Line_iterator begin();											//返回指向行首字符的迭代器
 	Line_iterator end();											//返回指向行尾字符的迭代器
 	std::wstring  TransformToWString(int first, int last);			//以wstringf的形式返回[first,last]中的字符串
@@ -67,7 +67,7 @@ class Line_iterator
 	friend class CLine;
 	friend class Text_iterator;
 public:
-	Line_iterator() = default;
+	Line_iterator() :nIndex(0), bAfter_end(true) { pLine = NULL; pWChar = NULL; pBlock = NULL; }
 	Line_iterator(CLine& theLine, int index = 1);
 	Line_iterator(const Line_iterator& m);
 	~Line_iterator();
@@ -75,7 +75,8 @@ public:
 	int CurrentPosition()const;									//返回当前迭代器指向位置
 	CLine* GetLinePointer();									//返回当前行首指针
 	bool isValid()const;										//是否为有效(非空)的行
-																//operators
+	bool isEnd();												//判断是否指向最后一个字符
+	//operators
 	Line_iterator& operator++();
 	Line_iterator operator++(int);
 	Line_iterator& operator--();
@@ -87,12 +88,14 @@ public:
 	bool operator==(const Line_iterator& m);
 	bool operator!=(const Line_iterator& m);
 private:
-	CLine * pLine;				//当前行指针			
-	TCHAR *		pWChar;			//指向CLine中的一个字符
-	DataBlock*	pBlock;			//当前指向字符所在数据块
-	int			nIndex;			//当前指向的字符在行中的位置(注：不是下标，从1开始)	
+	CLine *		pLine;											//当前行指针			
+	TCHAR *		pWChar;											//指向CLine中的一个字符
+	DataBlock*	pBlock;											//当前指向字符所在数据块
+	int			nIndex;											//当前指向的字符在行中的位置(注：不是下标，从1开始)	
+	bool		bAfter_end;										//该迭代器指向最后一个字符
 };
 //得到两迭代器[first,last]之间的字符数
 size_t operator-(Line_iterator last, Line_iterator first);
 //同一行中，将[first,last]的字符从start开始拷贝到
 Line_iterator copy(Line_iterator start, Line_iterator first, Line_iterator	last);
+bool isChange_Line_Character(std::wstring Str);

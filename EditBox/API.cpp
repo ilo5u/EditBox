@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include"Cursor.h"
 #include<stack>
 
 
@@ -7,7 +8,13 @@ wchar_t* pTChar = NULL;
 wchar_t* pBuffer = NULL;
 size_t MaxBufferSize = 0;
 std::stack<Record*>* pRecord = NULL;
-RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM fParam, SPARAM sParam)
+RVALUE __stdcall UserMessageProc(
+	_In_ HTEXT hText,
+	_In_opt_ int x, _In_opt_ int y,
+	_In_ UINT message,
+	_In_opt_ FPARAM fParam, _In_opt_ SPARAM sParam,
+	_Out_opt_ LPKERNELINFO lpKernelInfo
+)
 {
 	pCursor->SethText(hText);
 	int Width_EN = Install::Width;			//字符宽度（英文、特殊符号单位宽度 汉字、汉化符号占两个Width）	
@@ -25,7 +32,7 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 	//对消息做出的处理
 	switch (message)
 	{
-	case UM_UP:
+	case UM_UP:				//上
 	{
 		if (LineNumber > 1)
 		{
@@ -38,9 +45,12 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 			}
 		}
 		pCursor->ResetChoose();
-		return RVALUE(y) << 32 | RVALUE(x);
+		/*设置光标像素位置 行列号*/
+		lpKernelInfo->m_pCaretPixelPos = { x,y };
+		lpKernelInfo->m_cCaretCoord = { LineNumber,pCursor->Characters_before_Cursor(LineNumber,x) };
+		break;
 	}
-	case UM_DOWN:
+	case UM_DOWN:			//下
 	{
 		if (LineNumber < hText->Line_Number())
 		{
@@ -53,9 +63,12 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 			}
 		}
 		pCursor->ResetChoose();
-		return RVALUE(y) << 32 | RVALUE(x);
+		/*设置光标像素位置 行列号*/
+		lpKernelInfo->m_pCaretPixelPos = { x,y };
+		lpKernelInfo->m_cCaretCoord = { LineNumber,pCursor->Characters_before_Cursor(LineNumber,x) };
+		break;
 	}
-	case UM_LEFT:
+	case UM_LEFT:			//左
 	{
 		int opt = pCursor->CharactersProperty_before_Cursor(LineNumber, x);
 		switch (opt)
@@ -73,9 +86,12 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 			}
 		}
 		pCursor->ResetChoose();
-		return RVALUE(y) << 32 | RVALUE(x);
+		/*设置光标像素位置 行列号*/
+		lpKernelInfo->m_pCaretPixelPos = { x,y };
+		lpKernelInfo->m_cCaretCoord = { LineNumber,pCursor->Characters_before_Cursor(LineNumber,x) };
+		break;
 	}
-	case UM_RIGHT:
+	case UM_RIGHT:			//右
 	{
 		int Size = pCursor->Characters_before_Cursor(LineNumber, x);
 		if (Size == hText->Line_Size(LineNumber))
@@ -94,13 +110,19 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 				x += Width_ZH;
 		}
 		pCursor->ResetChoose();
-		return RVALUE(y) << 32 | RVALUE(x);
+		/*设置光标像素位置 行列号*/
+		lpKernelInfo->m_pCaretPixelPos = { x,y };
+		lpKernelInfo->m_cCaretCoord = { LineNumber,pCursor->Characters_before_Cursor(LineNumber,x) };
+		break;
 	}
 	case UM_END:			//当前行尾时x y坐标
 	{
 		x = hText->Line_Width(LineNumber, Width_EN);
 		pCursor->ResetChoose();
-		return RVALUE(y) << 32 | RVALUE(x);
+		/*设置光标像素位置 行列号*/
+		lpKernelInfo->m_pCaretPixelPos = { x,y };
+		lpKernelInfo->m_cCaretCoord = { LineNumber,pCursor->Characters_before_Cursor(LineNumber,x) };
+		break;
 	}
 	case UM_RETURN:			//回车换行
 	{
@@ -108,24 +130,31 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 		/*对文本内的处理*/
 		position.LineNumber = LineNumber;
 		position.Sequence = pCursor->Characters_before_Cursor(LineNumber, x);
-		
+
 		Record* rd = new Record(RD_RETURN);							//记录撤销信息
 		rd->Set_Choose_Data(position, position);
 		pRecord->push(rd);
 
 		position = hText->EnterNewLine(position);
 		int New_Width = hText->Max_Line_Width(Width_EN);			//处理后文本最大宽度
-																	
-		//高字节文本范围横向宽度（单位像素）低字节纵向宽度
+
+
 		pCursor->ResetChoose();
-		return  RVALUE(Height*hText->Line_Number()) << 32 | RVALUE(New_Width);
+		/*设置光标像素位置 行列号*/
+		lpKernelInfo->m_pCaretPixelPos = { x,y };
+		lpKernelInfo->m_cCaretCoord = { LineNumber,pCursor->Characters_before_Cursor(LineNumber,x) };
+		/*设置换行信息 文本大小*/
+		lpKernelInfo->m_bLineBreak = TRUE;
+		lpKernelInfo->m_pTextPixelSize = { hText->Max_Line_Width(Width_EN),hText->Line_Number()*Height };
+		break;
 	}
-	case UM_DELETE:
+	case UM_DELETE:			//删除
 	{
+		int Old_Lines = hText->Line_Number();
 		Record* rd = new Record(RD_DELETE);
 		//选段结束横纵坐标
-		int end_x = LODWORD(sParam);
-		int end_y = HIDWORD(sParam);
+		int end_x = LODWORD(fParam);
+		int end_y = LODWORD(sParam);
 		Position start_position;
 		Position end_position;
 		//删除start光标后的字符到end光标前的所有字符
@@ -137,11 +166,11 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 		catch (std::invalid_argument &e)
 		{
 			//光标位于文本末尾
-			//新文本长宽
-			int New_Width_X = hText->Max_Line_Width(Width_EN);
-			int New_Height_Y = hText->Line_Number()*Height;
 			delete rd;
-			return RVALUE(New_Height_Y) << 32 | RVALUE(New_Width_X);
+			/*设置换行信息 文本大小*/
+			lpKernelInfo->m_bLineBreak = FALSE;
+			lpKernelInfo->m_pTextPixelSize = { hText->Max_Line_Width(Width_EN),hText->Line_Number()*Height };
+			break;
 		}
 		end_position = pCursor->CursorToPosition(end_x, end_y);
 		//坐标相等表示向后删除
@@ -168,7 +197,10 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 				//收到异常 说明当前光标位置文本末尾 对向后删除不做处理
 				delete rd;
 				pCursor->ResetChoose();
-				return RVALUE(0);
+				/*设置换行信息 文本大小*/
+				lpKernelInfo->m_bLineBreak = FALSE;
+				lpKernelInfo->m_pTextPixelSize = { hText->Max_Line_Width(Width_EN),hText->Line_Number()*Height };
+				break;
 			}
 		}
 		//位置相同表示退格键
@@ -198,24 +230,32 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 			pRecord->push(rd);
 			hText->Delete(start_position, end_position);
 		}
-		//新文本长宽
-		int New_Width_X = hText->Max_Line_Width(Width_EN);
-		int New_Height_Y = hText->Line_Number()*Height;
+
 		pCursor->ResetChoose();
-		return RVALUE(New_Height_Y) << 32 | RVALUE(New_Width_X);
+		int New_Lines = hText->Line_Number();
+		/*设置换行信息 文本大小*/
+		lpKernelInfo->m_bLineBreak = (Old_Lines == New_Lines ? FALSE : TRUE);
+		lpKernelInfo->m_pTextPixelSize = { hText->Max_Line_Width(Width_EN),hText->Line_Number()*Height };
+		break;
 	}
-	case UM_CURSOR:		//定位合法光标
+	case UM_CURSOR:			//定位合法光标
 	{
 		x = pCursor->CursorLocation(LineNumber, x);
 		pCursor->ResetChoose();
-		return RVALUE(y) << 32 | RVALUE(x);
 
+		/*设置光标像素位置 行列号*/
+		lpKernelInfo->m_pCaretPixelPos = { x,y };
+		lpKernelInfo->m_cCaretCoord = { LineNumber,pCursor->Characters_before_Cursor(LineNumber,x) };
+		break;
 	}
-	case UM_HOME:		//Home键
+	case UM_HOME:		
 	{
 		x = 0;
 		pCursor->ResetChoose();
-		return RVALUE(y) << 32 | RVALUE(x);
+		/*设置光标像素位置 行列号*/
+		lpKernelInfo->m_pCaretPixelPos = { x,y };
+		lpKernelInfo->m_cCaretCoord = { LineNumber,pCursor->Characters_before_Cursor(LineNumber,x) };
+		break;
 	}
 	case UM_NEW:
 	{
@@ -261,14 +301,14 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 			TCHAR* pwch = (TCHAR*)sParam;
 			std::string FileName = wchTostring(pwch);
 			hText->ReadText(FileName);
-			int TextWidth = hText->Max_Line_Width(Width_EN);
 			pCursor->ResetChoose();
-			return RVALUE(hText->Line_Number()*Height) << 32 | RVALUE(TextWidth);
+			/*设置 文本大小 */
+			lpKernelInfo->m_pTextPixelSize = { hText->Max_Line_Width(Width_EN),hText->Line_Number()*Height };
+			break;
 		}
 		else
-		{
 			return UR_NOTSAVED;
-		}
+		
 	}
 	case UM_COPY:
 	{
@@ -286,38 +326,59 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 	}
 	case UM_CHAR:
 	{
-		pCursor->ResetChoose();
 		Record* rd = new Record(RD_INSERT);
 		std::wstring ws;
 		TCHAR wch = (TCHAR)LODWORD(sParam);			//待插入字符
-		Position position = pCursor->CursorToPosition(x, y);
-		if (wch == L'\t')							//处理Tab
+		int Old_Lines = hText->Line_Number();
+		//存在选中信息 插入更改为替换操作
+		if (pCursor->isChoose())
 		{
-			int PreWidth = hText->Line_Width(position.LineNumber, Width_EN, position.Sequence);		
-			int n = TAB_SIZE - (PreWidth / Width_EN) % TAB_SIZE;			//n表示需要插入空格的数量
-			x += Width_EN * n;
-			for (int i = 0; i < n; i++)
-				ws.push_back(L' ');
-			Position temp = { position.LineNumber,position.Sequence + 1 };
-			position = hText->Insert(position, ws);
-			rd->Set_Choose_Data(temp, position);
+			ws.push_back(wch);
+			rd->ACT = RD_REPLACE;
+			rd->Save_Delete_Data(hText, pCursor->start, pCursor->end);	
+
+			hText->Replace(pCursor->start, pCursor->end, ws);
+
+			rd->Set_Choose_Data(pCursor->start, pCursor->start);
+			x = (pCursor->PositionToCursor(pCursor->start)).x;
+			pCursor->ResetChoose();
 		}
 		else
 		{
-			ws.push_back(wch);
-
-			position = hText->Insert(position, ws);				//在Position后面插入一个字符  position记录插入后的字符位置
-
-			rd->Set_Choose_Data(position, position);
-			if (WORD(wch >> 8) > 0)
-				x += Width_ZH;
+			Position position = pCursor->CursorToPosition(x, y);
+			if (wch == L'\t')							//处理Tab
+			{
+				int PreWidth = hText->Line_Width(position.LineNumber, Width_EN, position.Sequence);
+				int n = TAB_SIZE - (PreWidth / Width_EN) % TAB_SIZE;			//n表示需要插入空格的数量
+				x += Width_EN * n;
+				for (int i = 0; i < n; i++)
+					ws.push_back(L' ');
+				Position temp = { position.LineNumber,position.Sequence + 1 };
+				position = hText->Insert(position, ws);
+				rd->Set_Choose_Data(temp, position);
+			}
 			else
-				x += Width_EN;
-		}
+			{
+				ws.push_back(wch);
 
+				position = hText->Insert(position, ws);				//在Position后面插入一个字符  position记录插入后的字符位置
+
+				rd->Set_Choose_Data(position, position);
+				if (WORD(wch >> 8) > 0)
+					x += Width_ZH;
+				else
+					x += Width_EN;
+			}
+		}
 		pRecord->push(rd);
-		int New_Max_Width = hText->Max_Line_Width(Install::Width);
-		return RVALUE(x) << 32 | RVALUE(New_Max_Width);
+		int New_Lines = hText->Line_Number();
+		/*设置光标像素位置 行列号*/
+		lpKernelInfo->m_pCaretPixelPos = { x,y };
+		lpKernelInfo->m_cCaretCoord = { LineNumber,pCursor->Characters_before_Cursor(LineNumber,x) };
+		/*设置换行信息 文本大小*/
+		lpKernelInfo->m_bLineBreak = (Old_Lines == New_Lines ? FALSE : TRUE);
+		lpKernelInfo->m_pTextPixelSize = { hText->Max_Line_Width(Width_EN),hText->Line_Number()*Height };
+		break;
 	}
 	case UM_TEXT:
 	{
@@ -362,17 +423,17 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 	}
 	case UM_ALL:
 	{
-		int MaxLineNumber = hText->Line_Number();
-		y = (MaxLineNumber - 1)*Height;
-		x = hText->Line_Width(MaxLineNumber, Width_EN);
 		pCursor->Choose(hText->First_Position(), hText->End_Position());		//全选
-		return RVALUE(y) << 32 | RVALUE(x);
+		/*设置光标像素位置 行列号*/
+		lpKernelInfo->m_pCaretPixelPos = { 0,0 };
+		lpKernelInfo->m_cCaretCoord = { 1,0 };
+		break;
 	}
 	case UM_CHOOSE:
 	{
 		Position start, end;
 		int end_x = LODWORD(fParam);
-		int end_y = HIDWORD(fParam);
+		int end_y = LODWORD(sParam);
 		end_y -= end_y % Height;
 		end_x = pCursor->CursorLocation(end_y / Height + 1, end_x);
 		x = pCursor->CursorLocation(LineNumber, x);
@@ -391,13 +452,18 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 		{
 			start = pCursor->CursorToPosition_After(x, y);
 			pCursor->Choose(start, end);					//记录选中信息 （start 在前 end 在后）
+			if (start > end)
+				throw std::invalid_argument("无效的选中");
 		}
 		catch (std::invalid_argument& e)
 		{
 			pCursor->ResetChoose();
 		}				
-		
-		return RVALUE(p.y) << 32 | RVALUE(p.x);
+
+		/*设置光标像素位置 行列号*/
+		lpKernelInfo->m_pCaretPixelPos = { x,y };
+		lpKernelInfo->m_cCaretCoord = { LineNumber,pCursor->Characters_before_Cursor(LineNumber,x) };
+		break;
 	}
 	case UM_CANCEL:
 	{
@@ -448,16 +514,31 @@ RVALUE _stdcall UserMessageProc(HTEXT hText, int x, int y, UINT message, FPARAM 
 	}
 	case UM_PASTE:
 	{
-		pCursor->ResetChoose();
+		
 		Record* rd = new Record(RD_INSERT);
 		std::string SText = wchTostring((TCHAR*)sParam);
 		std::wstring WSText = StringToWString(SText);			//待插入的内容
-		Position start;
-		start = pCursor->CursorToPosition(x, y);
-		Position s = { start.LineNumber,start.Sequence + 1 };	//插入后的首字符位置
-		start = hText->Insert(start, WSText);					//插入字符 start得到插入的最后一个字符的位置
 
-		rd->Set_Choose_Data(s, start);
+		Position start;
+		if (pCursor->isChoose())
+		{
+			rd->ACT = RD_REPLACE;
+			start = pCursor->start;
+			start.Sequence--;
+			rd->Save_Delete_Data(hText, pCursor->start, pCursor->end);
+			pCursor->end = hText->Replace(pCursor->start, pCursor->end, WSText);
+			rd->Set_Choose_Data(pCursor->start, pCursor->end);
+			pCursor->ResetChoose();
+		}
+		else
+		{
+			start = pCursor->CursorToPosition(x, y);
+			Position s = { start.LineNumber,start.Sequence + 1 };	//插入后的首字符位置
+			start = hText->Insert(start, WSText);					//插入字符 start得到插入的最后一个字符的位置
+
+			rd->Set_Choose_Data(s, start);
+		}
+
 		pRecord->push(rd);
 
 		*(POINT*)fParam = pCursor->PositionToCursor(start);
@@ -600,6 +681,16 @@ void Alloc_Buffer(wchar_t *& p, size_t & Old_Size, size_t New_Size)
 		delete[]p;
 		p = new wchar_t[New_Size];
 		Old_Size = New_Size;
+	}
+	else
+	{
+		if (New_Size <= Old_Size / 4)		//减少缓冲区大小 避免内存占用过大
+		{
+			if (p != NULL)
+				delete[] p;
+			p = new wchar_t[New_Size];
+			Old_Size = New_Size;
+		}
 	}
 
 }

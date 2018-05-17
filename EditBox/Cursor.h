@@ -43,3 +43,10 @@ struct Install
 	static int Width;						//×Ö·û¿í¶È
 	static int Height;						//ÐÐ¸ß
 };
+
+
+
+Cursor* Initialize_Cursor(CText* p, int Width, int Height);
+void    Alloc_Buffer(wchar_t* &p, size_t &Old_Size, size_t New_Size);
+void    Free_Buffer(wchar_t* &p);
+void    Set_Height_Light(int LineNumber, Position ps, Position pe, short int& start, short int& end);

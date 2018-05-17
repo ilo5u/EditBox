@@ -16,16 +16,20 @@ typedef UINT      RVALUE;   // _INT64 UserMessageProc处理返回的结果码
 typedef struct _USER_RESULT 
 {
 	POINT m_pCaretPixelPos;  // 光标的像素位置
+	COORD m_cCaretCoord;     // 光标的逻辑坐标(X列 Y行)
 	POINT m_pStartPixelPos;  // 起点的像素位置
 	POINT m_pEndPixelPos;    // 终点的像素位置
 	POINT m_pTextPixelSize;  // 文本的像素大小
-	POINT m_pCaretCoord;     // 光标的逻辑坐标(X行 Y列)
+
+	// 仅UM_DELETE、UM_CHAR、UM_PASTE使用
+	BOOL  m_bLineBreak;       // 换行符是否有更新
 
 	// 仅UM_TEXT使用
-	UINT  m_uiCount;         // 文本字符数目
-	UINT  m_uiStart;         // 高亮部分起点
-	UINT  m_uiEnd;           // 高亮部分终点
-	BOOL  m_bInside;         // 起点位于中文字符中间(true or false)
+	UINT    m_uiCount;         // 文本字符数目
+	UINT    m_uiStart;         // 高亮部分起点
+	UINT    m_uiEnd;           // 高亮部分终点
+	BOOL    m_bInside;         // 起点位于中文字符中间(true or false)
+	LPCWSTR m_lpchText;        // 文本指针
 } KERNELINFO, *LPKERNELINFO;
 
 #define LODWORD(l) ((UINT)(((ULONGLONG)(l)) & 0xffffffff))			// 低双字节
@@ -66,7 +70,11 @@ typedef struct _USER_RESULT
 // +++++++++++++++++ END ++++++++++++++++++ //
 
 // ++++++++ About Query ++++++++ //
-#define UM_ISSAVED 0x000000011
+#define UM_ISSAVED  0x00000011
+// +++++++++++++ END +++++++++++ //
+
+// ++++++++ About Config +++++++ //
+#define UM_CHANGECHARSIZE  0x00000012
 // +++++++++++++ END +++++++++++ //
 
 // ++++++++++ Error Information +++++++++++ //
@@ -78,26 +86,25 @@ typedef struct _USER_RESULT
 #define UR_SUCCESS		0x00000000
 // ++++++++++++++++++ END +++++++++++++++++ //
 
+// +++++++++++ FIND MODE +++++++++++++++ //
+#define FIND_ALLCASE  0x0000000000000000
+#define FIND_LHCASE   0x0000000000000001
+#define BEFORE_CARET  0x0000000000000000
+#define AFTER_CARET   0x0000000000000100
+#define FIND_COMPELTE 0x0000000000000000
+#define FIND_SUBSEQ   0x0000000000010000
+// +++++++++++++++ END +++++++++++++++++ //
+
 /*
   @Description: 接口函数，负责内部数据处理和图形界面绘制的沟通
 */
-RVALUE _stdcall UserMessageProc(_In_ HTEXT hText,
+RVALUE __stdcall UserMessageProc(_In_ HTEXT hText,
 	_In_opt_ int x, _In_opt_ int y,
 	_In_ UINT message,
 	_In_opt_ FPARAM fParam, _In_opt_ SPARAM sParam,
 	_Out_opt_ LPKERNELINFO lpKernelInfo
 );
 
-#define FIND_COMPELTE 0x0000000000000001
-#define FIND_LHCASE   0x0000000000000002
-
 #define TEXT_SIZE	300				//显示文本长度
 #define TAB_SIZE	4				//Tab字符为4空格
 
-/*-------------------------------------------------------------------
-  @Suggestion : Move the following statement to other header file
--------------------------------------------------------------------*/ 
-Cursor* Initialize_Cursor(CText* p, int Width, int Height);
-void    Alloc_Buffer(wchar_t* &p, size_t &Old_Size, size_t New_Size);
-void    Free_Buffer(wchar_t* &p);
-void    Set_Height_Light(int LineNumber, Position ps, Position pe, short int& start, short int& end);

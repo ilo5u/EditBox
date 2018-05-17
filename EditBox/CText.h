@@ -5,9 +5,12 @@
 #include<sstream>
 #include<fstream>
 #include"CLine.h"
+#include"MyExpection.h"
 #include<queue>
 #include<Windows.h>
-
+#include<time.h>
+#include<process.h>
+#define AUTO_SAVE_TIME 300														//自动保存时间间隔
 //文本存储结构
 class CText
 {
@@ -46,9 +49,12 @@ private:
 	int			nLineNumbers;													//行数
 	std::string	FileName;														//文件名		
 	bool		bSave;															//是否保存
+	int			Start_Time;														//定时器启动时间
+	HANDLE      hAuto_Save;														//定时器句柄
 	void UpDataLineNumber(CLine* p, int Start);									//更新行号
 	void InsertLine(int AfterLineNumber);										//在行号后面插入空行
 	bool upper_lower_match(TCHAR ch1, TCHAR ch2, bool upper_lower);				//判断是否符合匹配
+	UINT __stdcall Auto_Save_Timer_Thread(LPVOID);								//自动保存定时器线程
 };
 
 /*全文本迭代器*/
@@ -86,3 +92,4 @@ std::string WStringToString(const std::wstring& ws);		//实现字符转换
 std::string wchTostring(TCHAR* pwch);						//宽字符指针转换为string
 void WStringToWch(const std::wstring &ws, TCHAR* &pwch);	//宽字符串转化为指针
 std::queue<std::wstring> WStrToLineWStr(std::wstring WSTR);	//将包含换行符的字符串转化为不同行的字符串(不含换行符)		
+
