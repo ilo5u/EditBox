@@ -84,7 +84,7 @@ HTEXTKERNEL __stdcall CreateKernel(HWND hWnd, HTEXTUSER hUser)
 	if (!lpKernel)
 		return HTEXTKERNEL(nullptr);
 
-	if (!(lpKernel->m_hText = CreateText(hUser->m_pCharPixelSize.x, hUser->m_pCharPixelSize.y, DEFAULT_PATH)))
+	if (!(lpKernel->m_hText = CreateText(hUser->m_pCharPixelSize.x, hUser->m_pCharPixelSize.y)))
 		return HTEXTKERNEL(nullptr);
 
 	lpKernel->m_pTextPixelSize = POINT{ 0, 0 };

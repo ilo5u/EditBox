@@ -6,7 +6,7 @@
 #include "Record.h"
 
 typedef CText* HTEXT;
-HTEXT	_stdcall	CreateText(int iCharWidth, int iCharHeight, LPCWSTR lpszDefaultPath);
+HTEXT	_stdcall	CreateText(int iCharWidth, int iCharHeight);
 BOOL	_stdcall	DestroyText(HTEXT &hText);
 
 typedef ULONGLONG FPARAM;	// _INT64
@@ -67,28 +67,23 @@ typedef struct _USER_RESULT
 #define UM_CANCEL	0x0000000E
 #define UM_FIND		0x0000000F
 #define UM_REPLACE  0x00000010
-#define UM_SAVEAS   0x00000011
 // +++++++++++++++++ END ++++++++++++++++++ //
 
 // ++++++++ About Query ++++++++ //
-#define UM_ISSAVED  0x00000012
-#define UM_PATH     0x00000013
+#define UM_ISSAVED  0x00000011
 // +++++++++++++ END +++++++++++ //
 
 // ++++++++ About Config +++++++++ //
-#define UM_CHANGECHARSIZE 0x00000014
+#define UM_CHANGECHARSIZE 0x00000012
 // ++++++++++++ END ++++++++++++++ //
 
 // ++++++++++ Error Information +++++++++++ //
-#define UR_NOPATH		0xFFFFFFFF
 #define UR_NOTSAVED		0xFFFFFFFE
 #define UR_NOTCANCEL	0xFFFFFFFD
 #define UR_ERROR		0xFFFFFFFC
 #define UR_SAVED		0xFFFFFFFB
 #define UR_SUCCESS		0x00000000
-#define UR_DEFAULTPATH	0xFFFFFFFA
-#define UR_DEFAULT      0xFFFFFFF9
-#define UR_USER         0xFFFFFFF8
+#define UR_DEFAULTPATH	0xFFFFFFA0
 // ++++++++++++++++++ END +++++++++++++++++ //
 
 // +++++++++++ FIND MASK +++++++++++++++ //
@@ -103,7 +98,8 @@ typedef struct _USER_RESULT
 /*
   @Description: 接口函数，负责内部数据处理和图形界面绘制的沟通
 */
-RVALUE __stdcall UserMessageProc(_In_ HTEXT hText,
+RVALUE __stdcall UserMessageProc(
+	_In_ HTEXT hText,
 	_In_opt_ int x, _In_opt_ int y,
 	_In_ UINT message,
 	_In_opt_ FPARAM fParam, _In_opt_ SPARAM sParam,

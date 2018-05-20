@@ -374,7 +374,7 @@ Line_iterator::Line_iterator(CLine & theLine, int index) :pLine(&theLine)
 		pWChar = theLine.pLineHead->Strings;						//指向行首字符
 		pBlock = theLine.pLineHead;
 		nIndex = 1;
-		bAfter_end = false;
+		bAfter_end = FALSE;
 		*this = *this + (index - 1);
 	}
 	else
@@ -383,7 +383,7 @@ Line_iterator::Line_iterator(CLine & theLine, int index) :pLine(&theLine)
 		pWChar = NULL;
 		pBlock = NULL;
 		nIndex = 0;
-		bAfter_end = true;
+		bAfter_end = TRUE;
 	}
 }
 
@@ -427,7 +427,7 @@ Line_iterator & Line_iterator::operator--()
 	*/
 	if (bAfter_end)
 	{
-		bAfter_end = false;
+		bAfter_end = FALSE;
 		return *this;
 	}
 	if (nIndex%BLOCK_SIZE == 1)
@@ -485,7 +485,7 @@ void Line_iterator::Set(CLine & theLine, int index)
 		pWChar = NULL;
 		pBlock = NULL;
 		nIndex = 0;
-		bAfter_end = true;
+		bAfter_end = TRUE;
 	}
 }
 //返回当前迭代器指向的字符所在位置
@@ -536,7 +536,7 @@ false		当前迭代器未绑定或当前行为空行或者指向尾后
 */
 bool Line_iterator::isValid() const
 {
-	if (pWChar == NULL || bAfter_end == true)
+	if (pWChar == NULL || bAfter_end == TRUE)
 		return false;
 	else
 		return true;
@@ -561,17 +561,8 @@ bool Line_iterator::operator<(const Line_iterator & m)
 		return true;
 	else if (pLine->nLineNumber == m.pLine->nLineNumber)
 	{
-		if (nIndex < m.nIndex)
+		if (nIndex + bAfter_end < m.nIndex + m.bAfter_end)
 			return true;
-		if (nIndex == m.nIndex)
-		{
-			if (bAfter_end&&m.bAfter_end)
-				return true;
-			if (!bAfter_end&&m.bAfter_end)
-				return true;
-			if (bAfter_end && !m.bAfter_end)
-				return false;
-		}
 		else
 			return false;
 	}
@@ -583,7 +574,7 @@ bool Line_iterator::operator<=(const Line_iterator & m)
 {
 	if (*this < m)
 		return true;
-	if (pLine->nLineNumber == m.pLine->nLineNumber&&nIndex == m.nIndex)
+	if (pLine->nLineNumber == m.pLine->nLineNumber&&nIndex + bAfter_end == m.nIndex + m.bAfter_end)
 		return true;
 	else
 		return false;
