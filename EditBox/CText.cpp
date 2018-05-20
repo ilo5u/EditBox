@@ -1,5 +1,6 @@
 #include"stdafx.h"
-std::string CText::Path = "C:\\MiniWord\\Default\\";				
+
+std::string CText::Path = "C:\\MiniWord\\Default\\";
 CText::CText()
 {
 	pFirstLineHead = NULL;
@@ -28,8 +29,8 @@ void CText::ReadText(std::string filename)
 {
 	ClearAll();
 	FileName = filename;
-	std::ifstream	File_r(FileName, std::wifstream::in);		//以读的方式打开txt文件
-	/*读取文件失败*/
+	std::ifstream	File_r(CText::Path + FileName, std::ifstream::in);		//以读的方式打开txt文件
+																			/*读取文件失败*/
 	if (!File_r)
 		throw Read_Text_Failed("找不到文件");
 	std::string LineStr;
@@ -174,9 +175,9 @@ Position CText::BackSpace(Position position)
 	{
 		std::wstring LineStr = p->TransformToWString(1, p->nDataSize);
 		DeleteLines(p->nLineNumber, p->nLineNumber);
-		if(!LineStr.empty())
+		if (!LineStr.empty())
 			preLine->InsertStrings(preLine->nDataSize, LineStr);
-		return { position.LineNumber - 1,preLine->nDataSize  };
+		return { position.LineNumber - 1,preLine->nDataSize };
 	}
 	else
 	{
@@ -259,7 +260,7 @@ std::wstring CText::Copy(Position start, Position end)
 		LineStr = p->TransformToWString(1, end.Sequence);
 	else
 		LineStr = p->TransformToWString(start.Sequence, end.Sequence);
-	
+
 	Str += LineStr;
 	return Str;
 }
@@ -499,7 +500,7 @@ UINT __stdcall Auto_Save_Timer_Thread(LPVOID LP)
 			pText->Save();
 			pText->Start_Time = clock() / 1000;
 		}
-			
+
 	}
 	return 0;
 }
@@ -625,6 +626,8 @@ Text_iterator & Text_iterator::operator++()
 			p = p->pNextLine;
 			currLine.Set(*p);						//换入下一行行首
 		}
+		else
+			++currLine;								//进入文本尾后
 	}
 	else
 		++currLine;
@@ -645,7 +648,7 @@ Text_iterator & Text_iterator::operator--()
 	int CurLineNumber = p->nLineNumber;				//获取当前行号
 	if (position == 1 || position == 0)
 	{
-		if (CurLineNumber != 1)
+		if (CurLineNumber > 1)
 		{
 			p = pText->GetLinePointer(CurLineNumber - 1);
 			currLine.Set(*p, p->nDataSize);		//回到上一行行尾
@@ -672,6 +675,7 @@ Text_iterator  Text_iterator::operator+(int n)
 	}
 	return temp;
 }
+
 Text_iterator  Text_iterator::operator-(int n)
 {
 	Text_iterator temp(*this);
@@ -693,15 +697,11 @@ bool Text_iterator::operator!=(const Text_iterator & Text)
 
 bool Text_iterator::operator<(const Text_iterator & Text)
 {
-	if (currLine.pLine->nLineNumber < Text.currLine.pLine->nLineNumber)
-		return true;
-	if (currLine.nIndex < Text.currLine.nIndex)
-		return true;
-	return false;
+	return currLine < Text.currLine;
 }
 bool Text_iterator::operator<=(const Text_iterator & Text)
 {
-	return (*this < Text) || (currLine.pLine->nLineNumber == Text.currLine.pLine->nLineNumber&&currLine.nIndex == Text.currLine.nIndex);
+	return currLine <= Text.currLine;
 }
 
 //判断当前文本迭代器是否到了文末

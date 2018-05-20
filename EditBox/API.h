@@ -71,8 +71,8 @@ typedef struct _USER_RESULT
 // +++++++++++++++++ END ++++++++++++++++++ //
 
 // ++++++++ About Query ++++++++ //
-#define UM_ISSAVED       0x00000012
-#define UM_ISDEFAULTPATH 0x00000013
+#define UM_ISSAVED  0x00000012
+#define UM_PATH     0x00000013
 // +++++++++++++ END +++++++++++ //
 
 // ++++++++ About Config +++++++++ //
@@ -87,8 +87,8 @@ typedef struct _USER_RESULT
 #define UR_SAVED		0xFFFFFFFB
 #define UR_SUCCESS		0x00000000
 #define UR_DEFAULTPATH	0xFFFFFFFA
-#define UR_YES          0xFFFFFFF9
-#define UR_NO           0xFFFFFFF8
+#define UR_DEFAULT      0xFFFFFFF9
+#define UR_USER         0xFFFFFFF8
 // ++++++++++++++++++ END +++++++++++++++++ //
 
 // +++++++++++ FIND MASK +++++++++++++++ //

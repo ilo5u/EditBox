@@ -123,14 +123,14 @@ Line_iterator CLine::DeleteLine(int first, int last)
 		--it_first;
 		DeleteSpareBlocks(it_first.pBlock->pNextBlock);
 		it_first.pBlock->pNextBlock = NULL;
-	/*
+		/*
 		if (it_first.nIndex%BLOCK_SIZE == 1)
 		{
-			--it_first;
-			DeleteSpareBlocks(it_first.pBlock->pNextBlock);
-			it_first.pBlock->pNextBlock = NULL;
+		--it_first;
+		DeleteSpareBlocks(it_first.pBlock->pNextBlock);
+		it_first.pBlock->pNextBlock = NULL;
 		}
-	*/
+		*/
 		nDataSize -= (last - first + 1);
 		return it_first;
 	}
@@ -150,7 +150,7 @@ bool CLine::BackSpace(Position position)
 {
 	if (position.Sequence == 0)
 	{
-		if (position.LineNumber == 1)			//首行不需要换行
+		if (position.LineNumber == 1)
 			return true;
 		else
 			return false;
@@ -224,11 +224,9 @@ void CLine::InsertStrings(int start, std::wstring String)
 			pnewLine->pLineHead = NULL;
 			delete pnewLine;
 		}
-		
 	}
 	else if (start == 0)	//在行首插入
 	{
-	//	Line_iterator it_start = begin();
 		CLine* pnewLine = new CLine(nLineNumber);
 		pnewLine->CreateLine(String);
 
@@ -250,7 +248,7 @@ void CLine::InsertStrings(int start, std::wstring String)
 		std::wstring backstr = TransformToWString(start + 1, nDataSize);				//保存start后面的字符串
 		DeleteLine(start + 1, nDataSize);												//删除这部分
 		String += backstr;
-		return InsertStrings(start, String);
+		return InsertStrings(nDataSize, String);
 
 	}
 
@@ -318,11 +316,11 @@ bool CLine::isBlankLine() const
 }
 //返回当前行行宽[1-nDatasize/end]（像素） 第三个参数可选 
 //end == 0 返回行宽 end != 0 返回[1-end]的宽度
-int CLine::Line_Width(int Width,int end)
+int CLine::Line_Width(int Width, int end)
 {
 	if (bBlankLine)
 		return 0;
-	int n =( end == 0 ? nDataSize : min(end, nDataSize));
+	int n = (end == 0 ? nDataSize : min(end, nDataSize));
 	int Width_EN = Width;
 	int Width_ZH = Width * 2;
 	int	Total_Width = 0;
@@ -404,11 +402,11 @@ Line_iterator & Line_iterator::operator++()
 	//防止越界处理
 	if (bAfter_end)
 		return *this;
-	if(nIndex%BLOCK_SIZE == 0)
+	if (nIndex%BLOCK_SIZE == 0)
 	{
 		pBlock = pBlock->pNextBlock;
 		pWChar = pBlock->Strings;
-		
+
 	}
 	nIndex++;
 	return *this;
@@ -427,9 +425,8 @@ Line_iterator & Line_iterator::operator--()
 	防止左移越界处理
 	...
 	*/
-	if (isEnd())
+	if (bAfter_end)
 	{
-		nIndex--;									//对于当前迭代器指向尾后的情况
 		bAfter_end = false;
 		return *this;
 	}
@@ -487,7 +484,7 @@ void Line_iterator::Set(CLine & theLine, int index)
 	{
 		pWChar = NULL;
 		pBlock = NULL;
-		nIndex = 1;
+		nIndex = 0;
 		bAfter_end = true;
 	}
 }
@@ -547,16 +544,49 @@ bool Line_iterator::isValid() const
 
 bool Line_iterator::isEnd()
 {
-	if (nIndex > pLine->nDataSize)
-		bAfter_end = true;
+	if (nIndex == pLine->nDataSize)
+		return true;
 	else
-		bAfter_end = false;
-	return bAfter_end;
+		return false;
 }
 
 bool Line_iterator::operator==(const Line_iterator & m)
 {
-	return	pBlock == m.pBlock&&nIndex == m.nIndex;
+	return	pBlock == m.pBlock&&nIndex == m.nIndex&&bAfter_end == m.bAfter_end;
+}
+
+bool Line_iterator::operator<(const Line_iterator & m)
+{
+	if (pLine->nLineNumber < m.pLine->nLineNumber)
+		return true;
+	else if (pLine->nLineNumber == m.pLine->nLineNumber)
+	{
+		if (nIndex < m.nIndex)
+			return true;
+		if (nIndex == m.nIndex)
+		{
+			if (bAfter_end&&m.bAfter_end)
+				return true;
+			if (!bAfter_end&&m.bAfter_end)
+				return true;
+			if (bAfter_end && !m.bAfter_end)
+				return false;
+		}
+		else
+			return false;
+	}
+	else
+		return false;
+}
+
+bool Line_iterator::operator<=(const Line_iterator & m)
+{
+	if (*this < m)
+		return true;
+	if (pLine->nLineNumber == m.pLine->nLineNumber&&nIndex == m.nIndex)
+		return true;
+	else
+		return false;
 }
 
 bool Line_iterator::operator!=(const Line_iterator & m)
