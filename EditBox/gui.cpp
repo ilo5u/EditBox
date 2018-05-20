@@ -309,7 +309,7 @@ BOOL PaintWindow(LPRECT lpRepaint, HTEXTINFO hTextInfo)
 					kernelinfo.m_lpchText,
 					kernelinfo.m_uiCount, kernelinfo.m_uiStart, kernelinfo.m_uiEnd,
 					CHARSIZE(hTextInfo).x
-				), wprintf_s(TEXT("yOffset = %d: %ls\n"), yOffset, kernelinfo.m_lpchText);
+				), wprintf_s(TEXT("bInside = %d, yOffset = %d: %ls\n"), kernelinfo.m_bInside, yOffset, kernelinfo.m_lpchText);
 		}
 		break;
 		default:
