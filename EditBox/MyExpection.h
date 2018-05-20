@@ -11,3 +11,9 @@ public:
 private:
 	std::string s;
 };
+
+class No_File_Name :public std::logic_error
+{
+public:
+	No_File_Name(const std::string& Str) :std::logic_error(Str) {  }
+};

@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "editbox.h"
+#include "miniword.h"
 #include "debug.h"
 
 BOOL operator==(POINT left, POINT right)
@@ -20,19 +20,19 @@ BOOL MyInvalidateRect(HTEXTINFO hTextInfo, LONG left, LONG right, LONG top, LONG
 	return (TRUE);
 }
 
-BOOL AdjustCaretPosBeforeBackspace(HWND hWnd, HTEXTINFO hTextInfo)
+BOOL AdjustCaretPosBeforeBackspace(HTEXTINFO hTextInfo)
 {
 	if (STARTPOS(hTextInfo) == ENDPOS(hTextInfo))
 	{	// 当前未选中片段 删除光标前一个字符
 		POINT pOldEndPos = ENDPOS(hTextInfo);                        // 记录选段尾部
-		SendMessage(hWnd, WM_KEYDOWN, VK_LEFT, NULL);                // 光标左移
+		SendMessage(hTextInfo->m_hWnd, WM_KEYDOWN, VK_LEFT, NULL);                // 光标左移
 		SelectHighlight(hTextInfo, STARTPOS(hTextInfo), pOldEndPos); // 重设高亮部分(光标后一个字符)
 	}
 
 	return (TRUE);
 }
 
-BOOL AdjustPaintPos(HWND hWnd, HTEXTINFO hTextInfo)
+BOOL AdjustPaintPos(HTEXTINFO hTextInfo)
 {
 	// 计算偏移量
 	int xOffset = INRANGEX(CARETPOS(hTextInfo).x, 
@@ -51,7 +51,7 @@ BOOL AdjustPaintPos(HWND hWnd, HTEXTINFO hTextInfo)
 	SCROLLINFO shInfo;
 	shInfo.cbSize = sizeof(SCROLLINFO);
 	shInfo.fMask  = SIF_POS | SIF_RANGE | SIF_PAGE;
-	GetScrollInfo(hWnd, SB_HORZ, &shInfo);
+	GetScrollInfo(hTextInfo->m_hWnd, SB_HORZ, &shInfo);
 
 	int iOldHorzPos = shInfo.nPos;
 	shInfo.nPos     = shInfo.nPos + xOffset / CHARSIZE(hTextInfo).x;
@@ -63,12 +63,12 @@ BOOL AdjustPaintPos(HWND hWnd, HTEXTINFO hTextInfo)
 
 	shInfo.cbSize = sizeof(SCROLLINFO);
 	shInfo.fMask  = SIF_POS;
-	SetScrollInfo(hWnd, SB_HORZ, &shInfo, TRUE);
+	SetScrollInfo(hTextInfo->m_hWnd, SB_HORZ, &shInfo, TRUE);
 
 	SCROLLINFO svInfo;
 	svInfo.cbSize = sizeof(SCROLLINFO);
 	svInfo.fMask  = SIF_POS | SIF_RANGE | SIF_PAGE;
-	GetScrollInfo(hWnd, SB_VERT, &svInfo);
+	GetScrollInfo(hTextInfo->m_hWnd, SB_VERT, &svInfo);
 
 	int iOldVertPos = svInfo.nPos;
 	svInfo.nPos     = svInfo.nPos + yOffset / CHARSIZE(hTextInfo).y;
@@ -80,11 +80,12 @@ BOOL AdjustPaintPos(HWND hWnd, HTEXTINFO hTextInfo)
 
 	svInfo.cbSize = sizeof(SCROLLINFO);
 	svInfo.fMask  = SIF_POS;
-	SetScrollInfo(hWnd, SB_VERT, &svInfo, TRUE);
+	SetScrollInfo(hTextInfo->m_hWnd, SB_VERT, &svInfo, TRUE);
 
 	SelectPaintPos(hTextInfo, 
 		POINT{ iNowHorzPos * CHARSIZE(hTextInfo).x, iNowVertPos * CHARSIZE(hTextInfo).y }
 	); // 设置绘图区域的像素位置
+	SelectCaretPos(hTextInfo, CARETPOS(hTextInfo), CARETCOORD(hTextInfo));
 
 	MyScrollWindow(hTextInfo, 
 		(iOldHorzPos - iNowHorzPos) * CHARSIZE(hTextInfo).x, 
@@ -104,7 +105,7 @@ BOOL MoveCaret(HTEXTINFO hTextInfo, UINT message)
 	case UR_SUCCESS:
 	{
 		SelectCaretPos(hTextInfo, kernelinfo.m_pCaretPixelPos, kernelinfo.m_cCaretCoord);
-		AdjustPaintPos(hTextInfo->m_hWnd, hTextInfo); // 滑动绘图区 使光标落在绘图区域内
+		AdjustPaintPos(hTextInfo); // 滑动绘图区 使光标落在绘图区域内
 
 		MyInvalidateRect(hTextInfo,
 			0, PAINTSIZE(hTextInfo).x,
@@ -131,6 +132,8 @@ BOOL SelectPaintPos(HTEXTINFO hTextInfo, POINT thePos)
 
 BOOL SelectCaretPos(HTEXTINFO hTextInfo, POINT thePixelPos, COORD theCoord)
 {
+	static BOOL s_bCaretAlreadyHiden = false;
+
 	CARETPOS(hTextInfo) = thePixelPos;
 	CARETCOORD(hTextInfo) = theCoord;
 	if (!INRANGEX(thePixelPos.x,
@@ -138,12 +141,22 @@ BOOL SelectCaretPos(HTEXTINFO hTextInfo, POINT thePixelPos, COORD theCoord)
 		PAINTPOS(hTextInfo).x + PAGESIZE(hTextInfo).x * CHARSIZE(hTextInfo).x)
 		|| !INRANGEY(thePixelPos.y,
 			PAINTPOS(hTextInfo).y,
-			PAINTPOS(hTextInfo).y + PAGESIZE(hTextInfo).y * CHARSIZE(hTextInfo).y))
-	{	// 光标未落在窗口内
-		HideCaret(hTextInfo->m_hWnd);
+			PAINTPOS(hTextInfo).y + PAGESIZE(hTextInfo).y * CHARSIZE(hTextInfo).y)) // 光标未落在窗口内
+	{
+		if (!s_bCaretAlreadyHiden)
+		{
+			HideCaret(hTextInfo->m_hWnd);
+			s_bCaretAlreadyHiden = true;
+		}
 	}
 	else
-		ShowCaret(hTextInfo->m_hWnd);
+	{
+		if (s_bCaretAlreadyHiden)
+		{
+			ShowCaret(hTextInfo->m_hWnd);
+			s_bCaretAlreadyHiden = false;
+		}
+	}
 	SetCaretPos(CARETPOS(hTextInfo).x - PAINTPOS(hTextInfo).x, CARETPOS(hTextInfo).y - PAINTPOS(hTextInfo).y);
 
 	TCHAR szCaretCoord[MAX_PATH];
@@ -203,9 +216,10 @@ BOOL SelectWindow(HTEXTINFO hTextInfo, POINT pTextSize, LPCWSTR szFileName)
 	SelectPaintPos(hTextInfo, POINT{ 0, 0 });	// 设置窗口位置（左上角
 
 	CreateCaret(hTextInfo->m_hWnd, NULL,
-		CARETSIZE(hTextInfo).y,
+		CARETSIZE(hTextInfo).x,
 		CARETSIZE(hTextInfo).y
 	); // 创建光标
+	ShowCaret(hTextInfo->m_hWnd);
 
 	SelectCaretPos(hTextInfo, POINT{ 0, 0 }, COORD{ 0, 0 });	// 设置光标位置（左上角）
 	SelectHighlight(hTextInfo,
@@ -231,7 +245,7 @@ BOOL MyScrollWindow(HTEXTINFO hTextInfo, int xOffset, int yOffset)
 			PAINTSIZE(hTextInfo).x : -xOffset;
 		rcScroll.right = PAINTSIZE(hTextInfo).x;
 		MyInvalidateRect(hTextInfo,
-			0, rcScroll.left,
+			max(0, xOffset + PAINTSIZE(hTextInfo).x), PAINTSIZE(hTextInfo).x,
 			0, PAINTSIZE(hTextInfo).y
 		);
 	}
@@ -241,7 +255,7 @@ BOOL MyScrollWindow(HTEXTINFO hTextInfo, int xOffset, int yOffset)
 		rcScroll.right = xOffset > PAINTSIZE(hTextInfo).x ? 
 			0 : PAINTSIZE(hTextInfo).x - xOffset;
 		MyInvalidateRect(hTextInfo,
-			rcScroll.right, PAINTSIZE(hTextInfo).x,
+			0, min(xOffset, PAINTSIZE(hTextInfo).x),
 			0, PAINTSIZE(hTextInfo).y
 		);
 	}
@@ -253,7 +267,7 @@ BOOL MyScrollWindow(HTEXTINFO hTextInfo, int xOffset, int yOffset)
 		rcScroll.bottom = PAINTSIZE(hTextInfo).y;
 		MyInvalidateRect(hTextInfo,
 			0, PAINTSIZE(hTextInfo).x,
-			0, rcScroll.top
+			max(0, yOffset + PAINTSIZE(hTextInfo).y - PAINTSIZE(hTextInfo).y % CHARSIZE(hTextInfo).y), PAINTSIZE(hTextInfo).y
 		);
 	}
 	else
@@ -263,7 +277,7 @@ BOOL MyScrollWindow(HTEXTINFO hTextInfo, int xOffset, int yOffset)
 			PAINTSIZE(hTextInfo).y : PAINTSIZE(hTextInfo).y - yOffset;
 		MyInvalidateRect(hTextInfo,
 			0, PAINTSIZE(hTextInfo).x,
-			rcScroll.bottom, PAINTSIZE(hTextInfo).y
+			0, min(yOffset, PAINTSIZE(hTextInfo).y)
 		);
 	}
 
@@ -295,7 +309,7 @@ BOOL PaintWindow(LPRECT lpRepaint, HTEXTINFO hTextInfo)
 					kernelinfo.m_lpchText,
 					kernelinfo.m_uiCount, kernelinfo.m_uiStart, kernelinfo.m_uiEnd,
 					CHARSIZE(hTextInfo).x
-				);
+				), wprintf_s(TEXT("yOffset = %d: %ls\n"), yOffset, kernelinfo.m_lpchText);
 		}
 		break;
 		default:
@@ -330,6 +344,11 @@ BOOL SelectCharSize(HTEXTINFO hTextInfo, LONG newCharWidth, LONG newCharHeight)
 	TEXTSIZE(hTextInfo).x = TEXTSIZE(hTextInfo).x * newCharWidth / CHARSIZE(hTextInfo).x;
 	TEXTSIZE(hTextInfo).y = TEXTSIZE(hTextInfo).y * newCharHeight / CHARSIZE(hTextInfo).y;
 
+	DestroyCaret();
+	CARETSIZE(hTextInfo).y = newCharHeight;
+	CreateCaret(hTextInfo->m_hWnd, NULL, CARETSIZE(hTextInfo).x, CARETSIZE(hTextInfo).y);
+	ShowCaret(hTextInfo->m_hWnd);
+
 	SCROLLINFO shInfo;
 	shInfo.cbSize = sizeof(SCROLLINFO);
 	shInfo.fMask  = SIF_ALL;
@@ -338,6 +357,7 @@ BOOL SelectCharSize(HTEXTINFO hTextInfo, LONG newCharWidth, LONG newCharHeight)
 	shInfo.nPage = PAGESIZE(hTextInfo).x;
 	shInfo.nMin  = 0;
 	shInfo.nMax  = TEXTSIZE(hTextInfo).x / newCharWidth;
+	shInfo.nPos  = PAINTPOS(hTextInfo).x / CHARSIZE(hTextInfo).x;
 
 	shInfo.cbSize = sizeof(SCROLLINFO);
 	shInfo.fMask  = SIF_ALL | SIF_DISABLENOSCROLL;
@@ -351,6 +371,7 @@ BOOL SelectCharSize(HTEXTINFO hTextInfo, LONG newCharWidth, LONG newCharHeight)
 	svInfo.nPage = PAGESIZE(hTextInfo).y;
 	svInfo.nMin  = 0;
 	svInfo.nMax  = TEXTSIZE(hTextInfo).y / newCharHeight;
+	svInfo.nPos  = PAINTPOS(hTextInfo).y / CHARSIZE(hTextInfo).y;
 
 	svInfo.cbSize = sizeof(SCROLLINFO);
 	svInfo.fMask  = SIF_ALL | SIF_DISABLENOSCROLL;

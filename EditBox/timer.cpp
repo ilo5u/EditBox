@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "editbox.h"
+#include "miniword.h"
 #include <mutex>
 
 static DWORD __stdcall RunTimer(LPVOID lpVoid)

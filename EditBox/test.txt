@@ -1,6 +1,6 @@
 #include "stdafx.h"
-#include "Cursor.h"
-#include <stack>
+#include"Cursor.h"
+#include<stack>
 
 
 Cursor* pCursor = NULL;
@@ -141,7 +141,7 @@ RVALUE __stdcall UserMessageProc(
 
 		pCursor->ResetChoose();
 		/*设置光标像素位置 行列号*/
-		lpKernelInfo->m_pCaretPixelPos = { 0,y + Height };
+		lpKernelInfo->m_pCaretPixelPos = { x,y };
 		lpKernelInfo->m_cCaretCoord = { (short)pCursor->Characters_before_Cursor(LineNumber,x),(short)LineNumber };
 		/*设置换行信息 文本大小*/
 		lpKernelInfo->m_bLineBreak = TRUE;
@@ -287,7 +287,8 @@ RVALUE __stdcall UserMessageProc(
 	}
 	case UM_OPEN:
 	{
-		std::string FileName = wchTostring((TCHAR*)sParam);
+		TCHAR* pwch = (TCHAR*)sParam;
+		std::string FileName = wchTostring(pwch);
 		try
 		{
 			hText->ReadText(FileName);
@@ -436,8 +437,8 @@ RVALUE __stdcall UserMessageProc(
 	case UM_CHOOSE:
 	{
 		Position start, end;
-		int end_x = fParam;
-		int end_y = sParam;
+		int end_x = LODWORD(fParam);
+		int end_y = LODWORD(sParam);
 		end_y -= end_y % Height;
 		end_x = pCursor->CursorLocation(end_y / Height + 1, end_x);
 		x = pCursor->CursorLocation(LineNumber, x);
@@ -660,8 +661,6 @@ RVALUE __stdcall UserMessageProc(
 	{
 		Install::Width = x;
 		Install::Height = y;
-		pCursor->SetWidth(x);
-		pCursor->SetHeight(y);
 		break;
 	}
 	default: break;
@@ -669,10 +668,9 @@ RVALUE __stdcall UserMessageProc(
 	return UR_SUCCESS;
 }
 //创建文本函数
-HTEXT _stdcall CreateText(int iCharWidth, int iCharHeight, LPCWSTR lpszDefaultPath)
+HTEXT _stdcall CreateText(int iCharWidth, int iCharHeight)
 {
 	CText* p = new CText;
-	CText::Path = wchTostring((TCHAR*)lpszDefaultPath);
 	p->NewFile();
 	pTChar = new wchar_t[TEXT_SIZE];
 	wmemset(pTChar, L' ', TEXT_SIZE);

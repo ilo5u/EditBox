@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "editbox.h"
+#include "miniword.h"
 
 void chDEBUGPRINTBOX(LPCWSTR msg)
 {

@@ -6,7 +6,7 @@
 #include "Record.h"
 
 typedef CText* HTEXT;
-HTEXT	_stdcall	CreateText(int iCharWidth, int iCharHeight);
+HTEXT	_stdcall	CreateText(int iCharWidth, int iCharHeight, LPCWSTR lpszDefaultPath);
 BOOL	_stdcall	DestroyText(HTEXT &hText);
 
 typedef ULONGLONG FPARAM;	// _INT64
@@ -73,9 +73,9 @@ typedef struct _USER_RESULT
 #define UM_ISSAVED  0x00000011
 // +++++++++++++ END +++++++++++ //
 
-// ++++++++ About Config +++++++ //
-#define UM_CHANGECHARSIZE  0x00000012
-// +++++++++++++ END +++++++++++ //
+// ++++++++ About Config +++++++++ //
+#define UM_CHANGECHARSIZE 0x00000012
+// ++++++++++++ END ++++++++++++++ //
 
 // ++++++++++ Error Information +++++++++++ //
 #define UR_NOPATH		0xFFFFFFFF
@@ -84,15 +84,16 @@ typedef struct _USER_RESULT
 #define UR_ERROR		0xFFFFFFFC
 #define UR_SAVED		0xFFFFFFFB
 #define UR_SUCCESS		0x00000000
+#define UR_DEFAULTPATH	0xFFFFFFA0
 // ++++++++++++++++++ END +++++++++++++++++ //
 
-// +++++++++++ FIND MODE +++++++++++++++ //
-#define FIND_ALLCASE  0x0000000000000000
-#define FIND_LHCASE   0x0000000000000001
+// +++++++++++ FIND MASK +++++++++++++++ //
+#define ALLCASE       0x0000000000000000
+#define LHCASE        0x0000000000000001
 #define BEFORE_CARET  0x0000000000000000
-#define AFTER_CARET   0x0000000000000100
-#define FIND_COMPELTE 0x0000000000000000
-#define FIND_SUBSEQ   0x0000000000010000
+#define AFTER_CARET   0x0000000000010000
+#define NONWHOLE_TEXT 0x0000000000000000
+#define WHOLE_TEXT    0x0000000100000000
 // +++++++++++++++ END +++++++++++++++++ //
 
 /*

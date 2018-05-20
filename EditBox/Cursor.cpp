@@ -266,13 +266,3 @@ bool Cursor::isChoose()
 	return bChoose;
 }
 
-void Install::SetWidth(int width)
-{
-	Install::Width = width;
-}
-
-void Install::SetHeight(int height)
-{
-	Install::Height = height;
-}
-

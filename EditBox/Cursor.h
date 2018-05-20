@@ -38,8 +38,6 @@ private:
 //配置信息类
 struct Install
 {
-	void SetWidth(int width);
-	void SetHeight(int height);
 	static int Width;						//字符宽度
 	static int Height;						//行高
 };

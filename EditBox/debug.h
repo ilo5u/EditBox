@@ -17,11 +17,11 @@ void chDEBUGTEXTOUT(HWND hWnd, LPCWSTR lpString, int x, int y);
 #define PRINTCARETPOS(hTextInfo) \
 	wprintf_s(TEXT("Caret's position: (%d, %d) "), CARETPOS((hTextInfo)).x, CARETPOS((hTextInfo)).y)
 
-#define PRINTWINDOWSIZE(hTextInfo) \
-	wprintf_s(TEXT("Window's size: (%d, %d) "), WINDOWSIZE((hTextInfo)).x, WINDOWSIZE((hTextInfo)).y)
+#define PRINTPAINTSIZE(hTextInfo) \
+	wprintf_s(TEXT("Paint's size: (%d, %d) "), PAINTSIZE((hTextInfo)).x, PAINTSIZE((hTextInfo)).y)
 
-#define PRINTWINDOWPOS(hTextInfo) \
-	wprintf_s(TEXT("Window's position: (%d, %d) "), WINDOWPOS((hTextInfo)).x, WINDOWPOS((hTextInfo)).y)
+#define PRINTPAINTPOS(hTextInfo) \
+	wprintf_s(TEXT("Paint's position: (%d, %d) "), PAINTPOS((hTextInfo)).x, PAINTPOS((hTextInfo)).y)
 
 #define PRINTPAGESIZE(hTextInfo) \
 	wprintf_s(TEXT("Page's size: (%d, %d) "), PAGESIZE((hTextInfo)).x, PAGESIZE((hTextInfo)).y)

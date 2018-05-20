@@ -1,16 +1,18 @@
 #include"stdafx.h"
-
+std::string CText::Path = "C:\\MiniWord\\Default\\";				
 CText::CText()
 {
 	pFirstLineHead = NULL;
 	nLineNumbers = 1;
 	FileName = "";
-	hAuto_Save = NULL;
+	hAuto_Save = (HANDLE)_beginthreadex(NULL, 0, Auto_Save_Timer_Thread, (void*)this, 0, NULL);
 }
 
 CText::~CText()
 {
 	ClearAll();
+	TerminateThread(hAuto_Save, 0);
+	CloseHandle(hAuto_Save);
 	delete pFirstLineHead;
 }
 /*新建文本 保存默认文件名*/
@@ -18,16 +20,13 @@ void CText::NewFile()
 {
 	ClearAll();
 	nLineNumbers = 1;
-	/*待修正  增设默认文件名 */
 	FileName = "";		//默认文件名及其类型
 	bSave = 1;
-	 // hAuto_Save = (HANDLE)_beginthreadex(NULL, 0, Auto_Save_Timer_Thread, NULL, 0, NULL);
 }
 //传递文件名路径及其后缀
 void CText::ReadText(std::string filename)
 {
 	ClearAll();
-	// hAuto_Save = (HANDLE)_beginthreadex(NULL, 0, Auto_Save_Timer_Thread, NULL, 0, NULL);
 	FileName = filename;
 	std::ifstream	File_r(FileName, std::wifstream::in);		//以读的方式打开txt文件
 	/*读取文件失败*/
@@ -71,7 +70,6 @@ void CText::ClearAll()
 	pFirstLineHead = new CLine(1);
 	nLineNumbers = 1;
 	bSave = 0;
-	CloseHandle(hAuto_Save);
 }
 
 void CText::ShowText() const
@@ -361,11 +359,13 @@ Position CText::Replace(Position start, Position end, std::wstring Str)
 	return Insert(Delete(start, end), Str);
 }
 //保存 若传入文件名参数，则更改内置文本的绑定文件名 否则将内容保存到文本中
-void CText::Save(std::string filename, bool isChange)
+void CText::Save()
 {
-	if (!filename.empty() && isChange == true)
-		FileName = filename;
-	std::fstream wFile(filename, std::fstream::out);
+	if (FileName.empty())
+	{
+		throw No_File_Name("当前文本未命名");
+	}
+	std::fstream wFile(Path + FileName, std::fstream::out);
 	std::wstring wString;		//从内存中获取的宽字符
 	std::string String;			//写入文件的短字符
 	CLine* p = pFirstLineHead;
@@ -385,13 +385,11 @@ bool CText::isSaved()
 	return bSave;
 }
 
-std::string CText::FilePath()
+std::string CText::File_Name()
 {
-	if (FileName.empty())
-		return "";
-	else
-		return	FileName;
+	return	FileName;
 }
+
 
 int CText::Line_Size(int LineNumber)
 {
@@ -484,22 +482,73 @@ bool CText::upper_lower_match(TCHAR ch1, TCHAR ch2, bool upper_lower)
 	else
 		return ch1 == ch2;
 }
-/*
-UINT __stdcall CText::Auto_Save_Timer_Thread(LPVOID)
+
+UINT __stdcall Auto_Save_Timer_Thread(LPVOID LP)
 {
+	CText* pText = (CText*)LP;
 	while (true)
 	{
-		if (isSaved)
+		if (pText->isSaved())
 		{
-			Start_Time = clock() / 1000;
+			pText->Start_Time = clock() / 1000;
 			continue;
 		}
 		int Current_time = clock() / 1000;							//当前时间(s)
-		if (Current_time - Start_Time >= AUTO_SAVE_TIME)
-			Save();
+		if (Current_time - pText->Start_Time >= AUTO_SAVE_TIME && !pText->FileName.empty())
+		{
+			pText->Save();
+			pText->Start_Time = clock() / 1000;
+		}
+			
 	}
 	return 0;
-}*/
+}
+
+/*在默认路径文件下生成默认文本文档文件名*/
+std::string Generate_Default_File_Name(const std::string & Path)
+{
+	std::string FileName = "新建文本文档";
+	int n = 0;
+	WIN32_FIND_DATAA findData;
+	HANDLE hFindFile;
+	std::string File_Style = Path + "*.txt";				//搜索当前文件夹下所有txt文件
+
+	char* szFileName = (char*)File_Style.c_str();
+	hFindFile = FindFirstFileA(szFileName, &findData);
+	if (hFindFile != INVALID_HANDLE_VALUE)
+	{
+		do
+		{
+			n = max(n, Match_File_Name(std::string(findData.cFileName)));
+		} while (FindNextFileA(hFindFile, &findData));
+
+		FindClose(hFindFile);
+	}
+	if (n > 0)
+		FileName = FileName + " (" + std::to_string(n) + ")";
+	return FileName + ".txt";
+}
+/*返回当前默认文件名*/
+int Match_File_Name(const std::string & FileName)
+{
+	if (FileName.size() < 12)
+		return 0;
+	std::string s("新建文本文档.txt");
+	if (FileName == s)
+		return 1;
+	if (std::string(FileName.begin(), FileName.begin() + 13) == std::string("新建文本文档 "))
+	{
+		auto l = std::find(FileName.begin(), FileName.end(), '(');
+		auto r = std::find(FileName.begin(), FileName.end(), ')');
+		if (l != FileName.end() && r != FileName.end())
+		{
+			return stoi(std::string(l + 1, r)) + 1;
+		}
+		else
+			return 0;
+	}
+	return 0;
+}
 
 //获取行首指针
 CLine * CText::GetLinePointer(int LineNumber)
@@ -529,6 +578,16 @@ Position CText::End_Position()
 		return { nLineNumbers,p->nDataSize };
 	else
 		return { 1,0 };
+}
+
+void CText::Set_File_Name(const std::string Name)
+{
+	FileName = Name;
+}
+
+void CText::Set_Path(const std::string path)
+{
+	CText::Path = path;
 }
 
 Text_iterator::Text_iterator(CText & Text, int LineNumber, int position)

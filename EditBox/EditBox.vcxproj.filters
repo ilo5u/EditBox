@@ -33,18 +33,15 @@
     <ClInclude Include="API.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="editbox.h">
+    <ClInclude Include="debug.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="debug.h">
+    <ClInclude Include="miniword.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="EditBox.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="IO.cpp">
@@ -71,10 +68,13 @@
     <ClCompile Include="debug.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="operation.cpp">
+    <ClCompile Include="kernel.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="struture.cpp">
+    <ClCompile Include="gui.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="miniword.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

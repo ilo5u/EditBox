@@ -1,6 +1,8 @@
 #include "stdafx.h"
-#include "editbox.h"
+#include "miniword.h"
 #include "api.h"
+
+#pragma comment(lib, "comctl32.lib")
 
 HTEXTINFO __stdcall CreateTextInfo(HWND hWnd, HINSTANCE hInst)
 {
@@ -60,8 +62,12 @@ HTEXTUSER __stdcall CreateUser(HWND hWnd)
 	lpUser->m_pCaretPixelPos  = POINT{ 0, 0 };
 	lpUser->m_cCaretCoord     = COORD{ 0, 0 };
 
-	lpUser->m_pMinCharPixelSize = POINT{ 8, 16 };
-	lpUser->m_pMaxCharPixelSize = POINT{ 16, 32 };
+	lpUser->m_pMinCharPixelSize = POINT{ 6, 12 };
+	lpUser->m_pMaxCharPixelSize = POINT{ 12, 24 };
+
+	lpUser->m_fMask &= DEFAULT;
+	ZeroMemory(lpUser->m_szFindWhat, STRING_SIZE);
+	ZeroMemory(lpUser->m_szReplaceWhat, STRING_SIZE);
 
 	return HTEXTUSER(lpUser);
 }
@@ -78,7 +84,7 @@ HTEXTKERNEL __stdcall CreateKernel(HWND hWnd, HTEXTUSER hUser)
 	if (!lpKernel)
 		return HTEXTKERNEL(nullptr);
 
-	if (!(lpKernel->m_hText = CreateText(hUser->m_pCharPixelSize.x, hUser->m_pCharPixelSize.y)))
+	if (!(lpKernel->m_hText = CreateText(hUser->m_pCharPixelSize.x, hUser->m_pCharPixelSize.y, DEFAULT_PATH)))
 		return HTEXTKERNEL(nullptr);
 
 	lpKernel->m_pTextPixelSize = POINT{ 0, 0 };
@@ -90,6 +96,7 @@ HTEXTKERNEL __stdcall CreateKernel(HWND hWnd, HTEXTUSER hUser)
 
 BOOL __stdcall ReleaseKernel(HWND hWnd, HTEXTKERNEL hKernel)
 {
+	DestroyText(hKernel->m_hText);
 	delete hKernel;
 	return (TRUE);
 }
@@ -146,6 +153,8 @@ HTEXTGDI __stdcall CreateGDI(HWND hWnd, HINSTANCE hInst, HTEXTUSER hUser)
 	SendMessage(lpGDI->m_hStatus, SB_SETPARTS, sizeof(nSize) / sizeof(nSize[0]), (LPARAM)nSize);
 
 	TCHAR szCaretCoord[MAX_PATH];
+	wsprintf(szCaretCoord, TEXT("Ins"));
+	SendMessage(lpGDI->m_hStatus, SB_SETTEXT, SBT_NOBORDERS | (WORD)0x00, (LPARAM)szCaretCoord);
 	wsprintf(szCaretCoord, TEXT("%d rows, %d cols"), hUser->m_cCaretCoord.Y, hUser->m_cCaretCoord.X);
 	SendMessage(lpGDI->m_hStatus, SB_SETTEXT, SBT_NOBORDERS | (WORD)0x01, (LPARAM)szCaretCoord);
 
@@ -192,7 +201,6 @@ BOOL __stdcall ReleaseGDI(HWND hWnd, HTEXTGDI hGDI)
 	DeleteObject(hGDI->m_hBitmap);
 	DeleteObject(hGDI->m_hBrush);
 	DeleteObject(hGDI->m_hMemDC);
-
 	delete hGDI;
 	return (TRUE);
 }
