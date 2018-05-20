@@ -67,14 +67,16 @@ typedef struct _USER_RESULT
 #define UM_CANCEL	0x0000000E
 #define UM_FIND		0x0000000F
 #define UM_REPLACE  0x00000010
+#define UM_SAVEAS   0x00000011
 // +++++++++++++++++ END ++++++++++++++++++ //
 
 // ++++++++ About Query ++++++++ //
-#define UM_ISSAVED  0x00000011
+#define UM_ISSAVED       0x00000012
+#define UM_ISDEFAULTPATH 0x00000013
 // +++++++++++++ END +++++++++++ //
 
 // ++++++++ About Config +++++++++ //
-#define UM_CHANGECHARSIZE 0x00000012
+#define UM_CHANGECHARSIZE 0x00000014
 // ++++++++++++ END ++++++++++++++ //
 
 // ++++++++++ Error Information +++++++++++ //
@@ -84,7 +86,9 @@ typedef struct _USER_RESULT
 #define UR_ERROR		0xFFFFFFFC
 #define UR_SAVED		0xFFFFFFFB
 #define UR_SUCCESS		0x00000000
-#define UR_DEFAULTPATH	0xFFFFFFA0
+#define UR_DEFAULTPATH	0xFFFFFFFA
+#define UR_YES          0xFFFFFFF9
+#define UR_NO           0xFFFFFFF8
 // ++++++++++++++++++ END +++++++++++++++++ //
 
 // +++++++++++ FIND MASK +++++++++++++++ //
