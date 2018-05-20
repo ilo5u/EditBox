@@ -5,7 +5,7 @@
 BOOL WINAPI MyTextOutW(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCWSTR lpString, _In_ int c, _In_ short s, _In_ short e, _In_ int width)
 {
 	int iCount = 0;
-	int iLeft = x;
+	int iLeft  = x;
 	int iRight = x;
 
 	//°×µ×ºÚ×Ö
@@ -15,14 +15,10 @@ BOOL WINAPI MyTextOutW(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCWS
 
 	while (iCount < s)
 	{
-		if (lpString[iCount] & TCHAR(0xFF00))
-		{	// ºº×Ö
+		if (lpString[iCount] & TCHAR(0xFF00)) // ºº×Ö
 			iRight = iRight + (width << 1);
-		}
 		else
-		{
 			iRight = iRight + width;
-		}
 		++iCount;
 	}
 	TextOut(hdc, iLeft, y, lpString, iCount);
@@ -35,14 +31,10 @@ BOOL WINAPI MyTextOutW(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCWS
 	iLeft = iRight;
 	while (iCount < e)
 	{
-		if (lpString[iCount] & TCHAR(0xFF00))
-		{	// ºº×Ö
+		if (lpString[iCount] & TCHAR(0xFF00)) // ºº×Ö
 			iRight = iRight + (width << 1);
-		}
 		else
-		{
 			iRight = iRight + width;
-		}
 		++iCount;
 	}
 	TextOut(hdc, iLeft, y, lpString + s, iCount - s);
@@ -55,19 +47,13 @@ BOOL WINAPI MyTextOutW(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCWS
 	iLeft = iRight;
 	while (iCount < c)
 	{
-		if (lpString[iCount] & TCHAR(0xFF00))
-		{	// ºº×Ö
+		if (lpString[iCount] & TCHAR(0xFF00)) // ºº×Ö
 			iRight = iRight + (width << 1);
-		}
 		else
-		{
 			iRight = iRight + width;
-		}
 		++iCount;
 	}
 	TextOut(hdc, iLeft, y, lpString + e, iCount - e);
-
-	// assert(!(iCount != c));
 
 	return (TRUE);
 }

@@ -171,8 +171,8 @@
     <ClCompile Include="CText.cpp" />
     <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="debug.cpp" />
+    <ClCompile Include="io.cpp" />
     <ClCompile Include="miniword.cpp" />
-    <ClCompile Include="IO.cpp" />
     <ClCompile Include="Record.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

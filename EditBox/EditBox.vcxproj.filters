@@ -44,9 +44,6 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="IO.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="CLine.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -75,6 +72,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="miniword.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="io.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
