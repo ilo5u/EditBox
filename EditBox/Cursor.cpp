@@ -57,13 +57,6 @@ bool Cursor::isLegalCursor(int LineNumber, int x)
 {
 	int Sum = 0;
 	CLine* p = pText->GetLinePointer(LineNumber);
-	if (p == NULL)
-	{
-		if (x > 0)
-			return false;
-		else
-			return true;
-	}
 	if (x > p->Line_Width(nWidth))
 		return false;
 	Line_iterator iterator(*p);

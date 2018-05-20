@@ -25,7 +25,7 @@ BOOL AdjustCaretPosBeforeBackspace(HTEXTINFO hTextInfo)
 	if (STARTPOS(hTextInfo) == ENDPOS(hTextInfo))
 	{	// 当前未选中片段 删除光标前一个字符
 		POINT pOldEndPos = ENDPOS(hTextInfo);                        // 记录选段尾部
-		SendMessage(hTextInfo->m_hWnd, WM_KEYDOWN, VK_LEFT, NULL);                // 光标左移
+		SendMessage(hTextInfo->m_hWnd, WM_KEYDOWN, VK_LEFT, NULL);   // 光标左移
 		SelectHighlight(hTextInfo, STARTPOS(hTextInfo), pOldEndPos); // 重设高亮部分(光标后一个字符)
 	}
 
@@ -309,7 +309,8 @@ BOOL PaintWindow(LPRECT lpRepaint, HTEXTINFO hTextInfo)
 					kernelinfo.m_lpchText,
 					kernelinfo.m_uiCount, kernelinfo.m_uiStart, kernelinfo.m_uiEnd,
 					CHARSIZE(hTextInfo).x
-				), wprintf_s(TEXT("s = %d, e = %d, c = %d, yOffset = %d: %ls\n"),
+				), wprintf_s(TEXT("bInside = %d, s = %d, e = %d, c = %d, yOffset = %d: %ls\n"),
+					kernelinfo.m_bInside,
 					kernelinfo.m_uiStart, kernelinfo.m_uiEnd, kernelinfo.m_uiCount, yOffset, kernelinfo.m_lpchText);
 		}
 		break;

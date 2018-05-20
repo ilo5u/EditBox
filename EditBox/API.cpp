@@ -389,13 +389,19 @@ RVALUE __stdcall UserMessageProc(
 			lpKernelInfo->m_uiCount = 0;
 			break;
 		}
-		pCursor->CursorLocation(LineNumber, x);
-
 		int iCount = 0;					//显示的字符数量
 		short int iStart = 0;			//高亮部分的开始点
 		short int iEnd = 0;				//高亮部分结束点
 
 		int end_x = fParam;
+		x = pCursor->CursorLocation(LineNumber, x);
+		end_x = pCursor->CursorLocation(LineNumber, end_x);
+		if (x == end_x)
+		{
+			pTChar[0] = L'\0';
+			lpKernelInfo->m_uiCount = 0;
+			break;
+		}
 		CLine* pLine = hText->GetLinePointer(LineNumber);
 		Position position_start;		//字符显示起点
 		Position position_end;			//字符显示终点
@@ -410,13 +416,11 @@ RVALUE __stdcall UserMessageProc(
 			lpKernelInfo->m_uiCount = 0;
 			break;
 		}
-		end_x = pCursor->CursorLocation(LineNumber, end_x);
 		position_end = pCursor->CursorToPosition(end_x, y);
 		std::wstring WStr = pLine->TransformToWString(position_start.Sequence, position_end.Sequence);
+		WStr.push_back(L'\0');
 		WStringToWch(WStr, pTChar);
 		iCount = WStr.size();
-		if (iCount < TEXT_SIZE)
-			pTChar[iCount] = L'\0';
 		//设置高亮部分  从0开始
 		if (pCursor->isChoose())
 		{
@@ -444,10 +448,16 @@ RVALUE __stdcall UserMessageProc(
 		Position start, end;
 		int end_x = fParam;
 		int end_y = sParam;
+		int end_LineNumber = end_y / Height + 1;
+		if (end_LineNumber > hText->Line_Number())
+		{
+			end_LineNumber = hText->Line_Number();
+			end_y = (LineNumber - 1) * Height;
+		}
 		end_y -= end_y % Height;
-		end_x = pCursor->CursorLocation(end_y / Height + 1, end_x);
-		POINT p = { x,y };									//保存当前光标位置
+		end_x = pCursor->CursorLocation(end_LineNumber, end_x);
 		x = pCursor->CursorLocation(LineNumber, x);
+		POINT p = { x, y };									//保存当前光标位置
 		if (y > end_y)
 		{
 			std::swap(x, end_x);
