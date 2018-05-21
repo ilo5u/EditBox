@@ -489,6 +489,7 @@ UINT __stdcall Auto_Save_Timer_Thread(LPVOID LP)
 	CText* pText = (CText*)LP;
 	while (true)
 	{
+		Sleep(1000 * 150);
 		if (pText->isSaved())
 		{
 			pText->Start_Time = clock() / 1000;

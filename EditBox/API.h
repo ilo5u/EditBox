@@ -83,7 +83,7 @@ typedef struct _USER_RESULT
 #define UR_ERROR		0xFFFFFFFC
 #define UR_SAVED		0xFFFFFFFB
 #define UR_SUCCESS		0x00000000
-#define UR_DEFAULTPATH	0xFFFFFFA0
+#define UR_NOFILENAME	0xFFFFFFA0
 // ++++++++++++++++++ END +++++++++++++++++ //
 
 // +++++++++++ FIND MASK +++++++++++++++ //
