@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Windows.h>
+#include <shellapi.h>
 
 #include "resource.h"
 
