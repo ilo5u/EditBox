@@ -175,9 +175,10 @@ Position CText::BackSpace(Position position)
 	{
 		std::wstring LineStr = p->TransformToWString(1, p->nDataSize);
 		DeleteLines(p->nLineNumber, p->nLineNumber);
+		int n = preLine->nDataSize;
 		if (!LineStr.empty())
 			preLine->InsertStrings(preLine->nDataSize, LineStr);
-		return { position.LineNumber - 1,preLine->nDataSize };
+		return { position.LineNumber - 1,n };
 	}
 	else
 	{
@@ -367,8 +368,8 @@ void CText::Save()
 		throw No_File_Name("当前文本未命名");
 	}
 	std::fstream wFile(Path + FileName, std::fstream::out);
-	std::wstring wString;		//从内存中获取的宽字符
-	std::string String;			//写入文件的短字符
+	std::wstring wString;					//从内存中获取的宽字符
+	std::string String;						//写入文件的短字符
 	CLine* p = pFirstLineHead;
 	while (p != NULL)
 	{
@@ -378,6 +379,22 @@ void CText::Save()
 		p = p->pNextLine;
 	}
 	bSave = 1;
+	wFile.close();
+}
+
+void CText::SaveAs(std::string FullPath)
+{
+	std::fstream wFile(FullPath, std::fstream::out);
+	CLine* p = pFirstLineHead;
+	std::wstring wString;				//从内存中获取的宽字符
+	std::string String;					//写入文件的短字符
+	while (p != NULL)
+	{
+		wString = p->TransformToWString(1, p->nDataSize);
+		String = WStringToString(wString);
+		wFile << String << std::endl;
+		p = p->pNextLine;
+	}
 	wFile.close();
 }
 

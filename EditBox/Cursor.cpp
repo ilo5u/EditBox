@@ -215,7 +215,10 @@ POINT Cursor::PositionToCursor(Position position)
 	POINT point;
 	int x, y;
 	y = (position.LineNumber - 1)*nHeight;
-	x = pText->Line_Width(position.LineNumber, nWidth, position.Sequence);
+	if (position.Sequence != 0)
+		x = pText->Line_Width(position.LineNumber, nWidth, position.Sequence);
+	else
+		x = 0;
 	point.x = x;
 	point.y = y;
 	return point;

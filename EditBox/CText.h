@@ -24,6 +24,7 @@ public:
 	void NewFile();																//新建文件
 	void ReadText(std::string filename);										//打开文件进行编辑
 	void Save();																//保存到文本  
+	void SaveAs(std::string FullPath);											//另存为
 	void ClearAll();															//清空文本
 	void ShowText()const;
 	void DeleteLines(int first, int last);										//删除整行

@@ -294,6 +294,12 @@ RVALUE __stdcall UserMessageProc(
 		}
 		break;
 	}
+	case UM_SAVEAS:
+	{
+		std::string path = wchTostring((TCHAR*)sParam);
+		hText->SaveAs(path);
+		break;
+	}
 	case UM_OPEN:
 	{
 		std::string FileName = wchTostring((TCHAR*)sParam);

@@ -67,6 +67,7 @@ typedef struct _USER_RESULT
 #define UM_CANCEL	0x0000000E
 #define UM_FIND		0x0000000F
 #define UM_REPLACE  0x00000010
+#define UM_SAVEAS   0x00000013
 // +++++++++++++++++ END ++++++++++++++++++ //
 
 // ++++++++ About Query ++++++++ //
