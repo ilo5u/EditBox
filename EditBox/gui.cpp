@@ -336,9 +336,6 @@ BOOL SelectCharSize(HTEXTINFO hTextInfo, LONG newCharWidth, LONG newCharHeight)
 	PAINTPOS(hTextInfo).x = PAINTPOS(hTextInfo).x * newCharWidth / CHARSIZE(hTextInfo).x;
 	PAINTPOS(hTextInfo).y = PAINTPOS(hTextInfo).y * newCharHeight / CHARSIZE(hTextInfo).y;
 
-	CARETPOS(hTextInfo).x = CARETPOS(hTextInfo).x * newCharWidth / CHARSIZE(hTextInfo).x;
-	CARETPOS(hTextInfo).y = CARETPOS(hTextInfo).y * newCharHeight / CHARSIZE(hTextInfo).y;
-
 	STARTPOS(hTextInfo).x = STARTPOS(hTextInfo).x * newCharWidth / CHARSIZE(hTextInfo).x;
 	STARTPOS(hTextInfo).y = STARTPOS(hTextInfo).y * newCharHeight / CHARSIZE(hTextInfo).y;
 
@@ -351,10 +348,11 @@ BOOL SelectCharSize(HTEXTINFO hTextInfo, LONG newCharWidth, LONG newCharHeight)
 	TEXTSIZE(hTextInfo).x = TEXTSIZE(hTextInfo).x * newCharWidth / CHARSIZE(hTextInfo).x;
 	TEXTSIZE(hTextInfo).y = TEXTSIZE(hTextInfo).y * newCharHeight / CHARSIZE(hTextInfo).y;
 
-	DestroyCaret();
-	CARETSIZE(hTextInfo).y = newCharHeight;
-	CreateCaret(hTextInfo->m_hWnd, NULL, CARETSIZE(hTextInfo).x, CARETSIZE(hTextInfo).y);
-	ShowCaret(hTextInfo->m_hWnd);
+	SelectCaretPos(hTextInfo,
+		POINT{ CARETPOS(hTextInfo).x * newCharWidth / CHARSIZE(hTextInfo).x,
+		CARETPOS(hTextInfo).y * newCharHeight / CHARSIZE(hTextInfo).y },
+		CARETCOORD(hTextInfo)
+	);
 
 	SCROLLINFO shInfo;
 	shInfo.cbSize = sizeof(SCROLLINFO);
@@ -364,7 +362,7 @@ BOOL SelectCharSize(HTEXTINFO hTextInfo, LONG newCharWidth, LONG newCharHeight)
 	shInfo.nPage = PAGESIZE(hTextInfo).x;
 	shInfo.nMin  = 0;
 	shInfo.nMax  = TEXTSIZE(hTextInfo).x / newCharWidth;
-	shInfo.nPos  = PAINTPOS(hTextInfo).x / CHARSIZE(hTextInfo).x;
+	shInfo.nPos  = PAINTPOS(hTextInfo).x / newCharWidth;
 
 	shInfo.cbSize = sizeof(SCROLLINFO);
 	shInfo.fMask  = SIF_ALL | SIF_DISABLENOSCROLL;
@@ -378,7 +376,7 @@ BOOL SelectCharSize(HTEXTINFO hTextInfo, LONG newCharWidth, LONG newCharHeight)
 	svInfo.nPage = PAGESIZE(hTextInfo).y;
 	svInfo.nMin  = 0;
 	svInfo.nMax  = TEXTSIZE(hTextInfo).y / newCharHeight;
-	svInfo.nPos  = PAINTPOS(hTextInfo).y / CHARSIZE(hTextInfo).y;
+	svInfo.nPos  = PAINTPOS(hTextInfo).y / newCharHeight;
 
 	svInfo.cbSize = sizeof(SCROLLINFO);
 	svInfo.fMask  = SIF_ALL | SIF_DISABLENOSCROLL;
@@ -422,6 +420,11 @@ BOOL SelectCharSize(HTEXTINFO hTextInfo, LONG newCharWidth, LONG newCharHeight)
 		0, PAINTSIZE(hTextInfo).x,
 		0, PAINTSIZE(hTextInfo).y
 	);
+
+	DestroyCaret();
+	CARETSIZE(hTextInfo).y = newCharHeight;
+	CreateCaret(hTextInfo->m_hWnd, NULL, CARETSIZE(hTextInfo).x, CARETSIZE(hTextInfo).y);
+	ShowCaret(hTextInfo->m_hWnd);
 
 	return (TRUE);
 }

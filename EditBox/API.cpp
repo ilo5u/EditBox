@@ -22,13 +22,14 @@ RVALUE __stdcall UserMessageProc(
 	int Height = Install::Height;			//字符高度
 	int LineNumber = y / Height + 1;
 	//对于鼠标点击文本下方空白区域的行号计算
-	if (LineNumber > hText->Line_Number() && message != UM_TEXT)
+	if (LineNumber > hText->Line_Number() && message != UM_TEXT && message != UM_CHANGECHARSIZE)
 	{
 		LineNumber = hText->Line_Number();
 		y = (LineNumber - 1) * Height;
 	}
 	//规格化y坐标
-	y = y - y % Height;
+	if(message!=UM_CHANGECHARSIZE)
+		y = y - y % Height;
 	//对消息做出的处理
 	switch (message)
 	{
@@ -421,6 +422,7 @@ RVALUE __stdcall UserMessageProc(
 			lpKernelInfo->m_uiCount = 0;
 			break;
 		}
+		lpKernelInfo->m_bInside = !pCursor->isLegalCursor(LineNumber, x);
 		int iCount = 0;					//显示的字符数量
 		short int iStart = 0;			//高亮部分的开始点
 		short int iEnd = 0;				//高亮部分结束点
@@ -464,7 +466,6 @@ RVALUE __stdcall UserMessageProc(
 		lpKernelInfo->m_uiCount = iCount;
 		lpKernelInfo->m_uiStart = iStart;
 		lpKernelInfo->m_uiEnd = iEnd;
-		lpKernelInfo->m_bInside = !pCursor->isLegalCursor(LineNumber, x);
 		break;
 	}
 	case UM_ALL:
