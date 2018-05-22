@@ -41,6 +41,7 @@ void CText::ReadText(std::string filename)
 	{
 		nLineNumbers++;
 		LineWStr = StringToWString(LineStr);
+		TabToSpace(LineWStr);
 		if (nLineNumbers == 1)
 		{
 			pFirstLineHead->CreateLine(LineWStr);
@@ -340,6 +341,42 @@ bool CText::SeekStrings(std::wstring Str, Position& start, Position& end, bool u
 
 			start = (iterator - nSize).GetCurPositin();
 			end = (iterator - 1).GetCurPositin();
+			j = -1;
+			delete pNext;
+			return true;
+		}
+	}
+
+	delete pNext;
+	return false;
+}
+
+bool CText::ReSeekStrings(std::wstring Str, Position & start, Position & end, bool upper_lower)
+{
+	std::wstring R_Str(Str.rbegin(), Str.rend());			//逆序处理
+															//模式匹配预处理
+	int* pNext = GetNextValArray(R_Str);
+	int nSize = R_Str.size();
+	Text_iterator iterator(*this);
+	Text_iterator TextEnd(*this);
+	iterator.GoPosition(start);
+	TextEnd.GoPosition(end);
+	//匹配
+	int j = 0;
+	while (!(iterator < TextEnd))
+	{
+		if (j == -1 || upper_lower_match(*iterator, R_Str[j], upper_lower))
+		{
+			++j;
+			--iterator;
+		}
+		else
+			j = pNext[j];
+		if (j == nSize)				//成功的一次匹配
+		{
+
+			start = (iterator + 1).GetCurPositin();
+			end = (iterator + nSize).GetCurPositin();
 			j = -1;
 			delete pNext;
 			return true;
@@ -671,6 +708,9 @@ Text_iterator & Text_iterator::operator--()
 			p = pText->GetLinePointer(CurLineNumber - 1);
 			currLine.Set(*p, p->nDataSize);		//回到上一行行尾
 		}
+		else if (position == 1)
+			--currLine;							//回到文本前
+		
 	}
 	else
 		--currLine;
@@ -863,4 +903,21 @@ std::queue<std::wstring> WStrToLineWStr(std::wstring WSTR)
 	if (!Str.empty())
 		dq.push(Str);
 	return dq;
+}
+
+void TabToSpace(std::wstring & Str)
+{
+	TCHAR tab = L'\t';
+	if (Str.find(tab) == std::wstring::npos)		//不包含制表符 返回
+		return;
+	std::wstring Spaces;
+	for (int i = 0; i < Str.size(); i++)
+	{
+		if (Str[i] == tab)
+		{
+			int n = TAB_SIZE - i % TAB_SIZE;
+			std::wstring Spaces(n, L' ');
+			Str.replace(i, 1, Spaces);
+		}
+	}
 }

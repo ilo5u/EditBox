@@ -147,7 +147,7 @@ int Cursor::CharactersProperty_before_Cursor(int LineNumber, int x)
 使之返回一个合法的光标位置
 向后定位
 */
-int Cursor::CursorLocation(int LineNumber, int x)
+int Cursor::CursorLocation(int LineNumber, int x, bool after_forward)
 {
 	int Length = pText->Line_Width(LineNumber, nWidth);
 	if (x > Length)
@@ -159,7 +159,7 @@ int Cursor::CursorLocation(int LineNumber, int x)
 			if (isLegalCursor(LineNumber, x))
 				return x;
 			else
-				x++;
+				x = (after_forward ? x + 1 : x - 1);
 		}
 	}
 

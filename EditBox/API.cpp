@@ -289,7 +289,21 @@ RVALUE __stdcall UserMessageProc(
 		}
 		else
 		{
-			hText->Set_File_Name(wchTostring((TCHAR*)sParam));
+			if ((TCHAR*)sParam != NULL)
+			{
+				std::string FullPath = wchTostring((TCHAR*)sParam);
+				std::string FileName;
+				size_t pos = FullPath.rfind('\\');
+				if (pos != std::string::npos)
+				{
+					FileName = std::string(FullPath.begin() + pos + 1, FullPath.end());
+					CText::Path = std::string(FullPath.begin(), FullPath.begin() + pos + 1);
+				}
+				else
+					return UR_ERROR;
+				hText->Set_File_Name(FileName);
+			}
+				
 			hText->Save();
 		}
 		break;
@@ -302,7 +316,16 @@ RVALUE __stdcall UserMessageProc(
 	}
 	case UM_OPEN:
 	{
-		std::string FileName = wchTostring((TCHAR*)sParam);
+		std::string FullPath = wchTostring((TCHAR*)sParam);
+		std::string FileName;
+		size_t pos=FullPath.rfind('\\');
+		if (pos != std::string::npos)
+		{
+			FileName = std::string(FullPath.begin() + pos + 1, FullPath.end());
+			CText::Path = std::string(FullPath.begin(), FullPath.begin() + pos + 1);
+		}
+		else
+			return UR_ERROR;
 		try
 		{
 			hText->ReadText(FileName);
@@ -403,7 +426,7 @@ RVALUE __stdcall UserMessageProc(
 		short int iEnd = 0;				//高亮部分结束点
 
 		int end_x = fParam;
-		x = pCursor->CursorLocation(LineNumber, x);
+		x = pCursor->CursorLocation(LineNumber, x, false);
 		end_x = pCursor->CursorLocation(LineNumber, end_x);
 		if (x == end_x)
 		{
@@ -560,7 +583,7 @@ RVALUE __stdcall UserMessageProc(
 		Record* rd = new Record(RD_INSERT);
 		std::string SText = wchTostring((TCHAR*)sParam);
 		std::wstring WSText = StringToWString(SText);						//待插入的内容
-
+		TabToSpace(WSText);
 		Position start, end;												//记录粘贴后最后一个字符位置
 		if (pCursor->isChoose())
 		{
@@ -596,16 +619,17 @@ RVALUE __stdcall UserMessageProc(
 
 		/*设置查找模式*/
 		bool upper_lower = true;
-		bool after_forward = false;
 		if (WORD(sParam) == 0)
 			upper_lower = false;
 		Position start = hText->First_Position();
 		Position end = hText->End_Position();
-		if ((WORD(HIDWORD(sParam)) == 0))
+		/*取出待查找字符串*/
+		std::string SText = wchTostring((TCHAR*)fParam);
+		std::wstring Str = StringToWString(SText);
+		if ((WORD(HIDWORD(sParam)) == 0))											//全文档查找
 		{
-			if (HIWORD(LODWORD(sParam)) > 0)
+			if (HIWORD(LODWORD(sParam)) > 0)										//向后查找
 			{
-				after_forward = true;
 				try 
 				{
 					start = pCursor->CursorToPosition_After(x, y);
@@ -614,47 +638,41 @@ RVALUE __stdcall UserMessageProc(
 				{
 					return UR_ERROR;					//从文本末尾开始查找 无符合匹配
 				}
-			}
-			else
-			{
-				end = pCursor->CursorToPosition(x, y);
-				if (end.Sequence == 0)
+				if (hText->SeekStrings(Str, start, end, upper_lower))			//查找成功
 				{
-					if (LineNumber == 1)				//从文本头之前查找 无符合匹配
-						return UR_ERROR;
-					else
-					{
-						end.LineNumber--;
-						CLine* pLine = hText->GetLinePointer(end.LineNumber);
-						end.Sequence = pLine->size();
-					}
+					pCursor->Choose(start, end);
+					lpKernelInfo->m_cCaretCoord = { (short)end.Sequence ,(short)end.LineNumber };
+					lpKernelInfo->m_pStartPixelPos = pCursor->PositionToCursor_Before(pCursor->start);
+					lpKernelInfo->m_pEndPixelPos = pCursor->PositionToCursor(pCursor->end);
+					lpKernelInfo->m_pCaretPixelPos = lpKernelInfo->m_pEndPixelPos;
+					break;
 				}
 			}
-		}
-
-
-		/*取出待查找字符串*/
-		std::string SText = wchTostring((TCHAR*)fParam);
-		std::wstring Str = StringToWString(SText);						
-
-
-		if (hText->SeekStrings(Str, start, end, upper_lower))			//查找成功
-		{
-			pCursor->Choose(start, end);			
-			lpKernelInfo->m_cCaretCoord = { (short)end.Sequence ,(short)end.LineNumber };
-			lpKernelInfo->m_pStartPixelPos = pCursor->PositionToCursor_Before(pCursor->start);
-			lpKernelInfo->m_pEndPixelPos = pCursor->PositionToCursor(pCursor->end);
-			lpKernelInfo->m_pCaretPixelPos = (after_forward ? lpKernelInfo->m_pEndPixelPos : lpKernelInfo->m_pStartPixelPos);
-			break;
-		}
-
+			else                                                                    //向前查找
+			{
+				end = hText->First_Position();
+				start = pCursor->CursorToPosition(x, y);
+				if (start.LineNumber == 1 && start.Sequence == 0)					
+					return UR_ERROR;
+				if (hText->ReSeekStrings(Str, start, end, upper_lower))
+				{
+					pCursor->Choose(start, end);
+					lpKernelInfo->m_cCaretCoord = { (short)start.Sequence ,(short)start.LineNumber };
+					lpKernelInfo->m_pStartPixelPos = pCursor->PositionToCursor_Before(pCursor->start);
+					lpKernelInfo->m_pEndPixelPos = pCursor->PositionToCursor(pCursor->end);
+					lpKernelInfo->m_pCaretPixelPos = lpKernelInfo->m_pStartPixelPos;
+					break;
+				}
+			}
+		}					
 		return UR_ERROR;												//未查到
 	}
 	case UM_REPLACE:
 	{
-		/*取出替代的字符串*/
+		/*取出替代的字符串并格式化(替换Tab)*/
 		std::string SText = wchTostring((TCHAR*)sParam);
 		std::wstring Str = StringToWString(SText);
+		TabToSpace(Str);
 
 		/*选中被替换的字符串起始终点位置*/
 		Position start = pCursor->start;

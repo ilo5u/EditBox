@@ -11,6 +11,7 @@
 #include<time.h>
 #include<process.h>
 #define AUTO_SAVE_TIME 300														//自动保存时间间隔
+#define TAB_SIZE	4															//Tab字符为4空格
 //文本存储结构
 class CText
 {
@@ -34,6 +35,7 @@ public:
 	std::wstring Copy(Position start, Position end);							//拷贝段落
 	Position	EnterNewLine(Position position);								//光标在position后按回车
 	bool	SeekStrings(std::wstring Str, Position& start, Position& end, bool upper_lower = true);		//查找字符串
+	bool	ReSeekStrings(std::wstring Str, Position& start, Position& end, bool upper_lower = true);	//向前查找字符串
 	Position	Replace(Position start, Position end, std::wstring Str);		//替换字符串
 	bool        isSaved();														//是否保存
 	static std::string Path;													//默认存储路径
@@ -99,6 +101,7 @@ std::string WStringToString(const std::wstring& ws);		//实现字符转换
 std::string wchTostring(TCHAR* pwch);						//宽字符指针转换为string
 void WStringToWch(const std::wstring &ws, TCHAR* &pwch);	//宽字符串转化为指针
 std::queue<std::wstring> WStrToLineWStr(std::wstring WSTR);	//将包含换行符的字符串转化为不同行的字符串(不含换行符)		
+void TabToSpace(std::wstring& Str);							//将字符串中制表符更替为对应的空格
 
 UINT __stdcall Auto_Save_Timer_Thread(LPVOID);				//自动保存定时器线程
 std::string Generate_Default_File_Name(const std::string& Path);

@@ -16,7 +16,7 @@ public:
 	bool isTextTail(int x, int y);										//返回光标是否在文本末尾
 	int Characters_before_Cursor(int LineNumber, int x);				//返回光标前的字符数量
 	int CharactersProperty_before_Cursor(int LineNumber, int x);		//返回光标前字符属性
-	int CursorLocation(int LineNumber, int x);							//重定位光标x(使之合法)
+	int CursorLocation(int LineNumber, int x, bool after_forward = true);//重定位光标x(使之合法)
 	Position CursorToPosition(int x, int y);							//（合法）光标位置前的字符位置转化到文本位置
 	Position CursorToPosition_After(int x, int y);						//（合法）光标位置后的字符位置转化到文本位置
 	POINT    PositionToCursor(Position position);						//返回position后的光标位置	

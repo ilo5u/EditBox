@@ -172,6 +172,6 @@ BOOL operator==(POINT left, POINT right);
 // +++++++++++++++ END ++++++++++++++ //
 
 // +++++++++++++++++++ CONFIG ++++++++++++++++++++++ //
-#define SUB_KEY_VALUE TEXT("*\\shell\\EditBox")
-#define DEFAULT_PATH  TEXT("C:\\MiniWord\\Default\\")
+#define SUB_KEY_VALUE TEXT("*\\shell\\MiniWord")
+#define DEFAULT_PATH  TEXT("C:\\MiniWord\\")
 // +++++++++++++++++++++ END +++++++++++++++++++++++ //
