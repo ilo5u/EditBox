@@ -45,6 +45,8 @@ public:
 	int Line_Width(int LineNumber, int Width, int end = 0);						//返回当前行所占位宽
 	int Max_Line_Width(int Width);												//文本最大行宽
 	int Line_Number()const;														//返回行数
+	int Characters(Position start, Position end);								//记录字符数量
+	int All_Characters();														//全文字符数量
 	CLine* GetLinePointer(int LineNumber);										//获取行指针
 	Position First_Position();													//返回文本第一个字符位置
 	Position End_Position();													//返回文本最后一个字符位置

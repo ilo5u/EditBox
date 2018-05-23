@@ -623,8 +623,10 @@ bool Position::operator<(Position & position)
 {
 	if (LineNumber < position.LineNumber)
 		return true;
-	else
+	else if (LineNumber == position.LineNumber)
 		return Sequence < position.Sequence;
+	else
+		return false;
 }
 
 bool Position::operator<=(Position & position)

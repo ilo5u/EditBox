@@ -245,7 +245,7 @@ BOOL MyScrollWindow(HTEXTINFO hTextInfo, int xOffset, int yOffset)
 			PAINTSIZE(hTextInfo).x : -xOffset;
 		rcScroll.right = PAINTSIZE(hTextInfo).x;
 		MyInvalidateRect(hTextInfo,
-			max(0, xOffset + PAINTSIZE(hTextInfo).x), PAINTSIZE(hTextInfo).x,
+			max(0, xOffset + PAINTSIZE(hTextInfo).x - PAINTSIZE(hTextInfo).x % CHARSIZE(hTextInfo).x), PAINTSIZE(hTextInfo).x,
 			0, PAINTSIZE(hTextInfo).y
 		);
 	}

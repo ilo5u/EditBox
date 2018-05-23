@@ -90,5 +90,11 @@
     <Image Include="EditBox.ico">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="miniword.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="icon1.ico">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>

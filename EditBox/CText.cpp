@@ -54,6 +54,7 @@ void CText::ReadText(std::string filename)
 			p->CreateLine(LineWStr);
 		}
 	}
+	nLineNumbers = max(1, nLineNumbers);
 	File_r.close();
 	bSave = 1;
 }
@@ -474,6 +475,28 @@ int CText::Max_Line_Width(int Width)
 int CText::Line_Number() const
 {
 	return nLineNumbers;
+}
+
+int CText::Characters(Position start, Position end)
+{
+	if (start.LineNumber == end.LineNumber)
+		return end.Sequence - start.Sequence + 1;
+	int Sum = 0;
+	CLine* p = GetLinePointer(start.LineNumber);
+	Sum += p->nDataSize - start.Sequence + 1;
+	p = p->pNextLine;
+	while (p->nLineNumber != end.LineNumber)
+	{
+		Sum += p->nLineNumber;
+		p = p->pNextLine;
+	}
+	Sum += end.Sequence;
+	return Sum;
+}
+
+int CText::All_Characters()
+{
+	return Characters(First_Position(), End_Position());
 }
 
 
