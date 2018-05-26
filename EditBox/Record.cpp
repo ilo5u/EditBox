@@ -43,6 +43,7 @@ void Record::ReDo(CText* p)
 		std::wstring Str = pNextLine->TransformToWString(1, pNextLine->nDataSize);
 		pText->DeleteLines(nextLineNumber, nextLineNumber);
 		pLine->InsertStrings(start.Sequence, Str);
+		break;
 	}
 	case RD_MERGE_LINE:
 	{

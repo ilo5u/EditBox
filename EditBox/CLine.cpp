@@ -21,7 +21,11 @@ CLine::~CLine()
 	pNextLine = NULL;
 }
 
-//创建当前行(一般用于初始化之后)
+/*
+创建当前行 用字符串String初始化改行 
+String取值限制：
+"\n" 或者 长度大于0的字符串
+*/
 void CLine::CreateLine(std::wstring & String)
 {
 	if (isChange_Line_Character(String))			//回车 直接换行 此行为空
@@ -123,14 +127,6 @@ Line_iterator CLine::DeleteLine(int first, int last)
 		--it_first;
 		DeleteSpareBlocks(it_first.pBlock->pNextBlock);
 		it_first.pBlock->pNextBlock = NULL;
-		/*
-		if (it_first.nIndex%BLOCK_SIZE == 1)
-		{
-		--it_first;
-		DeleteSpareBlocks(it_first.pBlock->pNextBlock);
-		it_first.pBlock->pNextBlock = NULL;
-		}
-		*/
 		nDataSize -= (last - first + 1);
 		return it_first;
 	}
@@ -271,7 +267,9 @@ return  "bcd"
 std::wstring CLine::TransformToWString(int first, int last)
 {
 	std::wstring WStr;
-	if (bBlankLine || first > nDataSize)
+	if (bBlankLine)
+		return std::wstring(L"\n");
+	if (first > nDataSize)
 		return WStr;
 	TCHAR wch;
 	last = min(nDataSize, last);
@@ -615,7 +613,7 @@ Line_iterator copy(Line_iterator start, Line_iterator first, Line_iterator last)
 //判断是否为换行符
 bool isChange_Line_Character(std::wstring Str)
 {
-	return Str.empty();
+	return Str == std::wstring(L"\n");
 }
 
 //P1<P2 表示p1 在 P2之前 

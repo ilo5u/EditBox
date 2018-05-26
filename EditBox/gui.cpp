@@ -348,12 +348,6 @@ BOOL SelectCharSize(HTEXTINFO hTextInfo, LONG newCharWidth, LONG newCharHeight)
 	TEXTSIZE(hTextInfo).x = TEXTSIZE(hTextInfo).x * newCharWidth / CHARSIZE(hTextInfo).x;
 	TEXTSIZE(hTextInfo).y = TEXTSIZE(hTextInfo).y * newCharHeight / CHARSIZE(hTextInfo).y;
 
-	SelectCaretPos(hTextInfo,
-		POINT{ CARETPOS(hTextInfo).x * newCharWidth / CHARSIZE(hTextInfo).x,
-		CARETPOS(hTextInfo).y * newCharHeight / CHARSIZE(hTextInfo).y },
-		CARETCOORD(hTextInfo)
-	);
-
 	SCROLLINFO shInfo;
 	shInfo.cbSize = sizeof(SCROLLINFO);
 	shInfo.fMask  = SIF_ALL;
@@ -382,6 +376,12 @@ BOOL SelectCharSize(HTEXTINFO hTextInfo, LONG newCharWidth, LONG newCharHeight)
 	svInfo.fMask  = SIF_ALL | SIF_DISABLENOSCROLL;
 	SetScrollInfo(hTextInfo->m_hWnd, SB_VERT, &svInfo, TRUE);
 
+	SelectCaretPos(hTextInfo,
+		POINT{ CARETPOS(hTextInfo).x * newCharWidth / CHARSIZE(hTextInfo).x,
+		CARETPOS(hTextInfo).y * newCharHeight / CHARSIZE(hTextInfo).y },
+		CARETCOORD(hTextInfo)
+	);
+
 	CHARSIZE(hTextInfo).x = newCharWidth;
 	CHARSIZE(hTextInfo).y = newCharHeight;
 
@@ -404,17 +404,8 @@ BOOL SelectCharSize(HTEXTINFO hTextInfo, LONG newCharWidth, LONG newCharHeight)
 	);
 	SelectObject(MEMDC(hTextInfo), FONT(hTextInfo));
 
-	switch (UserMessageProc(HTEXT(hTextInfo), CHARSIZE(hTextInfo).x, CHARSIZE(hTextInfo).y,
-		UM_CHANGECHARSIZE, NULL, NULL, NULL))
-	{
-	case UR_SUCCESS:
-	{
-
-	}
-	break;
-	default:
-		break;
-	}
+	UserMessageProc(HTEXT(hTextInfo), CHARSIZE(hTextInfo).x, CHARSIZE(hTextInfo).y,
+		UM_CHANGECHARSIZE, NULL, NULL, NULL);
 
 	MyInvalidateRect(hTextInfo,
 		0, PAINTSIZE(hTextInfo).x,

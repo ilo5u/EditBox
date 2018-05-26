@@ -37,9 +37,10 @@ RVALUE __stdcall UserMessageProc(
 		if (LineNumber > 1)
 		{
 			y -= Height;
-			int LastLineWidth = hText->Line_Width(LineNumber - 1, Width_EN);
+			LineNumber--;
+			int LastLineWidth = hText->Line_Width(LineNumber, Width_EN);
 			x = min(LastLineWidth, x);
-			if (!(pCursor->isLegalCursor(LineNumber - 1, x)))			//光标位置合法性检测 防止因上下移动使光标在汉字中间显示
+			if (!(pCursor->isLegalCursor(LineNumber, x)))			//光标位置合法性检测 防止因上下移动使光标在汉字中间显示
 			{
 				x -= Width_EN;
 			}
@@ -55,9 +56,10 @@ RVALUE __stdcall UserMessageProc(
 		if (LineNumber < hText->Line_Number())
 		{
 			y += Height;
-			int NextLineWidth = hText->Line_Width(LineNumber + 1, Width_EN);
+			LineNumber++;
+			int NextLineWidth = hText->Line_Width(LineNumber, Width_EN);
 			x = min(NextLineWidth, x);
-			if (!(pCursor->isLegalCursor(LineNumber + 1, x)))
+			if (!(pCursor->isLegalCursor(LineNumber, x)))
 			{
 				x -= Width_EN;
 			}
@@ -547,7 +549,7 @@ RVALUE __stdcall UserMessageProc(
 		{
 			case RD_MERGE_LINE:
 			{
-				lpKernelInfo->m_pCaretPixelPos = pCursor->PositionToCursor(p->start);
+				lpKernelInfo->m_pCaretPixelPos = pCursor->PositionToCursor_Before(p->start);
 				lpKernelInfo->m_cCaretCoord = { (short)p->start.Sequence,(short)p->start.LineNumber };
 				lpKernelInfo->m_uiCount = hText->All_Characters();
 				break;
