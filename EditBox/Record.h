@@ -1,6 +1,7 @@
 #pragma once
 #include"CText.h"
 #include"Cursor.h"
+#include <stack>
 #include<Windows.h>
 
 //记录操作信息
@@ -25,7 +26,8 @@ struct Record
 	std::wstring Deleted_Data;			//存储删除信息
 };
 
-
+/*清空撤销栈*/
+void Clear_Record(std::stack<Record*>* pRecord_Stack);
 /*
 应该保存的状态
 删除

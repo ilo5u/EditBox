@@ -85,6 +85,15 @@ void Record::Clear_Choose_Data()
 	end.LineNumber = end.Sequence = 0;
 }
 
+void Clear_Record(std::stack<Record*>* pRecord_Stack)
+{
+	while (!pRecord_Stack->empty())
+	{
+		Record* p = pRecord_Stack->top();
+		delete p;
+		pRecord_Stack->pop();
+	}
+}
 
 
 

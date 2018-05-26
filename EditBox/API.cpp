@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "Cursor.h"
-#include <stack>
 
 
 Cursor* pCursor = NULL;
@@ -270,20 +269,19 @@ RVALUE __stdcall UserMessageProc(
 	}
 	case UM_NEW:
 	{
-		if (hText->isSaved())
-		{
-			hText->NewFile();
-			pCursor->ResetChoose();
-			CText::Path = wchTostring((TCHAR*)sParam);
-			std::wstring DefaultName = StringToWString(Generate_Default_File_Name(CText::Path));
-			DefaultName.push_back(L'\0');
-			Alloc_Buffer(pBuffer, MaxBufferSize, DefaultName.size());
-			WStringToWch(DefaultName, pBuffer);
-			lpKernelInfo->m_lpchText = pBuffer;
-			lpKernelInfo->m_uiCount = 0;
-			break;
-		}
-		return  UR_NOTSAVED;
+
+		hText->NewFile();
+		pCursor->ResetChoose();
+		CText::Path = wchTostring((TCHAR*)sParam);
+		std::wstring DefaultName = StringToWString(Generate_Default_File_Name(CText::Path));
+		DefaultName.push_back(L'\0');
+		Alloc_Buffer(pBuffer, MaxBufferSize, DefaultName.size());
+		WStringToWch(DefaultName, pBuffer);
+		lpKernelInfo->m_lpchText = pBuffer;
+		lpKernelInfo->m_uiCount = 0;
+		Clear_Record(pRecord);
+		break;
+
 	}
 	case UM_SAVE:
 	{
@@ -338,6 +336,7 @@ RVALUE __stdcall UserMessageProc(
 		try
 		{
 			hText->ReadText(FileName);
+			Clear_Record(pRecord);
 		}
 		catch (Read_Text_Failed e)
 		{
@@ -595,6 +594,7 @@ RVALUE __stdcall UserMessageProc(
 		delete p;
 		int New_LineNumbers = hText->Line_Number();
 		lpKernelInfo->m_bLineBreak = (Old_LineNumbers == New_LineNumbers ? FALSE : TRUE);
+		lpKernelInfo->m_pTextPixelSize = { hText->Max_Line_Width(Width_EN),hText->Line_Number()*Height };
 		break;
 	}
 	case UM_PASTE:
@@ -626,7 +626,7 @@ RVALUE __stdcall UserMessageProc(
 		/*设置文本大小 当前光标位置 逻辑行列*/
 		lpKernelInfo->m_pTextPixelSize = { hText->Max_Line_Width(Width_EN),hText->Line_Number()*Height };
 		lpKernelInfo->m_pCaretPixelPos = { pCursor->PositionToCursor(end) };
-		lpKernelInfo->m_cCaretCoord = { (short)pCursor->Characters_before_Cursor(end.LineNumber,lpKernelInfo->m_pCaretPixelPos.x),(short)end.LineNumber };
+		lpKernelInfo->m_cCaretCoord = { (short)end.Sequence,(short)end.LineNumber };
 		lpKernelInfo->m_uiCount = hText->All_Characters();
 		break;
 	}

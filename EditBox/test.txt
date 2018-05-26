@@ -231,7 +231,7 @@ RVALUE __stdcall UserMessageProc(
 
         pCursor->ResetChoose();
         int New_Lines = hText->Line_Number();
-        /*设置换行信息 文本大小*/
+        /*设置换行信息 文本大小*/123124124
         lpKernelInfo->m_bLineBreak = (Old_Lines == New_Lines ? FALSE : TRUE);
         lpKernelInfo->m_pTextPixelSize = { hText->Max_Line_Width(Width_EN),hText->Line_Number()*Height };
         break;
@@ -624,21 +624,7 @@ RVALUE __stdcall UserMessageProc(
     }
     case UM_REPLACE:
     {
-        /*取出替代的字符串*/
-        std::string SText = wchTostring((TCHAR*)sParam);
-        std::wstring Str = StringToWString(SText);
-
-        /*选中被替换的字符串起始终点位置*/
-        Position start = pCursor->start;
-        Position end = pCursor->end;
-
-        /*设置撤销 保存被替换字符串*/
-        Record* rd = new Record(RD_REPLACE);
-        rd->Save_Delete_Data(hText, start, end);
-
-        end = hText->Replace(start, end, Str);
-
-        pCursor->Choose(start, end);
+        /*取
         rd->Set_Choose_Data(start, end);
         pRecord->push(rd);
         /*设置 文本大小 */
@@ -661,7 +647,41 @@ RVALUE __stdcall UserMessageProc(
         Install::Height = y;
         break;
     }
-    default: break;
+    default: break;出替代的字符串*/
+        std::string SText = wchTostring((TCHAR*)sParam);
+        std::wstring Str = StringToWString(SText);
+
+        /*选中被替换的字符串起始终点位置*/
+        Position start = pCursor->start;
+        Position end = pCursor->end;
+
+        /*设置撤销 保存被替换字符串*/     lpKernelInfo->m_pCaretPixelPos = s;
+            lpKernelInfo->m_cCaretCoord = { (short)end.Sequence ,(short)end.LineNumber };
+            lpKernelInfo->m_pStartPixelPos = pCursor->PositionToCursor_Before(pCursor->start);
+            lpKernelInfo->m_pEndPixelPos = pCursor->PositionToCursor(pCursor->end);
+            break;
+        }
+
+        return UR_ERROR;                                                //未查到
+    }
+    case UM_REPLACE:
+    {
+        /*取出替代的字符串*/
+        std::string SText = wchTostring((TCHAR*)sParam);
+        std::wstring Str = StringToWString(SText);
+
+        /*选中被替换的字符串起始终点位置*/
+        Position start = pCursor->start;
+        Position end = pCursor->end;
+
+        /*设置撤销 保存被替换字符串*/
+        Record* rd = new Record(RD_REPLACE);
+        Record* rd = new Record(RD_REPLACE);
+        rd->Save_Delete_Data(hText, start, end);
+
+        end = hText->Replace(start, end, Str);
+
+        pCursor->Choose(start, end);
     }
     return UR_SUCCESS;
 }

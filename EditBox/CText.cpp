@@ -191,6 +191,7 @@ Position CText::BackSpace(Position position)
 /*
 在start 后面 插入字符串(含有换行符)
 返回插入的最后一个字符位置
+更新行号
 eg.
 22		abcdef    insert "123"  start={22,3}
 ------->abc123def
@@ -238,6 +239,7 @@ Position CText::Insert(Position start, std::wstring String)
 		dq.pop();
 		p->InsertStrings(0, String);
 	}
+	UpDataLineNumber(pFirstLineHead, 1);
 	return { n,(int)(String.size() + prenumbers) };
 }
 /*拷贝Position在[start ,end]之间的字符串 保存在wstring中 并加上换行符*/
