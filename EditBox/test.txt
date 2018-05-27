@@ -1,6 +1,8 @@
 #i
 
 
+
+
 Cursor* pCursor = NULL;
 wchar_t* pTChar = NULL;
 wchar_t* pBuffer = NULL;
@@ -16,18 +18,19 @@ xt->Line_Number()*Height };
             {
                 rd->Save_Delete_Data(hText, start_position, start_position);
                 pRecord->push(rd);
-            }
-            hText->B
+            
+            hello->B
         }
         else
         {
-            rd->Save_Delete_Data(hText, start_position, end_position);
+            rd->Save_Delete_Data(hello, start_position, end_position);
             pRecord->push(rd);
-            hText->Delete(start_position, end_position);
+            helloworld->Delete(start_position, end_position);
         }
 
+
         pCursor->ResetChoose();
-        int New_Lines = hText->Line_Number();
+        int New_Lines = helloworld->Line_Number();
         /*设置换行信息 文本大小*/123124124
         lpKernelInfo->m_bLineBreak = (Old_Lines == New_Lines ? FALSE : TRUE);
         lpKernelInfo->m_pTextPixelSize = { hText->Max_Line_Width(Width_EN),hText->Line_Number()*Height };
@@ -45,6 +48,7 @@ xt->Line_Number()*Height };
             hText->Delete(start_position, end_position);
         }
 
+
         pCursor->ResetChoose();
         int New_Lines = hText->Line_Number();
         /*设置换行信息 文本大小*/123124124
@@ -61,9 +65,11 @@ xt->Line_Number()*Height };
             }
             else
 
+
     {
         x = pCursor->CursorLocation(LineNumber, x);
         pCursor->ResetChoose();
+
 
         /*设置光标像素位置 行列号*/
         lpKernelInfo->m_pCaretPixelPos = { x,y };
@@ -153,7 +159,9 @@ xt->Line_Number()*Height };
             rd->ACT = RD_REPLACE;
             rd->Save_Delete_Data(hText, pCursor->start, pCursor->end);  
 
+
             hText->Replace(pCursor->start, pCursor->end, ws);
+
 
             rd->Set_Choose_Data(pCursor->start, pCursor->start);
             x = (pCursor->PositionToCursor(pCursor->start)).x;
@@ -177,7 +185,9 @@ xt->Line_Number()*Height };
             {
                 ws.push_back(wch);
 
+
                 position = hText->Insert(position, ws);             //在Position后面插入一个字符  position记录插入后的字符位置
+
 
                 rd->Set_Choose_Data(position, position);
                 if (WORD(wch >> 8) > 0)
@@ -208,9 +218,11 @@ xt->Line_Number()*Height };
         }
         pCursor->CursorLocation(LineNumber, x);
 
+
         int iCount = 0;                 //显示的字符数量
         short int iStart = 0;           //高亮部分的开始点
         short int iEnd = 0;             //高亮部分结束点
+
 
         int end_x = fParam;
         CLine* pLine = hText->GetLinePointer(LineNumber);
@@ -241,6 +253,7 @@ xt->Line_Number()*Height };
             lpKernelInfo->m_pStartPixelPos = pCursor->PositionToCursor_Before(pCursor->start);
             lpKernelInfo->m_pEndPixelPos = pCursor->PositionToCursor(pCursor->end);
         }   
+
 
         lpKernelInfo->m_uiCount = iCount;
         lpKernelInfo->m_uiStart = iStart;
@@ -287,6 +300,7 @@ xt->Line_Number()*Height };
             pCursor->ResetChoose();
         }               
 
+
         /*设置光标像素位置 行列号*/
         lpKernelInfo->m_pCaretPixelPos = { x,y };
         lpKernelInfo->m_cCaretCoord = { (short)pCursor->Characters_before_Cursor(LineNumber,x),(short)LineNumber };
@@ -294,6 +308,7 @@ xt->Line_Number()*Height };
     }
     case UM_CANCEL:
     {
+
 
         if (pRecord->empty())           //当前没有待撤销的步骤
             return UR_NOTCANCEL;
@@ -344,6 +359,8 @@ xt->Line_Number()*Height };
         }
 
 
+
+
         pRecord->pop();
         delete p;
         int New_LineNumbers = hText->Line_Number();
@@ -356,6 +373,7 @@ xt->Line_Number()*Height };
         Record* rd = new Record(RD_INSERT);
         std::string SText = wchTostring((TCHAR*)sParam);
         std::wstring WSText = StringToWString(SText);                       //待插入的内容
+
 
         Position start, end;                                                //记录粘贴后最后一个字符位置
         if (pCursor->isChoose())
@@ -372,8 +390,10 @@ xt->Line_Number()*Height };
             Position s = { start.LineNumber,start.Sequence + 1 };           //插入后的首字符位置
             end = hText->Insert(start, WSText);                             //插入字符 start得到插入的最后一个字符的位置
 
+
             rd->Set_Choose_Data(s, end);
         }
+
 
         pRecord->push(rd);
         /*设置文本大小 当前光标位置 逻辑行列*/
@@ -389,6 +409,7 @@ xt->Line_Number()*Height };
         |全文档查找 1 非全文档查找0    (16位)|当前光标向后查找 1 当前光标向前查找 0 （16位）|区分大小写 1 不区分大小写 0（16位）|
         ---------------------------------------------------------------------------------------------------------------------
         */
+
 
         /*设置查找模式*/
         bool upper_lower = true;
@@ -427,9 +448,13 @@ xt->Line_Number()*Height };
         }
 
 
+
+
         /*取出待查找字符串*/
         std::string SText = wchTostring((TCHAR*)fParam);
         std::wstring Str = StringToWString(SText);                      
+
+
 
 
         if (hText->SeekStrings(Str, start, end, upper_lower))           //查找成功
@@ -443,6 +468,7 @@ xt->Line_Number()*Height };
             lpKernelInfo->m_pEndPixelPos = pCursor->PositionToCursor(pCursor->end);
             break;
         }
+
 
         return UR_ERROR;                                                //未查到
     }
@@ -475,9 +501,11 @@ xt->Line_Number()*Height };
         std::string SText = wchTostring((TCHAR*)sParam);
         std::wstring Str = StringToWString(SText);
 
+
         /*选中被替换的字符串起始终点位置*/
         Position start = pCursor->start;
         Position end = pCursor->end;
+
 
         /*设置撤销 保存被替换字符串*/     lpKernelInfo->m_pCaretPixelPos = s;
             lpKernelInfo->m_cCaretCoord = { (short)end.Sequence ,(short)end.LineNumber };
@@ -485,6 +513,7 @@ xt->Line_Number()*Height };
             lpKernelInfo->m_pEndPixelPos = pCursor->PositionToCursor(pCursor->end);
             break;
         }
+
 
         return UR_ERROR;                                                //未查到
     }
@@ -494,16 +523,20 @@ xt->Line_Number()*Height };
         std::string SText = wchTostring((TCHAR*)sParam);
         std::wstring Str = StringToWString(SText);
 
+
         /*选中被替换的字符串起始终点位置*/
         Position start = pCursor->start;
         Position end = pCursor->end;
+
 
         /*设置撤销 保存被替换字符串*/
         Record* rd = new Record(RD_REPLACE);
         Record* rd = new Record(RD_REPLACE);
         rd->Save_Delete_Data(hText, start, end);
 
+
         end = hText->Replace(start, end, Str);
+
 
         pCursor->Choose(start, end);
     }
@@ -529,21 +562,26 @@ BOOL _stdcall DestroyText(HTEXT &hText)
         delete hText;
     hText = NULL;
 
+
     delete pRecord;
     pRecord = NULL;
     delete pCursor;
     pCursor = NULL;
+
 
     Free_Buffer(pTChar);
     Free_Buffer(pBuffer);
     return TRUE;
 }
 
+
 Cursor * Initialize_Cursor(CText * p, int Width, int Height)
 {
     Cursor* pCursor = new Cursor(p, Width, Height);
     return pCursor;
 }
+
+
 
 
 //为数据存储申请缓冲区 存在周期为整个程序
@@ -572,7 +610,12 @@ void Alloc_Buffer(wchar_t *& p, size_t & Old_Size, size_t New_Size)
         }
     }
 
+
 }
+
+
+
+
 
 
 
@@ -584,6 +627,7 @@ void Free_Buffer(wchar_t *& p)
         delete[]p;
     p = NULL;
 }
+
 
 void Set_Height_Light(int LineNumber, Position ps, Position pe, short int & start, short int & end)
 {
@@ -623,6 +667,11 @@ void Set_Height_Light(int LineNumber, Position ps, Position pe, short int & star
     }
     return;
 }
+
+
+
+
+
 
 
 

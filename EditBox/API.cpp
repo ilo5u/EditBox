@@ -710,11 +710,13 @@ RVALUE __stdcall UserMessageProc(
 		end = hText->Replace(start, end, Str);
 
 		pCursor->Choose(start, end);
-		lpKernelInfo->m_uiCount = hText->All_Characters();
+		lpKernelInfo->m_uiCount = hText->Characters(start, end);
 		rd->Set_Choose_Data(start, end);
 		pRecord->push(rd);
-		/*设置 文本大小 */
+		/*设置 文本大小 鼠标位置 */
 		lpKernelInfo->m_pTextPixelSize = { hText->Max_Line_Width(Width_EN),hText->Line_Number()*Height };
+		lpKernelInfo->m_pCaretPixelPos = pCursor->PositionToCursor(end);
+		lpKernelInfo->m_cCaretCoord = { short(end.Sequence),short(end.LineNumber) };
 		/*设置高亮*/
 		lpKernelInfo->m_pStartPixelPos = pCursor->PositionToCursor_Before(start);
 		lpKernelInfo->m_pEndPixelPos = pCursor->PositionToCursor(end);

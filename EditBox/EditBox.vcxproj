@@ -190,7 +190,6 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="EditBox.ico" />
-    <Image Include="icon1.ico" />
     <Image Include="miniword.ico" />
     <Image Include="small.ico" />
   </ItemGroup>

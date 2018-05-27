@@ -28,6 +28,7 @@ void Record::ReDo(CText* p)
 	case RD_REPLACE:
 	{
 		end = p->Replace(start, end, Deleted_Data);			//·´ÏòÌæ»»
+		break;
 	}
 	case RD_INSERT:
 	{

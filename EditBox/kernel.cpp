@@ -1,9 +1,35 @@
+/*--------------------------------------------------------------------------------------------------
+// File : *.cpp, *.h
+//
+// Description:
+//             (此处添加注释)
+//
+// Author: XXX
+//
+// Date: 2018-XX-XX
+//
+--------------------------------------------------------------------------------------------------*/
+
 #include "stdafx.h"
 #include "miniword.h"
 #include "api.h"
 
 #pragma comment(lib, "comctl32.lib")
 
+/*---------------------------------------------
+	@Description:
+		创建MiniWord信息管理对象
+
+	@Paramter:
+		hWnd: 主窗口句柄
+		hInst: 当前实例
+
+	@Return:
+		对象句柄
+
+	@Author:
+		程鑫
+---------------------------------------------*/
 HTEXTINFO __stdcall CreateTextInfo(HWND hWnd, HINSTANCE hInst)
 {
 	LPTEXTINFO lpTextInfo = new TEXTINFO{};
@@ -25,6 +51,20 @@ HTEXTINFO __stdcall CreateTextInfo(HWND hWnd, HINSTANCE hInst)
 	return HTEXTINFO(lpTextInfo);
 }
 
+/*---------------------------------------------
+	@Description:
+		释放MiniWord信息管理对象
+
+	@Paramter:
+		hWnd: 主窗口句柄
+		hTextInfo: 对象句柄
+
+	@Return:
+		释放结果（默认为TRUE）
+
+	@Author:
+		程鑫
+---------------------------------------------*/
 BOOL __stdcall ReleaseTextInfo(HWND hWnd, HTEXTINFO hTextInfo)
 {
 	ReleaseGDI(hWnd, hTextInfo->m_hGDI);
@@ -35,6 +75,19 @@ BOOL __stdcall ReleaseTextInfo(HWND hWnd, HTEXTINFO hTextInfo)
 	return (TRUE);
 }
 
+/*---------------------------------------------
+	@Description:
+		创建用户信息管理对象
+
+	@Paramter:
+		hWnd: 主窗口句柄
+
+	@Return:
+		对象句柄
+
+	@Author:
+		程鑫
+---------------------------------------------*/
 HTEXTUSER __stdcall CreateUser(HWND hWnd)
 {
 	LPTEXTUSER lpUser = new TEXTUSER{};
@@ -66,18 +119,46 @@ HTEXTUSER __stdcall CreateUser(HWND hWnd)
 	lpUser->m_pMaxCharPixelSize = POINT{ 12, 24 };
 
 	lpUser->m_fMask &= DEFAULT;
-	ZeroMemory(lpUser->m_szFindWhat, STRING_SIZE);
-	ZeroMemory(lpUser->m_szReplaceWhat, STRING_SIZE);
+	ZeroMemory(lpUser->m_szFindWhat, MAX_LOADSTRING);
+	ZeroMemory(lpUser->m_szReplaceWhat, MAX_LOADSTRING);
 
 	return HTEXTUSER(lpUser);
 }
 
+/*---------------------------------------------
+	@Description:
+		释放用户信息管理对象
+
+	@Paramter:
+		hWnd: 主窗口句柄
+		hUser: 对象句柄
+
+	@Return:
+		释放结果（默认为TRUE）
+
+	@Author:
+		程鑫
+---------------------------------------------*/
 BOOL __stdcall ReleaseUser(HWND hWnd, HTEXTUSER hUser)
 {
 	delete hUser;
 	return (TRUE);
 }
 
+/*---------------------------------------------
+	@Description:
+		创建内核信息管理对象
+
+	@Paramter:
+		hWnd: 主窗口句柄
+		hUser: 用户信息管理对象句柄
+
+	@Return:
+		对象句柄
+
+	@Author:
+		程鑫
+---------------------------------------------*/
 HTEXTKERNEL __stdcall CreateKernel(HWND hWnd, HTEXTUSER hUser)
 {
 	LPTEXTKERNEL lpKernel = new TEXTKERNEL{};
@@ -94,6 +175,20 @@ HTEXTKERNEL __stdcall CreateKernel(HWND hWnd, HTEXTUSER hUser)
 	return HTEXTKERNEL(lpKernel);
 }
 
+/*---------------------------------------------
+	@Description:
+		释放内核信息管理对象
+
+	@Paramter:
+		hWnd: 主窗口句柄
+		hKernel: 对象句柄
+
+	@Return:
+		释放结果（默认为TRUE）
+
+	@Author:
+		程鑫
+---------------------------------------------*/
 BOOL __stdcall ReleaseKernel(HWND hWnd, HTEXTKERNEL hKernel)
 {
 	DestroyText(hKernel->m_hText);
@@ -101,6 +196,21 @@ BOOL __stdcall ReleaseKernel(HWND hWnd, HTEXTKERNEL hKernel)
 	return (TRUE);
 }
 
+/*---------------------------------------------
+	@Description:
+		创建图形设备信息管理对象
+
+	@Paramter:
+		hWnd: 主窗口句柄
+		hInst: 当前实例
+		hUser: 用户信息管理对象句柄
+
+	@Return:
+		对象句柄
+
+	@Author:
+		程鑫
+---------------------------------------------*/
 HTEXTGDI __stdcall CreateGDI(HWND hWnd, HINSTANCE hInst, HTEXTUSER hUser)
 {
 	LPTEXTGDI lpGDI = new TEXTGDI{};
@@ -153,8 +263,6 @@ HTEXTGDI __stdcall CreateGDI(HWND hWnd, HINSTANCE hInst, HTEXTUSER hUser)
 	SendMessage(lpGDI->m_hStatus, SB_SETPARTS, sizeof(nSize) / sizeof(nSize[0]), (LPARAM)nSize);
 
 	TCHAR szCaretCoord[MAX_PATH];
-	wsprintf(szCaretCoord, TEXT("Ins"));
-	SendMessage(lpGDI->m_hStatus, SB_SETTEXT, SBT_NOBORDERS | (WORD)0x00, (LPARAM)szCaretCoord);
 	wsprintf(szCaretCoord, TEXT("%d rows, %d cols"), hUser->m_cCaretCoord.Y, hUser->m_cCaretCoord.X);
 	SendMessage(lpGDI->m_hStatus, SB_SETTEXT, SBT_NOBORDERS | (WORD)0x01, (LPARAM)szCaretCoord);
 
@@ -196,6 +304,20 @@ HTEXTGDI __stdcall CreateGDI(HWND hWnd, HINSTANCE hInst, HTEXTUSER hUser)
 	return HTEXTGDI(lpGDI);
 }
 
+/*---------------------------------------------
+	@Description:
+		释放图形设备信息管理对象
+
+	@Paramter:
+		hWnd: 主窗口句柄
+		hGDI: 对象句柄
+
+	@Return:
+		释放结果（默认为TRUE）
+
+	@Author:
+		程鑫
+---------------------------------------------*/
 BOOL __stdcall ReleaseGDI(HWND hWnd, HTEXTGDI hGDI)
 {
 	DeleteObject(hGDI->m_hBitmap);

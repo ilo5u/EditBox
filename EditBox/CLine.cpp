@@ -28,7 +28,7 @@ String取值限制：
 */
 void CLine::CreateLine(std::wstring & String)
 {
-	if (isChange_Line_Character(String))			//回车 直接换行 此行为空
+	if (isChange_Line_Character(String) || String.empty())			//回车 直接换行 此行为空
 	{
 		bBlankLine = true;
 		nDataSize = 0;
@@ -161,7 +161,6 @@ bool CLine::BackSpace(Position position)
 在start 后面 插入字符串 ：
 eg		abcdef    insert "123"  start=3
 ------->abc123def
-start==0			在行首添加字符串
 start==nDataSize	在行末添加字符
 start==x			在x位置后面插入字符串
 返回插入的第一位字符位置
@@ -171,6 +170,17 @@ void CLine::InsertStrings(int start, std::wstring String)
 {
 	if (isChange_Line_Character(String))			//插入换行符
 	{
+		CLine* p = new CLine(nLineNumber + 1);
+		if (start != nDataSize)
+		{
+			std::wstring Str_After = TransformToWString(start + 1, nDataSize);
+			DeleteLine(start + 1, nDataSize);
+			p->CreateLine(Str_After);
+
+		}
+		p->pNextLine = pNextLine;
+		pNextLine = p;
+			/*
 		if (start == 0)			//换行
 		{
 			CLine* p = new CLine(*this);		//创建副本
@@ -184,7 +194,7 @@ void CLine::InsertStrings(int start, std::wstring String)
 			CLine* p = new CLine(nLineNumber + 1, pNextLine);
 			p->CreateLine(String);
 			pNextLine = p;
-		}
+		}*/
 		UpDataLineNumber();
 		return;
 	}
@@ -244,7 +254,7 @@ void CLine::InsertStrings(int start, std::wstring String)
 		std::wstring backstr = TransformToWString(start + 1, nDataSize);				//保存start后面的字符串
 		DeleteLine(start + 1, nDataSize);												//删除这部分
 		String += backstr;
-		return InsertStrings(nDataSize, String);
+		InsertStrings(nDataSize, String);
 
 	}
 
@@ -349,13 +359,14 @@ void CLine::DeleteSpareBlocks(DataBlock * p)
 	}
 }
 
-//更新行号
+//更新行号与是否为空行
 void CLine::UpDataLineNumber()
 {
 	CLine* pLine = pNextLine;
 	int n = nLineNumber + 1;
 	while (pLine != NULL)
 	{
+		bBlankLine = pLine->nDataSize > 0 ? false : true;
 		pLine->nLineNumber = n;
 		n++;
 		pLine = pLine->pNextLine;
