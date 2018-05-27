@@ -496,6 +496,7 @@ RVALUE __stdcall UserMessageProc(
 		lpKernelInfo->m_pEndPixelPos = pCursor->PositionToCursor(pCursor->end);
 		lpKernelInfo->m_pCaretPixelPos = pCursor->PositionToCursor(pCursor->end);
 		lpKernelInfo->m_cCaretCoord = { short(pCursor->end.Sequence) ,short(pCursor->end.LineNumber) };
+		lpKernelInfo->m_uiCount = hText->All_Characters();
 		break;
 	}
 	case UM_CHOOSE:
@@ -574,6 +575,7 @@ RVALUE __stdcall UserMessageProc(
 				lpKernelInfo->m_pCaretPixelPos = pCursor->PositionToCursor(p->start);
 				lpKernelInfo->m_cCaretCoord = { (short)p->start.Sequence,(short)p->start.LineNumber };
 				lpKernelInfo->m_uiCount = hText->All_Characters();
+				lpKernelInfo->m_pStartPixelPos = lpKernelInfo->m_pEndPixelPos = lpKernelInfo->m_pCaretPixelPos;
 				break;
 			}
 			case RD_DELETE:
