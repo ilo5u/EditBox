@@ -490,6 +490,8 @@ int CText::Line_Number() const
 
 int CText::Characters(Position start, Position end)
 {
+	if (start == end && start.Sequence == 0)
+		return 0;
 	if (start.LineNumber == end.LineNumber)
 		return end.Sequence - start.Sequence + 1;
 	int Sum = 0;
