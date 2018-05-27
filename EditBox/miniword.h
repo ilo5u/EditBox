@@ -1,3 +1,15 @@
+/*--------------------------------------------------------------------------------------------------
+// File : *.cpp, *.h
+//
+// Description:
+//             (此处添加注释)
+//
+// Author: XXX
+//
+// Date: 2018-XX-XX
+//
+--------------------------------------------------------------------------------------------------*/
+
 #pragma once
 
 #include <Windows.h>
@@ -5,24 +17,27 @@
 
 #include "resource.h"
 
-#define STRING_SIZE 200
+#define MAX_LOADSTRING 100
 
-// 定时器
+////////////////////////// 定时器模块 ///////////////////////////////
 typedef struct _TIMER
 {
 public:
 	_TIMER(const DWORD& tr);
 	~_TIMER();
 
-	DWORD     time_rest;
-	HANDLE    time_mutex;
-	HANDLE    time_thread_id;
+	DWORD     time_rest;       // 定时器时长
+	HANDLE    time_mutex;      // 互斥锁做事件触发
+	HANDLE    time_thread_id;  // 定时器运行的子线程id
 } TIMER, *HTIMER;
-HTIMER _stdcall CreateTimer(DWORD time_length); // 创建一次性定时器
-BOOL   _stdcall KillTimer(HTIMER timer);        // 销毁一次性定时器
-BOOL            IsTimerStopped(HTIMER hTimer);  // 定时器是否停止
 
-// RESOURCE
+/* ------------ struct TIMER's function statement ----------- */
+HTIMER _stdcall CreateTimer(DWORD time_length);
+BOOL   _stdcall KillTimer(HTIMER timer);
+BOOL            IsTimerStopped(HTIMER hTimer);
+/* ------------------------ end ----------------------------- */
+
+////////////////////////// 内核模块 /////////////////////////////////
 class CText;
 typedef CText *HTEXT, *LPTEXT;
 
@@ -35,15 +50,17 @@ typedef struct _TEXT_USER
 	POINT m_pCaretPixelPos;   // 光标像素位置
 	COORD m_cCaretCoord;      // 光标逻辑坐标(X列 Y行)
 
-	POINT m_pMinCharPixelSize;
-	POINT m_pMaxCharPixelSize;
+	POINT m_pMinCharPixelSize;  // 最小字符像素大小
+	POINT m_pMaxCharPixelSize;  // 最大字符像素大小
 
-	ULONGLONG m_fMask;
-	TCHAR m_szFindWhat[STRING_SIZE];
-	TCHAR m_szReplaceWhat[STRING_SIZE];
+	ULONGLONG m_fMask;                     // 查找模式
+	TCHAR m_szFindWhat[MAX_LOADSTRING];    // 查找串
+	TCHAR m_szReplaceWhat[MAX_LOADSTRING]; // 替换串
 } TEXTUSER, *LPTEXTUSER, *HTEXTUSER;
+/* ----------- struct TEXTUSER's function statement ------------ */
 HTEXTUSER __stdcall CreateUser(HWND hWnd);
 BOOL      __stdcall ReleaseUser(HWND hWnd, HTEXTUSER hUser);
+/* --------------------------- end ----------------------------- */
 
 // 文本内核结构
 typedef struct _TEXT_KERNEL
@@ -53,8 +70,10 @@ typedef struct _TEXT_KERNEL
 	POINT m_pStartPixelPos; // 起点像素位置
 	POINT m_pEndPixelPos;   // 终点像素位置
 } TEXTKERNEL, *LPTEXTKERNEL, *HTEXTKERNEL;
+/* ----------- struct TEXTKERNEL's function statement ------------- */
 HTEXTKERNEL __stdcall CreateKernel(HWND hWnd, HTEXTUSER hUser);
 BOOL        __stdcall ReleaseKernel(HWND hWnd, HTEXTKERNEL hKernel);
+/* ----------------------------- end ------------------------------ */
 
 /* 文本图形设备结构 */
 typedef struct _TEXT_GDI
@@ -73,24 +92,29 @@ typedef struct _TEXT_GDI
 	HTIMER  m_hMouseTimer;      // 鼠标移动定时器
 	HTIMER  m_hSaveTimer;       // 自动保存定时器
 } TEXTGDI, *LPTEXTGDI, *HTEXTGDI;
+/* -------------- struct TEXTGDI's function statement ------------------- */
 HTEXTGDI __stdcall CreateGDI(HWND hWnd, HINSTANCE hInst, HTEXTUSER hUser);
 BOOL     __stdcall ReleaseGDI(HWND hWnd, HTEXTGDI hGDI);
+/* -------------------------------- end --------------------------------- */
 
 // 文本结构
 typedef struct _TEXT_INFO
 {
-	HTEXTKERNEL	m_hKernel;
-	HTEXTGDI	m_hGDI;
-	HTEXTUSER	m_hUser;
-	HWND		m_hWnd;
-	HINSTANCE   m_hInst;
+	HTEXTKERNEL	m_hKernel;  // 内核管理句柄
+	HTEXTGDI	m_hGDI;     // 图形设备管理句柄
+	HTEXTUSER	m_hUser;    // 用户管理句柄
+	HWND		m_hWnd;     // 主窗口句柄
+	HINSTANCE   m_hInst;    // 当前应用实例
 } TEXTINFO, *LPTEXTINFO, *HTEXTINFO;
+/* ------------- struct TEXTINFO's function statement ------------- */
 HTEXTINFO __stdcall CreateTextInfo(HWND hWnd, HINSTANCE hInst);
 BOOL      __stdcall ReleaseTextInfo(HWND hWnd, HTEXTINFO hTextInfo);
-typedef RECT *LPRECT;
+/* ---------------------------- end ------------------------------- */
 
-// IO
-BOOL WINAPI MyTextOutW(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCWSTR lpString, _In_ int c, _In_ short s, _In_ short e, _In_ int width);
+//////////////////////////// IO模块 /////////////////////////////////
+BOOL WINAPI MyTextOutW(_In_ HDC hdc, 
+	_In_ int x, _In_ int y, _In_reads_(c) LPCWSTR lpString, 
+	_In_ int c, _In_ short s, _In_ short e, _In_ int width);
 
 #ifdef UNICODE
 #define MyTextOut MyTextOutW
@@ -98,8 +122,9 @@ BOOL WINAPI MyTextOutW(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCWS
 #define MyTextOut MyTextOutA
 #endif // UNICODE
 
-// Operation function
-BOOL	MyInvalidateRect(HTEXTINFO, LONG, LONG, LONG, LONG);         // 设置无效区域
+//////////////////////////// 绘图模块 ///////////////////////////////
+BOOL	MyInvalidateRect(HTEXTINFO, 
+	LONG, LONG, LONG, LONG); // 设置无效区域
 
 BOOL    AdjustCaretPosBeforeBackspace(HTEXTINFO); // 用户按Backspace键时 调整光标位置
 BOOL    AdjustPaintPos(HTEXTINFO);                // 滑动窗口
@@ -113,7 +138,7 @@ BOOL    SelectWindow(HTEXTINFO, POINT, LPCWSTR);  // 命名文本窗口显示
 
 BOOL    MyScrollWindow(HTEXTINFO, int, int);      // 滑动窗口
 
-BOOL    PaintWindow(LPRECT, HTEXTINFO);           // 重绘窗口
+BOOL    PaintWindow(HTEXTINFO, LPRECT);           // 重绘窗口
 
 BOOL    SelectClientSize(HTEXTINFO, LPRECT);      // 设置显示区大小(WM_SIZE)
 BOOL    SelectCharSize(HTEXTINFO, LONG, LONG);    // 设置字体大小

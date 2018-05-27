@@ -37,9 +37,10 @@ RVALUE __stdcall UserMessageProc(
 		if (LineNumber > 1)
 		{
 			y -= Height;
-			int LastLineWidth = hText->Line_Width(LineNumber - 1, Width_EN);
+			LineNumber--;
+			int LastLineWidth = hText->Line_Width(LineNumber, Width_EN);
 			x = min(LastLineWidth, x);
-			if (!(pCursor->isLegalCursor(LineNumber - 1, x)))			//光标位置合法性检测 防止因上下移动使光标在汉字中间显示
+			if (!(pCursor->isLegalCursor(LineNumber, x)))			//光标位置合法性检测 防止因上下移动使光标在汉字中间显示
 			{
 				x -= Width_EN;
 			}
@@ -48,6 +49,7 @@ RVALUE __stdcall UserMessageProc(
 		/*设置光标像素位置 行列号*/
 		lpKernelInfo->m_pCaretPixelPos = { x,y };
 		lpKernelInfo->m_cCaretCoord = { (short)pCursor->Characters_before_Cursor(LineNumber,x),(short)LineNumber };
+		lpKernelInfo->m_uiCount = hText->All_Characters();
 		break;
 	}
 	case UM_DOWN:			//下
@@ -55,9 +57,10 @@ RVALUE __stdcall UserMessageProc(
 		if (LineNumber < hText->Line_Number())
 		{
 			y += Height;
-			int NextLineWidth = hText->Line_Width(LineNumber + 1, Width_EN);
+			LineNumber++;
+			int NextLineWidth = hText->Line_Width(LineNumber, Width_EN);
 			x = min(NextLineWidth, x);
-			if (!(pCursor->isLegalCursor(LineNumber + 1, x)))
+			if (!(pCursor->isLegalCursor(LineNumber, x)))
 			{
 				x -= Width_EN;
 			}
@@ -66,6 +69,7 @@ RVALUE __stdcall UserMessageProc(
 		/*设置光标像素位置 行列号*/
 		lpKernelInfo->m_pCaretPixelPos = { x,y };
 		lpKernelInfo->m_cCaretCoord = { (short)pCursor->Characters_before_Cursor(LineNumber,x),(short)LineNumber };
+		lpKernelInfo->m_uiCount = hText->All_Characters();
 
 		break;
 	}
@@ -90,6 +94,7 @@ RVALUE __stdcall UserMessageProc(
 		/*设置光标像素位置 行列号*/
 		lpKernelInfo->m_pCaretPixelPos = { x,y };
 		lpKernelInfo->m_cCaretCoord = { (short)pCursor->Characters_before_Cursor(LineNumber,x) ,(short)LineNumber };
+		lpKernelInfo->m_uiCount = hText->All_Characters();
 	
 		break;
 	}
@@ -115,6 +120,7 @@ RVALUE __stdcall UserMessageProc(
 		/*设置光标像素位置 行列号*/
 		lpKernelInfo->m_pCaretPixelPos = { x,y };
 		lpKernelInfo->m_cCaretCoord = { (short)pCursor->Characters_before_Cursor(LineNumber,x) ,(short)LineNumber };
+		lpKernelInfo->m_uiCount = hText->All_Characters();
 		break;
 	}
 	case UM_END:			//当前行尾时x y坐标
@@ -124,6 +130,7 @@ RVALUE __stdcall UserMessageProc(
 		/*设置光标像素位置 行列号*/
 		lpKernelInfo->m_pCaretPixelPos = { x,y };
 		lpKernelInfo->m_cCaretCoord = { (short)pCursor->Characters_before_Cursor(LineNumber,x),(short)LineNumber };
+		lpKernelInfo->m_uiCount = hText->All_Characters();
 		break;
 	}
 	case UM_RETURN:			//回车换行
@@ -148,6 +155,7 @@ RVALUE __stdcall UserMessageProc(
 		/*设置换行信息 文本大小*/
 		lpKernelInfo->m_bLineBreak = TRUE;
 		lpKernelInfo->m_pTextPixelSize = { hText->Max_Line_Width(Width_EN),hText->Line_Number()*Height };
+		lpKernelInfo->m_uiCount = hText->All_Characters();
 		break;
 	}
 	case UM_DELETE:			//删除
@@ -256,6 +264,7 @@ RVALUE __stdcall UserMessageProc(
 		/*设置光标像素位置 行列号*/
 		lpKernelInfo->m_pCaretPixelPos = { x,y };
 		lpKernelInfo->m_cCaretCoord = { (short)pCursor->Characters_before_Cursor(LineNumber,x) ,(short)LineNumber };
+		lpKernelInfo->m_uiCount = hText->All_Characters();
 		break;
 	}
 	case UM_HOME:		
@@ -265,6 +274,7 @@ RVALUE __stdcall UserMessageProc(
 		/*设置光标像素位置 行列号*/
 		lpKernelInfo->m_pCaretPixelPos = { x,y };
 		lpKernelInfo->m_cCaretCoord = { (short)pCursor->Characters_before_Cursor(LineNumber,x), (short)LineNumber };
+		lpKernelInfo->m_uiCount = hText->All_Characters();
 		break;
 	}
 	case UM_NEW:
@@ -486,6 +496,7 @@ RVALUE __stdcall UserMessageProc(
 		lpKernelInfo->m_pEndPixelPos = pCursor->PositionToCursor(pCursor->end);
 		lpKernelInfo->m_pCaretPixelPos = pCursor->PositionToCursor(pCursor->end);
 		lpKernelInfo->m_cCaretCoord = { short(pCursor->end.Sequence) ,short(pCursor->end.LineNumber) };
+		lpKernelInfo->m_uiCount = hText->All_Characters();
 		break;
 	}
 	case UM_CHOOSE:
@@ -547,7 +558,7 @@ RVALUE __stdcall UserMessageProc(
 		{
 			case RD_MERGE_LINE:
 			{
-				lpKernelInfo->m_pCaretPixelPos = pCursor->PositionToCursor(p->start);
+				lpKernelInfo->m_pCaretPixelPos = pCursor->PositionToCursor_Before(p->start);
 				lpKernelInfo->m_cCaretCoord = { (short)p->start.Sequence,(short)p->start.LineNumber };
 				lpKernelInfo->m_uiCount = hText->All_Characters();
 				break;
@@ -564,6 +575,7 @@ RVALUE __stdcall UserMessageProc(
 				lpKernelInfo->m_pCaretPixelPos = pCursor->PositionToCursor(p->start);
 				lpKernelInfo->m_cCaretCoord = { (short)p->start.Sequence,(short)p->start.LineNumber };
 				lpKernelInfo->m_uiCount = hText->All_Characters();
+				lpKernelInfo->m_pStartPixelPos = lpKernelInfo->m_pEndPixelPos = lpKernelInfo->m_pCaretPixelPos;
 				break;
 			}
 			case RD_DELETE:
@@ -687,7 +699,8 @@ RVALUE __stdcall UserMessageProc(
 					break;
 				}
 			}
-		}					
+		}		
+		lpKernelInfo->m_uiCount = hText->All_Characters();
 		return UR_ERROR;												//未查到
 	}
 	case UM_REPLACE:
@@ -708,11 +721,13 @@ RVALUE __stdcall UserMessageProc(
 		end = hText->Replace(start, end, Str);
 
 		pCursor->Choose(start, end);
-		lpKernelInfo->m_uiCount = hText->All_Characters();
+		lpKernelInfo->m_uiCount = hText->Characters(start, end);
 		rd->Set_Choose_Data(start, end);
 		pRecord->push(rd);
-		/*设置 文本大小 */
+		/*设置 文本大小 鼠标位置 */
 		lpKernelInfo->m_pTextPixelSize = { hText->Max_Line_Width(Width_EN),hText->Line_Number()*Height };
+		lpKernelInfo->m_pCaretPixelPos = pCursor->PositionToCursor(end);
+		lpKernelInfo->m_cCaretCoord = { short(end.Sequence),short(end.LineNumber) };
 		/*设置高亮*/
 		lpKernelInfo->m_pStartPixelPos = pCursor->PositionToCursor_Before(start);
 		lpKernelInfo->m_pEndPixelPos = pCursor->PositionToCursor(end);

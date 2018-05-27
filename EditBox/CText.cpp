@@ -42,6 +42,8 @@ void CText::ReadText(std::string filename)
 		nLineNumbers++;
 		LineWStr = StringToWString(LineStr);
 		TabToSpace(LineWStr);
+		if (LineWStr.empty())
+			LineWStr.push_back(L'\n');
 		if (nLineNumbers == 1)
 		{
 			pFirstLineHead->CreateLine(LineWStr);
@@ -147,7 +149,7 @@ Position CText::Delete(Position first, Position last)
 		CLine* pNext = p->pNextLine;
 		std::wstring Str = pNext->TransformToWString(last.Sequence + 1, pNext->nDataSize);
 		DeleteLines(pNext->nLineNumber, pNext->nLineNumber);
-		if (!Str.empty())
+		if (!isChange_Line_Character(Str) && !Str.empty())
 			p->InsertStrings(first.Sequence - 1, Str);
 	}
 	//first last位于同一行
@@ -203,7 +205,7 @@ Position CText::Insert(Position start, std::wstring String)
 	std::queue<std::wstring> dq = WStrToLineWStr(String);
 	CLine* p = GetLinePointer(start.LineNumber);
 	if (p == NULL)
-		throw std::invalid_argument("位置传入错误");
+		throw std::invalid_argument("行指针为空");
 	int n = start.LineNumber;
 	int prenumbers = 0;
 	if (!dq.empty())					//对首行的特殊处理
@@ -212,7 +214,7 @@ Position CText::Insert(Position start, std::wstring String)
 		dq.pop();
 		p->InsertStrings(start.Sequence, String);
 
-		if (String.size() != 0 && !dq.empty())
+		if (!isChange_Line_Character(String) && !dq.empty())
 			EnterNewLine({ n, start.Sequence + (int)String.size() });
 		if (!dq.empty())
 			n++;
@@ -227,7 +229,7 @@ Position CText::Insert(Position start, std::wstring String)
 
 		p->InsertStrings(0, String);
 
-		if (String.size() != 0)
+		if (!isChange_Line_Character(String))
 			EnterNewLine({ n, (int)String.size() });
 
 		n++;
@@ -237,7 +239,8 @@ Position CText::Insert(Position start, std::wstring String)
 	{
 		String = dq.front();
 		dq.pop();
-		p->InsertStrings(0, String);
+		if (!isChange_Line_Character(String))
+			p->InsertStrings(0, String);
 	}
 	UpDataLineNumber(pFirstLineHead, 1);
 	return { n,(int)(String.size() + prenumbers) };
@@ -255,14 +258,20 @@ std::wstring CText::Copy(Position start, Position end)
 			LineStr = p->TransformToWString(start.Sequence, p->nDataSize);
 		else
 			LineStr = p->TransformToWString(1, p->nDataSize);
-		LineStr.push_back(Flag);
+		if (!(p->bBlankLine))
+			LineStr.push_back(Flag);			//行尾添加换行符
 		Str += LineStr;
+		LineStr.clear();
 		p = p->pNextLine;
 	}
 	if (p == NULL)
 		throw std::invalid_argument("拷贝：错误的结束位置");
 	if (p->nLineNumber != start.LineNumber)
+	{
 		LineStr = p->TransformToWString(1, end.Sequence);
+		if (!(p->bBlankLine))
+			LineStr.push_back(Flag);			//行尾添加换行符
+	}
 	else
 		LineStr = p->TransformToWString(start.Sequence, end.Sequence);
 
@@ -634,6 +643,7 @@ int Match_File_Name(const std::string & FileName)
 //获取行首指针
 CLine * CText::GetLinePointer(int LineNumber)
 {
+	UpDataLineNumber(pFirstLineHead, 1);
 	if (LineNumber > Line_Number())
 		throw std::invalid_argument("传输行参数过大");
 	CLine* p = pFirstLineHead;
@@ -647,7 +657,7 @@ CLine * CText::GetLinePointer(int LineNumber)
 Position CText::First_Position()
 {
 	if (pFirstLineHead != NULL)
-		return { 1,1 };
+		return { 1,min(pFirstLineHead->nDataSize,1) };
 	else
 		return { 1,0 };
 }
@@ -910,17 +920,25 @@ void WStringToWch(const std::wstring & ws, TCHAR* &pwch)
 	}
 }
 
+/*将含有换行符的字符串转化为多行（此时不带换行符，除非改行为空）*/
 std::queue<std::wstring> WStrToLineWStr(std::wstring WSTR)
 {
 	std::queue<std::wstring> dq;
 	std::wstring Str;
+	std::wstring ChangeLine(L"\n");
 	TCHAR Flag = L'\n';		//换行符
 	for (TCHAR ch : WSTR)
 	{
 		if (ch == Flag)		//遇到行尾换行符 换下一行
 		{
-			dq.push(Str);	//注：Str为空说明次此行仅有换行符		
-			Str.clear();	//清空
+			//注：Str为空说明次此行仅有换行符		
+			if (Str.empty())
+				dq.push(ChangeLine);
+			else
+			{
+				dq.push(Str);
+				Str.clear();	//清空
+			}
 		}
 		else
 			Str.push_back(ch);
