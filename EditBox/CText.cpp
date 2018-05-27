@@ -42,6 +42,8 @@ void CText::ReadText(std::string filename)
 		nLineNumbers++;
 		LineWStr = StringToWString(LineStr);
 		TabToSpace(LineWStr);
+		if (LineWStr.empty())
+			LineWStr.push_back(L'\n');
 		if (nLineNumbers == 1)
 		{
 			pFirstLineHead->CreateLine(LineWStr);
@@ -147,7 +149,7 @@ Position CText::Delete(Position first, Position last)
 		CLine* pNext = p->pNextLine;
 		std::wstring Str = pNext->TransformToWString(last.Sequence + 1, pNext->nDataSize);
 		DeleteLines(pNext->nLineNumber, pNext->nLineNumber);
-		if (!Str.empty())
+		if (!isChange_Line_Character(Str) && !Str.empty())
 			p->InsertStrings(first.Sequence - 1, Str);
 	}
 	//first last位于同一行
@@ -227,7 +229,7 @@ Position CText::Insert(Position start, std::wstring String)
 
 		p->InsertStrings(0, String);
 
-		if (isChange_Line_Character(String))
+		if (!isChange_Line_Character(String))
 			EnterNewLine({ n, (int)String.size() });
 
 		n++;
@@ -237,7 +239,8 @@ Position CText::Insert(Position start, std::wstring String)
 	{
 		String = dq.front();
 		dq.pop();
-		p->InsertStrings(0, String);
+		if (!isChange_Line_Character(String))
+			p->InsertStrings(0, String);
 	}
 	UpDataLineNumber(pFirstLineHead, 1);
 	return { n,(int)(String.size() + prenumbers) };
@@ -254,19 +257,21 @@ std::wstring CText::Copy(Position start, Position end)
 		if (p->nLineNumber == start.LineNumber)
 			LineStr = p->TransformToWString(start.Sequence, p->nDataSize);
 		else
-		{
-			if (!(p->bBlankLine))
-				LineStr = p->TransformToWString(1, p->nDataSize);
-		}
-			
-		LineStr.push_back(Flag);	//行尾添加换行符
+			LineStr = p->TransformToWString(1, p->nDataSize);
+		if (!(p->bBlankLine))
+			LineStr.push_back(Flag);			//行尾添加换行符
 		Str += LineStr;
+		LineStr.clear();
 		p = p->pNextLine;
 	}
 	if (p == NULL)
 		throw std::invalid_argument("拷贝：错误的结束位置");
 	if (p->nLineNumber != start.LineNumber)
+	{
 		LineStr = p->TransformToWString(1, end.Sequence);
+		if (!(p->bBlankLine))
+			LineStr.push_back(Flag);			//行尾添加换行符
+	}
 	else
 		LineStr = p->TransformToWString(start.Sequence, end.Sequence);
 
@@ -638,6 +643,7 @@ int Match_File_Name(const std::string & FileName)
 //获取行首指针
 CLine * CText::GetLinePointer(int LineNumber)
 {
+	UpDataLineNumber(pFirstLineHead, 1);
 	if (LineNumber > Line_Number())
 		throw std::invalid_argument("传输行参数过大");
 	CLine* p = pFirstLineHead;
