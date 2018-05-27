@@ -180,7 +180,7 @@ Position CText::BackSpace(Position position)
 		std::wstring LineStr = p->TransformToWString(1, p->nDataSize);
 		DeleteLines(p->nLineNumber, p->nLineNumber);
 		int n = preLine->nDataSize;
-		if (!LineStr.empty())
+		if (!LineStr.empty() && !isChange_Line_Character(LineStr))
 			preLine->InsertStrings(preLine->nDataSize, LineStr);
 		return { position.LineNumber - 1,n };
 	}
@@ -496,9 +496,9 @@ int CText::Characters(Position start, Position end)
 	CLine* p = GetLinePointer(start.LineNumber);
 	Sum += p->nDataSize - start.Sequence + 1;
 	p = p->pNextLine;
-	while (p->nLineNumber != end.LineNumber)
+	while (p->nLineNumber < end.LineNumber)
 	{
-		Sum += p->nLineNumber;
+		Sum += p->nDataSize;
 		p = p->pNextLine;
 	}
 	Sum += end.Sequence;

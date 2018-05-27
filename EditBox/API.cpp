@@ -428,6 +428,7 @@ RVALUE __stdcall UserMessageProc(
 		/*设置换行信息 文本大小*/
 		lpKernelInfo->m_bLineBreak = (Old_Lines == New_Lines ? FALSE : TRUE);
 		lpKernelInfo->m_pTextPixelSize = { hText->Max_Line_Width(Width_EN),hText->Line_Number()*Height };
+		lpKernelInfo->m_uiCount = hText->All_Characters();
 		break;
 	}
 	case UM_TEXT:
