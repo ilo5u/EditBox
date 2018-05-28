@@ -263,6 +263,7 @@ RVALUE __stdcall UserMessageProc(
 
 		/*设置光标像素位置 行列号*/
 		lpKernelInfo->m_pCaretPixelPos = { x,y };
+		lpKernelInfo->m_pStartPixelPos = lpKernelInfo->m_pEndPixelPos = lpKernelInfo->m_pCaretPixelPos;
 		lpKernelInfo->m_cCaretCoord = { (short)pCursor->Characters_before_Cursor(LineNumber,x) ,(short)LineNumber };
 		lpKernelInfo->m_uiCount = hText->All_Characters();
 		break;
@@ -372,6 +373,8 @@ RVALUE __stdcall UserMessageProc(
 			pBuffer[wstr_copy.size()] = L'\0';
 		lpKernelInfo->m_lpchText = pBuffer;
 		lpKernelInfo->m_uiCount = wstr_copy.size();
+		lpKernelInfo->m_pStartPixelPos = pCursor->PositionToCursor_Before(copy_start);
+		lpKernelInfo->m_pEndPixelPos= pCursor->PositionToCursor(copy_end);
 		break;
 	}
 	case UM_CHAR:
@@ -562,6 +565,7 @@ RVALUE __stdcall UserMessageProc(
 				lpKernelInfo->m_pCaretPixelPos = pCursor->PositionToCursor_Before(p->start);
 				lpKernelInfo->m_cCaretCoord = { (short)p->start.Sequence,(short)p->start.LineNumber };
 				lpKernelInfo->m_uiCount = hText->All_Characters();
+				lpKernelInfo->m_pStartPixelPos = lpKernelInfo->m_pEndPixelPos = lpKernelInfo->m_pCaretPixelPos;
 				break;
 			}
 			case RD_INSERT :
@@ -569,6 +573,7 @@ RVALUE __stdcall UserMessageProc(
 				lpKernelInfo->m_pCaretPixelPos = pCursor->PositionToCursor(p->start);
 				lpKernelInfo->m_cCaretCoord = { (short)p->start.Sequence,(short)p->start.LineNumber };
 				lpKernelInfo->m_uiCount = hText->All_Characters();
+				lpKernelInfo->m_pStartPixelPos = lpKernelInfo->m_pEndPixelPos = lpKernelInfo->m_pCaretPixelPos;
 				break;
 			}
 			case RD_RETURN :

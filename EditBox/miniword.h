@@ -199,4 +199,5 @@ BOOL operator==(POINT left, POINT right);
 // +++++++++++++++++++ CONFIG ++++++++++++++++++++++ //
 #define SUB_KEY_VALUE TEXT("*\\shell\\MiniWord")
 #define DEFAULT_PATH  TEXT("C:\\MiniWord\\")
+#define HELP_DOCUMENT TEXT("C:\\MiniWord\\Help\\help.txt")
 // +++++++++++++++++++++ END +++++++++++++++++++++++ //

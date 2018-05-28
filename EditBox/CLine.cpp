@@ -78,9 +78,9 @@ void CLine::ClearLine()
 			p = temp;
 		}
 		pLineHead = NULL;
-		nDataSize = 0;
 		nBlocks = 0;
 	}
+	nDataSize = 0;
 	bBlankLine = true;
 }
 
@@ -114,7 +114,7 @@ Line_iterator CLine::DeleteLine(int first, int last)
 {
 	if (bBlankLine || first > last || first > nDataSize || last == 0)	//空行或无效的操作
 		return end();
-	if (first == 1 && last == nDataSize)		//删除整行
+	if (first <= 1 && last == nDataSize)		//删除整行
 	{
 		ClearLine();
 		return end();
@@ -180,21 +180,6 @@ void CLine::InsertStrings(int start, std::wstring String)
 		}
 		p->pNextLine = pNextLine;
 		pNextLine = p;
-			/*
-		if (start == 0)			//换行
-		{
-			CLine* p = new CLine(*this);		//创建副本
-			ClearLine();
-			pNextLine = p;
-		}
-		else
-		{
-			String = TransformToWString(start + 1, nDataSize);
-			DeleteLine(start + 1, nDataSize);
-			CLine* p = new CLine(nLineNumber + 1, pNextLine);
-			p->CreateLine(String);
-			pNextLine = p;
-		}*/
 		UpDataLineNumber();
 		return;
 	}
