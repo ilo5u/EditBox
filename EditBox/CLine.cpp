@@ -22,7 +22,7 @@ CLine::~CLine()
 }
 
 /*
-创建当前行 用字符串String初始化改行 
+创建当前行 用字符串String初始化改行
 String取值限制：
 "\n" 或者 长度大于0的字符串
 */
@@ -128,6 +128,8 @@ Line_iterator CLine::DeleteLine(int first, int last)
 		DeleteSpareBlocks(it_first.pBlock->pNextBlock);
 		it_first.pBlock->pNextBlock = NULL;
 		nDataSize -= (last - first + 1);
+		if (nDataSize == 0)
+			bBlankLine = true;
 		return it_first;
 	}
 	else
@@ -163,14 +165,12 @@ eg		abcdef    insert "123"  start=3
 ------->abc123def
 start==nDataSize	在行末添加字符
 start==x			在x位置后面插入字符串
-返回插入的第一位字符位置
-return Line_iterator(4)
 */
 void CLine::InsertStrings(int start, std::wstring String)
 {
 	if (isChange_Line_Character(String))			//插入换行符
 	{
-		CLine* p = new CLine(nLineNumber + 1);
+		CLine* p = new CLine(nLineNumber + 1, pNextLine);
 		if (start != nDataSize)
 		{
 			std::wstring Str_After = TransformToWString(start + 1, nDataSize);
@@ -178,7 +178,6 @@ void CLine::InsertStrings(int start, std::wstring String)
 			p->CreateLine(Str_After);
 
 		}
-		p->pNextLine = pNextLine;
 		pNextLine = p;
 		UpDataLineNumber();
 		return;
@@ -351,21 +350,18 @@ void CLine::UpDataLineNumber()
 	int n = nLineNumber + 1;
 	while (pLine != NULL)
 	{
-		bBlankLine = pLine->nDataSize > 0 ? false : true;
+		pLine->bBlankLine = (pLine->nDataSize > 0) ? false : true;
 		pLine->nLineNumber = n;
 		n++;
 		pLine = pLine->pNextLine;
 	}
 }
 
-
-
-
 Line_iterator::Line_iterator(CLine & theLine, int index) :pLine(&theLine)
 {
-	if (theLine.pLineHead != NULL && index > 0)					//不为空行的情况
+	if (theLine.pLineHead != NULL && index > 0) //不为空行的情况
 	{
-		pWChar = theLine.pLineHead->Strings;						//指向行首字符
+		pWChar = theLine.pLineHead->Strings; //指向行首字符
 		pBlock = theLine.pLineHead;
 		nIndex = 1;
 		bAfter_end = FALSE;
@@ -400,7 +396,6 @@ Line_iterator & Line_iterator::operator++()
 	{
 		pBlock = pBlock->pNextBlock;
 		pWChar = pBlock->Strings;
-
 	}
 	nIndex++;
 	return *this;

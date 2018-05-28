@@ -109,7 +109,7 @@ HTEXTUSER __stdcall CreateUser(HWND hWnd)
 		CLIP_DEFAULT_PRECIS,			// 裁剪精度
 		DEFAULT_QUALITY,				// 输出质量
 		DEFAULT_PITCH | FF_DONTCARE,	// 间距
-		TEXT("New Curier")				// 名称
+		TEXT("宋体")				// 名称
 	);
 	lpUser->m_pCaretPixelSize = POINT{ 1, 16 };
 	lpUser->m_pCaretPixelPos  = POINT{ 0, 0 };

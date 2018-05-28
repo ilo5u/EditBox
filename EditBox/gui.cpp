@@ -602,7 +602,7 @@ BOOL SelectCharSize(HTEXTINFO hTextInfo, LONG newCharWidth, LONG newCharHeight)
 		CLIP_DEFAULT_PRECIS,			// 裁剪精度
 		DEFAULT_QUALITY,				// 输出质量
 		DEFAULT_PITCH | FF_DONTCARE,	// 间距
-		TEXT("New Curier")				// 名称
+		TEXT("宋体")				// 名称
 	);
 	SelectObject(MEMDC(hTextInfo), FONT(hTextInfo));
 
