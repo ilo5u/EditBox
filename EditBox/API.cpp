@@ -151,7 +151,7 @@ RVALUE __stdcall UserMessageProc(
 		pCursor->ResetChoose();
 		/*设置光标像素位置 行列号*/
 		lpKernelInfo->m_pCaretPixelPos = { 0,y + Height };
-		lpKernelInfo->m_cCaretCoord = { (short)pCursor->Characters_before_Cursor(LineNumber,x),(short)LineNumber };
+		lpKernelInfo->m_cCaretCoord = { 0 ,(short)(LineNumber + 1) };
 		/*设置换行信息 文本大小*/
 		lpKernelInfo->m_bLineBreak = TRUE;
 		lpKernelInfo->m_pTextPixelSize = { hText->Max_Line_Width(Width_EN),hText->Line_Number()*Height };

@@ -5,7 +5,7 @@
 #include<tchar.h>
 #include<string>
 #include<iostream>
-#define BLOCK_SIZE	50
+#define BLOCK_SIZE	100
 struct Position
 {
 	int LineNumber;		//ËùÔÚĞĞºÅ
