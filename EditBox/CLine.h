@@ -94,7 +94,7 @@ private:
 	TCHAR *		pWChar;											//指向CLine中的一个字符
 	DataBlock*	pBlock;											//当前指向字符所在数据块
 	int			nIndex;											//当前指向的字符在行中的位置(注：不是下标，从1开始)	
-	bool		bAfter_end;										//该迭代器指向最后一个字符之后
+	BOOL		bAfter_end;										//该迭代器指向最后一个字符之后
 };
 //得到两迭代器[first,last]之间的字符数
 size_t operator-(Line_iterator last, Line_iterator first);

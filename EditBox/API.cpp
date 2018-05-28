@@ -428,6 +428,7 @@ RVALUE __stdcall UserMessageProc(
 		/*设置换行信息 文本大小*/
 		lpKernelInfo->m_bLineBreak = (Old_Lines == New_Lines ? FALSE : TRUE);
 		lpKernelInfo->m_pTextPixelSize = { hText->Max_Line_Width(Width_EN),hText->Line_Number()*Height };
+		lpKernelInfo->m_uiCount = hText->All_Characters();
 		break;
 	}
 	case UM_TEXT:
@@ -611,7 +612,7 @@ RVALUE __stdcall UserMessageProc(
 	}
 	case UM_PASTE:
 	{
-		
+		int Old_Lines = hText->Line_Number();
 		Record* rd = new Record(RD_INSERT);
 		std::string SText = wchTostring((TCHAR*)sParam);
 		std::wstring WSText = StringToWString(SText);						//待插入的内容
@@ -635,11 +636,13 @@ RVALUE __stdcall UserMessageProc(
 		}
 
 		pRecord->push(rd);
+		int New_Lines = hText->Line_Number();
 		/*设置文本大小 当前光标位置 逻辑行列*/
 		lpKernelInfo->m_pTextPixelSize = { hText->Max_Line_Width(Width_EN),hText->Line_Number()*Height };
 		lpKernelInfo->m_pCaretPixelPos = { pCursor->PositionToCursor(end) };
 		lpKernelInfo->m_cCaretCoord = { (short)end.Sequence,(short)end.LineNumber };
 		lpKernelInfo->m_uiCount = hText->All_Characters();
+		lpKernelInfo->m_bLineBreak = (Old_Lines == New_Lines ? FALSE : TRUE);
 		break;
 	}
 	case UM_FIND:
