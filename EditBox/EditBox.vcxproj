@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -158,41 +158,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="API.h" />
-    <ClInclude Include="CLine.h" />
-    <ClInclude Include="CText.h" />
-    <ClInclude Include="debug.h" />
-    <ClInclude Include="miniword.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="API.cpp" />
-    <ClCompile Include="CLine.cpp" />
-    <ClCompile Include="CText.cpp" />
-    <ClCompile Include="Cursor.cpp" />
-    <ClCompile Include="debug.cpp" />
-    <ClCompile Include="help_document.cpp" />
-    <ClCompile Include="io.cpp" />
-    <ClCompile Include="miniword.cpp" />
-    <ClCompile Include="Record.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="kernel.cpp" />
-    <ClCompile Include="gui.cpp" />
-    <ClCompile Include="timer.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ResourceCompile Include="EditBox.rc" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="EditBox.ico" />
     <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="api.cpp" />
+    <ClCompile Include="cline.cpp" />
+    <ClCompile Include="ctext.cpp" />
+    <ClCompile Include="cursor.cpp" />
+    <ClCompile Include="debug.cpp" />
+    <ClCompile Include="gui.cpp" />
+    <ClCompile Include="helpdocument.cpp" />
+    <ClCompile Include="io.cpp" />
+    <ClCompile Include="kernel.cpp" />
+    <ClCompile Include="miniword.cpp" />
+    <ClCompile Include="record.cpp" />
+    <ClCompile Include="timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="api.h" />
+    <ClInclude Include="debug.h" />
+    <ClInclude Include="miniword.h" />
+    <ClInclude Include="myexception.h" />
+    <ClInclude Include="record.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

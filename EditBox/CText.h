@@ -5,7 +5,7 @@
 #include<sstream>
 #include<fstream>
 #include"CLine.h"
-#include"MyExpection.h"
+#include"myexception.h"
 #include<queue>
 #include<Windows.h>
 #include<time.h>
