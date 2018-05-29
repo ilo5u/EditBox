@@ -158,10 +158,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ResourceCompile Include="EditBox.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="EditBox.ico" />
+    <Image Include="editbox.ico" />
     <Image Include="small.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -172,7 +169,6 @@
     <ClCompile Include="debug.cpp" />
     <ClCompile Include="gui.cpp" />
     <ClCompile Include="helpdocument.cpp" />
-    <ClCompile Include="io.cpp" />
     <ClCompile Include="kernel.cpp" />
     <ClCompile Include="miniword.cpp" />
     <ClCompile Include="record.cpp" />
@@ -187,6 +183,9 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="editbox.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

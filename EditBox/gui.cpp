@@ -10,9 +10,11 @@
 //
 --------------------------------------------------------------------------------------------------*/
 
+#include <mutex>
+
 #include "stdafx.h"
 #include "miniword.h"
-#include "debug.h"
+// #include "debug.h"
 
 BOOL operator==(POINT left, POINT right)
 {
@@ -614,6 +616,82 @@ BOOL SelectCharSize(HTEXTINFO hTextInfo, LONG newCharWidth, LONG newCharHeight)
 	CARETSIZE(hTextInfo).y = newCharHeight;
 	CreateCaret(hTextInfo->m_hWnd, NULL, CARETSIZE(hTextInfo).x, CARETSIZE(hTextInfo).y);
 	ShowCaret(hTextInfo->m_hWnd);
+
+	return (TRUE);
+}
+
+/*---------------------------------------------
+	@Description:
+		待高亮显示的文本打印函数
+
+	@Paramter:
+		hdc: 图形设备
+		x: 横坐标
+		y: 纵坐标
+		lpString: 待打印字符串
+		c: 字符数目
+		s: 高亮起点
+		e: 高亮终点
+		width: 英文字符宽度
+
+	@Return:
+		处理结果（默认返回TRUE）
+
+	@Author:
+		程鑫
+---------------------------------------------*/
+BOOL WINAPI MyTextOutW(_In_ HDC hdc, _In_ int x, _In_ int y, _In_reads_(c) LPCWSTR lpString, _In_ int c, _In_ short s, _In_ short e, _In_ int width)
+{
+	int iCount = 0;
+	int iLeft = x;
+	int iRight = x;
+
+	//白底黑字
+	SetTextColor(hdc, RGB(0x00, 0x00, 0x00));
+	SetBkColor(hdc, RGB(0xFF, 0xFF, 0xFF));
+	// ...
+
+	while (iCount < s)
+	{
+		if (lpString[iCount] & TCHAR(0xFF00)) // 汉字
+			iRight = iRight + (width << 1);
+		else
+			iRight = iRight + width;
+		++iCount;
+	}
+	TextOut(hdc, iLeft, y, lpString, iCount);
+
+	// 蓝底白字
+	SetTextColor(hdc, RGB(0xFF, 0xFF, 0xFF));
+	SetBkColor(hdc, RGB(0x1C, 0x86, 0xEE));
+	// ...
+
+	iLeft = iRight;
+	while (iCount < e)
+	{
+		if (lpString[iCount] & TCHAR(0xFF00)) // 汉字
+			iRight = iRight + (width << 1);
+		else
+			iRight = iRight + width;
+		++iCount;
+	}
+	TextOut(hdc, iLeft, y, lpString + s, iCount - s);
+
+	//白底黑字
+	SetTextColor(hdc, RGB(0x00, 0x00, 0x00));
+	SetBkColor(hdc, RGB(0xFF, 0xFF, 0xFF));
+	// ...
+
+	iLeft = iRight;
+	while (iCount < c)
+	{
+		if (lpString[iCount] & TCHAR(0xFF00)) // 汉字
+			iRight = iRight + (width << 1);
+		else
+			iRight = iRight + width;
+		++iCount;
+	}
+	TextOut(hdc, iLeft, y, lpString + e, iCount - e);
 
 	return (TRUE);
 }

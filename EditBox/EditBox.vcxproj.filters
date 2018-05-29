@@ -13,15 +13,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="EditBox.rc">
-      <Filter>资源文件</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
     <Image Include="small.ico">
       <Filter>资源文件</Filter>
     </Image>
-    <Image Include="EditBox.ico">
+    <Image Include="editbox.ico">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>
@@ -33,9 +28,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="helpdocument.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="io.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="kernel.cpp">
@@ -88,5 +80,10 @@
     <ClInclude Include="api.h">
       <Filter>头文件</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="editbox.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
