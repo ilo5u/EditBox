@@ -173,6 +173,7 @@
     <ClCompile Include="CText.cpp" />
     <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="debug.cpp" />
+    <ClCompile Include="help_document.cpp" />
     <ClCompile Include="io.cpp" />
     <ClCompile Include="miniword.cpp" />
     <ClCompile Include="Record.cpp" />
