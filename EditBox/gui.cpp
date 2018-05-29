@@ -491,20 +491,13 @@ BOOL PaintWindow(HTEXTINFO hTextInfo, LPRECT lpRepaint)
 		case UR_SUCCESS:
 		{
 			if (kernelinfo.m_uiCount > 0)
-			{
 				MyTextOut(MEMDC(hTextInfo),
 					kernelinfo.m_bInside ? lpRepaint->left - CHARSIZE(hTextInfo).x : lpRepaint->left,
 					yOffset,
 					kernelinfo.m_lpchText,
 					kernelinfo.m_uiCount, kernelinfo.m_uiStart, kernelinfo.m_uiEnd,
 					CHARSIZE(hTextInfo).x
-				), wprintf_s(TEXT("bInside = %d, s = %d, e = %d, c = %d, yOffset = %d: %ls\n"),
-					kernelinfo.m_bInside,
-					kernelinfo.m_uiStart, kernelinfo.m_uiEnd, kernelinfo.m_uiCount, yOffset, kernelinfo.m_lpchText);
-				if (kernelinfo.m_lpchText[0] == TEXT('\t'))
-					wprintf_s(L"There is a tab.\n");
-			}
-
+				);
 		}
 		break;
 		default:
