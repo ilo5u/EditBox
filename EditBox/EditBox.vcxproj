@@ -176,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="api.h" />
+    <ClInclude Include="cline.h" />
     <ClInclude Include="debug.h" />
     <ClInclude Include="miniword.h" />
     <ClInclude Include="myexception.h" />
