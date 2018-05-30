@@ -107,6 +107,6 @@ RVALUE __stdcall UserMessageProc(
 	_Out_opt_ LPKERNELINFO lpKernelInfo
 );
 
-#define TEXT_SIZE	300				//显示文本长度
+#define TEXT_SIZE	600				//显示文本长度
 #define TAB_SIZE	4				//Tab字符为4空格
 
