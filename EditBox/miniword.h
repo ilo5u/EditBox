@@ -201,6 +201,6 @@ BOOL operator==(POINT left, POINT right);
 #define DEFAULT_PATH       TEXT("C:\\MiniWord\\")
 #define HELP_DOCUMENT_PATH TEXT("C:\\MiniWord\\Help\\readme.txt")
 #define HELP_DOCUMENT_DIR  TEXT("C:\\MiniWord\\Help\\")
-#define ICON_PATH          TEXT("C:\\MiniWord\\Icon\\miniword.ico")
+#define ICON_NAME          TEXT("miniword.ico")
 #define DOCUMENT_LENGTH    2909
 // +++++++++++++++++++++ END +++++++++++++++++++++++ //
