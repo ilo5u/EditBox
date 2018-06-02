@@ -100,7 +100,7 @@ HTEXTUSER __stdcall CreateUser(HWND hWnd)
 		lpUser->m_pCharPixelSize.x,		// 宽度
 		0,		// 水平
 		0,		// 倾斜
-		400,	// 粗度
+		200,	// 粗度
 		0,		// 不倾斜
 		0,		// 无下划线
 		0,		// 无中划线
